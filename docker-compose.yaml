@@ -1,0 +1,16 @@
+services:
+  app:
+    image: node:19.1.0-slim
+    volumes:
+      - ./:/app
+      - node_modules:/app/app/node_modules
+    working_dir: /app
+    user: 0:0
+    command: sh -c "cd app && npm i && npm run dev --turbo"
+    ports:
+      - 3000:3000
+    environment:
+      - WATCHPACK_POLLING=true
+
+volumes:
+  node_modules:
