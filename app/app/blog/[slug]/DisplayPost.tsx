@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { MDXRemote } from "next-mdx-remote"
+import { MDXRemote } from "next-mdx-remote";
 
 export const DisplayPost = ({ source }) => {
-    return <MDXRemote {...source} />
-}
+  return <MDXRemote {...source} />;
+};
