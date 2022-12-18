@@ -5,6 +5,7 @@ services:
       - ./:/app
       - node_modules:/app/app/node_modules
     working_dir: /app
+    user: 0:0
     command: sh -c "cd app && npm install && npm run dev --turbo"
     ports:
       - 3000:3000
