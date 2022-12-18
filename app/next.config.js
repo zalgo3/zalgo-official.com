@@ -7,7 +7,6 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    basePath: '/zalgo-official.com',
 };
 
 module.exports = nextConfig;
