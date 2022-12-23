@@ -4,7 +4,7 @@ import { type PostData } from "lib/posts";
 import { useStyles } from "lib/styles";
 import { Card, CardHeader } from "@fluentui/react-components/unstable";
 
-export const DisplayPosts = ({ posts }: { posts: PostData[] }) => {
+const DisplayPosts = ({ posts }: { posts: PostData[] }) => {
   const styles = useStyles();
   return (
     <>
@@ -16,3 +16,5 @@ export const DisplayPosts = ({ posts }: { posts: PostData[] }) => {
     </>
   );
 };
+
+export default DisplayPosts;

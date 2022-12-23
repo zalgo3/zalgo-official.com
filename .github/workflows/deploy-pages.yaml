@@ -21,11 +21,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install packages
-        run: docker compose run --rm app sh -c "cd app && npm install"
+        run: docker compose run --rm app sh -c "cd app && yarn"
       - name: Build
-        run: docker compose run --rm app sh -c "cd app && npm run build"
+        run: docker compose run --rm app sh -c "cd app && yarn build"
       - name: Export
-        run: docker compose run --rm app sh -c "cd app && npm run export"
+        run: docker compose run --rm app sh -c "cd app && yarn export"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

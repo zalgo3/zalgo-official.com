@@ -2,10 +2,12 @@
 
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 
-export const DisplayPost = ({
+const DisplayPost = ({
   source,
 }: {
   source: MDXRemoteSerializeResult;
 }) => {
   return <MDXRemote {...source} />;
 };
+
+export default DisplayPost;
