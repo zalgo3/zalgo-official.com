@@ -12,7 +12,7 @@
     "lint-staged": "lint-staged",
     "prettier": "prettier --write --ignore-path .gitignore .",
     "prettier:check": "prettier --check --ignore-path .gitignore .",
-    "test": "npx prettier:check && npx lint",
+    "test": "yarn prettier:check && yarn lint",
     "type-check": "tsc --noEmit",
     "validate": "npm run type-check && npm run lint"
   },
