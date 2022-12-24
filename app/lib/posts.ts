@@ -25,10 +25,10 @@ export const getPostAll = (options: Options = {}): Post[] => {
         return;
       }
     })
-    .filter((post) => typeof post !== "undefined")
+    .filter((post: Post | undefined) => typeof post !== "undefined")
     .slice(0, options.limit)
-    .sort((m1, m2) =>
-      moment(m1.data.createdAt).isAfter(m2.data.createdAt) ? -1 : 1
+    .sort((p1: Post, p2: Post) =>
+      moment(p1.data.createdAt).isAfter(p2.data.createdAt) ? -1 : 1
     );
 
   return posts as Post[];
