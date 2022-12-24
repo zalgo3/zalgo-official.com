@@ -24,6 +24,7 @@ export const getPostAll = (options: Options = {}): Post[] => {
       post.data.updatedAt = mtime.toJSON();
       return post;
     })
+    .filter((post): post is Post => !!post)
     .slice(0, options.limit)
     .sort((p1, p2) =>
       moment(p1.data.createdAt).isAfter(p2.data.createdAt) ? -1 : 1
