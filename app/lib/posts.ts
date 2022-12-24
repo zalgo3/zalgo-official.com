@@ -48,7 +48,6 @@ export const getPost = (slug: string): Post => {
 
 export type Post = GrayMatterFile<Input> & {
   data: PostData;
-  orig: undefined;
   prevPostData: PostData | undefined;
   nextPostData: PostData | undefined;
 };
