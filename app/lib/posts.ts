@@ -12,22 +12,20 @@ type Options = {
 export const getPostAll = (options: Options = {}): Post[] => {
   const posts = fs
     .readdirSync(postsPath)
-    .map((slug: string) => {
+    .map((slug) => {
       const postPath = path.join(postsPath, slug, "post.md");
-      try {
-        const { atime, mtime } = fs.statSync(postPath);
-        let { orig, ...post } = matter(fs.readFileSync(postPath));
-        post.data.slug = slug;
-        post.data.createdAt = atime.toJSON();
-        post.data.updatedAt = mtime.toJSON();
-        return post;
-      } catch (err) {
-        return;
+      if (!fs.existsSync(postPath)) {
+          return;
       }
+      const { atime, mtime } = fs.statSync(postPath);
+      let { orig, ...post } = matter(fs.readFileSync(postPath));
+      post.data.slug = slug;
+      post.data.createdAt = atime.toJSON();
+      post.data.updatedAt = mtime.toJSON();
+      return post;
     })
-    .filter((post: Post | undefined) => typeof post !== "undefined")
     .slice(0, options.limit)
-    .sort((p1: Post, p2: Post) =>
+    .sort((p1, p2) =>
       moment(p1.data.createdAt).isAfter(p2.data.createdAt) ? -1 : 1
     );
 
