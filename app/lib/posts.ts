@@ -1,9 +1,9 @@
-import path from "path";
-import fs from "fs";
-import matter, { GrayMatterFile, Input } from "gray-matter";
-import moment from "moment";
+import path from 'path';
+import fs from 'fs';
+import matter, { GrayMatterFile, Input } from 'gray-matter';
+import moment from 'moment';
 
-const postsPath = "posts";
+const postsPath = 'posts';
 
 type Options = {
   limit?: number;
@@ -13,9 +13,9 @@ export const getPostAll = (options: Options = {}): Post[] => {
   const posts = fs
     .readdirSync(postsPath)
     .map((slug) => {
-      const postPath = path.join(postsPath, slug, "post.md");
+      const postPath = path.join(postsPath, slug, 'post.md');
       if (!fs.existsSync(postPath)) {
-          return;
+        return;
       }
       const { atime, mtime } = fs.statSync(postPath);
       let { orig, ...post } = matter(fs.readFileSync(postPath));
@@ -27,7 +27,7 @@ export const getPostAll = (options: Options = {}): Post[] => {
     .filter((post): post is Post => !!post)
     .slice(0, options.limit)
     .sort((p1, p2) =>
-      moment(p1.data.createdAt).isAfter(p2.data.createdAt) ? -1 : 1
+      moment(p1.data.createdAt).isAfter(p2.data.createdAt) ? -1 : 1,
     );
 
   return posts as Post[];
