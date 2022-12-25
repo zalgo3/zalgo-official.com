@@ -1,5 +1,5 @@
-import { getPostDataAll } from "lib/posts";
-import DisplayPosts from "./DisplayPosts"
+import { getPostDataAll } from 'lib/posts';
+import DisplayPosts from './DisplayPosts';
 
 const Page = () => {
   const posts = getPostDataAll({ limit: 3 });

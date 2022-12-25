@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { Button } from "@fluentui/react-components";
+import Link from 'next/link';
+import { Button } from '@fluentui/react-components';
 
 const Page = () => {
   return (

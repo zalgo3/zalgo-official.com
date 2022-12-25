@@ -1,12 +1,8 @@
-"use client";
+'use client';
 
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 
-const DisplayPost = ({
-  source,
-}: {
-  source: MDXRemoteSerializeResult;
-}) => {
+const DisplayPost = ({ source }: { source: MDXRemoteSerializeResult }) => {
   return <MDXRemote {...source} />;
 };
 
