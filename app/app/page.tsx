@@ -1,15 +1,18 @@
 'use client';
 
+import Footer from './footer';
+import Header from './header';
 import Link from 'next/link';
 import { Button } from '@fluentui/react-components';
 
 const Page = () => {
   return (
     <>
-      <h1>ざるご / 田辺広樹</h1>
+      <Header />
       <Button>
         <Link href="/blog">ブログ</Link>
       </Button>
+      <Footer />
     </>
   );
 };
