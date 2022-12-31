@@ -7,7 +7,7 @@ const DisplayPosts = ({posts}: {posts: PostData[]}) => {
     return (
         <>
             {posts.map((post: PostData) => (
-                    <Link href={`/blog/${post.slug}`}>
+                    <Link href={`/blog/${post.slug}`} key={post.slug}>
                             {post.title}
                             {post.createdAt}
                     </Link>
