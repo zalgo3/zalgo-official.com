@@ -10,7 +10,7 @@ const DisplayPosts = ({posts}: {posts: PostData[]}) => {
     return (
         <>
             {posts.map((post: PostData) => (
-                <Card className={styles.card}>
+                <Card className={styles.card} key={post.slug}>
                     <Link as="a" href={`/blog/${post.slug}`}>
                         <CardHeader
                             header={post.title}
