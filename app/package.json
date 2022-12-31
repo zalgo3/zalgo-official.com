@@ -18,6 +18,11 @@
   "git": {
     "pre-commit": "lint-staged"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*": "prettier --write --ignore-path .gitignore ."
   },
@@ -44,6 +49,7 @@
     "@types/react-dom": "^18.0.10",
     "eslint": "^8.29.0",
     "eslint-config-next": "^13.1.1",
+    "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1"
   }
