@@ -1,5 +1,8 @@
 :root {
     --c-primary: #00aa90;
-    --c-background: #abb8c3;
+    --c-background: #ebf2fa;
+}
+
+body {
     background-color: var(--c-background);
 }

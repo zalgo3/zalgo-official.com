@@ -77,7 +77,7 @@ const Footer = () => {
     const years = now === '2018' ? now : `2018 - ${now}`;
     return (
         <>
-        {/*
+            {/*
             <NavBar />
             */}
             © {years} Hiroki Tanabe

@@ -1,14 +1,12 @@
-import 'styles/global.scss'
+import 'styles/global.css';
 
-const Layout = ({children}: {children: React.ReactNode}) => {
+const RootLayout = ({children}: {children: React.ReactNode}) => {
     return (
         <html>
             <head />
-            <body>
-                            {children}
-            </body>
+            <body>{children}</body>
         </html>
     );
 };
 
-export default Layout;
+export default RootLayout;
