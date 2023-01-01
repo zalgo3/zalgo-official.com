@@ -1,8 +1,15 @@
 :root {
     --c-primary: #00aa90;
     --c-background: #ebf2fa;
+    --c-base: #333;
+    --c-white: #f2f6f9;
+    --box-shadow-background: 2px 2px 6px #c8ced5, 
+                -2px -2px 6px #ffffff;
+    --box-shadow-primary: 2px 2px 6px #00917a,
+                                -2px -2px 6px #00c4a6;
 }
 
 body {
     background-color: var(--c-background);
+    color: var(--c-base);
 }
