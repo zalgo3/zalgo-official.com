@@ -1,4 +1,6 @@
-const RootLayout = ({children}: {children: React.ReactNode}) => {
+import 'styles/global.scss'
+
+const Layout = ({children}: {children: React.ReactNode}) => {
     return (
         <html>
             <head />
@@ -9,4 +11,4 @@ const RootLayout = ({children}: {children: React.ReactNode}) => {
     );
 };
 
-export default RootLayout;
+export default Layout;
