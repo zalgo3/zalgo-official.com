@@ -7,7 +7,7 @@ const Footer = () => {
     const years = now === '2018' ? now : `2018 - ${now}`;
     return (
         <>
-            <nav>
+            <nav className={styles.navFooter}>
                 <ul>
                     <li>
                         <Link href="/">ホーム</Link>

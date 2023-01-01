@@ -1,33 +1,33 @@
-nav {
+.navFooter {
     display: flex;
     justify-content: center;
 }
 
-nav ul {
+.navFooter ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav li {
+.navFooter li {
     border-radius: 10px;
     box-shadow: var(--box-shadow-background);
     margin: 5px 4px 5px 4px;
 }
 
-nav a {
+.navFooter a {
     color: inherit;
     display: block;
     padding: 8px;
     text-decoration: none;
 }
 
-nav ul ul {
+.navFooter ul ul {
     display: none;
 }
 
-nav ul li:hover > ul {
+.navFooter ul li:hover > ul {
     display: block;
     position: absolute;
 }
