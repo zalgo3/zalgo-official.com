@@ -5,9 +5,7 @@ const Header = () => {
     return (
         <header>
             <h1 className={styles.logo}>
-                <Link href="/" className={styles.logoLink}>
-                    ざるご のブログ
-                </Link>
+                <Link href="/blog">ざるごのブログ</Link>
             </h1>
         </header>
     );
