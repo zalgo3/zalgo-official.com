@@ -1,11 +1,13 @@
 import {getPostDataAll} from 'lib/posts';
 import DisplayPosts from './DisplayPosts';
+import Header from './header';
 import Footer from 'app/footer';
 
 const Page = () => {
     const posts = getPostDataAll({limit: 3});
     return (
         <>
+            <Header />
             <DisplayPosts posts={posts} />
             <Footer />
         </>

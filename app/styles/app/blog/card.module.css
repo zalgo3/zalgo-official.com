@@ -1,0 +1,11 @@
+.card {
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--box-shadow-background);
+    border-radius: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
