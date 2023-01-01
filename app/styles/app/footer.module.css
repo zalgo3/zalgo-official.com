@@ -1,0 +1,38 @@
+.navFooter {
+    display: flex;
+    justify-content: center;
+}
+
+.navFooter ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navFooter li {
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-background);
+    margin: 5px 4px 5px 4px;
+}
+
+.navFooter a {
+    color: inherit;
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.navFooter ul ul {
+    display: none;
+}
+
+.navFooter ul li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+.copyright {
+    font-size: 100%;
+    text-align: center;
+}

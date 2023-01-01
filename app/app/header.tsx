@@ -1,8 +1,15 @@
+import Link from 'next/link';
+import styles from 'styles/app/header.module.css';
+
 const Header = () => {
     return (
-        <>
-            <h1>ざるご / 田辺広樹</h1>
-        </>
+        <header>
+            <h1 className={styles.logo}>
+                <Link href="/" className={styles.logoLink}>
+                    ざるご / 田辺広樹
+                </Link>
+            </h1>
+        </header>
     );
 };
 
