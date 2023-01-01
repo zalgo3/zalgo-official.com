@@ -2,15 +2,13 @@
 
 import {type PostData} from 'lib/posts';
 import Link from 'next/link';
+import Card from './card';
 
 const DisplayPosts = ({posts}: {posts: PostData[]}) => {
     return (
         <>
             {posts.map((post: PostData) => (
-                <Link href={`/blog/${post.slug}`} key={post.slug}>
-                    {post.title}
-                    {post.createdAt}
-                </Link>
+                <Card post={post} />
             ))}
         </>
     );

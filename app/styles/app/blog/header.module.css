@@ -1,0 +1,15 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    font-size: 300%;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-background);
+    border: none;
+}
+
+.logoLink {
+    text-decoration: none;
+    color: inherit;
+}
