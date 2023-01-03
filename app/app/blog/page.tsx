@@ -5,7 +5,7 @@ import React, {useState, useEffect} from 'react';
 import {getPostDataAll} from 'lib/posts';
 
 const Page = async () => {
-    posts = await getData();
+    const posts = await getData();
     return (
         <>
             <Header />
