@@ -24,7 +24,7 @@ export const getPostAll = (options: Options = {}): Post[] => {
                 post.data.createdAt = atime.toJSON();
                 post.data.updatedAt = mtime.toJSON();
                 return post;
-            } catch (error) {
+            } catch (error: any) {
                 console.error(error.message);
                 return;
             }
