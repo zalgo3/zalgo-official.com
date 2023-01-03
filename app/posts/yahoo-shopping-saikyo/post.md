@@ -28,14 +28,14 @@ Amazon？楽天？ふむふむ。
 
 ## 超PayPay祭
 
-いま、Yahoo!ショッピングでは、[超PayPay祭](//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3619296&pid=887436134&vc_url=https%3A%2F%2Fshopping.yahoo.co.jp%2Fpromotion%2Fsale%2Fppf%2F%3Fsc_i%3Dshp_pc_promo-sale_counter1_ppf2021%23anchor_mdPreparation)という、ポイントが**<span class="bold-red">最大38.5％</span>**と年の中でもかなりお得になる祭りをやっている。
+いま、Yahoo!ショッピングでは、[超PayPay祭](https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3619296&pid=887436134&vc_url=https%3A%2F%2Fshopping.yahoo.co.jp%2Fpromotion%2Fsale%2Fppf%2F%3Fsc_i%3Dshp_pc_promo-sale_counter1_ppf2021%23anchor_mdPreparation)という、ポイントが**<span class="bold-red">最大38.5％</span>**と年の中でもかなりお得になる祭りをやっている。
 
 ぶっちゃけ、38.5%というのは煽り文句で、さすがにその水準まで上げるのは困難だが、**日曜+5%**(ソフトバンクユーザーなら+10%)または**5のつく日+4%**、PayPay残高払い+0.5%、ストアポイント+1%、PayPayモールのPayPay Step+2%で合計**<span class="bold-blue">8.5%</span>**くらいなら普通に狙える。
 
-（ちなみに、[PayPayモール](//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3619296&pid=887436134&vc_url=https%3A%2F%2Fpaypaymall.yahoo.co.jp%2F)と<meta charset="utf-8">[Yahoo!ショッピング](//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3619296&pid=887436152)とLOHACOは、紛らわしいけどだいたい一緒だと思ってもらえればいい）
+（ちなみに、[PayPayモール](https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3619296&pid=887436134&vc_url=https%3A%2F%2Fpaypaymall.yahoo.co.jp%2F)と[Yahoo!ショッピング](https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3619296&pid=887436152)とLOHACOは、紛らわしいけどだいたい一緒だと思ってもらえればいい）
 
 さらに、ショップによってポイントが5%なり10%なり上乗せしてくれるところもあって、そういうのを加えれば**<span class="bold-red">+20%以上</span>**も圏内だ。
 
-はじめの6ヶ月は無料で入れる[Yahoo!プレミアム](//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3619296&pid=887436147)で+2%を狙っても良い。もっとも、6ヶ月無料は初回限定なので、タイミングは各自考えたほうが良いが。
+はじめの6ヶ月は無料で入れる[Yahoo!プレミアム](https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3619296&pid=887436147)で+2%を狙っても良い。もっとも、6ヶ月無料は初回限定なので、タイミングは各自考えたほうが良いが。
 
-さあ、これを読んで情報強者になった皆さんは、もちろん、[Yahoo!ショッピング](//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3619296&pid=887436152)を使いますよね？
+さあ、これを読んで情報強者になった皆さんは、もちろん、[Yahoo!ショッピング](https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3619296&pid=887436152)を使いますよね？
