@@ -39,8 +39,7 @@ export const getPostAll = (options: Options = {}): Post[] => {
 };
 
 export const getPostDataAll = (options?: Options): PostData[] => {
-    return getPostAll(options)
-        .map(m => m.data);
+    return getPostAll(options).map(m => m.data);
 };
 
 export const getPost = (slug: string): Post => {

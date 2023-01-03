@@ -17,7 +17,6 @@ const Page = async () => {
 
 const getData = async () => {
     return await getPostDataAll();
-}
-
+};
 
 export default Page;
