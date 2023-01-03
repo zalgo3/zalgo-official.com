@@ -42,7 +42,7 @@ https://linepay.line.me/promotion/line-creditcard/202105-promotion.html?utm_sour
 
 </div>
 
-ポイント還元率**<span class="bold-red">2%**の最強カードです。
+ポイント還元率**2%**の最強カードです。
 
 だいたいの支払いはこれでオーケー。Amazonもこれで大丈夫です。Amazonマスターカードよりこっちのほうが還元率高いのでこれで払いましょう。
 
@@ -56,7 +56,7 @@ https://pc.moppy.jp/ad/detail.php?s_id=149052
 
 コンビニの支払いは全部これで大丈夫です。
 
-セブンイレブン/ローソン/ファミリーマート/マクドナルドで、Visaのタッチ決済またはMastercard®コンタクトレスで支払えば<span class="bold-red">5%還元。
+セブンイレブン/ローソン/ファミリーマート/マクドナルドで、Visaのタッチ決済またはMastercard®コンタクトレスで支払えば5%還元。
 
 支払うときは普通に「カードで」って言って、端末に差し込まずに上からタッチすればOKです。
 
@@ -68,7 +68,7 @@ https://hb.afl.rakuten.co.jp/hsc/20480eaa.2bb41113.20480eab.e7b3fc49/?link_type=
 
 </div>
 
-楽天市場で使う用。楽天市場限定で<span class="bold-red">3%還元です。
+楽天市場で使う用。楽天市場限定で3%還元です。
 
 通販は全部Amazonって人多いけど、結構多くの商品が楽天のほうが安く買えるので、楽天市場は使ったほうがいいと思います。
 
