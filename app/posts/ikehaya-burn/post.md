@@ -23,7 +23,7 @@ title: "【脱社畜サロン炎上まとめ】イケハヤは悪くねえだろ
 
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-タイトルに登場人物全員悪く無いって書いたけど，<span style="font-size: 150%; color: #20a39e;">**正確に言うとこいつだけは悪い．**</span>
+タイトルに登場人物全員悪く無いって書いたけど，<span style="font-size: 150%; color: #20a39e;">**正確に言うとこいつだけは悪い．**
 このスクショ投稿も，月額コンテンツのスクショを勝手に晒してるわけで良くない行為なんだけど，この人物はこの先にもっと最悪なことをしでかすことになる．
 
 ##### ③2019-01-10 00:40 正田氏が法的措置を匂わせるツイート
@@ -41,7 +41,7 @@ title: "【脱社畜サロン炎上まとめ】イケハヤは悪くねえだろ
 > まずこれが1点。 次に3桁億のM&Aをやったのかってなんか知らないけど僕が問い詰められてますが、2〜3桁億のM&Aがメインとプロフに書いてあるだけで、決めたとは言ってない(これについては今から補足) — 正田圭 (@keimasada222) [2019年1月9日](https://twitter.com/keimasada222/status/1083027725621682176?ref_src=twsrc%5Etfw)
 
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<span style="color: #20a39e;">**<span style="font-size: 150%;">超うさんくせえ(笑)</span>**</span>
+<span style="color: #20a39e;">**<span style="font-size: 150%;">超うさんくせえ(笑)**
 典型的な金持ちのふりして実はそんなに持ってないやつって感じ．まあでも法に触れるようなことをしてるわけじゃないし，バカから稼いでガッポリなんだろうなあ
 
 ##### ⑤2019-01-10 02:14 石川氏「脱社畜サロンに既に払ってしまったお金を取り返したい！」polcaを設置
@@ -52,11 +52,11 @@ title: "【脱社畜サロン炎上まとめ】イケハヤは悪くねえだろ
 
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 polcaというのはしょぼい版のクラウドファンディングサイトみたいなもので，支援したいと思った人がこの人にお金を送れるというもの．
-まあそれ自体は構わないんだけど，ヤバ過ぎるのがこのpolcaのリターンに<span style="font-size: 150%; color: #20a39e;">**脱社畜サロンの内部を報告**</span>というのが設定されていたこと．
+まあそれ自体は構わないんだけど，ヤバ過ぎるのがこのpolcaのリターンに<span style="font-size: 150%; color: #20a39e;">**脱社畜サロンの内部を報告**というのが設定されていたこと．
 しかもお値段300円．
 ちなみにもとの脱社畜サロンの値段は月額3000円．
 要は月額3000円のものを第三者がコピーしてそのまま300円で売ろうとしてたわけだ．
-<span style="font-size: 150%; color: #ff4e00;">**炎上に乗っかって，さすがにやってることがクズすぎねえか？？**</span>
+<span style="font-size: 150%; color: #ff4e00;">**炎上に乗っかって，さすがにやってることがクズすぎねえか？？**
 
 ##### ⑥2019-01-10 07:32 イケハヤ氏，石川氏をサロンから追放，Twitterもブロック
 
@@ -65,7 +65,7 @@ polcaというのはしょぼい版のクラウドファンディングサイト
 > 脱社畜サロンもBANです 質問してただけなのに…… まさか突かれたら 痛いところだったんですか？？ 3桁億のM&Aしてないんですよね？！[#脱社畜サロン](https://twitter.com/hashtag/%E8%84%B1%E7%A4%BE%E7%95%9C%E3%82%B5%E3%83%AD%E3%83%B3?src=hash&ref_src=twsrc%5Etfw)[#脱・脱社畜サロン](https://twitter.com/hashtag/%E8%84%B1%E3%83%BB%E8%84%B1%E7%A4%BE%E7%95%9C%E3%82%B5%E3%83%AD%E3%83%B3?src=hash&ref_src=twsrc%5Etfw) [pic.twitter.com/zo764bggDW](https://t.co/zo764bggDW) — いしかわ (@73_568) [2019年1月9日](https://twitter.com/73_568/status/1083129368862310402?ref_src=twsrc%5Etfw)
 
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<span style="color: #ff4e00;"><span style="font-size: 150%;">**そりゃそうなるわな（笑）**</span></span>
+<span style="color: #ff4e00;"><span style="font-size: 150%;">**そりゃそうなるわな（笑）**
 正直BANどころで済んでまだ良かった話で，普通に訴えられてもおかしくなかったレベルの出来事．
 しかし，このイケハヤ氏の対応が，思わぬ炎上を呼ぶことになる．
 
@@ -118,7 +118,7 @@ polcaというのはしょぼい版のクラウドファンディングサイト
 > — 田端信太郎 ＠田端大学塾長である！ (@tabbata) [2019年1月10日](https://twitter.com/tabbata/status/1083499302347956224?ref_src=twsrc%5Etfw)
 
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<span style="font-size: 150%; color: #20a39e;">**さらっとかわしてるｗｗｗ**</span>
+<span style="font-size: 150%; color: #20a39e;">**さらっとかわしてるｗｗｗ**
 世間は正田氏に風当たりが強い状況．ここで「盛ってないと思う」などと言ってしまえば世間からの田端氏の印象はガタっと落ちてしまう．
 かといって，「盛っていると思う」と断言するのも，それはそれで躊躇したくなる状況だ．
 そこで出てきた，「胸に手を当てて考えろ」．いやーうまいですねえ．
@@ -149,7 +149,7 @@ polcaというのはしょぼい版のクラウドファンディングサイト
 > いや、わかるんですけどね！ でも、ロックじゃないんですよ。 とりま謝ればいいという態度は、シンプルにダサい。 でもけんすうさんは好きです！ [https://t.co/sC45lSMlYL](https://t.co/sC45lSMlYL) — イケハヤ (@IHayato) [2019年1月11日](https://twitter.com/IHayato/status/1083529355387592705?ref_src=twsrc%5Etfw)
 
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-**<span style="font-size: 150%;"><span style="color: #1464b3;">よっ！さすが高知のロックンローラー！</span></span>**
+**<span style="font-size: 150%;"><span style="color: #1464b3;">よっ！さすが高知のロックンローラー！**
 実際，明らかに世間の風当たりは正田氏側に不利な状況で，あえて正田氏側につくのは実にロックンロールな行為です．炎上が目に見えてるからね．
 このイケハヤ氏という方は本当にロックな方で，今までビジネス系ブロガーをやってたのに突然[スマブラのプロゲーマーを目指す](https://www.youtube.com/watch?v=Cqch_qVQ3OE)とか言い出しちゃうような人です．
 色んな意味で面白いよね．そういうところがインフルエンサーたるゆえんであり，炎上をしょっちゅう起こす理由でもあるんだと思う．
@@ -161,7 +161,7 @@ polcaというのはしょぼい版のクラウドファンディングサイト
 > まだ間に合うから、今のうちに、「ごめんなさい！」しとけ。 な、オッチャン悪いコト言わんからさ。 [https://t.co/NGeGJVMZPa](https://t.co/NGeGJVMZPa) — 田端信太郎 ＠田端大学塾長である！ (@tabbata) [2019年1月11日](https://twitter.com/tabbata/status/1083530913642921986?ref_src=twsrc%5Etfw)
 
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-**<span style="font-size: 150%;"><span style="color: #1464b3;">絶対謝ると思ってないだろ（笑）</span></span>**
+**<span style="font-size: 150%;"><span style="color: #1464b3;">絶対謝ると思ってないだろ（笑）**
 このツイートは，「おれはこういうときに謝る人だよ」というはっきりとしたキャラ付けになっており，「エリート会社員」としての田端さん像をしっかりと支持している．
 ロックンローラーのイケハヤといい，自分をわかりやすいキャラクターに落とし込める人がネットでは評価されるんですなあ．
 
@@ -196,9 +196,9 @@ polcaというのはしょぼい版のクラウドファンディングサイト
 > こんなに美味しい場面はないやろ。 ちゃっかり利用させて貰うで！ ごっつあ〜ん！ [https://t.co/0w06lHHYip](https://t.co/0w06lHHYip) — 田端信太郎 ＠田端大学塾長である！ (@tabbata) [2019年1月11日](https://twitter.com/tabbata/status/1083546936987267072?ref_src=twsrc%5Etfw)
 
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-思うんだけどさ，<span style="color: #20a39e;">**<span style="font-size: 150%;">こいつら何の話してんの？</span>**</span>
+思うんだけどさ，<span style="color: #20a39e;">**<span style="font-size: 150%;">こいつら何の話してんの？**
 注目される場でお互いがお互いのキャラクターをアピールしてるだけで，全く中身のある話をしてないよね．
-炎上の発端だったはずの正田氏，<span style="color: #20a39e;">**<span style="font-size: 150%;">完全に置いてきぼりやん（笑）</span>**</span>
+炎上の発端だったはずの正田氏，<span style="color: #20a39e;">**<span style="font-size: 150%;">完全に置いてきぼりやん（笑）**
 お二人とも，注目を集めて，ネットの中で自分の配役を決めてロールプレイをするのがとても上手だなーと感心します．
 
 ##### ⑰2019-01-11 11:41 イケハヤ氏，本題に戻そうとする
@@ -218,7 +218,7 @@ polcaというのはしょぼい版のクラウドファンディングサイト
 > — 田端信太郎 ＠田端大学塾長である！ (@tabbata) [2019年1月11日](https://twitter.com/tabbata/status/1083554907888762881?ref_src=twsrc%5Etfw)
 
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<span style="color: #20a39e;">**<span style="font-size: 150%;">田端氏，これをもスルー（笑）</span>**</span>
+<span style="color: #20a39e;">**<span style="font-size: 150%;">田端氏，これをもスルー（笑）**
 田端氏は，炎上につけこんで「大人だよ」アピールができればそれでいいので，細かい詳細の話をする気はゼロ．一貫しています．
 
 ##### ⑲2018-01-11 14:54 田端氏「お前なあ・・・・。。。勝手にしろ！」
@@ -236,7 +236,7 @@ polcaというのはしょぼい版のクラウドファンディングサイト
 > — イケハヤ (@IHayato) [2019年1月11日](https://twitter.com/IHayato/status/1083604496201052161?ref_src=twsrc%5Etfw)
 
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<span style="color: #ff4e00;">**<span style="font-size: 150%;">仲良しか（笑）</span>**</span>
+<span style="color: #ff4e00;">**<span style="font-size: 150%;">仲良しか（笑）**
 
 ##### ⑳2019-01-12 09:07 イケハヤ氏，田端氏をブロック
 

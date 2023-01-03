@@ -16,7 +16,7 @@ title: "【IoT】Nature Remo×Alexa×IFTTTで家にリモコンはもう不要�
 
 そこで私ざるご，もうこんな日々はゴメンだ！と思った私ざるご，決意しました．
 
-<span style="font-size: 36px" class="font-size"><span style="color: #20a39e" class="text-color">家の中から，リモコンを撤廃します！</span></span>
+<span style="font-size: 36px" class="font-size"><span style="color: #20a39e" class="text-color">家の中から，リモコンを撤廃します！
 
 この記事では，スマートホーム化により**「リモコンを捨てる方法」**を解説します．
 
@@ -68,7 +68,7 @@ Alexaスキルでスマホ要らずになったわけですが，
 
 でもそんな便利なツールが世の中にあるわけ…あるわけ…
 
-<span style="color: #20a39e" class="text-color"><span style="font-size: 36px" class="font-size">あった！</span></span>
+<span style="color: #20a39e" class="text-color"><span style="font-size: 36px" class="font-size">あった！
 
 あらゆるものを自動化できる無料アプリ**「IFTTT（イフト）」**を使います．
 

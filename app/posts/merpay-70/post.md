@@ -12,16 +12,16 @@ title: "【8月11日まで】メルペイの70%還元キャンペーンが最強
 
 以下の8店舗での決済が対象となる．
 
-* **<span style="color: #d32f2f;"><span style="color: #f9a730" class="text-color">セブンイレブン</span></span>**
-* **<span style="color: #d32f2f;"><span style="color: #f9a730" class="text-color">ファミリーマート</span></span>**
-* **<span style="color: #d32f2f;"><span style="color: #f9a730" class="text-color">ローソン</span></span>**
+* **<span style="color: #d32f2f;"><span style="color: #f9a730" class="text-color">セブンイレブン**
+* **<span style="color: #d32f2f;"><span style="color: #f9a730" class="text-color">ファミリーマート**
+* **<span style="color: #d32f2f;"><span style="color: #f9a730" class="text-color">ローソン**
 * ミニストップ
 * ポプラ
 * デイリーヤマザキ
 * 吉野家
 * マクドナルド
 
-以前の70%還元のキャンペーンでは，セブンイレブンのみが対象であったが，今回は**<span style="color: #1464b3;"><span style="color: #20a39e" class="text-color">大手３社のいずれもが対象</span></span>**になっているのが魅力的だ．
+以前の70%還元のキャンペーンでは，セブンイレブンのみが対象であったが，今回は**<span style="color: #1464b3;"><span style="color: #20a39e" class="text-color">大手３社のいずれもが対象**になっているのが魅力的だ．
 
 になっているのが魅力的だ．
 
@@ -33,17 +33,17 @@ title: "【8月11日まで】メルペイの70%還元キャンペーンが最強
 
 メルペイあと払いは，一時的に支払いをメルカリに立て替えてもらい，その分の料金を翌月に精算する決済方法である．
 
-メルペイ残高で精算すれば<span style="color: #d32f2f;">**<span style="color: #ff4e00" class="text-color">手数料は無料</span>**</span>なので，安心して利用してよい．
+メルペイ残高で精算すれば<span style="color: #d32f2f;">**<span style="color: #ff4e00" class="text-color">手数料は無料**なので，安心して利用してよい．
 
 ただし，精算を忘れて滞納すると遅延損害金を取られたり，信用情報に傷がついたりする恐れがあるので，翌月中には必ず精算を行うようにしよう．
 
-なお，支払い方法は，**<span style="color: #1464b3;"><span style="color: #20a39e" class="text-color">iD払い，コード支払いのいずれでもOKだ．</span></span>**
+なお，支払い方法は，**<span style="color: #1464b3;"><span style="color: #20a39e" class="text-color">iD払い，コード支払いのいずれでもOKだ．**
 
 ## 還元上限は1500ポイントまで
 
 期間中の買い物に対し，最大1500ポイントまでが還元される．
 
-つまり，70%還元対象の店舗なら，**<span style="color: #1464b3;"><span style="color: #20a39e" class="text-color">2142円分の商品を，実質642円で購入することが可能</span></span>**なわけだ．
+つまり，70%還元対象の店舗なら，**<span style="color: #1464b3;"><span style="color: #20a39e" class="text-color">2142円分の商品を，実質642円で購入することが可能**なわけだ．
 
 なお，付与されたポイントは，再びメルペイでコンビニなどで利用することができる．
 

@@ -30,7 +30,7 @@ Google以外にも、MicrosoftとかAppleの入社試験とかいうのもYouTub
 
 しかし、Googleの公式サイトでも否定されているように、今はGoogleの入社試験でそのような問題は出題されていません。
 
-> <span class="bold">Google の面接では今でも創造力を試す超難問が出題されていますか？</span>
+> <span class="bold">Google の面接では今でも創造力を試す超難問が出題されていますか？
 > いいえ。そうした超難問を面接に取り入れても優秀な候補者の判定にはつながらないことがわかったため、現在は出題しておりません。代わりにサンプルテストを実施し、構造化面接法に基づいた質問を行っています。
 > 
 > <cite>https://careers.google.com/how-we-hire/?hl=ja_jp</cite>

@@ -52,7 +52,7 @@ title: "パンツマンの汁無し坦々麺の作り方。【料理レシピ】
 
 にんにくを潰してみじん切りにします。
 
-<span style="font-size: 200%; color: #20a39e;">親の仇プレス！</span>
+<span style="font-size: 200%; color: #20a39e;">親の仇プレス！
 
 ![f:id:zalgo:20180623143410j:plain](/img/20180623143410.jpg "f:id:zalgo:20180623143410j:plain")
 
@@ -78,7 +78,7 @@ title: "パンツマンの汁無し坦々麺の作り方。【料理レシピ】
 
 このソースがほんとに神で、入れすぎた調味料があってもしょっぱくなったり甘すぎたりすることが絶対にありません。
 
-<span style="font-size: 200%; color: #20a39e;">秘伝南伝</span>
+<span style="font-size: 200%; color: #20a39e;">秘伝南伝
 
 まずはみりんと酒を加熱してアルコールを飛ばします。
 
@@ -116,8 +116,8 @@ title: "パンツマンの汁無し坦々麺の作り方。【料理レシピ】
 
 辛いラー油をたっぷりかけて、よくかき混ぜて食べましょう。
 
-<span style="font-size: 200%; color: #20a39e;">これがなかなか混ざりにくい！</span>
+<span style="font-size: 200%; color: #20a39e;">これがなかなか混ざりにくい！
 
 でも
 
-<span style="font-size: 200%; color: #20a39e;">オッカラ☆カラリラ</span>
+<span style="font-size: 200%; color: #20a39e;">オッカラ☆カラリラ

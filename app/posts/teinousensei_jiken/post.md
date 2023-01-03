@@ -2,10 +2,10 @@
 title: "「低能先生」は殺人によって社会を思い通りに動かした"
 ---
 
-<span style="color: #0c0c22; font-family: 'Lucida Grande', Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #fafafa; float: none; display: inline !important;">有名ブロガーHagex氏が、各所で捨てIDを作って荒らし行為を繰り返していた「低能先生」と呼ばれる人物に後ろから刺されて殺されてしまった。</span>
+<span style="color: #0c0c22; font-family: 'Lucida Grande', Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #fafafa; float: none; display: inline !important;">有名ブロガーHagex氏が、各所で捨てIDを作って荒らし行為を繰り返していた「低能先生」と呼ばれる人物に後ろから刺されて殺されてしまった。
 
-> <span style="color: #0c0c22; font-family: 'Lucida Grande', Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #fafafa; float: none; display: inline !important;">2018年6月24日(日)20:00前後、福岡県福岡市の旧大名小学校跡地でインターネットセキュリティー会社スタッフの岡本顕一郎さん(41歳)が背中を刃物で刺され病院に搬送。その後に死亡が確認された「男性刺殺事件」で、非常に恐ろしい情報が入ってきた。インターネット上で岡本顕一郎さんに罵られ、恨みを持っていた犯人が刺し殺した可能性が浮上しているのである。</span> **・低能先生と呼ばれていた人物が犯人か**
-> <span style="color: #0c0c22; font-family: 'Lucida Grande', Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #fafafa; float: none; display: inline !important;">岡本顕一郎さんはインターネット上で</span><span style="color: #20a39e;">[Hagex(ハゲックス)](http://buzz-plus.com/article/2018/06/25/hagex-fukuoka-news/)</span><span style="color: #0c0c22; font-family: 'Lucida Grande', Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #fafafa; float: none; display: inline !important;">というニックネームでブログ「Hagex-day info」を書いていたとされている。そのブログ内で岡本顕一郎さんに「低能先生」と罵られていた人物がおり、今回の事件は低能先生と呼ばれていた人物が岡本顕一郎さんに恨みをもち、犯行に及んだのではないかとの情報が出ている。</span>
+> <span style="color: #0c0c22; font-family: 'Lucida Grande', Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #fafafa; float: none; display: inline !important;">2018年6月24日(日)20:00前後、福岡県福岡市の旧大名小学校跡地でインターネットセキュリティー会社スタッフの岡本顕一郎さん(41歳)が背中を刃物で刺され病院に搬送。その後に死亡が確認された「男性刺殺事件」で、非常に恐ろしい情報が入ってきた。インターネット上で岡本顕一郎さんに罵られ、恨みを持っていた犯人が刺し殺した可能性が浮上しているのである。 **・低能先生と呼ばれていた人物が犯人か**
+> <span style="color: #0c0c22; font-family: 'Lucida Grande', Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #fafafa; float: none; display: inline !important;">岡本顕一郎さんはインターネット上で<span style="color: #20a39e;">[Hagex(ハゲックス)](http://buzz-plus.com/article/2018/06/25/hagex-fukuoka-news/)<span style="color: #0c0c22; font-family: 'Lucida Grande', Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #fafafa; float: none; display: inline !important;">というニックネームでブログ「Hagex-day info」を書いていたとされている。そのブログ内で岡本顕一郎さんに「低能先生」と罵られていた人物がおり、今回の事件は低能先生と呼ばれていた人物が岡本顕一郎さんに恨みをもち、犯行に及んだのではないかとの情報が出ている。
 
 <cite class="hatena-citation">[buzz-plus.com](http://buzz-plus.com/article/2018/06/25/hagex-fukuoka-net-news/)</cite>
 
@@ -64,11 +64,11 @@ Hagex氏は、以前から低能先生の行動を問題視しており、過去
 また、記事の最後では、以下のような言葉でこの事件についてまとめられている。
 
 > **・命を奪うことは許されない**
-> <span style="color: #0c0c22; font-family: 'Lucida Grande', Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #fafafa; float: none; display: inline !important;">この現代社会において人間は議論をし、熱く語り、ときに不条理な罵り合いになることもあるかもしれないが、だからといって命を奪うことは許されることではない。Hagexという名で人気ブロガーとなった岡本顕一郎さんは、多くの人たちから支持を得ていたカリスマ的人物だった。今回の彼の死に、多くの人たちが悲しんでいる。</span>
+> <span style="color: #0c0c22; font-family: 'Lucida Grande', Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #fafafa; float: none; display: inline !important;">この現代社会において人間は議論をし、熱く語り、ときに不条理な罵り合いになることもあるかもしれないが、だからといって命を奪うことは許されることではない。Hagexという名で人気ブロガーとなった岡本顕一郎さんは、多くの人たちから支持を得ていたカリスマ的人物だった。今回の彼の死に、多くの人たちが悲しんでいる。
 
 この記事を私なりに要約した結果が↓だ。
 
-<span style="color: #20a39e;">**ブログ主がブログで犯人を晒し上げて集団で罵倒した。それに耐えきれなくなった犯人が殺人行為を行った。現代社会ではこうした不条理な罵り合いがあるかもしれないが、それは殺人行為を正当化するものではない。**</span>
+<span style="color: #20a39e;">**ブログ主がブログで犯人を晒し上げて集団で罵倒した。それに耐えきれなくなった犯人が殺人行為を行った。現代社会ではこうした不条理な罵り合いがあるかもしれないが、それは殺人行為を正当化するものではない。**
 
 この要約だけを見れば、犯人に同情的になる人も多いのではないだろうか。
 
@@ -80,7 +80,7 @@ Hagex氏は、以前から低能先生の行動を問題視しており、過去
 
 そのメッセージが、ナイフ一本でいとも簡単に世に送り出されてしまったのだ。
 
-この事件は、<span style="color: #20a39e;">**今まで世間に伝えられなかったメッセージも、殺人をすれば伝えられるようになる、**</span><span style="color: #000000;">ということを証明してしまったのだ。</span>
+この事件は、<span style="color: #20a39e;">**今まで世間に伝えられなかったメッセージも、殺人をすれば伝えられるようになる、**<span style="color: #000000;">ということを証明してしまったのだ。
 
 これほど恐ろしいことはないと思う。
 
@@ -88,6 +88,6 @@ Hagex氏は、以前から低能先生の行動を問題視しており、過去
 
 <div class="footnote">
 
-[*1](#fn-f78cd470)<span class="footnote-delimiter">:</span><span class="footnote-text">記事内には「『低能先生』と罵られていた人物」とあるが、低能だから低能先生なのではなく、低能と連呼するから低能先生なのであって、これは記述が間違っている。</span>
+[*1](#fn-f78cd470)<span class="footnote-delimiter">:<span class="footnote-text">記事内には「『低能先生』と罵られていた人物」とあるが、低能だから低能先生なのではなく、低能と連呼するから低能先生なのであって、これは記述が間違っている。
 
 </div>

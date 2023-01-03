@@ -19,7 +19,7 @@ Vimには，行中一文字検索という機能があります．
 
 これは，行中の，指定した文字の位置までカーソルを動かしてくれる機能です．
 
-コマンドは，<span style="background-color: #d3d3d3" class="background-color">f+文字</span>(順方向行中一文字検索)または<span style="background-color: #d3d3d3" class="background-color">F+文字</span>（逆方向行中一文字検索）です．
+コマンドは，<span style="background-color: #d3d3d3" class="background-color">f+文字(順方向行中一文字検索)または<span style="background-color: #d3d3d3" class="background-color">F+文字（逆方向行中一文字検索）です．
 
 これは当然ピリオドに対しても使うことができて，文章中から行末のピリオドまでカーソルを動かしたいときは，
 
@@ -45,9 +45,9 @@ f.
 
 </figure>
 
-3つあとの行末に移動したい場合，<span style="background-color: #d3d3d3" class="background-color">f.</span> <span style="background-color: #d3d3d3" class="background-color">;</span> <span style="background-color: #d3d3d3" class="background-color">;</span>
+3つあとの行末に移動したい場合，<span style="background-color: #d3d3d3" class="background-color">f. <span style="background-color: #d3d3d3" class="background-color">; <span style="background-color: #d3d3d3" class="background-color">;
 
-そこから1つ戻りたい場合，<span style="background-color: #d3d3d3" class="background-color">,</span>
+そこから1つ戻りたい場合，<span style="background-color: #d3d3d3" class="background-color">,
 
 でカーソルを移動することができます！
 
