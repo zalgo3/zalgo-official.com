@@ -17,12 +17,17 @@ export const getPostAll = (options: Options = {}): Post[] => {
             if (!fs.existsSync(postPath)) {
                 return;
             }
-            const {atime, mtime} = fs.statSync(postPath);
-            let {orig, ...post} = matter(fs.readFileSync(postPath));
-            post.data.slug = slug;
-            post.data.createdAt = atime.toJSON();
-            post.data.updatedAt = mtime.toJSON();
-            return post;
+            try {
+                const {atime, mtime} = fs.statSync(postPath);
+                let {orig, ...post} = matter(fs.readFileSync(postPath));
+                post.data.slug = slug;
+                post.data.createdAt = atime.toJSON();
+                post.data.updatedAt = mtime.toJSON();
+                return post;
+            } catch (error) {
+                console.error(error.message);
+                return;
+            }
         })
         .filter((post): post is Post => !!post)
         .slice(0, options.limit)

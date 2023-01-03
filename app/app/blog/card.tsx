@@ -7,7 +7,9 @@ const Card = ({post}: {post: PostData}) => {
         <article className={styles.card}>
             <Link href={`/blog/${post.slug}`} key={post.slug}>
                 <h2>{post.title}</h2>
-                <footer>{post.createdAt}</footer>
+                <footer>
+                    {post.createdAt} {post.updatedAt}
+                </footer>
             </Link>
         </article>
     );
