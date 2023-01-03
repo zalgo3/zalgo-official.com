@@ -16,11 +16,7 @@ title: "【Premiere Pro 2020】GPUエンコードのプラグイン「Daniel2」
 
 そこで，[こちら](https://fabrec.jp/2017/11/28/daniel2-install/)のブログを参考に，ソフトのインストール，ライセンス認証まで済ませました．
 
-<figure class="wp-block-image size-large">![](https://zalgo-official.com/img/daniel2-1024x492.png)
-
-<figcaption>赤枠が今回インストールしたもの．「Cinegy Daniel2」「Cinegy H.264」「Cinegy HEVC (H.265)」</figcaption>
-
-</figure>
+<figure class="wp-block-image size-large">![](https://zalgo-official.com/img/daniel2-1024x492.png)<figcaption>赤枠が今回インストールしたもの．「Cinegy Daniel2」「Cinegy H.264」「Cinegy HEVC (H.265)」</figcaption></figure>
 
 すると，こんな感じで，これまでH.264を選んでいたところに新しい形式が3つ追加されています．
 
