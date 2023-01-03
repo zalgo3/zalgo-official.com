@@ -30,16 +30,17 @@ export const getPostAll = (options: Options = {}): Post[] => {
             }
         })
         .filter((post): post is Post => !!post)
-        .slice(0, options.limit)
         .sort((p1, p2) =>
             moment(p1.data.createdAt).isAfter(p2.data.createdAt) ? -1 : 1
-        );
+        )
+        .slice(0, options.limit);
 
     return posts as Post[];
 };
 
-export const getPostDataAll = (options: Options): PostData[] => {
-    return getPostAll(options).map(m => m.data);
+export const getPostDataAll = (options?: Options): PostData[] => {
+    return getPostAll(options)
+        .map(m => m.data);
 };
 
 export const getPost = (slug: string): Post => {
