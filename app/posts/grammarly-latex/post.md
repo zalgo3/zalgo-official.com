@@ -8,7 +8,7 @@ title: "数式を含むLaTeX論文にGrammarlyの英文校正を精度良くか�
 
 [Grammarly](https://grammarly.go2cloud.org/aff_c?offer_id=312&aff_id=75350)は非常に強力な英文校正ツールです．
 
-しかし，LaTeX論文を英文校正にかける場合，LaTeX特有のコマンド($$, \begin{hoge}等)が邪魔で，うまくGrammarly側が認識してくれなかったりします．
+しかし，LaTeX論文を英文校正にかける場合，LaTeX特有のコマンドが邪魔で，うまくGrammarly側が認識してくれなかったりします．
 
 以前はコマンドを含むところは無視するとか，適宜コマンドを消すとかしていたんですが，最近もっと良い方法を知りました．
 
