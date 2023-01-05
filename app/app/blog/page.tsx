@@ -1,10 +1,11 @@
-import {getPostDataAll} from 'lib/posts';
 import DisplayPosts from './DisplayPosts';
 import Header from './header';
 import Footer from 'app/footer';
+import React, {useState, useEffect} from 'react';
+import {getPostDataAll} from 'lib/posts';
 
-const Page = () => {
-    const posts = getPostDataAll({limit: 3});
+const Page = async () => {
+    const posts = await getData();
     return (
         <>
             <Header />
@@ -12,6 +13,10 @@ const Page = () => {
             <Footer />
         </>
     );
+};
+
+const getData = async () => {
+    return await getPostDataAll();
 };
 
 export default Page;
