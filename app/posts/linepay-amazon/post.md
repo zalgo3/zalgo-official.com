@@ -14,11 +14,7 @@ LINE Payの20%還元という激ヤバキャンペーンがまたも開催され
 
 このキャンペーンのやばいところが，Amazonギフト券やSuicaへのチャージでも20%還元がもらえること．
 
-<figure class="wp-block-image figure-image figure-image-fotolife">![f:id:zalgo:20190418111234p:plain:h300](/img/20190418111234.png)
-
-<figcaption>LINE Pay公式の問い合わせ結果にも記載がある．</figcaption>
-
-</figure>
+<figure class="wp-block-image figure-image figure-image-fotolife">![f:id:zalgo:20190418111234p:plain:h300](/img/20190418111234.png)<figcaption>LINE Pay公式の問い合わせ結果にも記載がある．</figcaption></figure>
 
 最大10000円まで還元されるとのことなので，とりあえずAmazonに50000円ぶち込んでおけばそのまま10000円が手に入るというわけだ．まさに錬金術．
 

@@ -20,13 +20,13 @@ title: "ブラックホール撮影にも使える「スパースモデリング
 
 次のような連立一次方程式を考えます．
 
-![ Ax = y](https://chart.apis.google.com/chart?cht=tx&chl=%20Ax%20%3D%20y)
+$ Ax = y $
 
-この方程式は，![ A](https://chart.apis.google.com/chart?cht=tx&chl=%20A)が逆行列を持つときに解くことができて，
+この方程式は，$ A $が逆行列を持つときに解くことができて，
 
-![ x = A^{-1} y](https://chart.apis.google.com/chart?cht=tx&chl=%20x%20%3D%20A%5E%7B-1%7D%20y)
+$ x = A^{-1} y $
 
-となります．では，![ A](https://chart.apis.google.com/chart?cht=tx&chl=%20A)が逆行列を持たないときはどうなるでしょうか？
+となります．では，$ A $が逆行列を持たないときはどうなるでしょうか？
 
 高校や大学1年生で習った数学では，そういう連立方程式は解けないと習ったと思います．「不能」とか「不定」とかいうやつですね．
 
@@ -34,16 +34,16 @@ title: "ブラックホール撮影にも使える「スパースモデリング
 
 そこで登場するのが**スパースモデリング**です．スパースモデリングでは，以下の2つを仮定することによって解なしの連立一次方程式でも無理やり解を求めてしまいます．
 
-1. ![ Ax = y](https://chart.apis.google.com/chart?cht=tx&chl=%20Ax%20%3D%20y)が完全に満たされなくてもよく，![ Ax \approx y](https://chart.apis.google.com/chart?cht=tx&chl=%20Ax%20%5Capprox%20y)と近似的に成り立てばよいものとする．
-2. ![ x](https://chart.apis.google.com/chart?cht=tx&chl=%20x)が**スパース（疎）**であるとする．
+1. $ Ax = y $が完全に満たされなくてもよく，$ Ax \approx y $と近似的に成り立てばよいものとする．
+2. $ x $が**スパース（疎）**であるとする．
 
 スパース（疎）というのは人によってはあまり馴染みのない表現かもしれません．
 
 スパースというのは，**疎**という字からも連想されるように，**データ(0以外の要素)がまばら**であることをいいます．
 
-ベクトル![ x](https://chart.apis.google.com/chart?cht=tx&chl=%20x)がスパースであるというのは，![ x](https://chart.apis.google.com/chart?cht=tx&chl=%20x)の要素のほとんどが0で，0以外の要素がちょっとだけある，つまり
+ベクトル$ x $がスパースであるというのは，$ x $の要素のほとんどが0で，0以外の要素がちょっとだけある，つまり
 
-![ x = (0, \dots, 0, a, 0 , \dots, 0, b, 0, \dots )^\top](https://chart.apis.google.com/chart?cht=tx&chl=%20x%20%3D%20%280%2C%20%5Cdots%2C%200%2C%20a%2C%200%20%2C%20%5Cdots%2C%200%2C%20b%2C%200%2C%20%5Cdots%20%29%5E%5Ctop)
+$ x = (0, \dots, 0, a, 0 , \dots, 0, b, 0, \dots )^\top $
 
 のようなベクトルであるということです．
 
@@ -55,35 +55,35 @@ title: "ブラックホール撮影にも使える「スパースモデリング
 
 では具体的にこれをどう解くか，というところを順を追って解説していきます．まず1から．
 
-なるべく![ Ax](https://chart.apis.google.com/chart?cht=tx&chl=%20Ax)が![ y](https://chart.apis.google.com/chart?cht=tx&chl=%20y)に近づくような![ x](https://chart.apis.google.com/chart?cht=tx&chl=%20x)を手に入れたいわけです．そこで，次の関数を最小化することを考えます．
+なるべく$ Ax $が$ y $に近づくような$ x $を手に入れたいわけです．そこで，次の関数を最小化することを考えます．
 
-![ ||Ax - y||^2_2](https://chart.apis.google.com/chart?cht=tx&chl=%20%7C%7CAx%20-%20y%7C%7C%5E2_2)
+$ ||Ax - y||^2_2 $
 
-![ ||x||_2](https://chart.apis.google.com/chart?cht=tx&chl=%20%7C%7Cx%7C%7C_2)という記号は見慣れない人もいるかも知れませんが，高校で習うベクトルの絶対値![ |\vec{x}|](https://chart.apis.google.com/chart?cht=tx&chl=%20%7C%5Cvec%7Bx%7D%7C)と同じです．つまり，上の問題の意味は，![ Ax - y](https://chart.apis.google.com/chart?cht=tx&chl=%20Ax%20-%20y)の各成分の二乗和（二乗誤差）を最小化するという意味になります．
+$ ||x||_2 $という記号は見慣れない人もいるかも知れませんが，高校で習うベクトルの絶対値$ |\vec{x}| $と同じです．つまり，上の問題の意味は，$ Ax - y $の各成分の二乗和（二乗誤差）を最小化するという意味になります．
 
-二乗和は必ず0以上となるので，この関数を最小化すれば0に近い値が得られるはずです．したがって，![ Ax \approx y](https://chart.apis.google.com/chart?cht=tx&chl=%20Ax%20%5Capprox%20y)となるような![ x](https://chart.apis.google.com/chart?cht=tx&chl=%20x)が得られるという理屈になります．
+二乗和は必ず0以上となるので，この関数を最小化すれば0に近い値が得られるはずです．したがって，$ Ax \approx y $となるような$ x $が得られるという理屈になります．
 
 この方法を**最小二乗法 (Least Squares Method)**といいます．
 
-しかし，これだけでは![ x](https://chart.apis.google.com/chart?cht=tx&chl=%20x)がスパースになってくれるとは限りません．そこでさっきの関数の代わりに次の関数を考えます．
+しかし，これだけでは$ x $がスパースになってくれるとは限りません．そこでさっきの関数の代わりに次の関数を考えます．
 
-![ ||Ax - y||^2_2 + c ||x||_0](https://chart.apis.google.com/chart?cht=tx&chl=%20%7C%7CAx%20-%20y%7C%7C%5E2_2%20%2B%20c%20%7C%7Cx%7C%7C_0)
+$ ||Ax - y||^2_2 + c ||x||_0 $
 
-![ c > 0](https://chart.apis.google.com/chart?cht=tx&chl=%20c%20%3E%200)は適当な正の定数を表します．
+$ c > 0 $は適当な正の定数を表します．
 
-![ ||x||_0](https://chart.apis.google.com/chart?cht=tx&chl=%20%7C%7Cx%7C%7C_0)
+$ ||x||_0 $
 
-というのは，![ x](https://chart.apis.google.com/chart?cht=tx&chl=%20x)の非ゼロ要素の個数を表す記号です（L0ノルムという）．たとえば![ x = (0, 2, 0)^\top](https://chart.apis.google.com/chart?cht=tx&chl=%20x%20%3D%20%280%2C%202%2C%200%29%5E%5Ctop)のとき，![ ||x||_0 = 1](https://chart.apis.google.com/chart?cht=tx&chl=%20%7C%7Cx%7C%7C_0%20%3D%201)となります．
+というのは，$ x $の非ゼロ要素の個数を表す記号です（L0ノルムという）．たとえば$ x = (0, 2, 0)^\top $のとき，$ ||x||_0 = 1 $となります．
 
 最小二乗法と違って，二乗誤差と一緒に非ゼロ要素の個数を最小化することになるので，非ゼロ要素の数が少ないスパースな解が得られます．
 
 しかし，「非ゼロ要素の数」というのは連続的に変化せず，数学的に結構扱いづらい性質を持っています．そこでこれと似たような問題として，
 
-![ ||Ax - y||^2_2 + c ||x||_1](https://chart.apis.google.com/chart?cht=tx&chl=%20%7C%7CAx%20-%20y%7C%7C%5E2_2%20%2B%20c%20%7C%7Cx%7C%7C_1)
+$ ||Ax - y||^2_2 + c ||x||_1 $
 
 の最小化を考えることがあります．
 
-![ ||x||_1](https://chart.apis.google.com/chart?cht=tx&chl=%20%7C%7Cx%7C%7C_1)は，![ x](https://chart.apis.google.com/chart?cht=tx&chl=%20x)の各成分の絶対値の総和を表します（L1ノルムという）．
+$ ||x||_1 $は，$ x $の各成分の絶対値の総和を表します（L1ノルムという）．
 
 この問題も，解がスパースになるということがよく知られています．
 
@@ -135,21 +135,21 @@ title: "ブラックホール撮影にも使える「スパースモデリング
 
 ブラックホール観測にスパースモデリングをどう用いるか，ぼくも完全に理解しているわけではないですが，ざっくりと書きます．
 
-まず，電波干渉計で観測されたデータ![ V](https://chart.apis.google.com/chart?cht=tx&chl=%20V)というのは，実際の天体画像![ I](https://chart.apis.google.com/chart?cht=tx&chl=%20I)に，観測行列（フーリエ変換）![ F](https://chart.apis.google.com/chart?cht=tx&chl=%20F)をかけてやったものと考えられます．つまり，
+まず，電波干渉計で観測されたデータ$ V $というのは，実際の天体画像$ I $に，観測行列（フーリエ変換）$ F $をかけてやったものと考えられます．つまり，
 
-![ V = FI](https://chart.apis.google.com/chart?cht=tx&chl=%20V%20%3D%20FI)
+$ V = FI $
 
 です．
 
-目標は，天体画像![ I](https://chart.apis.google.com/chart?cht=tx&chl=%20I)を，**なるべく高解像度で**復元してやることとなります．（空間分解能をあげるため）
+目標は，天体画像$ I $を，**なるべく高解像度で**復元してやることとなります．（空間分解能をあげるため）
 
-基本的に望遠鏡の数はそんなにたくさんは使えないので，![ F](https://chart.apis.google.com/chart?cht=tx&chl=%20F)の逆行列を求めて方程式をそのまま解くという方法は使えません．
+基本的に望遠鏡の数はそんなにたくさんは使えないので，$ F $の逆行列を求めて方程式をそのまま解くという方法は使えません．
 
 そこで生きるのがさっきの**スパースモデリング**です．
 
 次の関数を最小化して（LASSO），天体画像を復元してやります．
 
-![ ||V - FI||^2_2 + c ||I||_1](https://chart.apis.google.com/chart?cht=tx&chl=%20%7C%7CV%20-%20FI%7C%7C%5E2_2%20%2B%20c%20%7C%7CI%7C%7C_1)
+$$ ||V - FI||^2_2 + c ||I||_1 $$
 
 この方法により，実際に研究チームが復元した画像がこちらです[*1](#f-91148316 "本間ら「スパースモデリング天文学 — ブラックホール撮像から時間変動減少まで」，科学研究費補助金新学術領域研究「スパースモデリングの深化と高次元データ駆動科学の創成」最終成果報告会 (2017/12/18-20) ")．
 
@@ -168,9 +168,7 @@ title: "ブラックホール撮影にも使える「スパースモデリング
 スパースモデリングで用いられるモデルがざっくりと書いてある本．
 細かい証明等はほとんどないが，イメージを掴むのにおすすめ．
 
-<div class="hatena-asin-detail">[![スパース推定法による統計モデリング (統計学One Point)](https://images-fe.ssl-images-amazon.com/images/I/41V4DKzqv0L._SL160_.jpg "スパース推定法による統計モデリング (統計学One Point)")](http://www.amazon.co.jp/exec/obidos/ASIN/4320112571/galavollc-22/)
-
-<div class="hatena-asin-detail-info">
+[スパース推定法による統計モデリング (統計学One Point) ")](http://www.amazon.co.jp/exec/obidos/ASIN/4320112571/galavollc-22/)
 
 [スパース推定法による統計モデリング (統計学One Point)](http://www.amazon.co.jp/exec/obidos/ASIN/4320112571/galavollc-22/)
 
@@ -178,22 +176,13 @@ title: "ブラックホール撮影にも使える「スパースモデリング
 * 出版社/メーカー: 共立出版
 * 発売日: 2018/03/08
 * メディア: 単行本
-* [この商品を含むブログを見る](http://d.hatena.ne.jp/asin/4320112571/galavollc-22)
-
-</div>
-
-<div class="hatena-asin-detail-foot"> </div>
-
-</div>
 
 #### スパースモデリング- 基礎から動的システムへの応用
 
 基礎から応用までしっかり書かれている本．
 ソースコード例も載っているので，実際にプログラムを実装しながら学びたい人にはおすすめ．
 
-<div class="hatena-asin-detail">[![スパースモデリング- 基礎から動的システムへの応用 -](https://images-fe.ssl-images-amazon.com/images/I/511HN39f6SL._SL160_.jpg "スパースモデリング- 基礎から動的システムへの応用 -")](http://www.amazon.co.jp/exec/obidos/ASIN/4339032220/galavollc-22/)
-
-<div class="hatena-asin-detail-info">
+[スパースモデリング- 基礎から動的システムへの応用 - ](http://www.amazon.co.jp/exec/obidos/ASIN/4339032220/galavollc-22/)
 
 [スパースモデリング- 基礎から動的システムへの応用 -](http://www.amazon.co.jp/exec/obidos/ASIN/4339032220/galavollc-22/)
 
@@ -201,22 +190,13 @@ title: "ブラックホール撮影にも使える「スパースモデリング
 * 出版社/メーカー: コロナ社
 * 発売日: 2017/10/06
 * メディア: 単行本
-* [この商品を含むブログを見る](http://d.hatena.ne.jp/asin/4339032220/galavollc-22)
-
-</div>
-
-<div class="hatena-asin-detail-foot"> </div>
-
-</div>
 
 #### スパース性に基づく機械学習 (機械学習プロフェッショナルシリーズ)
 
 数学的な背景までスパースモデリングをガッツリ知りたい人向け．
 ぼくのように証明がないと発狂してしまう人類はこちらを．
 
-<div class="hatena-asin-detail">[![スパース性に基づく機械学習 (機械学習プロフェッショナルシリーズ)](https://images-fe.ssl-images-amazon.com/images/I/51kCPyleiML._SL160_.jpg "スパース性に基づく機械学習 (機械学習プロフェッショナルシリーズ)")](http://www.amazon.co.jp/exec/obidos/ASIN/4061529102/galavollc-22/)
-
-<div class="hatena-asin-detail-info">
+[スパース性に基づく機械学習 (機械学習プロフェッショナルシリーズ) ")](http://www.amazon.co.jp/exec/obidos/ASIN/4061529102/galavollc-22/)
 
 [スパース性に基づく機械学習 (機械学習プロフェッショナルシリーズ)](http://www.amazon.co.jp/exec/obidos/ASIN/4061529102/galavollc-22/)
 
@@ -226,11 +206,6 @@ title: "ブラックホール撮影にも使える「スパースモデリング
 * メディア: 単行本（ソフトカバー）
 * [この商品を含むブログ (2件) を見る](http://d.hatena.ne.jp/asin/4061529102/galavollc-22)
 
-</div>
-
-<div class="hatena-asin-detail-foot"> </div>
-
-</div>
 
 ## 宣伝
 

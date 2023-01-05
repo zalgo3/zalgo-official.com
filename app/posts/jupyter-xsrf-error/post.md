@@ -1,5 +1,5 @@
 ---
-title: "[Memo] What to do when Jupyter Notebook stops working with "'_xsrf' argument missing from POST" error but you don't want to restart the kernel?"
+title: [Memo] What to do when Jupyter Notebook stops working with "'_xsrf' argument missing from POST" error but you don't want to restart the kernel?
 ---
 
 The contents of the Notebook itself are still alive, just the token processing is not working. Therefore, get the list of running notebooks by
