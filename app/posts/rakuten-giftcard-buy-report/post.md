@@ -65,10 +65,6 @@ https://www.eposcard.co.jp/goldcard/main.html
 
 ### エポスカード→Kyash→MIXI Mでエポスゴールド修行
 
-<script language="javascript" src="https://ad-verification.a8.net/ad/js/brandsafe.js"></script>
-
-<div id="div_admane_async_1734_658_2971"><script language="javascript"><!-- brandsafe_js_async('//ad-verification.a8.net/ad', '_site=1734&_article=658&_link=2971&_image=3218&_ns=1&sad=s00000015110002', '220527000893', '3NANQ0+ERO5J6+38L8+BXQOH'); //--></script></div>
-
 ![](https://www13.a8.net/0.gif?a8mat=3NANQ0+ERO5J6+38L8+BXQOH)
 
 楽天ギフトカードから楽天証券という出口ができたことから、気軽にMIXI Mに高額のお金をチャージすることができるようになりました。
