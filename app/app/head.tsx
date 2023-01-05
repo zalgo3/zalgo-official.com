@@ -1,4 +1,4 @@
-import DefaultTags from "./DefaultTags";
+import DefaultTags from './DefaultTags';
 
 const Head = () => {
     return (

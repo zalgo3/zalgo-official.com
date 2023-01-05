@@ -1,4 +1,4 @@
-import DefaultTags from "app/DefaultTags";
+import DefaultTags from 'app/DefaultTags';
 
 const Head = () => {
     return (
@@ -14,7 +14,7 @@ const Head = () => {
                 precedence="default"
             />
         </>
-        );
+    );
 };
 
 export default Head;
