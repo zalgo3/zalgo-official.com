@@ -24,7 +24,7 @@ const Page = async ({params}: {params: {slug: string}}) => {
     );
 };
 
-const generateStaticParams = async () => {
+export const generateStaticParams = async () => {
     const posts = getPostAll();
     return posts.map(post => ({
         slug: post.data.slug,
