@@ -14,27 +14,27 @@ git amendで修正する羽目になることが多いです．
 
 そこで，何も書いていなくても自動でIssue番号をコミットメッセージに含めてもらいましょう．
 
-前提として，作業しているブランチはissue/5/hogeみたいな名前だとします．
+前提として，作業しているブランチは`issue/5/hoge`みたいな名前だとします．
 
 ## どうすればいいか
 
-次のファイルをcommit-msgという名前で.git/hooksに保存し，chmod +xで実行権限を与えましょう．
+次のファイルを`commit-msg`という名前で`.git/hooks`に保存し，`chmod +x`で実行権限を与えましょう．
 
-<div class="hcb_wrap">
-
-```
+```bash
 #!/bin/bash issue_num=`git branch --show-current | cut -d/ -f2 | tr -d "\n" | sed -e "s/\([0-9]*\).*/#\1 /g"` if [[ $issue_num =~ \#[0-9]* ]]; then mv $1 $1.tmp echo -n "$issue_num" > $1 cat $1.tmp >> $1 fi
 ```
 
-</div>
-
 ## どうなるか
 
+```bash
 git commit -m "変更加えた"
+```
 
 とコミットすると，コミットメッセージが
 
+```
 "#5 変更加えた"
+```
 
 のようになる．
 
@@ -42,34 +42,26 @@ git commit -m "変更加えた"
 
 ### 2行目
 
-<div class="hcb_wrap">
-
-```
+```bash
 issue_num=`git branch --show-current | cut -d/ -f2 | tr -d "\n" | sed -e "s/\([0-9]*\).*/#\1 /g"`
 ```
 
-</div>
+次の手順で，`issue_num`という変数に，`#5`などの文字列を格納しています．
 
-次の手順で，issue_numという変数に，「#5 」などの文字列を格納しています．
-
-1. git branch --show-current で現在のブランチを取得 ( ex. issue/5/hoge )
-2. cut -d/ -f2 で，スラッシュで区切られた2番目の要素を取得 ( ex. 5 )
-3. tr -d "\n" で，末尾の改行を消去
-4. sed -e "s/([0-9]_)._/#\1 /g" で，数字の前に#，後に空白をつける ( ex. #5 )
+1. `git branch --show-current` で現在のブランチを取得 ( ex. `issue/5/hoge` )
+2. `cut -d/ -f2` で，スラッシュで区切られた2番目の要素を取得 ( ex. `5` )
+3. `tr -d "\n"` で，末尾の改行を消去
+4. `sed -e "s/([0-9]_)._/#\1 /g"` で，数字の前に#，後に空白をつける ( ex. `#5` )
 
 ### 4-8行目
 
-<div class="hcb_wrap">
-
-```
+```bash
 if [[ $issue_num =~ \#[0-9]* ]]; then mv $1 $1.tmp echo -n "$issue_num" > $1 cat $1.tmp >> $1 fi
 ```
 
-</div>
+コミットメッセージの先頭に，先程定義した`issue_num`の値を挿入しています．
 
-コミットメッセージの先頭に，先程定義したissue_numの値を挿入しています．
-
-1. if [[ $issue_num =~ #[0-9]* ]];で，issue_numが#5 などの値になっているか確認．
-2. mv $1 $1.tmp で，$1（コミットメッセージ）の値を$1.tmpにコピー．
-3. echo -n "$issue_num" > $1 で，$1にissue_numの値を代入．
-4. cat $1.tmp >> $1 で，$1の末尾に先程コピーしておいたもとのコミットメッセージの値を戻す．
+1. `if [[ $issue_num =~ #[0-9]* ]];`で，`issue_num`が`#5` などの値になっているか確認．
+2. `mv $1 $1.tmp で，$1`（コミットメッセージ）の値を`$1.tmp`にコピー．
+3. `echo -n "$issue_num" > $1` で，`$1`に`issue_num`の値を代入．
+4. `cat $1.tmp >> $1` で，`$1`の末尾に先程コピーしておいたもとのコミットメッセージの値を戻す．
