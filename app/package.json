@@ -10,8 +10,7 @@
         "start": "next start",
         "format": "prettier --write  --ignore-path .gitignore \"./**/*.{js,jsx,ts,tsx,json}\"",
         "test": "jest --watch",
-        "test:ci": "jest",
-        "test:coverage": "jest --coverage"
+        "test:ci": "jest"
     },
     "dependencies": {
         "@mapbox/rehype-prism": "^0.8.0",
