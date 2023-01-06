@@ -16,7 +16,7 @@ jobs:
           reporter: github-pr-review # Change reporter.
           workdir: 'app'
       - name: Run Jest
-        run: yarn test:ci
+        run: cd app && yarn test:ci
       - name: Upload test coverage artifact
         uses: actions/upload-artifact@v1
         with:
@@ -26,4 +26,4 @@ jobs:
         uses: ziishaned/jest-reporter-action@v0.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          test-command: "yarn test:coverage"
+          test-command: "cd app && yarn test:coverage"
