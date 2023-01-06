@@ -1,8 +1,8 @@
-name: CI
+name: Lint and Test
 
 on: [pull_request]
 jobs:
-  build:
+  lint-and-test:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -17,14 +17,14 @@ jobs:
           workdir: 'app'
       - name: Run test
         run: cd app && yarn test:ci
-      - name: Show test coverage
+      - name: Generate test coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2.1.2
         id: coverage
         with:
           package-manager: yarn
           working-directory: app
           output: report-markdown
-      - uses: marocchino/sticky-pull-request-comment@v2
+      - name: Add test coverage report to pull request
+        uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: ${{ steps.coverage.outputs.report }}
-
