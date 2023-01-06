@@ -15,15 +15,15 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review # Change reporter.
           workdir: 'app'
-      - name: Run Jest
+      - name: Run test
         run: cd app && yarn test:ci
-      - name: Upload test coverage artifact
-        uses: actions/upload-artifact@v1
+      - name: Show test coverage
+        uses: ArtiomTr/jest-coverage-report-action@v2.1.2
+        id: coverage
         with:
-          name: coverage
-          path: app/coverage
-      - name: Show coverage in comments
-        uses: ziishaned/jest-reporter-action@v0.0.1
+          working-directory: app
+          output: report-markdown
+      - uses: marocchino/sticky-pull-request-comment@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          test-command: "cd app && yarn test:coverage"
+          message: ${{ steps.coverage.outputs.report }}
+
