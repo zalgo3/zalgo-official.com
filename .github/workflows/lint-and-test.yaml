@@ -8,11 +8,22 @@ jobs:
       contents: read
       pull-requests: write 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - name: Lint code
-        uses: ./.github/workflows/lint.yaml
-      - name: Run tests
-        uses: ./.github/workflows/test.yaml
-      - name: Report coverage
-        uses: ./.github/workflows/report.yaml
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review # Change reporter.
+          workdir: 'app'
+      - name: Run Jest
+        run: yarn test:ci
+      - name: Upload test coverage artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: coverage
+          path: coverage
+      - name: Show coverage in comments
+        uses: ziishaned/jest-reporter-action@v0.0.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          test-command: "yarn test:coverage"
