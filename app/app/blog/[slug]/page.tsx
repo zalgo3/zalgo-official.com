@@ -4,6 +4,7 @@ import Article from './article';
 import Header from 'app/blog/header';
 import Footer from 'app/footer';
 import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import rehypePrism from '@mapbox/rehype-prism';
 
@@ -11,7 +12,7 @@ const Page = async ({params}: {params: {slug: string}}) => {
     const {content, ...post} = getPost(params.slug);
     const source = await serialize(content, {
         mdxOptions: {
-            remarkPlugins: [remarkMath],
+            remarkPlugins: [remarkMath, remarkGfm],
             rehypePlugins: [rehypePrism, rehypeKatex],
             development: false,
         },
