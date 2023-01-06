@@ -1,0 +1,18 @@
+name: CI
+
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write 
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Lint code
+        uses: ./.github/workflows/lint.yaml
+      - name: Run tests
+        uses: ./.github/workflows/test.yaml
+      - name: Report coverage
+        uses: ./.github/workflows/report.yaml
