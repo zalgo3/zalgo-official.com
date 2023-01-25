@@ -1,6 +1,6 @@
 services:
   app:
-    image: node:19.4.0-slim
+    image: node:19.5.0-slim
     volumes:
       - ./:/app
       - node_modules:/app/app/node_modules
