@@ -1,10 +1,9 @@
 'use client';
 
-import {type PostData} from 'lib/posts';
-import Link from 'next/link';
+import { type PostData } from 'lib/posts';
 import Card from './card';
 
-const DisplayPosts = ({posts}: {posts: PostData[]}) => {
+const DisplayPosts = ({ posts }: { posts: PostData[] }) => {
     return (
         <>
             {posts.map((post: PostData) => (
