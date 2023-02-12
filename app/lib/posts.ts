@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs';
-import matter, { GrayMatterFile, Input } from 'gray-matter';
-import { execSync } from 'child_process';
+import matter, {GrayMatterFile, Input} from 'gray-matter';
+import {execSync} from 'child_process';
 
 const postsPath = 'posts';
 
@@ -18,7 +18,7 @@ export const getPostAll = (options: Options = {}): Post[] => {
                 return;
             }
             try {
-                let { orig, ...post } = matter(fs.readFileSync(postPath));
+                let {orig, ...post} = matter(fs.readFileSync(postPath));
                 post.data.slug = slug;
                 post.data.createdAt = parseInt(
                     execSync(
@@ -41,7 +41,12 @@ export const getPostAll = (options: Options = {}): Post[] => {
             }
         })
         .filter((post): post is Post => !!post)
-        .sort((p1, p2) => p2.data.createdAt - p1.data.createdAt)
+        .sort((p1, p2) => {
+            if (p1.data.createdAt === p2.data.createdAt) {
+                return p1.data.slug.localeCompare(p2.data.slug);
+            }
+            return p2.data.createdAt - p1.data.createdAt;
+        })
         .slice(0, options.limit);
 
     return posts as Post[];
@@ -57,7 +62,7 @@ export const getPost = (slug: string): Post => {
     const post = posts[idx];
     const prevPostData = posts[idx - 1]?.data ?? undefined;
     const nextPostData = posts[idx + 1]?.data ?? undefined;
-    return { ...post, prevPostData, nextPostData };
+    return {...post, prevPostData, nextPostData};
 };
 
 export type Post = GrayMatterFile<Input> & {
