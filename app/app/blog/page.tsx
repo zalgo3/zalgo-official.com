@@ -5,7 +5,7 @@ import React, {useState, useEffect} from 'react';
 import {getPostDataAll} from 'lib/posts';
 
 const Page = async () => {
-    const posts = await getData();
+    const posts = await getPostDataAll();
     return (
         <>
             <Header />
@@ -13,10 +13,6 @@ const Page = async () => {
             <Footer />
         </>
     );
-};
-
-const getData = async () => {
-    return await getPostDataAll();
 };
 
 export default Page;
