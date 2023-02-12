@@ -1,0 +1,17 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 1rem;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: gray;
+    margin: 0 0 0.5rem;
+}
