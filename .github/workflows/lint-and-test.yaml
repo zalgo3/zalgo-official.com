@@ -18,7 +18,7 @@ jobs:
       - name: Run test
         run: cd app && yarn test:ci
       - name: Generate test coverage report
-        uses: ArtiomTr/jest-coverage-report-action@v2.1.2
+        uses: ArtiomTr/jest-coverage-report-action@v2.2.0
         id: coverage
         with:
           package-manager: yarn
