@@ -43,18 +43,47 @@ const Page = () => {
                     </div>
 
                     <div className={styles.card}>
+                        <h2>Twitter</h2>
+                        <p>日常や研究や動画に関することをつぶやいています。</p>
+                        <a
+                            href="https://twitter.com/zalgo3"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.link}
+                        >
+                            @zalgo3
+                        </a>
+                        <a
+                            href="https://twitter.com/zalgo_video"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.link}
+                        >
+                            @zalgo_video (動画用)
+                        </a>
+                    </div>
+
+                    <div className={styles.card}>
+                        <h2>ブログ</h2>
+                        <p>140文字では書ききれないことを書いています。</p>
+                        <Link href="/blog" className={styles.link}>
+                            ざるごのブログ
+                        </Link>
+                    </div>
+
+                    <div className={styles.card}>
                         <h2>YouTube (ゲーム実況・RTA)</h2>
                         <p>
                             マリオオデッセイ・マリオ64などの3Dアクションゲームを中心に、RTA（最速クリア）や、やり込みをテーマとしたゲーム実況動画を投稿しています。
                         </p>
-                        <Link
+                        <a
                             href="https://www.youtube.com/c/zalgo33?sub_confirmation=1"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.link}
                         >
                             YouTube (ゲーム実況・RTA)
-                        </Link>
+                        </a>
                     </div>
 
                     <div className={styles.card}>
@@ -84,27 +113,6 @@ const Page = () => {
                             className={styles.link}
                         >
                             ニコニコ動画
-                        </a>
-                    </div>
-
-                    <div className={styles.card}>
-                        <h2>Twitter</h2>
-                        <p>日常や研究や動画に関することをつぶやいています。</p>
-                        <a
-                            href="https://twitter.com/zalgo3"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.link}
-                        >
-                            Twitter
-                        </a>
-                        <a
-                            href="https://twitter.com/zalgo_video"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.link}
-                        >
-                            Twitter (動画用)
                         </a>
                     </div>
                 </div>
