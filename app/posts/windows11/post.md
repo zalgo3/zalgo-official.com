@@ -1,142 +1,77 @@
 ---
-title: "Music and Gaming YouTuber's Thoughts on Upgrading PC to Windows 11 [Will Adobe Premiere Pro, Cubase 8.5, and Office 2013 Work?"
+title: 音楽・ゲーム系YouTuberが自作デスクトップPCをWindows 11にアップグレードした感想【Adobe Premiere Pro, Cubase 8.5, Office 2013は動くのか？】
 ---
 
-[Windows 11 has been officially released](https://www.microsoft.com/ja-jp/windows/windows-11) and I upgraded. This is a so-called "human pillar". I will update this page as needed.
+[Windows 11 が正式リリース](https://www.microsoft.com/ja-jp/windows/windows-11)されたのでアップグレードしました。いわゆる人柱。随時更新していきます。
 
-My opinion is based on my personal experience, so upgrade at your own risk!
+あくまで個人の経験に基づく感想なので、アップグレードは自己責任で！
 
-## PC specs of the author
+## 筆者の PC スペック
 
-First of all, here is a rough configuration for reference.
+まず、参考までに大体の構成を。
 
-* OS: Windows 7 Pro → Windows 10 Pro → Windows 11 Pro←Now here
+-   OS: Windows 7 Pro → Windows 10 Pro → Windows 11 Pro← 今ココ
 
-The configuration has changed in various ways along the way, but I have repeated free upgrades up to the present.
+構成は途中で色々変わってますが、無償アップグレードを繰り返して現在まで至ります。
 
-* CPU: Intel Core i7 10700
+-   CPU: Intel Core i7 10700
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+-   マザーボード: Gigabyte H470M DS3H
 
-https://amzn.to/3m89smh
+-   メモリ: Crucial 製 DDR4 32GB (16GB×2)
 
-</div>
+-   グラフィックボード: MSI GeForce RTX 2060 AERO ITX 6G
 
-* Motherboard: Gigabyte H470M DS3H
+-   SSD SanDisk 製 1TB SATA
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+OS はこのディスクにインストールされてます。データ保存用に、Western Digital 製の HDD を 2TB のものと 6TB のものを 2 つ積んでます。
 
-https://amzn.to/3b5TmmJ
+-   オーディオインターフェース: RME Babyface Pro
 
-</div>
+マイクを良い音質で録るためのやつです。PC 構成に入れるかは微妙ですが、これも相性とかに関係してきそうなので一応。
 
-* Memory: Crucial DDR4 32GB (16GB x 2)
+## 第一印象
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+-   さほど操作感は変わらず。ただ、ところどころ UI がかっこいいし、Windows の設定画面の画面遷移がすげーサクサク
 
-https://amzn.to/3noXTX8
+-   ウィジェットという新機能とか、Android アプリが動くやつとか、まだ全然使いこなせてないけど慣れたら便利そう
 
-</div>
-
-* Graphics board: MSI GeForce RTX 2060 AERO ITX 6G
-
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
-
-https://amzn.to/2ZhJCU1
-
-</div>
-
-* SSD SanDisk 1TB SATA
-
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
-
-https://amzn.to/3E7mEOh
-
-</div>
-
-The OS is installed on this disk. Two Western Digital HDDs are installed for data storage, one [2TB](https://amzn.to/3vFCPzj) and the other [6TB](https://amzn.to/3C9tnXA).
-
-* Audio interface: RME Babyface Pro
-
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
-
-https://amzn.to/3noxSY2
-
-</div>
-
-This is for recording microphones with good sound quality, and I'm not sure if I'll include it in my PC configuration, but just in case it has something to do with compatibility and such.
-
-## First impression
-
-* The feel of the operation is not much different. However, the UI is cool in places, and the screen transitions on the Windows settings screen are so crisp!
-* I haven't mastered the new widget feature or the Android apps that run on it yet, but I'm sure they will be useful once I get used to them.
-
-## Checking the operation of software used for video production, etc.
+## 動画制作とかに使うソフトの動作確認
 
 ### Adobe Premiere Pro, Photoshop, Illustrator
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+動画投稿者の生命線、Adobe のソフトたち。
 
-https://amzn.to/3Ea7VCg
+起動はできた。手元にあるプロジェクトとか開いてみたけど、問題なく動く。
 
-</div>
+エンコードとかはまだ試してないが、今のところ問題なさそう。
 
-Adobe software, the lifeline for video contributors.
+まあ、さすがにこいつらが Windows の安定最新版で動かなかったらめちゃめちゃ Adobe 社の評判落ちると思うんで、不具合とか見つかったとしてもすぐ対処されると信じてる。
 
-I was able to start up the software. I opened the projects I have on hand, and they work fine.
+### Cubase 12 Pro
 
-I haven't tried encoding yet, but so far it looks fine.
+この間上げたばっかの ↓ の動画のプロジェクトファイルを開いてみたけど、プラグインとか刺さった状態で問題なく再生できる。
 
-I'm sure Adobe's reputation will be damaged if they can't run on the latest stable version of Windows, so I'm sure they'll take care of any problems they find soon.
+https://youtu.be/c7q81jnfJKE
 
-### Cubase 8.5 Pro
-
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
-
-https://amzn.to/3puWAsD
-
-</div>
-
-↑upLink to Cubase 11
-
-The software I use to mix my singing.
-
-I was worried because it was not the latest 11, but I was able to start it without doing anything.
-
-I opened the video I uploaded the project file the other day, and I can play it without any problem with plug-ins and such.
-
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
-
-<div class="wp-block-embed__wrapper">https://youtu.be/c7q81jnfJKE</div>
-
-</figure>
-
-By the way, I mainly used [Waves Gold](https://amzn.to/3npFCJt) and Invisible Limiter as plug-ins. I don't know if other plug-ins are supported yet.
+ちなみにプラグインは主に Waves Gold とか Invisible Limiter とかを刺してた。他のプラグインの対応状況とかはまだ不明。
 
 ### Word 2013, Excel 2013, PowerPoint 2013
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+言わずとしれた Microsoft Office
 
-https://amzn.to/3npnv6g
+[Windows 11 では Office 2013 が使えないから Office 2021 を買え](https://forest.watch.impress.co.jp/docs/serial/yajiuma/1357213.html)とかいう記事を見てビビり散らかしてたけど、普通に動いた。そういう煽りはやめてほしい。
 
-</div>
+正確には、「Office 2013 は Windows 11 ではサポートされない」というのが[Microsoft の公式見解](https://blogs.windows.com/japan/2021/10/04/its-easier-to-create-together-with-microsoft-365-and-office-2021/)らしい。サポートされないのと使えないのはぜんぜん違うだろ・・・とりあえずこの PC では Office なんてそんな使わないので、動くなら別にいいやというスタンスです。
 
-↑upLink to Office 2021
+## 感想
 
-Microsoft Office as we know it.
+すごい使いやすそうだし、ぼくが使う範囲では大きな不具合とかも今のところないので、満足してます。
 
-I was scared to death when I saw an article saying that [Office 2013 is not available on Windows 11 and that I should buy Office 2021](https://forest.watch.impress.co.jp/docs/serial/yajiuma/1357213.html), but it works normally. Please don't give me that kind of scaremongering.
+今までとほぼ同じ操作感で使えるし、新機能も、多分使いこなしたらいい感じなんだろうなと思うから、これから使っていくのが楽しみです。
 
-To be precise, [Microsoft's official position seems to be](https://blogs.windows.com/japan/2021/10/04/its-easier-to-create-together-with-microsoft-365-and-office-2021/) that "Office 2013 will not be supported on Windows 11\. I don't use Office that much on this PC, so I'm fine with it if it works.
+無償アップグレードだからって、文句言う声ばっか目立つけど、そこまで言うほどなのでしょうか？
 
-## Impressions
+もちろん、仕事に使う端末とかをアップグレードするのはちょっとでも不具合が起こったらやばいので慎重になるべきですが、あんまりネガキャンしまくるのもどうなのだろうと思っていたりします。
 
-It looks really easy to use, and as far as I'm concerned, I haven't had any major problems with it so far, so I'm satisfied with it.
-
-I can use it with almost the same feel as before, and I'm looking forward to using the new features, which I'm sure will be great once I get used to them.
-
-I've heard a lot of people complaining about the free upgrade, but is it really that much to complain about?
-
-Of course, upgrading a device used for work is risky if even the slightest problem occurs, so we should be cautious, but I wonder if we should not be too negative about it.
-
-I'll also post more updates on Twitter (@zalgo3 ), so please feel free to follow me there.
+またなんか気づいたことあったら追記していきます。Twitter([@zalgo3](https://www.twitter.com/zalgo3))でも適宜操作感とかつぶやいていきますんで、よろしくどうぞ。
