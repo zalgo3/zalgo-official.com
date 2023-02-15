@@ -8,7 +8,7 @@ const DisplayPosts = ({ posts }: { posts: PostData[] }) => {
     return (
         <div className={styles.container}>
             {posts.map((post: PostData) => (
-                <Card post={post} />
+                <Card key={post.slug} post={post} />
             ))}
         </div>
     );
