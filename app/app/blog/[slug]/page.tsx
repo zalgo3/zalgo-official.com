@@ -20,6 +20,7 @@ export const generateMetadata = async ({
     return {
         title: post.data.title,
         openGraph: {
+            // @ts-expect-error
             title: post.data.title,
             url: `https://zalgo-official.com/${params.slug}`,
         },

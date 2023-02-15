@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     description:
         '京都大学博士 (情報学)/歌い手/ゲーム実況者/RTAランナーであるざるご (田辺広樹) のブログです。',
     openGraph: {
+        // @ts-expect-error
         title: 'ざるごのブログ',
         description:
             '京都大学博士 (情報学)/歌い手/ゲーム実況者/RTAランナーであるざるご (田辺広樹) のブログです。',
