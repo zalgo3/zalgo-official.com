@@ -9,9 +9,28 @@ import rehypeKatex from 'rehype-katex';
 import rehypePrism from '@mapbox/rehype-prism';
 import {utcToZonedTime, format as formatTZ} from 'date-fns-tz';
 import styles from 'styles/app/blog/page.module.css';
+import type {Metadata} from 'next';
+
+export const generateMetadata = async ({
+    params,
+}: {
+    params: {slug: string};
+}): Promise<Metadata> => {
+    const {content, ...post} = await getPost(params.slug);
+    return {
+        title: post.data.title,
+        openGraph: {
+            title: post.data.title,
+            url: `https://zalgo-official.com/${params.slug}`,
+        },
+        twitter: {
+            title: post.data.title,
+        },
+    };
+};
 
 const Page = async ({params}: {params: {slug: string}}) => {
-    const {content, ...post} = getPost(params.slug);
+    const {content, ...post} = await getPost(params.slug);
     const source = await serialize(content, {
         mdxOptions: {
             remarkPlugins: [remarkMath, remarkGfm],
