@@ -3,7 +3,7 @@ import styles from 'styles/app/header.module.css';
 
 const Header = () => {
     return (
-        <header>
+        <header className={styles.header}>
             <h1 className={styles.logo}>
                 <Link href="/" className={styles.logoLink}>
                     ざるご / 田辺広樹

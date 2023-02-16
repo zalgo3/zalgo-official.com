@@ -1,4 +1,3 @@
-import Footer from './footer';
 import Header from './header';
 import styles from 'styles/app/Home.module.css';
 import Link from 'next/link';
@@ -117,7 +116,6 @@ const Page = () => {
                     </div>
                 </div>
             </main>
-            <Footer />
         </>
     );
 };

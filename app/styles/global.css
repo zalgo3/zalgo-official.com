@@ -3,10 +3,9 @@
     --c-background: #ebf2fa;
     --c-base: #3b3d3f;
     --c-white: #f2f6f9;
-    --box-shadow-background: 2px 2px 6px #c8ced5, 
-                -2px -2px 6px #ffffff;
-    --box-shadow-primary: 2px 2px 6px #00917a,
-                                -2px -2px 6px #00c4a6;
+    --box-shadow-background: 2px 2px 6px #c8ced5, -2px -2px 6px #ffffff;
+    --box-shadow-foreground: inset var(--box-shadow-background);
+    --box-shadow-primary: 2px 2px 6px #00917a, -2px -2px 6px #00c4a6;
 }
 
 body {

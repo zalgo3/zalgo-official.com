@@ -1,7 +1,6 @@
 import { getPost, getPostAll } from 'lib/posts';
 import { serialize } from 'next-mdx-remote/serialize';
 import Article from './article';
-import Header from 'app/blog/header';
 import Footer from 'app/footer';
 import remarkMath from 'remark-math';
 import remarkGfm from 'remark-gfm';
@@ -40,7 +39,6 @@ const Page = async ({ params }: { params: { slug: string } }) => {
     });
     return (
         <>
-            <Header />
             <div className={styles.container}>
                 <h1 className={styles.title}>{post.data.title}</h1>
                 <p className={styles.date}>
@@ -65,7 +63,6 @@ const Page = async ({ params }: { params: { slug: string } }) => {
                 </p>
                 <Article source={source} />
             </div>
-            <Footer />
         </>
     );
 };
