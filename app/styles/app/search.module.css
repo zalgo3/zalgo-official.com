@@ -1,0 +1,40 @@
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: inherit;
+    box-shadow: var(--box-shadow-foreground);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.button {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: inherit;
+    border: none;
+    box-shadow: var(--box-shadow-background);
+}
+
+.button:hover,
+.button:focus {
+    color: #3b3d3f;
+    box-shadow: inset -2px -2px 6px #c8ced5, inset 2px 2px 6px #ffffff;
+}
+
+.button:active {
+    background-color: #c8ced5;
+    color: #3b3d3f;
+    box-shadow: inset -1.5 px -1.5 px 4.5 px #a9abb1,
+        inset 1.5 px 1.5 px 4.5 px #ffffff;
+}
