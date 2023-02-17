@@ -1,2 +1,2 @@
-/* /blog/:splash 301
+/* /blog/:splat 301
 /:slug/:id /blog/:slug 301
