@@ -1,6 +1,6 @@
 import 'styles/global.css';
 import Footer from './footer';
-import type { Metadata } from 'next';
+import type {Metadata} from 'next';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     },
     icons: {
         icon: [
-            { url: '/favicons/favicon-32x32.png', sizes: '32x32' },
-            { url: '/favicons/favicon-16x16.png', sizes: '16x16' },
+            {url: '/favicons/favicon-32x32.png', sizes: '32x32'},
+            {url: '/favicons/favicon-16x16.png', sizes: '16x16'},
         ],
-        apple: [{ url: '/favicons/apple-touch-icon.png', sizes: '180x180' }],
+        apple: [{url: '/favicons/apple-touch-icon.png', sizes: '180x180'}],
     },
     twitter: {
         card: 'summary_large_image',
@@ -36,15 +36,18 @@ export const metadata: Metadata = {
     },
 };
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+const RootLayout = ({children}: {children: React.ReactNode}) => {
     return (
         <html lang="ja">
             <Script
                 async
+                strategy="afterInteractive"
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3520947091484443"
+                crossOrigin="anonymous"
             />
             <Script
-                strategy="lazyOnload"
+                async
+                strategy="afterInteractive"
                 src="https://www.googletagmanager.com/gtag/js?id=G-KVTMLPFHK5"
             />
             <body>
