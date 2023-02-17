@@ -40,14 +40,22 @@ const RootLayout = ({children}: {children: React.ReactNode}) => {
     return (
         <html lang="ja">
             <Script
+                id="google-ads"
                 async
                 strategy="afterInteractive"
+                onError={e => {
+                    console.error('Script failed to load', e);
+                }}
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3520947091484443"
                 crossOrigin="anonymous"
             />
             <Script
+                id="google-analytics"
                 async
                 strategy="afterInteractive"
+                onError={e => {
+                    console.error('Script failed to load', e);
+                }}
                 src="https://www.googletagmanager.com/gtag/js?id=G-KVTMLPFHK5"
             />
             <body>
