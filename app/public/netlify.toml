@@ -1,9 +1,16 @@
+[build]
+base = "app"
+command = "yarn build"
+publish = "app/.next"
+
+[[plugins]]
+package = "@netlify/plugin-lighthouse"
+
 [[redirects]]
-from = "/:slug"
-to = "/blog/:slug"
+from = "/*"
+to = "/blog/:splat"
 status = 404
 
 [[redirects]]
-from = "/blog/:slug/:id"
+from = "/blog/:slug/*"
 to = "/blog/:slug"
-status = 404
