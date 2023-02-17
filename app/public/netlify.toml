@@ -2,3 +2,8 @@
 from = "/:slug"
 to = "/blog/:slug"
 status = 404
+
+[[redirects]]
+from = "/blog/:slug/:id"
+to = "/blog/:slug"
+status = 404
