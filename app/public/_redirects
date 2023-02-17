@@ -1,3 +1,1 @@
 /* /blog/:splat 301
-/:slug/:id /blog/:slug 301
-/_next/* /_next/:splat 200
