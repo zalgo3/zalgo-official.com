@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/:slug"
+to = "/blog/:slug"
+status = 404
