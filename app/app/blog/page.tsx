@@ -1,6 +1,6 @@
+import {getPostDataAll} from 'lib/posts';
+
 import DisplayPosts from './DisplayPosts';
-import Footer from 'app/footer';
-import { getPostDataAll } from 'lib/posts';
 
 const Page = async () => {
     const posts = getPostDataAll();

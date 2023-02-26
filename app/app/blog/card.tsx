@@ -1,7 +1,7 @@
-import { type PostData } from 'lib/posts';
+import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
+import {type PostData} from 'lib/posts';
 import Link from 'next/link';
 import styles from 'styles/app/blog/card.module.css';
-import { utcToZonedTime, format as formatTZ } from 'date-fns-tz';
 
 const truncateTitle = (title: string) => {
     const maxLength = 52;
@@ -12,7 +12,7 @@ const truncateTitle = (title: string) => {
     }
 };
 
-const Card = ({ post }: { post: PostData }) => {
+const Card = ({post}: {post: PostData}) => {
     return (
         <article className={styles.card}>
             <Link href={`/blog/${post.slug}`} key={post.slug}>

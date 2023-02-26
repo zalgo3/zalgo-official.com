@@ -1,21 +1,21 @@
-import { getPost, getPostAll } from 'lib/posts';
-import { serialize } from 'next-mdx-remote/serialize';
-import Article from './article';
-import Footer from 'app/footer';
-import remarkMath from 'remark-math';
-import remarkGfm from 'remark-gfm';
-import rehypeKatex from 'rehype-katex';
 import rehypePrism from '@mapbox/rehype-prism';
-import { utcToZonedTime, format as formatTZ } from 'date-fns-tz';
+import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
+import {getPost, getPostAll} from 'lib/posts';
+import type {Metadata} from 'next';
+import {serialize} from 'next-mdx-remote/serialize';
+import rehypeKatex from 'rehype-katex';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
 import styles from 'styles/app/blog/page.module.css';
-import type { Metadata } from 'next';
+
+import Article from './article';
 
 export const generateMetadata = async ({
     params,
 }: {
-    params: { slug: string };
+    params: {slug: string};
 }): Promise<Metadata> => {
-    const { content, ...post } = await getPost(params.slug);
+    const {content, ...post} = await getPost(params.slug);
     return {
         title: post.data.title,
         openGraph: {
@@ -28,8 +28,8 @@ export const generateMetadata = async ({
     };
 };
 
-const Page = async ({ params }: { params: { slug: string } }) => {
-    const { content, ...post } = await getPost(params.slug);
+const Page = async ({params}: {params: {slug: string}}) => {
+    const {content, ...post} = await getPost(params.slug);
     const source = await serialize(content, {
         mdxOptions: {
             remarkPlugins: [remarkMath, remarkGfm],

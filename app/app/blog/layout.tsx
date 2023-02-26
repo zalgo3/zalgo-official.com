@@ -1,4 +1,5 @@
-import type { Metadata } from 'next';
+import type {Metadata} from 'next';
+
 import Header from './header';
 import Search from './search';
 
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     },
 };
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({children}: {children: React.ReactNode}) => {
     return (
         <>
             <Header />

@@ -1,6 +1,7 @@
-import Header from './header';
-import styles from 'styles/app/Home.module.css';
 import Link from 'next/link';
+import styles from 'styles/app/Home.module.css';
+
+import Header from './header';
 
 const Page = () => {
     return (
