@@ -37,23 +37,38 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({children}: {children: React.ReactNode}) => {
+    const gtagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID;
+    const gAdsenseId = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID;
     return (
         <html lang="ja">
-            <Script
-                async
-                strategy="afterInteractive"
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3520947091484443"
-                crossOrigin="anonymous"
-            />
-            <Script
-                async
-                strategy="afterInteractive"
-                src="https://www.googletagmanager.com/gtag/js?id=G-KVTMLPFHK5"
-            />
             <body>
                 {children}
                 <Footer />
             </body>
+            <script
+                async
+                src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${gAdsenseId}`}
+                crossOrigin="anonymous"
+            />
+            <Script
+                id="gtag-init"
+                async
+                strategy="lazyOnload"
+                src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`}
+            />
+            <Script
+                id="gtag"
+                async
+                strategy="lazyOnload"
+                dangerouslySetInnerHTML={{
+                    __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gtagId}', { page_path: window.location.pathname });
+            `,
+                }}
+            />
         </html>
     );
 };
