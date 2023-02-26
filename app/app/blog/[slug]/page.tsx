@@ -34,7 +34,6 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         mdxOptions: {
             remarkPlugins: [remarkMath, remarkGfm],
             rehypePlugins: [rehypePrism, rehypeKatex],
-            development: false,
         },
     });
     return (
