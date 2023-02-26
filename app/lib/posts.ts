@@ -1,7 +1,7 @@
-import path from 'path';
+import {execSync} from 'child_process';
 import fs from 'fs';
 import matter, {GrayMatterFile, Input} from 'gray-matter';
-import {execSync} from 'child_process';
+import path from 'path';
 
 const postsPath = 'posts';
 

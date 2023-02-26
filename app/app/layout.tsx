@@ -1,7 +1,9 @@
 import 'styles/global.css';
-import Footer from './footer';
+
 import type {Metadata} from 'next';
 import Script from 'next/script';
+
+import Footer from './footer';
 
 export const metadata: Metadata = {
     title: {

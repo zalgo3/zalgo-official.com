@@ -1,10 +1,10 @@
-import nextJest from 'next/jest'
+import nextJest from 'next/jest';
 
 const createJestConfig = nextJest({
     dir: './',
 });
 
-const customJestConfig= {
+const customJestConfig = {
     moduleDirectories: ['node_modules', '<rootDir>/'],
 };
 

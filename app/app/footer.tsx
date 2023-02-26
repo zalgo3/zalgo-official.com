@@ -1,6 +1,6 @@
-import styles from 'styles/app/footer.module.css';
-import Link from 'next/link';
 import moment from 'moment';
+import Link from 'next/link';
+import styles from 'styles/app/footer.module.css';
 
 const Footer = () => {
     const now = moment().format('YYYY');

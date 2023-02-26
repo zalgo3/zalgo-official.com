@@ -6,12 +6,18 @@ describe('PostData type', () => {
             slug: 'test-slug',
             title: 'Test Title',
             createdAt: '2022-01-01T00:00:00.000Z',
-            updatedAt: '2022-01-01T00:00:00.000Z'
+            updatedAt: '2022-01-01T00:00:00.000Z',
         };
 
         expect(postData).toHaveProperty('slug', 'test-slug');
         expect(postData).toHaveProperty('title', 'Test Title');
-        expect(postData).toHaveProperty('createdAt', '2022-01-01T00:00:00.000Z');
-        expect(postData).toHaveProperty('updatedAt', '2022-01-01T00:00:00.000Z');
+        expect(postData).toHaveProperty(
+            'createdAt',
+            '2022-01-01T00:00:00.000Z'
+        );
+        expect(postData).toHaveProperty(
+            'updatedAt',
+            '2022-01-01T00:00:00.000Z'
+        );
     });
 });

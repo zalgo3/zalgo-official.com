@@ -1,10 +1,11 @@
 'use client';
 
-import { type PostData } from 'lib/posts';
-import Card from './card';
+import {type PostData} from 'lib/posts';
 import styles from 'styles/app/blog/DisplayPosts.module.css';
 
-const DisplayPosts = ({ posts }: { posts: PostData[] }) => {
+import Card from './card';
+
+const DisplayPosts = ({posts}: {posts: PostData[]}) => {
     return (
         <div className={styles.container}>
             {posts.map((post: PostData) => (
