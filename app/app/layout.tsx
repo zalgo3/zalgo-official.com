@@ -37,31 +37,37 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({children}: {children: React.ReactNode}) => {
+    const gtagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID;
+    const gAdsenseId = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID;
     return (
         <html lang="ja">
-            <Script
-                id="google-ads"
-                async
-                strategy="afterInteractive"
-                onError={e => {
-                    console.error('Script failed to load', e);
-                }}
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3520947091484443"
-                crossOrigin="anonymous"
-            />
-            <Script
-                id="google-analytics"
-                async
-                strategy="afterInteractive"
-                onError={e => {
-                    console.error('Script failed to load', e);
-                }}
-                src="https://www.googletagmanager.com/gtag/js?id=G-KVTMLPFHK5"
-            />
             <body>
                 {children}
                 <Footer />
             </body>
+            <Script
+                async
+                src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${gAdsenseId}`}
+                strategy="lazyOnload"
+                crossOrigin="anonymous"
+            />
+            <Script
+                async
+                strategy="lazyOnload"
+                src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`}
+            />
+            <Script
+                async
+                strategy="lazyOnload"
+                dangerouslySetInnerHTML={{
+                    __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gtagId}', { page_path: window.location.pathname });
+            `,
+                }}
+            />
         </html>
     );
 };
