@@ -45,18 +45,19 @@ const RootLayout = ({children}: {children: React.ReactNode}) => {
                 {children}
                 <Footer />
             </body>
-            <Script
+            <script
                 async
                 src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${gAdsenseId}`}
-                strategy="lazyOnload"
                 crossOrigin="anonymous"
             />
             <Script
+                id="gtag-init"
                 async
                 strategy="lazyOnload"
                 src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`}
             />
             <Script
+                id="gtag"
                 async
                 strategy="lazyOnload"
                 dangerouslySetInnerHTML={{
