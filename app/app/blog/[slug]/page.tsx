@@ -2,6 +2,7 @@ import rehypePrism from '@mapbox/rehype-prism';
 import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
 import {getPost, getPostAll} from 'lib/posts';
 import type {Metadata} from 'next';
+import {MDXRemote} from 'next-mdx-remote/rsc';
 import {serialize} from 'next-mdx-remote/serialize';
 import rehypeKatex from 'rehype-katex';
 import remarkGfm from 'remark-gfm';
@@ -30,12 +31,6 @@ export const generateMetadata = async ({
 
 const Page = async ({params}: {params: {slug: string}}) => {
     const {content, ...post} = await getPost(params.slug);
-    const source = await serialize(content, {
-        mdxOptions: {
-            remarkPlugins: [remarkMath, remarkGfm],
-            rehypePlugins: [rehypePrism, rehypeKatex],
-        },
-    });
     return (
         <>
             <link
@@ -78,7 +73,16 @@ const Page = async ({params}: {params: {slug: string}}) => {
                         'yyyy/MM/dd HH:mm'
                     )}
                 </p>
-                <Article source={source} />
+                {/* @ts-expect-error */}
+                <MDXRemote
+                    source={content}
+                    options={{
+                        mdxOptions: {
+                            remarkPlugins: [remarkMath, remarkGfm],
+                            rehypePlugins: [rehypePrism, rehypeKatex],
+                        },
+                    }}
+                />
             </div>
         </>
     );
