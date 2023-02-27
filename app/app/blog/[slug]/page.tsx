@@ -1,22 +1,19 @@
 import rehypePrism from '@mapbox/rehype-prism';
-import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
-import {getPost, getPostAll} from 'lib/posts';
-import type {Metadata} from 'next';
-import {MDXRemote} from 'next-mdx-remote/rsc';
-import {serialize} from 'next-mdx-remote/serialize';
+import { format as formatTZ, utcToZonedTime } from 'date-fns-tz';
+import { getPost, getPostAll } from 'lib/posts';
+import type { Metadata } from 'next';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import rehypeKatex from 'rehype-katex';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import styles from 'styles/app/blog/page.module.css';
 
-import Article from './article';
-
 export const generateMetadata = async ({
     params,
 }: {
-    params: {slug: string};
+    params: { slug: string };
 }): Promise<Metadata> => {
-    const {content, ...post} = await getPost(params.slug);
+    const { content, ...post } = await getPost(params.slug);
     return {
         title: post.data.title,
         openGraph: {
@@ -29,8 +26,8 @@ export const generateMetadata = async ({
     };
 };
 
-const Page = async ({params}: {params: {slug: string}}) => {
-    const {content, ...post} = await getPost(params.slug);
+const Page = async ({ params }: { params: { slug: string } }) => {
+    const { content, ...post } = await getPost(params.slug);
     return (
         <>
             <link
