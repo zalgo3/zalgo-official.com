@@ -22,7 +22,7 @@ export const generateMetadata = async ({
         title: post.data.title,
         openGraph: {
             title: post.data.title,
-            url: `https://zalgo-official.com/${params.slug}`,
+            url: `https://zalgo-official.com/blog/${params.slug}`,
         },
         twitter: {
             title: post.data.title,
