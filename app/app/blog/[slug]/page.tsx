@@ -11,6 +11,7 @@ import rehypeKatex from 'rehype-katex';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import styles from 'styles/app/blog/page.module.css';
+import Affiliates from 'ui/affiliates';
 
 export const generateMetadata = async ({
     params,
@@ -59,6 +60,8 @@ const Page = async ({params}: {params: {slug: string}}) => {
                 {/* @ts-expect-error */}
                 <MDXRemote
                     source={content}
+                    // @ts-expect-error
+                    components={{Affiliates}}
                     options={{
                         mdxOptions: {
                             remarkPlugins: [remarkMath, remarkGfm],
