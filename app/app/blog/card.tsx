@@ -1,16 +1,8 @@
 import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
 import {type PostData} from 'lib/posts';
+import {truncateTitle} from 'lib/string';
 import Link from 'next/link';
 import styles from 'styles/app/blog/card.module.css';
-
-const truncateTitle = (title: string) => {
-    const maxLength = 52;
-    if (title.length > maxLength) {
-        return title.slice(0, maxLength) + '...';
-    } else {
-        return title;
-    }
-};
 
 const Card = ({post}: {post: PostData}) => {
     return (

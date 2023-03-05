@@ -1,0 +1,52 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: var(--box-shadow-background);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.imageContainer {
+    margin-right: 1rem;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow-background);
+    margin: 5px 4px 5px 4px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.amazonButton {
+    background-color: #ff9900;
+    color: white;
+    margin-right: 0.5rem;
+}
