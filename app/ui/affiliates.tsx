@@ -1,4 +1,4 @@
-import { truncateTitle } from 'lib/string';
+import {truncateTitle} from 'lib/string';
 import Image from 'next/image';
 import Link from 'next/link';
 import ProductAdvertisingAPIv1 from 'paapi5-nodejs-sdk';
@@ -59,25 +59,40 @@ const getRakutenUrl = async (rakutenItemCode: string): Promise<string> => {
     return (await response.json()).Items[0].Item.affiliateUrl;
 };
 
+const getYahooUrl = async (keyword: string): Promise<string> => {
+    const params = {
+        token: process.env.VALUECOMMERCE_API_TOKEN as string,
+        keyword: keyword,
+        ec_code: '0hzmc',
+        format: 'json',
+    };
+    const urlSearchParams = new URLSearchParams(params).toString();
+    const response = await fetch(
+        `http://webservice.valuecommerce.ne.jp/productdb/search?${urlSearchParams}`
+    );
+    return (await response.json()).link;
+};
+
 const Affiliates = async ({
     asin,
     rakutenItemCode,
-    yahoo,
     keyword,
 }: {
     asin: string;
     rakutenItemCode: string;
-    yahoo?: string;
-    keyword?: string;
+    keyword: string;
 }) => {
     const defaultAmazonUrl = 'https://amzn.to/3ybBse7';
     const defaultRakutenUrl = 'https://a.r10.to/huBEC7';
+    const defaultYahooUrl =
+        'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3667930&pid=888917603';
     try {
         const amazonItem = await getAmazonItem(asin);
         const amazonItemUrl = amazonItem.DetailPageURL;
         const amazonItemImage = amazonItem.Images.Primary.Medium.URL;
         const amazonItemTitle = amazonItem.ItemInfo.Title.DisplayValue;
         const rakutenUrl = await getRakutenUrl(rakutenItemCode);
+        const yahooUrl = await getYahooUrl(keyword);
         return (
             <div className={styles.card}>
                 <div className={styles.imageContainer}>
@@ -115,6 +130,12 @@ const Affiliates = async ({
                         >
                             楽天
                         </Link>
+                        <Link
+                            href={yahooUrl}
+                            className={`${styles.button} ${styles.yahooButton}`}
+                        >
+                            Yahoo!ショッピング
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -135,6 +156,12 @@ const Affiliates = async ({
                         className={`${styles.button} ${styles.rakutenButton}`}
                     >
                         楽天
+                    </Link>
+                    <Link
+                        href={defaultYahooUrl}
+                        className={`${styles.button} ${styles.yahooButton}`}
+                    >
+                        Yahoo!ショッピング
                     </Link>
                 </div>
             </div>
