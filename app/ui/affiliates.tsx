@@ -5,11 +5,11 @@ import ProductAdvertisingAPIv1 from 'paapi5-nodejs-sdk';
 import styles from 'styles/ui/affiliates.module.css';
 
 type AmazonItem = {
-    DetailPageUrl: string;
+    DetailPageURL: string;
     Images: {
         Primary: {
             Medium: {
-                Url: string;
+                URL: string;
             };
         };
     };
@@ -39,7 +39,7 @@ const getAmazonItem = async (asin: string): Promise<AmazonItem> => {
     const response = await api.getItems(getItemsRequest);
     const amazonItem = response.ItemsResult.Items[0];
     return {
-        DetailPageUrl: amazonItem.DetailPageUrl,
+        DetailPageURL: amazonItem.DetailPageURL,
         Images: amazonItem.Images,
         ItemInfo: amazonItem.ItemInfo,
     };
@@ -74,11 +74,10 @@ const Affiliates = async ({
     const defaultRakutenUrl = 'https://a.r10.to/huBEC7';
     try {
         const amazonItem = await getAmazonItem(asin);
-        const amazonItemUrl = amazonItem.DetailPageUrl ?? defaultAmazonUrl;
-        const amazonItemImage = amazonItem.Images.Primary.Medium.Url;
+        const amazonItemUrl = amazonItem.DetailPageURL;
+        const amazonItemImage = amazonItem.Images.Primary.Medium.URL;
         const amazonItemTitle = amazonItem.ItemInfo.Title.DisplayValue;
-        const rakutenUrl =
-            (await getRakutenUrl(rakutenItemCode)) ?? defaultRakutenUrl;
+        const rakutenUrl = await getRakutenUrl(rakutenItemCode);
         return (
             <div className={styles.card}>
                 <div className={styles.imageContainer}>
