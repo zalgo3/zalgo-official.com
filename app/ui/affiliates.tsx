@@ -1,4 +1,4 @@
-import {truncateTitle} from 'lib/string';
+import { truncateTitle } from 'lib/string';
 import Image from 'next/image';
 import Link from 'next/link';
 import ProductAdvertisingAPIv1 from 'paapi5-nodejs-sdk';
@@ -29,7 +29,7 @@ const getAmazonItem = async (asin: string): Promise<AmazonItem> => {
     const api = new ProductAdvertisingAPIv1.DefaultApi();
     const getItemsRequest = new ProductAdvertisingAPIv1.GetItemsRequest();
     getItemsRequest.ItemIds = [asin];
-    getItemsRequest.PartnerTag = 'zalgo-22';
+    getItemsRequest.PartnerTag = process.env.AMAZON_ASSOCIATE_PARTNER_TAG;
     getItemsRequest.PartnerType = 'Associates';
     getItemsRequest.Resources = [
         'Images.Primary.Medium',
