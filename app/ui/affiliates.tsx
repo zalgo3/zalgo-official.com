@@ -70,12 +70,15 @@ const Affiliates = async ({
     yahoo?: string;
     keyword?: string;
 }) => {
+    const defaultAmazonUrl = 'https://amzn.to/3ybBse7';
+    const defaultRakutenUrl = 'https://a.r10.to/huBEC7';
     try {
         const amazonItem = await getAmazonItem(asin);
-        const amazonItemUrl = amazonItem.DetailPageUrl;
+        const amazonItemUrl = amazonItem.DetailPageUrl ?? defaultAmazonUrl;
         const amazonItemImage = amazonItem.Images.Primary.Medium.Url;
         const amazonItemTitle = amazonItem.ItemInfo.Title.DisplayValue;
-        const rakutenUrl = await getRakutenUrl(rakutenItemCode);
+        const rakutenUrl =
+            (await getRakutenUrl(rakutenItemCode)) ?? defaultRakutenUrl;
         return (
             <div className={styles.card}>
                 <div className={styles.imageContainer}>
@@ -123,13 +126,13 @@ const Affiliates = async ({
                 <p>商品情報を取得できませんでした。</p>
                 <div className={styles.buttonGroup}>
                     <Link
-                        href="https://amzn.to/3ybBse7"
+                        href={defaultAmazonUrl}
                         className={`${styles.button} ${styles.amazonButton}`}
                     >
                         Amazon
                     </Link>
                     <Link
-                        href="https://a.r10.to/huBEC7"
+                        href={defaultRakutenUrl}
                         className={`${styles.button} ${styles.rakutenButton}`}
                     >
                         楽天
