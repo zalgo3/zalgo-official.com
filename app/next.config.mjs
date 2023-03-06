@@ -1,9 +1,4 @@
-import withPWA from 'next-pwa';
-
-export default withPWA({
-    dest: 'public',
-    disable: process.env.NODE_ENV === 'development',
-})({
+export default {
     reactStrictMode: true,
     swcMinify: true,
     experimental: {
@@ -42,4 +37,4 @@ export default withPWA({
 
         return config
     },
-});
+};
