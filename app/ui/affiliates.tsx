@@ -5,11 +5,11 @@ import styles from 'styles/ui/affiliates.module.css';
 import {truncateTitle} from 'lib/string';
 
 type AmazonItem = {
-    DetailPageURL: string;
+    DetailPageUrl: string;
     Images: {
         Primary: {
             Medium: {
-                URL: string;
+                Url: string;
             };
         };
     };
@@ -39,30 +39,47 @@ const getAmazonItem = async (asin: string): Promise<AmazonItem> => {
     const response = await api.getItems(getItemsRequest);
     const amazonItem = response.ItemsResult.Items[0];
     return {
-        DetailPageURL: amazonItem.DetailPageURL,
+        DetailPageUrl: amazonItem.DetailPageUrl,
         Images: amazonItem.Images,
         ItemInfo: amazonItem.ItemInfo,
     };
 };
 
+const getRakutenUrl = async (rakutenItemCode: string): Promise<string> => {
+    const params = {
+        applicationId: process.env.RAKUTEN_API_APPLICATION_ID as string,
+        affiliateId: process.env.RAKUTEN_AFFILIATE_ID as string,
+        itemCode: rakutenItemCode,
+        hits: '1',
+    };
+    const urlSearchParams = new URLSearchParams(params).toString();
+    const response = await fetch(
+        `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
+    );
+    return (await response.json()).Items[0].Item.affiliateUrl;
+};
+
 const Affiliates = async ({
     asin,
-    rakuten,
+    rakutenItemCode,
     yahoo,
+    keyword,
 }: {
     asin: string;
-    rakuten?: string;
+    rakutenItemCode: string;
     yahoo?: string;
+    keyword?: string;
 }) => {
     try {
         const amazonItem = await getAmazonItem(asin);
-        const amazonItemURL = amazonItem.DetailPageURL;
-        const amazonItemImage = amazonItem.Images.Primary.Medium.URL;
+        const amazonItemUrl = amazonItem.DetailPageUrl;
+        const amazonItemImage = amazonItem.Images.Primary.Medium.Url;
         const amazonItemTitle = amazonItem.ItemInfo.Title.DisplayValue;
+        const rakutenUrl = await getRakutenUrl(rakutenItemCode);
         return (
             <div className={styles.card}>
                 <div className={styles.imageContainer}>
-                    <Link href={amazonItemURL}>
+                    <Link href={amazonItemUrl}>
                         <Image
                             src={amazonItemImage}
                             alt={amazonItemTitle}
@@ -78,19 +95,25 @@ const Affiliates = async ({
                     </Link>
                 </div>
                 <div className={styles.contentContainer}>
-                    <Link href={amazonItemURL}>
+                    <Link href={amazonItemUrl}>
                         <h2 className={styles.title}>
                             {truncateTitle(amazonItemTitle)}
                         </h2>
-                        <div className={styles.buttonGroup}>
-                            <button
-                                className={`${styles.button} ${styles.amazonButton}`}
-                                type="button"
-                            >
-                                Amazon
-                            </button>
-                        </div>
                     </Link>
+                    <div className={styles.buttonGroup}>
+                        <Link
+                            href={amazonItemUrl}
+                            className={`${styles.button} ${styles.amazonButton}`}
+                        >
+                            Amazon
+                        </Link>
+                        <Link
+                            href={rakutenUrl}
+                            className={`${styles.button} ${styles.rakutenButton}`}
+                        >
+                            楽天
+                        </Link>
+                    </div>
                 </div>
             </div>
         );
@@ -98,9 +121,24 @@ const Affiliates = async ({
         return (
             <div className={styles.card}>
                 <p>商品情報を取得できませんでした。</p>
-                <Link href="https://amzn.to/3ybBse7">
-                    Amazon で商品を探す。
-                </Link>
+                <div className={styles.buttonGroup}>
+                    <Link href="https://amzn.to/3ybBse7">
+                        <button
+                            className={`${styles.button} ${styles.amazonButton}`}
+                            type="button"
+                        >
+                            Amazon
+                        </button>
+                    </Link>
+                    <Link href="https://a.r10.to/huBEC7">
+                        <button
+                            className={`${styles.button} ${styles.rakutenButton}`}
+                            type="button"
+                        >
+                            楽天
+                        </button>
+                    </Link>
+                </div>
             </div>
         );
     }
