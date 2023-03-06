@@ -2,7 +2,7 @@ import ProductAdvertisingAPIv1 from 'paapi5-nodejs-sdk';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from 'styles/ui/affiliates.module.css';
-import {truncateTitle} from 'lib/string';
+import { truncateTitle } from 'lib/string';
 
 type AmazonItem = {
     DetailPageUrl: string;
@@ -122,21 +122,15 @@ const Affiliates = async ({
             <div className={styles.card}>
                 <p>商品情報を取得できませんでした。</p>
                 <div className={styles.buttonGroup}>
-                    <Link href="https://amzn.to/3ybBse7">
-                        <button
-                            className={`${styles.button} ${styles.amazonButton}`}
-                            type="button"
-                        >
-                            Amazon
-                        </button>
+                    <Link href="https://amzn.to/3ybBse7"
+                        className={`${styles.button} ${styles.amazonButton}`}
+                    >
+                        Amazon
                     </Link>
-                    <Link href="https://a.r10.to/huBEC7">
-                        <button
-                            className={`${styles.button} ${styles.rakutenButton}`}
-                            type="button"
-                        >
-                            楽天
-                        </button>
+                    <Link href="https://a.r10.to/huBEC7"
+                        className={`${styles.button} ${styles.rakutenButton}`}
+                    >
+                        楽天
                     </Link>
                 </div>
             </div>
