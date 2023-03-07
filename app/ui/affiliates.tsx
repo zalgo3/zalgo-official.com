@@ -75,7 +75,7 @@ const getRakutenUrl = async (rakutenItemCode: string): Promise<string> => {
     const response = await fetch(
         `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
     );
-    return (await response.json()).Items[0].Item.affiliateUrl;
+    return ((await response.json()) as any).Items[0].Item.affiliateUrl;
 };
 
 const getYahooUrl = async (JAN: string): Promise<string> => {
@@ -92,7 +92,7 @@ const getYahooUrl = async (JAN: string): Promise<string> => {
     const response = await fetch(
         `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`
     );
-    return (await response.json()).hits[0].url;
+    return ((await response.json()) as any).hits[0].url;
 };
 
 const Affiliates = async ({
