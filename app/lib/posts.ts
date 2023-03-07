@@ -1,5 +1,5 @@
 import {exec} from 'child_process';
-import fs from 'fs/promises';
+import {promises as fs} from 'fs';
 import matter, {GrayMatterFile, Input} from 'gray-matter';
 import path from 'path';
 import {promisify} from 'util';
