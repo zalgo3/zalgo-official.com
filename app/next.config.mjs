@@ -1,9 +1,6 @@
-import withPWA from 'next-pwa';
+import path from 'path';
 
-export default withPWA({
-    dest: 'public',
-    disable: process.env.NODE_ENV === 'development',
-})({
+export default {
     reactStrictMode: true,
     swcMinify: true,
     experimental: {
@@ -20,18 +17,11 @@ export default withPWA({
         ],
     },
     webpack: (config, options) => {
-        const { isServer } = options;
-
-        if (isServer) {
-            config.node = Object.assign({}, config.node, {
-                __dirname: false,
-                __filename: false,
-            });
-            config.module.rules.unshift({
-                test: /\.(m?js|node)$/,
-                parser: { amd: false },
-            });
-        }
+        config.module.rules.unshift({
+            test: /\.js$/,
+            include: [path.resolve('node_modules/paapi5-nodejs-sdk')],
+            parser: {amd: false},
+        });
         return config;
     },
-});
+};
