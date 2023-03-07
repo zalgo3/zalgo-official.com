@@ -1,3 +1,5 @@
+import path from 'path';
+
 export default {
     reactStrictMode: true,
     swcMinify: true,
@@ -15,18 +17,11 @@ export default {
         ],
     },
     webpack: (config, options) => {
-        const { isServer } = options;
-
-        if (isServer) {
-            config.node = Object.assign({}, config.node, {
-                __dirname: false,
-                __filename: false,
-            });
-            config.module.rules.unshift({
-                test: /\.(m?js|node)$/,
-                parser: { amd: false },
-            });
-        }
+        config.module.rules.unshift({
+            test: /\.js$/,
+            include: [path.resolve('node_modules/paapi5-nodejs-sdk')],
+            parser: {amd: false},
+        });
         return config;
     },
 };
