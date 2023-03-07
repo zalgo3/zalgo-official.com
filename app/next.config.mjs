@@ -19,7 +19,7 @@ export default {
     webpack: (config, options) => {
         config.module.rules.unshift({
             test: /\.js$/,
-            include: [path.join('node_modules/paapi5-nodejs-sdk/')],
+            include: [path.resolve('node_modules/paapi5-nodejs-sdk')],
             parser: {amd: false},
         });
         return config;
