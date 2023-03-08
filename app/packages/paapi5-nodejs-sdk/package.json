@@ -22,7 +22,7 @@
         "fs": false
     },
     "dependencies": {
-        "superagent": "3.8.3",
+        "superagent": "8.0.9",
         "crypto-js": "^4.0.0"
     },
     "devDependencies": {
