@@ -14,7 +14,6 @@ jobs:
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   reporter: github-pr-review # Change reporter.
-                  workdir: 'app'
             - name: Run test
               run: yarn test:ci
             - name: Generate test coverage report
@@ -22,7 +21,6 @@ jobs:
               id: coverage
               with:
                   package-manager: yarn
-                  working-directory: app
                   output: report-markdown
             - name: Add test coverage report to pull request
               uses: marocchino/sticky-pull-request-comment@v2
