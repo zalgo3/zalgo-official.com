@@ -2,29 +2,29 @@ name: Lint and Test
 
 on: [pull_request]
 jobs:
-  lint-and-test:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write 
-    steps:
-      - uses: actions/checkout@v3
-      - name: Lint code
-        uses: reviewdog/action-eslint@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-review # Change reporter.
-          workdir: 'app'
-      - name: Run test
-        run: cd app && yarn test:ci
-      - name: Generate test coverage report
-        uses: ArtiomTr/jest-coverage-report-action@v2.2.1
-        id: coverage
-        with:
-          package-manager: yarn
-          working-directory: app
-          output: report-markdown
-      - name: Add test coverage report to pull request
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          message: ${{ steps.coverage.outputs.report }}
+    lint-and-test:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+        steps:
+            - uses: actions/checkout@v3
+            - name: Lint code
+              uses: reviewdog/action-eslint@v1
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  reporter: github-pr-review # Change reporter.
+                  workdir: 'app'
+            - name: Run test
+              run: yarn test:ci
+            - name: Generate test coverage report
+              uses: ArtiomTr/jest-coverage-report-action@v2.2.1
+              id: coverage
+              with:
+                  package-manager: yarn
+                  working-directory: app
+                  output: report-markdown
+            - name: Add test coverage report to pull request
+              uses: marocchino/sticky-pull-request-comment@v2
+              with:
+                  message: ${{ steps.coverage.outputs.report }}
