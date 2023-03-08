@@ -1,5 +1,5 @@
 ---
-title: "【IoT】Nature Remo×Alexa×IFTTTで家にリモコンはもう不要です【スマートホーム】"
+title: '【IoT】Nature Remo×Alexa×IFTTTで家にリモコンはもう不要です【スマートホーム】'
 ---
 
 どうも，京大博士課程のざるご( [@zalgo_sogo](https://www.twitter.com/zalgo_sogo) )です．
@@ -26,7 +26,7 @@ title: "【IoT】Nature Remo×Alexa×IFTTTで家にリモコンはもう不要�
 
 そこで購入したのがこちら．
 
-[amazon asin="B08P6ZSXWZ" kw="Nature Remo"]
+<Affiliates asin="B08P6ZSXWZ" query="Nature Remo" />
 
 **スマートリモコン「Nature Remo」**です．
 
@@ -41,27 +41,27 @@ title: "【IoT】Nature Remo×Alexa×IFTTTで家にリモコンはもう不要�
 スマホ一台で済むなら失くす心配は少ないですね．
 
 ちなみに，スマートリモコンには他にも
-eRemoteやラトックといった商品がありますが，
-2chの学習リモコンスレで一番評判が良かったのがNature Remoだったので，
-今回はNature Remoを購入しました．
+eRemote やラトックといった商品がありますが，
+2ch の学習リモコンスレで一番評判が良かったのが Nature Remo だったので，
+今回は Nature Remo を購入しました．
 
-## Alexa×Nature Remoでスマホさえ要らない
+## Alexa×Nature Remo でスマホさえ要らない
 
-このNature Remo，便利なことにGoogle HomeやAlexa (Amazon Echo)にも対応しています．
+この Nature Remo，便利なことに Google Home や Alexa (Amazon Echo)にも対応しています．
 
-うちにはセールで購入したAmazon Echo Dotがいるので，こいつとの連携にチャレンジしました．
+うちにはセールで購入した Amazon Echo Dot がいるので，こいつとの連携にチャレンジしました．
 
-[amazon asin="B07PFFMQ64" kw="Echo Dot"]
+<Affiliates asin="B07PFFMQ64" query="Echo Dot" />
 
-Alexaアプリから，「Nature Remo」のスキルを追加すると，
+Alexa アプリから，「Nature Remo」のスキルを追加すると，
 「アレクサ，リモで電気をつけて」
 で電気が付きます．
 
 これでスマホも要りませんね（ニッコリ
 
-## IFTTT×Alexa×Nature RemoでIoTの化身となれ
+## IFTTT×Alexa×Nature Remo で IoT の化身となれ
 
-Alexaスキルでスマホ要らずになったわけですが，
+Alexa スキルでスマホ要らずになったわけですが，
 いちいち「リモで」をつけなければいけないのが個人的に気に入りませんでした．
 
 「アレクサ，電気をつけて」だけで電気がついてほしい．
@@ -72,12 +72,12 @@ Alexaスキルでスマホ要らずになったわけですが，
 
 あらゆるものを自動化できる無料アプリ**「IFTTT（イフト）」**を使います．
 
-IFTTTは，指定したトリガーが検出されたら，指定したアクションを起こすことの出来るツールです．
+IFTTT は，指定したトリガーが検出されたら，指定したアクションを起こすことの出来るツールです．
 
-今回は，「アレクサに「電気つけて」と言ったら，Nature Remoで電気をつける」という作業を，
-このIFTTTを使って自動化してみました．
+今回は，「アレクサに「電気つけて」と言ったら，Nature Remo で電気をつける」という作業を，
+この IFTTT を使って自動化してみました．
 
-IFTTTの使い方については，↓のサイトが詳しいのでご参考にどうぞ．
+IFTTT の使い方については，↓ のサイトが詳しいのでご参考にどうぞ．
 
 <div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
 
@@ -89,8 +89,8 @@ https://chasuke.com/smarthome-ifttt/
 
 <figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180444-485x1024.png)</figure>
 
-まず，Thisと書かれたところを選び，検索窓に「Alexa」と入力．
-Amazon Alexaを選択します．
+まず，This と書かれたところを選び，検索窓に「Alexa」と入力．
+Amazon Alexa を選択します．
 
 <figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180527-485x1024.png)</figure>
 
@@ -98,12 +98,12 @@ Say a specific phrase （特定のフレーズを言ったら）を選択しま�
 
 <figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180530-485x1024.png)</figure>
 
-入力欄に，トリガーにしたい言葉（今回は「電気つけて」）を入力し，Continueを押します．
+入力欄に，トリガーにしたい言葉（今回は「電気つけて」）を入力し，Continue を押します．
 
 <figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180540-485x1024.png)</figure>
 
-次に，Thatと書かれたところを選び，検索窓に「nature remo」と入力．
-Nature Remoを選択します．
+次に，That と書かれたところを選び，検索窓に「nature remo」と入力．
+Nature Remo を選択します．
 
 <figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180546-1-485x1024.png)</figure>
 
@@ -113,14 +113,14 @@ Nature Remoを選択します．
 
 <figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180609-485x1024.png)</figure>
 
-Please selectの中から，寝室の照明（ここは人によって違う） - ONを選択します．
+Please select の中から，寝室の照明（ここは人によって違う） - ON を選択します．
 
 <figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180617-485x1024.png)</figure>
 
-これでIFTTTにトリガーを設定できました！
+これで IFTTT にトリガーを設定できました！
 
-最後にAlexaアプリで定形アクションを設定し，
-「アレクサ，電気つけて」でIFTTTを呼び出せるようにします．
+最後に Alexa アプリで定形アクションを設定し，
+「アレクサ，電気つけて」で IFTTT を呼び出せるようにします．
 
 <figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-182500-485x1024.png)</figure>
 
@@ -128,9 +128,9 @@ Please selectの中から，寝室の照明（ここは人によって違う） 
 
 ## まとめ
 
-* スマートリモコンの「Nature Remo」
-* スマートスピーカーの「Alexa (Amazon Echo)」(Google Homeでも可)
-* 無料アプリの「[IFTTT](https://ifttt.com/)」
+-   スマートリモコンの「Nature Remo」
+-   スマートスピーカーの「Alexa (Amazon Echo)」(Google Home でも可)
+-   無料アプリの「[IFTTT](https://ifttt.com/)」
 
 これらを組み合わせることで，リモコンを失くす悩みから永遠に解き放たれます．
 
