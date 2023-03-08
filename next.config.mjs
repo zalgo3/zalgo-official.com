@@ -1,6 +1,7 @@
 import path from 'path';
 
 export default {
+    staticPageGenerationTimeout: 600,
     reactStrictMode: true,
     swcMinify: true,
     experimental: {
