@@ -21,12 +21,6 @@
             }
         ]
     },
-    "include": [
-        "next-env.d.ts",
-        "**/*.ts",
-        "**/*.tsx",
-        ".next/types/**/*.ts",
-        "C:\\Users\\zalgo\\Documents\\GitHub\\zalgo-official.com\\app\\.next/types/**/*.ts"
-    ],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
     "exclude": ["node_modules"]
 }
