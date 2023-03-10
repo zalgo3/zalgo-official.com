@@ -78,13 +78,13 @@ const Affiliates = async ({
 }) => {
     const rakutenItem = await retry(async () => {
         return await getRakutenItem(query, rakutenItemCode);
-    });
+    },{retries: 20});
     const rakutenUrl = rakutenItem.affiliateUrl;
     const rakutenItemName = rakutenItem.itemName;
     const rakutenImageUrl = rakutenItem.mediumImageUrls[0];
     const yahooUrl = await retry(async () => {
         return await getYahooUrl(query);
-    });
+    },{retries: 20});
     if (asin != null) {
         const amazonUrl = `https://www.amazon.co.jp/dp/${asin}/?ref=nosim?tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`;
         return (
