@@ -23,28 +23,19 @@ const getRakutenItem = async (
             hits: '1',
         };
         const urlSearchParams = new URLSearchParams(params).toString();
+        const endpoint = `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`;
         const item = await retry(async bail => {
-            const response = await fetch(
-                `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
-            );
+            const response = await fetch(endpoint);
             if (response.status === 400) {
-                bail(
-                    new Error(
-                        `Rakuten API error: Parameter ${urlSearchParams} is not valid.`
-                    )
-                );
+                bail(new Error(`Parameter is not valid: ${endpoint}.`));
                 return;
             }
             if (response.status == 404) {
-                bail(
-                    new Error(
-                        `Rakuten API error: Item not found for the parameter ${urlSearchParams}.`
-                    )
-                );
+                bail(new Error(`Not found: ${endpoint}.`));
                 return;
             }
             if (response.status === 429) {
-                throw new Error('Rakuten API error: Too many requests.');
+                throw new Error(`Too many requests: ${endpoint}`);
             }
             return ((await response.json()) as any).Items[0].Item;
         });
@@ -63,36 +54,23 @@ const getRakutenItem = async (
         hits: '1',
     };
     const urlSearchParams = new URLSearchParams(params).toString();
+    const endpoint = `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`;
     const item = await retry(async bail => {
-        const response = await fetch(
-            `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
-        );
+        const response = await fetch(endpoint);
         if (response.status === 400) {
-            bail(
-                new Error(
-                    `Rakuten API error: Parameter ${urlSearchParams} is not valid.`
-                )
-            );
+            bail(new Error(`Parameter is not valid: ${endpoint}.`));
             return;
         }
         if (response.status == 404) {
-            bail(
-                new Error(
-                    `Rakuten API error: Item not found for the parameter ${urlSearchParams}.`
-                )
-            );
+            bail(new Error(`Not found: ${endpoint}.`));
             return;
         }
         if (response.status === 429) {
-            throw new Error('Rakuten API error: Too many requests.');
+            throw new Error(`Too many requests: ${endpoint}`);
         }
         const items = ((await response.json()) as any).Items;
         if (items.length === 0) {
-            bail(
-                new Error(
-                    `Rakuten API error: No item found for the parameter ${urlSearchParams}.`
-                )
-            );
+            bail(new Error(`No hits: ${endpoint}.`));
             return;
         }
         return items[0].Item;
@@ -113,36 +91,23 @@ const getYahooUrl = async (query: string): Promise<string> => {
         results: '1',
     };
     const urlSearchParams = new URLSearchParams(params).toString();
+    const endpoint = `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`;
     const itemUrl = await retry(async bail => {
-        const response = await fetch(
-            `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`
-        );
+        const response = await fetch(endpoint);
         if (response.status === 400) {
-            bail(
-                new Error(
-                    `Yahoo API error: Parameter ${urlSearchParams} is not valid.`
-                )
-            );
+            bail(new Error(`Parameter is not valid: ${endpoint}`));
             return;
         }
         if (response.status == 404) {
-            bail(
-                new Error(
-                    `Yahoo API error: Item not found for the parameter ${urlSearchParams}.`
-                )
-            );
+            bail(new Error(`Not found: ${endpoint}.`));
             return;
         }
         if (response.status === 429) {
-            throw new Error('Yahoo API error: Too many requests.');
+            throw new Error(`Too many requests: ${endpoint}`);
         }
         const hits = ((await response.json()) as any).hits;
         if (hits.length === 0) {
-            bail(
-                new Error(
-                    `Yahoo API error: No item found for the parameter ${urlSearchParams}.`
-                )
-            );
+            bail(new Error(`No hits: ${endpoint}.`));
             return;
         }
         return hits[0].url;

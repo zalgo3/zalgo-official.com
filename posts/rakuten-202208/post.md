@@ -36,11 +36,11 @@ title: '【楽天市場】パスタ・食材中心にお得に爆買いした商
 
 あと、冷製パスタを作りたいので、ディチェコのフェデリーニをば。
 
-<Affiliates rakutenItemCode="seijoishii:10066936" query="【楽天市場】ディチェコ #10 フェデリーニ 1.4mm 500g×6 個：成城石井酒販 楽天市場店" />
+<Affiliates rakutenItemCode="seijoishii:10066936" query="ディチェコ フェデリーニ 1.4mm" />
 
 ディチェコのフェットチーネ。クリーム系に使う予定。
 
-<Affiliates rakutenItemCode="seijoishii:10066946" query="【楽天市場】ディチェコ ＃303 フェットチーネ 250g×5 個：成城石井酒販 楽天市場店" />
+<Affiliates rakutenItemCode="seijoishii:10066946" query="ディチェコ フェットチーネ" />
 
 マリナーラとか、プッタネスカとか、何かと便利なアンチョビ。スーパーで小さいのを買うとすぐ切れてしまうので、でかいのを試してみる。「スカーリアさんのアンチョビ」っていうの、有名っぽいので買ってみたけど、美味しいかはまだ謎。
 
@@ -78,11 +78,11 @@ title: '【楽天市場】パスタ・食材中心にお得に爆買いした商
 
 オレガノ。こっちはそんなに多用するわけじゃないので、缶じゃなくちっちゃいのを買いました。
 
-<Affiliates rakutenItemCode="e-sbfoods:10005745" query="FAUCHON 　オレガノ" />
+<Affiliates rakutenItemCode="e-sbfoods:10005745" query="FAUCHON オレガノ" />
 
 松の実。主にジェノベーゼ用です。100g もあれば、70 人分くらいは行ける気がします（我が家基準では 30 人前くらいですが…）
 
-<Affiliates rakutenItemCode="e-sbfoods:10004460" query="松の実 ホール 袋 100g" />
+<Affiliates rakutenItemCode="e-sbfoods:10004460" query="松の実 ホール 100g" />
 
 ラー油。スーパーでも普通に売ってますが、切れてたのでついでに。
 
@@ -90,7 +90,7 @@ title: '【楽天市場】パスタ・食材中心にお得に爆買いした商
 
 5 店舗目。G 対策グッズです。急にすみません。こないだ取り替えたので、ストックです。
 
-<Affiliates rakutenItemCode="sundrug:10063000" query="アース製薬 ブラックキャップ 12 個入り" />
+<Affiliates rakutenItemCode="sundrug:10063000" query="アース製薬 ブラックキャップ 12個入り" />
 
 オートミール。はずれも多いと聞きますが、この日本食品のやつは美味しいです。ヨーグルトとナッツ・フルーツを載せ、オリゴ糖をかけると美味しく健康的な朝食に。
 
@@ -98,15 +98,15 @@ title: '【楽天市場】パスタ・食材中心にお得に爆買いした商
 
 というわけで、6 店舗目は素焼きミックスナッツ。ヨーグルトにかける用途なので無塩のものです。
 
-<Affiliates rakutenItemCode="likaman:10033105" query="素焼き 4 種のミックスナッツ" />
+<Affiliates rakutenItemCode="likaman:10033105" query="素焼き4種のミックスナッツ" />
 
 7 店舗目。奥さんのリクエストでソープディスペンサー。正直未知ですが、水で濡れた手で触る必要がないので、水垢が付きにくいという効果を期待しています。
 
-<Affiliates rakutenItemCode="allplus:10000005" query="ソープディスペンサー自動 泡 /オート 非接触式 2 段階調整ハンドソープ" />
+<Affiliates rakutenItemCode="allplus:10000005" query="ソープディスペンサー自動 泡 オート 非接触式 2段階調整ハンドソープ" />
 
 8 店舗目は、[前回の記事](https://zalgo-official.com/ps-plus-switch-online-otoku/)で紹介した、Play Station Plus の利用権です。楽天ポイント付けながら定価で買えるのはほんとに神だと思います。
 
-<Affiliates rakutenItemCode="rdownload:17557694" query="PlayStation Plus 12 ヶ月利用権" />
+<Affiliates rakutenItemCode="rdownload:17557694" query="PlayStation Plus 12ヶ月利用権" />
 
 9、10 店舗目はふるさと納税で梨とカツオのたたき。どちらもレビューの評価は ★4.5 を超えてて美味しそうです。
 
@@ -114,8 +114,8 @@ title: '【楽天市場】パスタ・食材中心にお得に爆買いした商
 
 フルーツや魚は、健康を維持するためには欠かせないですが、都会でスーパーに出回るものは値段が高かったりするので、こういう機会に買うとお買い得かな、と思っていたりします。
 
-<Affiliates rakutenItemCode="f062090-nagai:10000700" query="【ふるさと納税】ご家庭用訳ありラ・フランス約 6kg" />
+<Affiliates rakutenItemCode="f062090-nagai:10000700" query="ふるさと納税 ご家庭用訳ありラ・フランス約 6kg" />
 
-<Affiliates rakutenItemCode="f392065-susaki:10002288" query="【ふるさと納税】かつお タタキ 1.8kg 本場 高知 藁焼き 不揃い かつおのたたき 鰹 本場 土佐 わら焼き：高知県須崎市" />
+<Affiliates rakutenItemCode="f392065-susaki:10002288" query="ふるさと納税 かつお タタキ 1.8kg 本場 高知 藁焼き 不揃い かつおのたたき 鰹 本場 土佐 わら焼き 高知県須崎市" />
 
 10 店舗買い回り達成ということで、+10%還元です。これに SPU の 5.5%つくので、超お得。成城石井はさらにショップポイントアップで+9%つきました。楽天経済圏ヤバいね。
