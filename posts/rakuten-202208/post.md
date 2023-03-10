@@ -72,9 +72,9 @@ title: '【楽天市場】パスタ・食材中心にお得に爆買いした商
 
 今回は缶買いましたが、次回以降は詰替えを買う予定です。
 
-<Affiliates rakutenItemCode="e-sbfoods:10000755" query="FD イタリアンパセリ M 缶 23g" />
+<Affiliates rakutenItemCode="e-sbfoods:10000755" query="イタリアンパセリ 缶 23g" />
 
-<Affiliates rakutenItemCode="e-sbfoods:10000751" query="FD スイートバジル M 缶 23g" />
+<Affiliates rakutenItemCode="e-sbfoods:10000751" query="スイートバジル 缶 23g" />
 
 オレガノ。こっちはそんなに多用するわけじゃないので、缶じゃなくちっちゃいのを買いました。
 
@@ -114,8 +114,8 @@ title: '【楽天市場】パスタ・食材中心にお得に爆買いした商
 
 フルーツや魚は、健康を維持するためには欠かせないですが、都会でスーパーに出回るものは値段が高かったりするので、こういう機会に買うとお買い得かな、と思っていたりします。
 
-<Affiliates rakutenItemCode="f062090-nagai:10000700" query="ふるさと納税 ご家庭用訳ありラ・フランス約 6kg" />
+<Affiliates rakutenItemCode="f062090-nagai:10000700" query="ふるさと納税 ラ・フランス" />
 
-<Affiliates rakutenItemCode="f392065-susaki:10002288" query="ふるさと納税 かつお タタキ 1.8kg 本場 高知 藁焼き 不揃い かつおのたたき 鰹 本場 土佐 わら焼き 高知県須崎市" />
+<Affiliates rakutenItemCode="f392065-susaki:10002288" query="ふるさと納税 高知県須崎市 かつお タタキ" />
 
 10 店舗買い回り達成ということで、+10%還元です。これに SPU の 5.5%つくので、超お得。成城石井はさらにショップポイントアップで+9%つきました。楽天経済圏ヤバいね。
