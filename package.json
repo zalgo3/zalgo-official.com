@@ -19,7 +19,7 @@
         "date-fns-tz": "^2.0.0",
         "gray-matter": "^4.0.3",
         "moment": "^2.29.4",
-        "next": "13.2.3",
+        "next": "13.2.4",
         "next-mdx-remote": "^4.3.0",
         "node-fetch": "^3.3.0",
         "paapi5-nodejs-sdk": "file:./packages/paapi5-nodejs-sdk",
