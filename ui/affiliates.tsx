@@ -95,7 +95,7 @@ const Affiliates = async ({
     const rakutenItem = await getRakutenItem(query, rakutenItemCode);
     const rakutenUrl = rakutenItem.affiliateUrl;
     const rakutenItemName = rakutenItem.itemName;
-    const rakutenImageUrl = rakutenItem.mediumImageUrls[0];
+    const rakutenImageUrl = rakutenItem.mediumImageUrls[0].imageUrl;
     const yahooUrl = await getYahooUrl(query);
     if (asin != null) {
         const amazonUrl = `https://www.amazon.co.jp/dp/${asin}/?ref=nosim?tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`;
