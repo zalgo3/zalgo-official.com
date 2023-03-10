@@ -23,10 +23,15 @@ const getRakutenItem = async (
             hits: '1',
         };
         const urlSearchParams = new URLSearchParams(params).toString();
-        const response = await fetch(
-            `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
+        const item = await retry(
+            async () => {
+                const response = await fetch(
+                    `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
+                );
+                return ((await response.json()) as any).Items[0].Item;
+            },
+            {minTimeOut: 10000}
         );
-        const item = ((await response.json()) as any).Items[0].Item;
         return {
             affiliateUrl: item.affiliateUrl,
             itemName: item.itemName,
@@ -40,10 +45,15 @@ const getRakutenItem = async (
             hits: '1',
         };
         const urlSearchParams = new URLSearchParams(params).toString();
-        const response = await fetch(
-            `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
+        const item = await retry(
+            async () => {
+                const response = await fetch(
+                    `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
+                );
+                return ((await response.json()) as any).Items[0].Item;
+            },
+            {minTimeOut: 10000}
         );
-        const item = ((await response.json()) as any).Items[0].Item;
         return {
             affiliateUrl: item.affiliateUrl,
             itemName: item.itemName,
@@ -61,10 +71,16 @@ const getYahooUrl = async (query: string): Promise<string> => {
         results: '1',
     };
     const urlSearchParams = new URLSearchParams(params).toString();
-    const response = await fetch(
-        `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`
+    const itemUrl = await retry(
+        async () => {
+            const response = await fetch(
+                `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`
+            );
+            return (await response.json()).hits[0].url;
+        },
+        {minTimeOut: 10000}
     );
-    return ((await response.json()) as any).hits[0].url;
+    return itemUrl;
 };
 
 const Affiliates = async ({
@@ -76,15 +92,11 @@ const Affiliates = async ({
     asin?: string;
     rakutenItemCode?: string;
 }) => {
-    const rakutenItem = await retry(async () => {
-        return await getRakutenItem(query, rakutenItemCode);
-    },{retries: 20});
+    const rakutenItem = await getRakutenItem(query, rakutenItemCode);
     const rakutenUrl = rakutenItem.affiliateUrl;
     const rakutenItemName = rakutenItem.itemName;
     const rakutenImageUrl = rakutenItem.mediumImageUrls[0];
-    const yahooUrl = await retry(async () => {
-        return await getYahooUrl(query);
-    },{retries: 20});
+    const yahooUrl = await getYahooUrl(query);
     if (asin != null) {
         const amazonUrl = `https://www.amazon.co.jp/dp/${asin}/?ref=nosim?tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`;
         return (
