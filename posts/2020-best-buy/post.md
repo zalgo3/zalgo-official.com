@@ -100,7 +100,7 @@ e5 でもすごく助かるんですが、i7 と違って部屋のマップを�
 
 ### 3 位 Fitbit Charge 4
 
-<Affiliates asin="B085M5SXVS" query="Fitbit Charge 4" />
+<Affiliates asin="B085M5SXVS" query="Fitbit Charge4" />
 
 第 3 位は、フィットネストラッカー兼スマートウォッチの「Fitbit Charge 4」です。
 

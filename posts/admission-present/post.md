@@ -14,9 +14,9 @@ title: '大学新入生が入学祝いに買ってもらうべきPC・タブレ�
 
 ## iPad Air (第 4 世代以降) + Apple Pencil (第 2 世代)
 
-<Affiliates asin="B09V3JF8HC" query="iPad Air 第 5 世代" />
+<Affiliates asin="B09V3JF8HC" query="iPad Air 第5世代" />
 
-<Affiliates asin="B07KR69HH9" query="Apple Pencil 第 2 世代" />
+<Affiliates asin="B07KR69HH9" query="Apple Pencil 第2世代" />
 
 はっきり言って、今どき、ノートを電子化しないのは**ダサい**です。
 

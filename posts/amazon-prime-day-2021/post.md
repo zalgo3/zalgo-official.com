@@ -54,7 +54,7 @@ title: '家事効率化オタクの京大生がAmazonプライムデーで買っ
 
 ### Dove(ダヴ) ビューティーモイスチャー乾燥 保湿 洗顔料 130g×4 個 おまけ付き ホワイトフローラルの香り
 
-<Affiliates asin="B08X4R7WPJ" query="Dove 洗顔料 130g 4 個" />
+<Affiliates asin="B08X4R7WPJ" query="Dove 洗顔料 130g 4個" />
 
 <div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
 
