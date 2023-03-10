@@ -76,7 +76,7 @@ const getYahooUrl = async (query: string): Promise<string> => {
             const response = await fetch(
                 `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`
             );
-            return (await response.json()).hits[0].url;
+            return (await response.json() as any).hits[0].url;
         },
         {minTimeout: 10000}
     );
