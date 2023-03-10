@@ -23,57 +23,7 @@ const getRakutenItem = async (
             hits: '1',
         };
         const urlSearchParams = new URLSearchParams(params).toString();
-        const item = await retry(
-            async bail => {
-                const response = await fetch(
-                    `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
-                );
-                if (response.status === 400) {
-                    bail(
-                        new Error(
-                            `Rakuten API error: Parameter ${urlSearchParams} is not valid.`
-                        )
-                    );
-                    return;
-                }
-                if (response.status == 404) {
-                    bail(
-                        new Error(
-                            `Rakuten API error: Item not found for the parameter ${urlSearchParams}.`
-                        )
-                    );
-                    return;
-                }
-                if (response.status === 429) {
-                    throw new Error('Rakuten API error: Too many requests.');
-                }
-                return ((await response.json()) as any).Items[0].Item;
-            },
-            {
-                onRetry: error => {
-                    console.warn(
-                        `Rakuten API warning: ${urlSearchParams} has raised ${error}. Retry fetching.`
-                    );
-                },
-            }
-        );
-        if (item != null) {
-            return {
-                affiliateUrl: item.affiliateUrl,
-                itemName: item.itemName,
-                imageUrl: item.mediumImageUrls[0].imageUrl,
-            };
-        }
-    }
-    const params = {
-        applicationId: process.env.RAKUTEN_API_APPLICATION_ID as string,
-        affiliateId: process.env.RAKUTEN_AFFILIATE_ID as string,
-        keyword: query,
-        hits: '1',
-    };
-    const urlSearchParams = new URLSearchParams(params).toString();
-    const item = await retry(
-        async bail => {
+        const item = await retry(async bail => {
             const response = await fetch(
                 `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
             );
@@ -97,15 +47,56 @@ const getRakutenItem = async (
                 throw new Error('Rakuten API error: Too many requests.');
             }
             return ((await response.json()) as any).Items[0].Item;
-        },
-        {
-            onRetry: error => {
-                console.warn(
-                    `Rakuten API warning: ${urlSearchParams} has raised ${error}. Retry fetching.`
-                );
-            },
+        });
+        if (item != null) {
+            return {
+                affiliateUrl: item.affiliateUrl,
+                itemName: item.itemName,
+                imageUrl: item.mediumImageUrls[0].imageUrl,
+            };
         }
-    );
+    }
+    const params = {
+        applicationId: process.env.RAKUTEN_API_APPLICATION_ID as string,
+        affiliateId: process.env.RAKUTEN_AFFILIATE_ID as string,
+        keyword: query,
+        hits: '1',
+    };
+    const urlSearchParams = new URLSearchParams(params).toString();
+    const item = await retry(async bail => {
+        const response = await fetch(
+            `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
+        );
+        if (response.status === 400) {
+            bail(
+                new Error(
+                    `Rakuten API error: Parameter ${urlSearchParams} is not valid.`
+                )
+            );
+            return;
+        }
+        if (response.status == 404) {
+            bail(
+                new Error(
+                    `Rakuten API error: Item not found for the parameter ${urlSearchParams}.`
+                )
+            );
+            return;
+        }
+        if (response.status === 429) {
+            throw new Error('Rakuten API error: Too many requests.');
+        }
+        const items = ((await response.json()) as any).Items;
+        if (items.length === 0) {
+            bail(
+                new Error(
+                    `Rakuten API error: No item found for the parameter ${urlSearchParams}.`
+                )
+            );
+            return;
+        }
+        return items[0].Item;
+    });
     return {
         affiliateUrl: item.affiliateUrl,
         itemName: item.itemName,
@@ -122,40 +113,40 @@ const getYahooUrl = async (query: string): Promise<string> => {
         results: '1',
     };
     const urlSearchParams = new URLSearchParams(params).toString();
-    const itemUrl = await retry(
-        async bail => {
-            const response = await fetch(
-                `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`
+    const itemUrl = await retry(async bail => {
+        const response = await fetch(
+            `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`
+        );
+        if (response.status === 400) {
+            bail(
+                new Error(
+                    `Yahoo API error: Parameter ${urlSearchParams} is not valid.`
+                )
             );
-            if (response.status === 400) {
-                bail(
-                    new Error(
-                        `Yahoo API error: Parameter ${urlSearchParams} is not valid.`
-                    )
-                );
-                return;
-            }
-            if (response.status == 404) {
-                bail(
-                    new Error(
-                        `Yahoo API error: Item not found for the parameter ${urlSearchParams}.`
-                    )
-                );
-                return;
-            }
-            if (response.status === 429) {
-                throw new Error('Yahoo API error: Too many requests.');
-            }
-            return ((await response.json()) as any).hits[0].url;
-        },
-        {
-            onRetry: error => {
-                console.warn(
-                    `Yahoo API warning: ${urlSearchParams} has raised ${error}. Retry fetching.`
-                );
-            },
+            return;
         }
-    );
+        if (response.status == 404) {
+            bail(
+                new Error(
+                    `Yahoo API error: Item not found for the parameter ${urlSearchParams}.`
+                )
+            );
+            return;
+        }
+        if (response.status === 429) {
+            throw new Error('Yahoo API error: Too many requests.');
+        }
+        const hits = ((await response.json()) as any).hits;
+        if (hits.length === 0) {
+            bail(
+                new Error(
+                    `Yahoo API error: No item found for the parameter ${urlSearchParams}.`
+                )
+            );
+            return;
+        }
+        return hits[0].url;
+    });
     return itemUrl;
 };
 

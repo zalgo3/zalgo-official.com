@@ -217,7 +217,7 @@ Samsung 990 PRO が最も性能が高いが、そこまで性能が上がらな�
 
 4TB は、2TB を２つ買うより高くなるし、どうしても容量が必要ならもう一枚買い足して RAID 0 にするという手もあるよなあと思い、とりあえず 2TB を 1 枚のみ。
 
-<Affiliates asin="B09K7DRMSC" query="Kingstone KC3000" />
+<Affiliates asin="B09K7DRMSC" query="KC3000" />
 
 ### 電源ユニット
 
