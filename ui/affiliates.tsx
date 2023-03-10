@@ -30,7 +30,7 @@ const getRakutenItem = async (
                 );
                 return ((await response.json()) as any).Items[0].Item;
             },
-            {minTimeOut: 10000}
+            {minTimeout: 10000}
         );
         return {
             affiliateUrl: item.affiliateUrl,
@@ -52,7 +52,7 @@ const getRakutenItem = async (
                 );
                 return ((await response.json()) as any).Items[0].Item;
             },
-            {minTimeOut: 10000}
+            {minTimeout: 10000}
         );
         return {
             affiliateUrl: item.affiliateUrl,
@@ -78,7 +78,7 @@ const getYahooUrl = async (query: string): Promise<string> => {
             );
             return (await response.json()).hits[0].url;
         },
-        {minTimeOut: 10000}
+        {minTimeout: 10000}
     );
     return itemUrl;
 };
