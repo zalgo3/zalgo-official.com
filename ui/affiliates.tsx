@@ -37,7 +37,12 @@ const getRakutenItem = async (
             if (response.status === 429) {
                 throw new Error(`Too many requests: ${endpoint}`);
             }
-            return ((await response.json()) as any).Items[0].Item;
+            const items = ((await response.json()) as any).Items;
+            if (items.length === 0) {
+                bail(new Error(`No hits: ${endpoint}.`));
+                return;
+            }
+            return items[0].Item;
         });
         if (item != null) {
             return {

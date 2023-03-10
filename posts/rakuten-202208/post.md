@@ -48,9 +48,9 @@ title: '【楽天市場】パスタ・食材中心にお得に爆買いした商
 
 ペコリーノ・ロマーノとパルミジャーノ・レッジャーノ。そんなに高くなくて、普通に美味しいので、ほかを試す機会もなく、いっつも成城石井です。特にパルミジャーノ・レッジャーノとかは、高級チーズのイメージありますけど、実はグラム単価で行ったらスーパーでよく売ってる緑のやつと変わりません。絶対固形買ったほうが美味いので買ったことない人はお試しを。
 
-<Affiliates rakutenItemCode="seijoishii:10045598" query="カステーリ ペコリーノ・ロマーノ" />
+<Affiliates rakutenItemCode="seijoishii:10045598" query="ペコリーノ・ロマーノ" />
 
-<Affiliates rakutenItemCode="seijoishii:10045600" query="カステーリ パルミジャーノ・レッジャーノ" />
+<Affiliates rakutenItemCode="seijoishii:10045600" query="パルミジャーノ・レッジャーノ" />
 
 ブリーチーズ。白カビチーズで、だいたいカマンベールと同じような味です。でもブリーのほうが安いので、ブリーを買います。パスタに生のトマト、ドライフルーツとブリーチーズを載せて、塩とオリーブオイルかけるだけで美味しいです。
 
@@ -106,7 +106,7 @@ title: '【楽天市場】パスタ・食材中心にお得に爆買いした商
 
 8 店舗目は、[前回の記事](https://zalgo-official.com/ps-plus-switch-online-otoku/)で紹介した、Play Station Plus の利用権です。楽天ポイント付けながら定価で買えるのはほんとに神だと思います。
 
-<Affiliates rakutenItemCode="rdownload:17557694" query="PlayStation Plus 12ヶ月利用権" />
+<Affiliates rakutenItemCode="rdownload:18492326" query="プレイステーション ストアチケット" />
 
 9、10 店舗目はふるさと納税で梨とカツオのたたき。どちらもレビューの評価は ★4.5 を超えてて美味しそうです。
 
