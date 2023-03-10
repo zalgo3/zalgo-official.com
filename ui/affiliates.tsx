@@ -8,7 +8,7 @@ import styles from 'styles/ui/affiliates.module.css';
 type RakutenItem = {
     affiliateUrl: string;
     itemName: string;
-    mediumImageUrls: string[];
+    imageUrl: string;
 };
 
 const getRakutenItem = async (
@@ -35,7 +35,7 @@ const getRakutenItem = async (
         return {
             affiliateUrl: item.affiliateUrl,
             itemName: item.itemName,
-            mediumImageUrls: item.mediumImageUrls,
+            imageUrl: item.mediumImageUrls[0].imageUrl,
         };
     } else {
         const params = {
@@ -57,7 +57,7 @@ const getRakutenItem = async (
         return {
             affiliateUrl: item.affiliateUrl,
             itemName: item.itemName,
-            mediumImageUrls: item.mediumImageUrls,
+            imageUrl: item.mediumImageUrls[0].imageUrl,
         };
     }
 };
@@ -95,7 +95,7 @@ const Affiliates = async ({
     const rakutenItem = await getRakutenItem(query, rakutenItemCode);
     const rakutenUrl = rakutenItem.affiliateUrl;
     const rakutenItemName = rakutenItem.itemName;
-    const rakutenImageUrl = rakutenItem.mediumImageUrls[0].imageUrl;
+    const rakutenImageUrl = rakutenItem.imageUrl;
     const yahooUrl = await getYahooUrl(query);
     if (asin != null) {
         const amazonUrl = `https://www.amazon.co.jp/dp/${asin}/?ref=nosim?tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`;
