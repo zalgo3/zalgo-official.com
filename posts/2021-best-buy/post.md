@@ -230,7 +230,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 9 位 Crush Grind TEN Collection
 
-<Affiliates asin="B01A8W0N24" query="Crush Grind TEN" />.g
+<Affiliates asin="B01A8W0N24" rakutenItemCode="sempre:13639532" query="Crush Grind TEN" />.g
 
 コショウのミルです。これもレストランとかでよく見かけるやつ。
 
