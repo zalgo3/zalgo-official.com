@@ -1,0 +1,55 @@
+name: CI/CD
+
+on: 
+  - pull_request
+  - push
+jobs:
+    cicd:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+        steps:
+            - uses: actions/checkout@v3
+            - name: Lint code
+              uses: reviewdog/action-eslint@v1
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  reporter: github-pr-review # Change reporter.
+            - name: Run test
+              run: yarn test:ci
+            - name: Generate test coverage report
+              uses: ArtiomTr/jest-coverage-report-action@v2.2.1
+              id: coverage
+              with:
+                  package-manager: yarn
+                  output: report-markdown
+            - name: Add test coverage report to pull request
+              if: ${{ github.event_name == 'pull_request' }}
+              uses: marocchino/sticky-pull-request-comment@v2
+              with:
+                  message: ${{ steps.coverage.outputs.report }}
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
+            - name: Build
+              uses: netlify/actions/cli@master
+              with:
+                args: build
+            - name: Deploy for preview
+              if: ${{ github.event_name == 'pull_request' }}
+              uses: netlify/actions/cli@master
+              with:
+                args: deploy --build
+              env:
+                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+            - name: Deploy for production
+              if: ${{ github.event_name == 'push' }}
+              uses: netlify/actions/cli@master
+              with:
+                args: deploy --build --prod
+              env:
+                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
