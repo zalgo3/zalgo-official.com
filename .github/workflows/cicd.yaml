@@ -1,0 +1,63 @@
+name: CI/CD
+
+on: 
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+jobs:
+    cicd:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+        steps:
+            - uses: actions/checkout@v3
+            - name: Set up node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
+            - name: Lint code
+              uses: reviewdog/action-eslint@v1
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  reporter: github-pr-review
+            - name: Run test
+              run: yarn test:ci
+            - name: Generate test coverage report
+              uses: ArtiomTr/jest-coverage-report-action@v2.2.1
+              id: coverage
+              with:
+                  package-manager: yarn
+                  output: report-markdown
+            - name: Add test coverage report to pull request
+              if: ${{ github.event_name == 'pull_request' }}
+              uses: marocchino/sticky-pull-request-comment@v2
+              with:
+                  message: ${{ steps.coverage.outputs.report }}
+            - name: Build and deploy for preview
+              if: ${{ github.event_name == 'pull_request' }}
+              run: npx netlify-cli deploy --build
+              env:
+                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+                AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
+                RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+                RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
+                VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
+                VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
+                YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
+            - name: Build and deploy for production
+              if: ${{ github.event_name == 'push' }}
+              run: npx netlify-cli deploy --build --prod
+              env:
+                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+                AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
+                RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+                RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
+                VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
+                VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
+                YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
