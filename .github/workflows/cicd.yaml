@@ -41,7 +41,7 @@ jobs:
               env:
                 NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                 NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-                AMAZON_ACCOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ACCOCIATE_PARTNER_TAG }}
+                AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
                 RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
                 RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
                 VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
@@ -55,7 +55,7 @@ jobs:
               env:
                 NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                 NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-                AMAZON_ACCOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ACCOCIATE_PARTNER_TAG }}
+                AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
                 RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
                 RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
                 VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
