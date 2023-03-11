@@ -1,6 +1,7 @@
 import path from 'path';
 
 export default {
+    staticPageGenerationTimeout: 3600,
     reactStrictMode: true,
     swcMinify: true,
     experimental: {
@@ -10,18 +11,10 @@ export default {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'm.media-amazon.com',
+                hostname: 'thumbnail.image.rakuten.co.jp',
                 port: '',
-                pathname: '/images/I/**',
+                pathname: '/**',
             },
         ],
-    },
-    webpack: (config, options) => {
-        config.module.rules.unshift({
-            test: /\.js$/,
-            include: [path.resolve('node_modules/paapi5-nodejs-sdk')],
-            parser: {amd: false},
-        });
-        return config;
     },
 };

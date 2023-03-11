@@ -1,122 +1,196 @@
-import fetch from 'node-fetch';
+import retry from 'async-retry';
 import {truncateTitle} from 'lib/string';
 import Image from 'next/image';
 import Link from 'next/link';
-import ProductAdvertisingAPIv1 from 'paapi5-nodejs-sdk';
+import fetch from 'node-fetch';
 import styles from 'styles/ui/affiliates.module.css';
 
-type AmazonItem = {
-    DetailPageURL: string;
-    Images: {
-        Primary: {
-            Medium: {
-                URL: string;
-            };
-        };
-    };
-    ItemInfo: {
-        Title: {
-            DisplayValue: string;
-        };
-        ExternalIds: {
-            EANs: {
-                DisplayValues: string[];
-                Label: string;
-                Locale: string;
-            };
-            ISBNs: {
-                DisplayValues: string[];
-                Label: string;
-                Locale: string;
-            };
-            UPCs: {
-                DisplayValues: string[];
-                Label: string;
-                Locale: string;
-            };
-        };
-    };
+type RakutenItem = {
+    affiliateUrl: string;
+    itemName: string;
+    imageUrl: string;
 };
 
-const getAmazonItem = async (asin: string): Promise<AmazonItem> => {
-    const defaultClient = ProductAdvertisingAPIv1.ApiClient.instance;
-    defaultClient.accessKey = process.env.AMAZON_PA_API_ACCESS_KEY_ID;
-    defaultClient.secretKey = process.env.AMAZON_PA_API_SECRET_KEY;
-    defaultClient.host = 'webservices.amazon.co.jp';
-    defaultClient.region = 'us-west-2';
-    const api = new ProductAdvertisingAPIv1.DefaultApi();
-    const getItemsRequest = new ProductAdvertisingAPIv1.GetItemsRequest();
-    getItemsRequest.ItemIds = [asin];
-    getItemsRequest.PartnerTag = process.env.AMAZON_ASSOCIATE_PARTNER_TAG;
-    getItemsRequest.PartnerType = 'Associates';
-    getItemsRequest.Resources = [
-        'Images.Primary.Medium',
-        'ItemInfo.Title',
-        'ItemInfo.ExternalIds',
-        'Offers.Listings.Price',
-    ];
-    const response = await api.getItems(getItemsRequest);
-    const amazonItem = response.ItemsResult.Items[0];
-    return {
-        DetailPageURL: amazonItem.DetailPageURL,
-        Images: amazonItem.Images,
-        ItemInfo: amazonItem.ItemInfo,
-    };
-};
-
-const getRakutenUrl = async (rakutenItemCode: string): Promise<string> => {
+const getRakutenItem = async (
+    query: string,
+    itemCode?: string
+): Promise<RakutenItem> => {
+    if (itemCode != null) {
+        const params = {
+            applicationId: process.env.RAKUTEN_API_APPLICATION_ID as string,
+            affiliateId: process.env.RAKUTEN_AFFILIATE_ID as string,
+            itemCode: itemCode,
+            hits: '1',
+        };
+        const urlSearchParams = new URLSearchParams(params).toString();
+        const endpoint = `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`;
+        const item = await retry(async bail => {
+            const response = await fetch(endpoint);
+            if (response.status === 400) {
+                bail(new Error(`Parameter is not valid: ${endpoint}.`));
+                return;
+            }
+            if (response.status == 404) {
+                bail(new Error(`Not found: ${endpoint}.`));
+                return;
+            }
+            if (response.status === 429) {
+                throw new Error(`Too many requests: ${endpoint}`);
+            }
+            const items = ((await response.json()) as any).Items;
+            if (items.length === 0) {
+                console.warn(`No hits: ${endpoint}.`);
+                return;
+            }
+            return items[0].Item;
+        });
+        if (item != null) {
+            return {
+                affiliateUrl: item.affiliateUrl,
+                itemName: item.itemName,
+                imageUrl: item.mediumImageUrls[0].imageUrl,
+            };
+        }
+    }
     const params = {
         applicationId: process.env.RAKUTEN_API_APPLICATION_ID as string,
         affiliateId: process.env.RAKUTEN_AFFILIATE_ID as string,
-        itemCode: rakutenItemCode,
+        keyword: query,
         hits: '1',
     };
     const urlSearchParams = new URLSearchParams(params).toString();
-    const response = await fetch(
-        `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`
-    );
-    return ((await response.json()) as any).Items[0].Item.affiliateUrl;
+    const endpoint = `https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601?${urlSearchParams}`;
+    const item = await retry(async bail => {
+        const response = await fetch(endpoint);
+        if (response.status === 400) {
+            bail(new Error(`Parameter is not valid: ${endpoint}.`));
+            return;
+        }
+        if (response.status == 404) {
+            bail(new Error(`Not found: ${endpoint}.`));
+            return;
+        }
+        if (response.status === 429) {
+            throw new Error(`Too many requests: ${endpoint}`);
+        }
+        const items = ((await response.json()) as any).Items;
+        if (items.length === 0) {
+            bail(new Error(`No hits: ${endpoint}.`));
+            return;
+        }
+        return items[0].Item;
+    });
+    return {
+        affiliateUrl: item.affiliateUrl,
+        itemName: item.itemName,
+        imageUrl: item.mediumImageUrls[0].imageUrl,
+    };
 };
 
-const getYahooUrl = async (JAN: string): Promise<string> => {
+const getYahooUrl = async (query: string): Promise<string> => {
     const params = {
         appid: process.env.YAHOO_API_APP_ID as string,
         affiliate_type: 'vc',
-        affiliate_id: encodeURI(
-            'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3667930&pid=888917603&vc_url='
-        ),
-        jan_code: JAN,
+        affiliate_id: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${process.env.VALUE_COMMERCE_SID}&pid=${process.env.VALUE_COMMERCE_PID}&vc_url=`,
+        query: query,
         results: '1',
     };
     const urlSearchParams = new URLSearchParams(params).toString();
-    const response = await fetch(
-        `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`
-    );
-    return ((await response.json()) as any).hits[0].url;
+    const endpoint = `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`;
+    const itemUrl = await retry(async bail => {
+        const response = await fetch(endpoint);
+        if (response.status === 400) {
+            bail(new Error(`Parameter is not valid: ${endpoint}`));
+            return;
+        }
+        if (response.status == 404) {
+            bail(new Error(`Not found: ${endpoint}.`));
+            return;
+        }
+        if (response.status === 429) {
+            throw new Error(`Too many requests: ${endpoint}`);
+        }
+        const hits = ((await response.json()) as any).hits;
+        if (hits.length === 0) {
+            bail(new Error(`No hits: ${endpoint}.`));
+            return;
+        }
+        return hits[0].url;
+    });
+    return itemUrl;
 };
 
 const Affiliates = async ({
+    query,
     asin,
     rakutenItemCode,
 }: {
-    asin: string;
-    rakutenItemCode: string;
+    query: string;
+    asin?: string;
+    rakutenItemCode?: string;
 }) => {
-    const amazonItem = await getAmazonItem(asin);
-    const amazonItemUrl = amazonItem.DetailPageURL;
-    const amazonItemImage = amazonItem.Images.Primary.Medium.URL;
-    const amazonItemInfo = amazonItem.ItemInfo;
-    const amazonItemTitle = amazonItemInfo.Title.DisplayValue;
-    const JAN = amazonItemInfo.ExternalIds.EANs.DisplayValues[0];
-    const rakutenUrl = await getRakutenUrl(rakutenItemCode);
-    const yahooUrl = await getYahooUrl(JAN);
+    const rakutenItem = await getRakutenItem(query, rakutenItemCode);
+    const rakutenUrl = rakutenItem.affiliateUrl;
+    const rakutenItemName = rakutenItem.itemName;
+    const rakutenImageUrl = rakutenItem.imageUrl;
+    const yahooUrl = await getYahooUrl(query);
+    if (asin != null) {
+        const amazonUrl = `https://www.amazon.co.jp/dp/${asin}/?ref=nosim?tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`;
+        return (
+            <div className={styles.card}>
+                <div className={styles.imageContainer}>
+                    <Link href={amazonUrl}>
+                        <Image
+                            src={rakutenImageUrl}
+                            alt={rakutenItemName}
+                            width={200}
+                            height={200}
+                            sizes="80vw"
+                            style={{
+                                borderRadius: '10px',
+                                width: '100%',
+                                height: 'auto',
+                            }}
+                        />
+                    </Link>
+                </div>
+                <div className={styles.contentContainer}>
+                    <Link href={amazonUrl}>
+                        <h2 className={styles.title}>
+                            {truncateTitle(rakutenItemName)}
+                        </h2>
+                    </Link>
+                    <div className={styles.buttonGroup}>
+                        <Link
+                            href={amazonUrl}
+                            className={`${styles.button} ${styles.amazonButton}`}
+                        >
+                            Amazon
+                        </Link>
+                        <Link
+                            href={rakutenUrl}
+                            className={`${styles.button} ${styles.rakutenButton}`}
+                        >
+                            楽天
+                        </Link>
+                        <Link
+                            href={yahooUrl}
+                            className={`${styles.button} ${styles.yahooButton}`}
+                        >
+                            Yahoo!
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        );
+    }
     return (
         <div className={styles.card}>
             <div className={styles.imageContainer}>
-                <Link href={amazonItemUrl}>
+                <Link href={rakutenUrl}>
                     <Image
-                        src={amazonItemImage}
-                        alt={amazonItemTitle}
+                        src={rakutenImageUrl}
+                        alt={rakutenItemName}
                         width={200}
                         height={200}
                         sizes="80vw"
@@ -129,18 +203,12 @@ const Affiliates = async ({
                 </Link>
             </div>
             <div className={styles.contentContainer}>
-                <Link href={amazonItemUrl}>
+                <Link href={rakutenUrl}>
                     <h2 className={styles.title}>
-                        {truncateTitle(amazonItemTitle)}
+                        {truncateTitle(rakutenItemName)}
                     </h2>
                 </Link>
                 <div className={styles.buttonGroup}>
-                    <Link
-                        href={amazonItemUrl}
-                        className={`${styles.button} ${styles.amazonButton}`}
-                    >
-                        Amazon
-                    </Link>
                     <Link
                         href={rakutenUrl}
                         className={`${styles.button} ${styles.rakutenButton}`}
@@ -151,7 +219,7 @@ const Affiliates = async ({
                         href={yahooUrl}
                         className={`${styles.button} ${styles.yahooButton}`}
                     >
-                        Yahoo!ショッピング
+                        Yahoo!
                     </Link>
                 </div>
             </div>

@@ -32,48 +32,38 @@ export const generateMetadata = async ({
 };
 
 const Page = async ({params}: {params: {slug: string}}) => {
-    try {
-        const {content, ...post} = await getPost(params.slug);
-        return (
-            <div className={styles.container}>
-                <h1 className={styles.title}>{post.data.title}</h1>
-                <p className={styles.date}>
-                    投稿日時:{' '}
-                    {formatTZ(
-                        utcToZonedTime(
-                            post.data.createdAt * 1000,
-                            'Asia/Tokyo'
-                        ),
-                        'yyyy/MM/dd HH:mm'
-                    )}
-                </p>
-                <p className={styles.date}>
-                    最終更新日時:{' '}
-                    {formatTZ(
-                        utcToZonedTime(
-                            post.data.updatedAt * 1000,
-                            'Asia/Tokyo'
-                        ),
-                        'yyyy/MM/dd HH:mm'
-                    )}
-                </p>
-                {/* @ts-expect-error */}
-                <MDXRemote
-                    source={content}
-                    // @ts-expect-error
-                    components={{Affiliates}}
-                    options={{
-                        mdxOptions: {
-                            remarkPlugins: [remarkMath, remarkGfm],
-                            rehypePlugins: [rehypePrism, rehypeKatex],
-                        },
-                    }}
-                />
-            </div>
-        );
-    } catch {
-        notFound();
-    }
+    const {content, ...post} = await getPost(params.slug);
+    return (
+        <div className={styles.container}>
+            <h1 className={styles.title}>{post.data.title}</h1>
+            <p className={styles.date}>
+                投稿日時:{' '}
+                {formatTZ(
+                    utcToZonedTime(post.data.createdAt * 1000, 'Asia/Tokyo'),
+                    'yyyy/MM/dd HH:mm'
+                )}
+            </p>
+            <p className={styles.date}>
+                最終更新日時:{' '}
+                {formatTZ(
+                    utcToZonedTime(post.data.updatedAt * 1000, 'Asia/Tokyo'),
+                    'yyyy/MM/dd HH:mm'
+                )}
+            </p>
+            {/* @ts-expect-error */}
+            <MDXRemote
+                source={content}
+                // @ts-expect-error
+                components={{Affiliates}}
+                options={{
+                    mdxOptions: {
+                        remarkPlugins: [remarkMath, remarkGfm],
+                        rehypePlugins: [rehypePrism, rehypeKatex],
+                    },
+                }}
+            />
+        </div>
+    );
 };
 
 export const generateStaticParams = async () => {
