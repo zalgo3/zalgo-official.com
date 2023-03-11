@@ -15,11 +15,15 @@ jobs:
             pull-requests: write
         steps:
             - uses: actions/checkout@v3
+            - name: Set up node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
             - name: Lint code
               uses: reviewdog/action-eslint@v1
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  reporter: github-pr-review # Change reporter.
+                  reporter: github-pr-review
             - name: Run test
               run: yarn test:ci
             - name: Generate test coverage report
@@ -35,9 +39,7 @@ jobs:
                   message: ${{ steps.coverage.outputs.report }}
             - name: Build and deploy for preview
               if: ${{ github.event_name == 'pull_request' }}
-              uses: netlify/actions/cli@master
-              with:
-                args: deploy --build
+              run: npx netlify deploy --build
               env:
                 NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                 NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
@@ -49,9 +51,7 @@ jobs:
                 YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
             - name: Build and deploy for production
               if: ${{ github.event_name == 'push' }}
-              uses: netlify/actions/cli@master
-              with:
-                args: deploy --build --prod
+              run: npx deploy --build --prod
               env:
                 NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                 NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
