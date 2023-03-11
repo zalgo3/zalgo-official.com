@@ -39,7 +39,7 @@ const getRakutenItem = async (
             }
             const items = ((await response.json()) as any).Items;
             if (items.length === 0) {
-                bail(new Error(`No hits: ${endpoint}.`));
+                console.warn(`No hits: ${endpoint}.`);
                 return;
             }
             return items[0].Item;
