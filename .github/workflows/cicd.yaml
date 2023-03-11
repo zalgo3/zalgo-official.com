@@ -33,10 +33,6 @@ jobs:
               uses: marocchino/sticky-pull-request-comment@v2
               with:
                   message: ${{ steps.coverage.outputs.report }}
-            - name: Setup Node
-              uses: actions/setup-node@v3
-              with:
-                node-version: 18
             - name: Build and deploy for preview
               if: ${{ github.event_name == 'pull_request' }}
               uses: netlify/actions/cli@master
