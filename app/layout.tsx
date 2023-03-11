@@ -1,7 +1,7 @@
 import 'styles/global.css';
-import Script from 'next/script';
 
 import type {Metadata} from 'next';
+import Script from 'next/script';
 
 import Footer from './footer';
 
