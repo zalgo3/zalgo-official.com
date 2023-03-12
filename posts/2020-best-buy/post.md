@@ -50,7 +50,7 @@ title: '2020年買ってよかったものランキング'
 
 #### ルンバ
 
-<Affiliates asin="B07K482T9R" rakutenItemCode="victoryslife:10005911" JAN="0885155017741" query="ルンバe5" />
+<Affiliates asin="B07K482T9R" rakutenItemCode="jhb-trade:10001605" JAN="0885155017741" query="ルンバe5" />
 
 上２つに比べると役に立ち度はやや落ちますが、それでも非常に助かる時短家電です。
 

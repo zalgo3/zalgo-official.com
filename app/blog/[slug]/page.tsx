@@ -5,7 +5,6 @@ import rehypePrism from '@mapbox/rehype-prism';
 import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
 import {getPost, getPostAll} from 'lib/posts';
 import type {Metadata} from 'next';
-import {notFound} from 'next/navigation';
 import {MDXRemote} from 'next-mdx-remote/rsc';
 import rehypeKatex from 'rehype-katex';
 import remarkGfm from 'remark-gfm';

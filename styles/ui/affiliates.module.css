@@ -1,48 +1,46 @@
 .card {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 'image title title' 'button button button';
     align-items: center;
     box-shadow: var(--box-shadow-background);
     border-radius: 10px;
     padding: 1rem;
 }
 
-.card a {
-    text-decoration: none;
-    color: inherit;
-}
-
 .imageContainer {
-    margin-right: 1rem;
-}
-
-.contentContainer {
-    display: flex;
-    flex-direction: column;
+    grid-area: image;
+    text-align: center;
 }
 
 .title {
+    grid-area: title;
     font-size: 1rem;
-    margin-bottom: 0.5rem;
 }
 
 .buttonGroup {
-    display: flex;
+    grid-area: button;
+    display: inline-flex;
     flex-direction: row;
 }
 
 .buttonGroup a {
+    text-decoration: none;
+
     color: white;
 }
 
 .button {
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.2rem;
+    margin: 0.2rem;
     cursor: pointer;
     box-shadow: var(--box-shadow-background);
-    margin: 5px 4px 5px 4px;
     border-radius: 10px;
     transition: transform 0.3s;
+    flex: 1;
+    text-align: center;
 }
 
 .button:hover {
@@ -51,15 +49,12 @@
 
 .amazonButton {
     background-color: #ff9900;
-    margin-right: 0.5rem;
 }
 
 .rakutenButton {
     background-color: #bf0000;
-    margin-right: 0.5rem;
 }
 
 .yahooButton {
     background-color: #ff0027;
-    margin-right: 0.5rem;
 }
