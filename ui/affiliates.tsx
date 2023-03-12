@@ -1,5 +1,5 @@
 import retry from 'async-retry';
-import { truncateTitle } from 'lib/string';
+import {truncateTitle} from 'lib/string';
 import Image from 'next/image';
 import Link from 'next/link';
 import fetch from 'node-fetch';
@@ -170,94 +170,50 @@ const Affiliates = async ({
     const rakutenItemName = rakutenItem.itemName;
     const rakutenImageUrl = rakutenItem.imageUrl;
     const yahooUrl = await getYahooUrl(query, JAN);
-    if (asin != null) {
-        const amazonUrl = `https://www.amazon.co.jp/dp/${asin}/?ref=nosim?tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`;
-        return (
-            <div className={styles.card}>
-                <div className={styles.imageContainer}>
-                    <Link href={amazonUrl}>
-                        <Image
-                            src={rakutenImageUrl}
-                            alt={rakutenItemName}
-                            width={200}
-                            height={200}
-                            sizes="80vw"
-                            style={{
-                                borderRadius: '10px',
-                                width: '100%',
-                                height: 'auto',
-                            }}
-                        />
-                    </Link>
-                </div>
-                <div className={styles.contentContainer}>
-                    <Link href={amazonUrl}>
-                        <h2 className={styles.title}>
-                            {truncateTitle(rakutenItemName)}
-                        </h2>
-                    </Link>
-                    <div className={styles.buttonGroup}>
-                        <Link
-                            href={amazonUrl}
-                            className={`${styles.button} ${styles.amazonButton}`}
-                        >
-                            Amazon
-                        </Link>
-                        <Link
-                            href={rakutenUrl}
-                            className={`${styles.button} ${styles.rakutenButton}`}
-                        >
-                            楽天
-                        </Link>
-                        <Link
-                            href={yahooUrl}
-                            className={`${styles.button} ${styles.yahooButton}`}
-                        >
-                            Yahoo!
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    const cardUrl =
+        asin != null
+            ? `https://www.amazon.co.jp/dp/${asin}/?ref=nosim?tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`
+            : rakutenUrl;
     return (
         <div className={styles.card}>
-            <div className={styles.imageContainer}>
-                <Link href={rakutenUrl}>
-                    <Image
-                        src={rakutenImageUrl}
-                        alt={rakutenItemName}
-                        width={200}
-                        height={200}
-                        sizes="80vw"
-                        style={{
-                            borderRadius: '10px',
-                            width: '100%',
-                            height: 'auto',
-                        }}
-                    />
-                </Link>
-            </div>
-            <div className={styles.contentContainer}>
-                <Link href={rakutenUrl}>
-                    <h2 className={styles.title}>
-                        {truncateTitle(rakutenItemName)}
-                    </h2>
-                </Link>
-                <div className={styles.buttonGroup}>
+            <Link className={styles.imageContainer} href={cardUrl}>
+                <Image
+                    src={rakutenImageUrl}
+                    alt={rakutenItemName}
+                    width={200}
+                    height={200}
+                    sizes="80vw"
+                    style={{
+                        borderRadius: '10px',
+                        width: 'auto',
+                        height: 'auto',
+                    }}
+                />
+            </Link>
+            <Link className={styles.title} href={cardUrl}>
+                {truncateTitle(rakutenItemName)}
+            </Link>
+            <div className={styles.buttonGroup}>
+                {asin != null && (
                     <Link
-                        href={rakutenUrl}
-                        className={`${styles.button} ${styles.rakutenButton}`}
+                        href={cardUrl}
+                        className={`${styles.button} ${styles.amazonButton}`}
                     >
-                        楽天
+                        Amazon
                     </Link>
-                    <Link
-                        href={yahooUrl}
-                        className={`${styles.button} ${styles.yahooButton}`}
-                    >
-                        Yahoo!
-                    </Link>
-                </div>
+                )}
+                <Link
+                    href={rakutenUrl}
+                    className={`${styles.button} ${styles.rakutenButton}`}
+                >
+                    楽天
+                </Link>
+                <Link
+                    href={yahooUrl}
+                    className={`${styles.button} ${styles.yahooButton}`}
+                >
+                    Yahoo!
+                </Link>
             </div>
         </div>
     );
