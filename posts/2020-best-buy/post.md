@@ -90,8 +90,7 @@ e5 でもすごく助かるんですが、i7 と違って部屋のマップを�
 
 #### 電動歯ブラシ
 
-<Affiliates asin="B07BMTNQC9" rakutenItemCode="ksheep1:10094619" JAN="
-4549980052051" query="ポケットドルツ" />
+<Affiliates asin="B07BMTNQC9" rakutenItemCode="ksheep1:10094619" JAN="4549980052051" query="ポケットドルツ" />
 
 普通の歯ブラシでもいいんですが、より磨きやすい電動歯ブラシを使っています。
 
