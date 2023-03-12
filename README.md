@@ -1,4 +1,4 @@
-![CI/CD](https://github.com/zalgo3/zalgo-official.com/actions/workflows/cicd.yml/badge.svg)
+![CI/CD](https://github.com/zalgo3/zalgo-official.com/actions/workflows/cicd.yaml/badge.svg)
 
 # [zalgo-official.com](https://zalgo-official.com)
 
