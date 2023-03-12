@@ -10,7 +10,7 @@ title: '2021年買ってよかったものランキング'
 
 ### 1 位 SHARP ヘルシオ ウォーターオーブン
 
-<Affiliates asin="B098DF799D" query="ヘルシオ ウォーターオーブン AX-XA20" />.g
+<Affiliates asin="B098DF799D" rakutenItemCode="yz-office:10014840" JAN="4974019184463" query="ヘルシオ ウォーターオーブン AX-XA20" />
 
 毎日使っている最高の調理家電です。
 
@@ -28,7 +28,7 @@ title: '2021年買ってよかったものランキング'
 
 ### 2 位 SHARP ヘルシオ ホットクック
 
-<Affiliates asin="B08JYF6JJD" query="ヘルシオ ホットクック 2.4L" />.g
+<Affiliates asin="B08JYF6JJD" rakutenItemCode="sokutei:10111252" JAN="4974019187143" query="ヘルシオ ホットクック 2.4L" />
 
 またまた SHARP の自動調理家電です。
 
@@ -40,9 +40,9 @@ title: '2021年買ってよかったものランキング'
 
 無水調理や蒸しが強いイメージです。低温蒸しはできませんが、100 度で蒸すならヘルシオウォーターオーブンよりもホットクックのほうがむしろ強いような気がします。
 
-### 3 位 日立 470L 冷蔵庫 R-HWS47N XN
+### 3 位 日立 470L 冷蔵庫
 
-<Affiliates asin="B09MYLZMGP" query="日立 470L 冷蔵庫" />.g
+<Affiliates asin="B09MYLZMGP" rakutenItemCode="takeya-lhe:10006458" JAN="4549873137797" query="日立 470L 冷蔵庫" />
 
 スペースの都合でずっと小さい冷蔵庫を使ってたんですけど、引っ越しに伴い大きいものに買い替え。
 
@@ -60,7 +60,7 @@ title: '2021年買ってよかったものランキング'
 
 ### 4 位 Switchbot カーテン
 
-<Affiliates asin="B099NQ1WMY" query="Switchbot カーテン" />.g
+<Affiliates asin="B099NQ1WMY" rakutenItemCode="gadgetmart:10030032" JAN="0850007706272" query="Switchbot カーテン" />
 
 カーテンを自動開閉してくれるスマート家電です。
 
@@ -76,7 +76,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 1 位 オカムラ コンテッサ セコンダ
 
-<Affiliates asin="B072J7ZS6H" query="オカムラ コンテッサ セコンダ" />.g
+<Affiliates asin="B072J7ZS6H" rakutenItemCode="cocodecow:10147080" JAN="4906076161699" query="オカムラ コンテッサ セコンダ" />
 
 2020 年の[Flexispot の電動昇降スタンディングデスク](https://amzn.to/3GHAxVm)に続き、2021 年もデスク関連グッズが 1 位を飾りました。
 
@@ -96,7 +96,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 2 位 アイリスオーヤマ 8 通りの高さ調整ができる枕 匠眠
 
-<Affiliates asin="B01AU77E9W" query="アイリスオーヤマ 枕 匠眠" />.g
+<Affiliates asin="B01AU77E9W" rakutenItemCode="l-plus:10232216" JAN="4967576194778" query="アイリスオーヤマ 枕 匠眠" />
 
 第 2 位は、中のシートや中材を出して 8 通りの高さ調節ができるアイリスオーヤマの枕です。
 
@@ -132,7 +132,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 3 位 山崎実業 tower ダンボールストッカー
 
-<Affiliates asin="B06VWDWGMJ" query="山崎実業 tower ダンボールストッカー" />.g
+<Affiliates asin="B06VWDWGMJ" query="山崎実業 tower ダンボールストッカー" />
 
 通販で買ったダンボールをそのまま立てておけるストッカーです。
 
@@ -144,11 +144,11 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 あと、紐を使って縛っても十分楽ではあるんですが、更に楽するために、ぼくはストレッチフィルムというラップを使ってぐるぐる巻きにしています。めっちゃ楽ですよ。
 
-<Affiliates asin="B01N68E3TJ" query="山善 ハンディラップ ストレッチ" />.g
+<Affiliates asin="B01N68E3TJ" query="山善 ハンディラップ ストレッチ" />
 
 あと、ダンボールついでですが、ミドリのダンボールカッターっていう小物が地味に便利だったのでおすすめしておきます。
 
-<Affiliates asin="B08LVBHRBN" query="ミドリ ダンボールカッター" />.g
+<Affiliates asin="B08LVBHRBN" query="ミドリ ダンボールカッター" />
 
 とてもコンパクトで、マグネット入りなので冷蔵庫とかに貼り付けられます。
 
@@ -156,7 +156,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 4 位 ダスキンの帯電ほこり取り エレクトロン・エル-E
 
-<Affiliates asin="B001PBWS7G" query="ダスキン エレクトロン エル" />.g
+<Affiliates asin="B001PBWS7G" query="ダスキン エレクトロン エル" />
 
 小物なんですが、これがめちゃくちゃ良かったです。
 
@@ -172,7 +172,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 5 位 ダスキンの台所用スポンジ
 
-<Affiliates asin="B08LWC33HX" query="ダスキン スポンジ" />.g
+<Affiliates asin="B08LWC33HX" query="ダスキン スポンジ" />
 
 またもやダスキンの小物雑貨です。
 
@@ -186,7 +186,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 6 位 ビルケンシュトックのサンダル「Arizona」
 
-<Affiliates asin="B08961766W" query="ビルケンシュトック アリゾナ" />.g
+<Affiliates asin="B08961766W" query="ビルケンシュトック アリゾナ" />
 
 ちょっとした外出に使うサンダルとしてちょっとお高いですが評判のいいこちらを購入しました。
 
@@ -200,7 +200,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 7 位 NuAns FLIPTRAY ステーショナリーケース
 
-<Affiliates asin="B0753DDJ11" query="NuAns FLIPTRAY" />.g
+<Affiliates asin="B0753DDJ11" query="NuAns FLIPTRAY" />
 
 要するに筆箱です。ただ、**めっちゃかっこいい**
 
@@ -220,7 +220,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 8 位 業務用の形と色が揃った箸 10 本
 
-<Affiliates asin="B01N8SRUGO" query="箸 業務用" />.g
+<Affiliates asin="B01N8SRUGO" query="箸 業務用" />
 
 よく飲食店に業務用で大量に置いてあるようなやつです。ガシガシ食洗機で洗っても全く問題ありません。
 
@@ -230,7 +230,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 9 位 Crush Grind TEN Collection
 
-<Affiliates asin="B01A8W0N24" rakutenItemCode="sempre:13639532" query="Crush Grind TEN" />.g
+<Affiliates asin="B01A8W0N24" rakutenItemCode="sempre:13639532" query="Crush Grind TEN" />
 
 コショウのミルです。これもレストランとかでよく見かけるやつ。
 
@@ -244,7 +244,7 @@ S&B の粗挽き黒こしょうの買ったときについてくるミルをず�
 
 ### 10 位 アイリスオーヤマ 工具箱 マイキット
 
-<Affiliates asin="B000QW7MSA" query="アイリスオーヤマ 工具箱" />.g
+<Affiliates asin="B000QW7MSA" query="アイリスオーヤマ 工具箱" />
 
 自作 PC をやっている関係で、なにかと工具とかがごちゃつくので 1 つ工具箱を買ってみました。
 
@@ -256,11 +256,11 @@ S&B の粗挽き黒こしょうの買ったときについてくるミルをず�
 
 ### 11 位 山崎実業 tower のキッチングッズ 3 点
 
-<Affiliates asin="B06XCD2MX1" query="山崎実業 ラップケース" />.g
+<Affiliates asin="B06XCD2MX1" query="山崎実業 ラップケース" />
 
-<Affiliates asin="B01N7V5JZV" query="山崎実業 カトラリートレー" />.g
+<Affiliates asin="B01N7V5JZV" query="山崎実業 カトラリートレー" />
 
-<Affiliates asin="B00TO2YQI2" query="山崎実業 排気口カバー" />.g
+<Affiliates asin="B00TO2YQI2" query="山崎実業 排気口カバー" />
 
 インスタグラマー御用達、山崎実業 tower シリーズより、マグネットラップケース・カトラリートレー・排気口カバーの 3 点です。
 
@@ -274,7 +274,7 @@ S&B の粗挽き黒こしょうの買ったときについてくるミルをず�
 
 ### 12 位 サーモス 真空断熱タンブラー
 
-<Affiliates asin="B07ZSGXVJP" query="サーモス 真空断熱タンブラー" />.g
+<Affiliates asin="B07ZSGXVJP" query="サーモス 真空断熱タンブラー" />
 
 今更すぎるぐらい有名なやつ。みんな持ってるけど、僕は持ってなかったので買いました。
 
@@ -288,14 +288,14 @@ S&B の粗挽き黒こしょうの買ったときについてくるミルをず�
 
 そのうち一個一個使い道とか感想とかまとめて記事にすると思います。時間があれば！おそらく！きっと！多分！
 
-<Affiliates asin="B005H2DC5G" query="イワキ 耐熱ガラス容器" />.g
+<Affiliates asin="B005H2DC5G" query="イワキ 耐熱ガラス容器" />
 
-<Affiliates asin="B002P67LH2" query="タニタ キッチンスケール" />.g
+<Affiliates asin="B002P67LH2" query="タニタ キッチンスケール" />
 
-<Affiliates asin="B08QJVHJTV" query="無印良品 調理スプーン" />.g
+<Affiliates asin="B08QJVHJTV" query="無印良品 調理スプーン" />
 
-<Affiliates asin="B0758PW7FM" query="oxo ミトン" />.g
+<Affiliates asin="B0758PW7FM" query="oxo ミトン" />
 
-<Affiliates asin="B00IHS6RZE" query="ラバーゼ 角ザル" />.g
+<Affiliates asin="B00IHS6RZE" query="ラバーゼ 角ザル" />
 
-<Affiliates asin="B00LHDQ166" query="金伊工業 茹であげザル" />.g
+<Affiliates asin="B00LHDQ166" query="金伊工業 茹であげザル" />
