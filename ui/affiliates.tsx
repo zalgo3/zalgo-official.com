@@ -182,11 +182,11 @@ const Affiliates = async ({
                     alt={rakutenItemName}
                     width={200}
                     height={200}
-                    sizes="80vw"
                     style={{
                         borderRadius: '10px',
-                        width: 'auto',
+                        width: '85%',
                         height: 'auto',
+                        boxShadow: 'var(--box-shadow-background)',
                     }}
                 />
             </Link>
