@@ -1,5 +1,5 @@
 import retry from 'async-retry';
-import {truncateTitle} from 'lib/string';
+import { truncateTitle } from 'lib/string';
 import Image from 'next/image';
 import Link from 'next/link';
 import fetch from 'node-fetch';
@@ -87,7 +87,41 @@ const getRakutenItem = async (
     };
 };
 
-const getYahooUrl = async (query: string): Promise<string> => {
+const getYahooUrl = async (query: string, JAN?: string): Promise<string> => {
+    if (JAN != null) {
+        const params = {
+            appid: process.env.YAHOO_API_APP_ID as string,
+            affiliate_type: 'vc',
+            affiliate_id: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${process.env.VALUE_COMMERCE_SID}&pid=${process.env.VALUE_COMMERCE_PID}&vc_url=`,
+            jan_code: JAN,
+            results: '1',
+        };
+        const urlSearchParams = new URLSearchParams(params).toString();
+        const endpoint = `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`;
+        const itemUrl = await retry(async bail => {
+            const response = await fetch(endpoint);
+            if (response.status === 400) {
+                bail(new Error(`Parameter is not valid: ${endpoint}`));
+                return;
+            }
+            if (response.status == 404) {
+                bail(new Error(`Not found: ${endpoint}.`));
+                return;
+            }
+            if (response.status === 429) {
+                throw new Error(`Too many requests: ${endpoint}`);
+            }
+            const hits = ((await response.json()) as any).hits;
+            if (hits.length === 0) {
+                console.warn(`No hits: ${endpoint}.`);
+                return;
+            }
+            return hits[0].url;
+        });
+        if (itemUrl != null) {
+            return itemUrl;
+        }
+    }
     const params = {
         appid: process.env.YAHOO_API_APP_ID as string,
         affiliate_type: 'vc',
@@ -124,16 +158,18 @@ const Affiliates = async ({
     query,
     asin,
     rakutenItemCode,
+    JAN,
 }: {
     query: string;
     asin?: string;
     rakutenItemCode?: string;
+    JAN?: string;
 }) => {
     const rakutenItem = await getRakutenItem(query, rakutenItemCode);
     const rakutenUrl = rakutenItem.affiliateUrl;
     const rakutenItemName = rakutenItem.itemName;
     const rakutenImageUrl = rakutenItem.imageUrl;
-    const yahooUrl = await getYahooUrl(query);
+    const yahooUrl = await getYahooUrl(query, JAN);
     if (asin != null) {
         const amazonUrl = `https://www.amazon.co.jp/dp/${asin}/?ref=nosim?tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`;
         return (
