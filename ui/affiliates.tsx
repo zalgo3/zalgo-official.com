@@ -36,7 +36,7 @@ const getRakutenItem = async (
             if (response.status === 429) {
                 throw new Error(`Too many requests: ${endpoint}`);
             }
-            const items = ((await response.json()) as any).Items;
+            const items = (await response.json()).Items;
             if (items.length === 0) {
                 console.warn(`No hits: ${endpoint}.`);
                 return;
@@ -72,7 +72,7 @@ const getRakutenItem = async (
         if (response.status === 429) {
             throw new Error(`Too many requests: ${endpoint}`);
         }
-        const items = ((await response.json()) as any).Items;
+        const items = (await response.json()).Items;
         if (items.length === 0) {
             bail(new Error(`No hits: ${endpoint}.`));
             return;
@@ -110,7 +110,7 @@ const getYahooUrl = async (query: string, JAN?: string): Promise<string> => {
             if (response.status === 429) {
                 throw new Error(`Too many requests: ${endpoint}`);
             }
-            const hits = ((await response.json()) as any).hits;
+            const hits = (await response.json()).hits;
             if (hits.length === 0) {
                 console.warn(`No hits: ${endpoint}.`);
                 return;
@@ -143,7 +143,7 @@ const getYahooUrl = async (query: string, JAN?: string): Promise<string> => {
         if (response.status === 429) {
             throw new Error(`Too many requests: ${endpoint}`);
         }
-        const hits = ((await response.json()) as any).hits;
+        const hits = (await response.json()).hits;
         if (hits.length === 0) {
             bail(new Error(`No hits: ${endpoint}.`));
             return;
