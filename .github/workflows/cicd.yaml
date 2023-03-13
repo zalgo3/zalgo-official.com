@@ -1,12 +1,15 @@
 name: CI/CD
 
-on: 
-  pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
+on:
+    pull_request:
+        branches:
+            - main
+    push:
+        branches:
+            - main
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
 jobs:
     cicd:
         runs-on: ubuntu-latest
@@ -15,23 +18,32 @@ jobs:
             pull-requests: write
         steps:
             - uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
             - name: Set up node
               uses: actions/setup-node@v3
               with:
-                node-version: 18
+                  node-version: 18
+            - name: Set up cache
+              uses: actions/cache@v3
+              with:
+                  path: ${{ github.workspace }}/.next/cache
+                  key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+                  restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
+            - name: Install packages
+              run: yarn
             - name: Lint code
               uses: reviewdog/action-eslint@v1
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   reporter: github-pr-review
-            - name: Run test
-              run: yarn test:ci
             - name: Generate test coverage report
               uses: ArtiomTr/jest-coverage-report-action@v2.2.1
               id: coverage
               with:
                   package-manager: yarn
                   output: report-markdown
+                  skip-step: install
             - name: Add test coverage report to pull request
               if: ${{ github.event_name == 'pull_request' }}
               uses: marocchino/sticky-pull-request-comment@v2
@@ -41,23 +53,23 @@ jobs:
               if: ${{ github.event_name == 'pull_request' }}
               run: npx netlify-cli deploy --build
               env:
-                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-                NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-                AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
-                RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
-                RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
-                VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
-                VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
-                YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
+                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+                  AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
+                  RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+                  RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
+                  VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
+                  VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
+                  YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
             - name: Build and deploy for production
               if: ${{ github.event_name == 'push' }}
               run: npx netlify-cli deploy --build --prod
               env:
-                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-                NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-                AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
-                RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
-                RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
-                VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
-                VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
-                YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
+                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+                  AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
+                  RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+                  RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
+                  VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
+                  VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
+                  YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
