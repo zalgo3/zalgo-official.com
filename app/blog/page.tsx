@@ -1,7 +1,7 @@
 import {getPostDataAll} from 'lib/posts';
+import ShareButtons from 'ui/share-buttons';
 
 import DisplayPosts from './DisplayPosts';
-import ShareButtons from 'ui/share-buttons';
 
 const Page = async () => {
     const posts = await getPostDataAll();

@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import styles from 'styles/app/Home.module.css';
+import ShareButtons from 'ui/share-buttons';
 
 import Header from './header';
-import ShareButtons from 'ui/share-buttons';
 
 const Page = () => {
     const url = 'https://zalgo-official.com';
