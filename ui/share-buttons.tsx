@@ -1,4 +1,4 @@
-import {FaTwitter, FaLine, FaFacebook} from 'react-icons/fa';
+import {FaFacebook,FaLine, FaTwitter} from 'react-icons/fa';
 import {SiHatenabookmark} from 'react-icons/si';
 import styles from 'styles/ui/share-buttons.module.css';
 
