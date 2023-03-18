@@ -20,7 +20,7 @@ title: '2020年買ってよかったものランキング'
 
 #### ドラム式洗濯乾燥機
 
-<Affiliates asin="B09GJWBRGT" rakutenItemCode="a-price:10932392" JAN="4974019194592" query="SHARP ドラム式洗濯機" />
+<Affiliates asin="B09GJWBRGT" rakutenItemCode="a-price:10932391" JAN="4974019194592" query="SHARP ドラム式洗濯機" />
 
 この記事で紹介する中で最も高価な商品です。ですが、それだけの価値があると断言できます。
 
@@ -146,7 +146,7 @@ https://zalgo-official.com/nature-remo/
 
 ### 6 位 全自動コーヒーメーカー
 
-<Affiliates asin="B07DTDHP7Q" rakutenItemCode="den-ki-ya2:10005067" JAN="4549980191279" query="パナソニック コーヒーメーカー" />
+<Affiliates asin="B07DTDHP7Q" rakutenItemCode="d-shop1one:10217669" JAN="4549980191279" query="パナソニック コーヒーメーカー" />
 
 第 6 位は、全自動で豆から挽いてコーヒーを入れてくれる「コーヒーメーカー」です。
 
