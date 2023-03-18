@@ -11,6 +11,7 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import styles from 'styles/app/blog/page.module.css';
 import Affiliates from 'ui/affiliates';
+import ShareButtons from 'ui/share-buttons';
 
 export const generateMetadata = async ({
     params,
@@ -32,6 +33,9 @@ export const generateMetadata = async ({
 
 const Page = async ({params}: {params: {slug: string}}) => {
     const {content, ...post} = await getPost(params.slug);
+    const postUrl = `https://zalgo-official.com/blog/${params.slug}`;
+    const siteTitle = 'ざるごのブログ';
+    const authorAccount = 'zalgo3';
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>{post.data.title}</h1>
@@ -60,6 +64,12 @@ const Page = async ({params}: {params: {slug: string}}) => {
                         rehypePlugins: [rehypePrism, rehypeKatex],
                     },
                 }}
+            />
+            <ShareButtons
+                url={postUrl}
+                title={post.data.title}
+                siteTitle={siteTitle}
+                authorAccount={authorAccount}
             />
         </div>
     );
