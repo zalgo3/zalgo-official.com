@@ -52,3 +52,11 @@ public/sitemap-*.xml
 
 # Local Netlify folder
 .netlify
+
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

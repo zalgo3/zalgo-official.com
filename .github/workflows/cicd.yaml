@@ -51,7 +51,7 @@ jobs:
                   message: ${{ steps.coverage.outputs.report }}
             - name: Build and deploy for preview
               if: ${{ github.event_name == 'pull_request' }}
-              run: npx netlify-cli deploy --build
+              run: yarn dlx netlify-cli deploy --build
               env:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
@@ -63,7 +63,7 @@ jobs:
                   YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
             - name: Build and deploy for production
               if: ${{ github.event_name == 'push' }}
-              run: npx netlify-cli deploy --build --prod
+              run: yarn dlx netlify-cli deploy --build --prod
               env:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
