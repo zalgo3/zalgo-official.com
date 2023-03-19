@@ -1,7 +1,7 @@
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-nord.min.css';
 
-import rehypePrism from '@mapbox/rehype-prism';
+import rehypePrism from 'rehype-prism-plus';
 import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
 import {getPost, getPostAll} from 'lib/posts';
 import type {Metadata} from 'next';
