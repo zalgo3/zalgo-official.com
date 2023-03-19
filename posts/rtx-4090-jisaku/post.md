@@ -49,7 +49,7 @@ RTX 4090、買います
 
 いや待て、冷静になろう。RTX 4090 の値段を調べてみる。
 
-<Affiliates asin="B0BHCBYYQ1" query="GAINWARD PHANTOM RTX 4090" />
+<Affiliates asin="B0BHCBYYQ1" rakutenItemCode="shoptsukumo:10014357" JAN="4710562243390" query="GAINWARD RTX 4090" />
 
 33 万円かー…だいたい+20 万円。。。んー。。。
 
