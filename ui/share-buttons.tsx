@@ -1,5 +1,5 @@
-import {FaFacebook, FaLine, FaTwitter} from 'react-icons/fa/index.js';
-import {SiHatenabookmark} from 'react-icons/si/index.js';
+import {FaFacebook, FaLine, FaTwitter} from 'react-icons/fa';
+import {SiHatenabookmark} from 'react-icons/si';
 import styles from 'styles/ui/share-buttons.module.css';
 
 const ShareButtons = ({
