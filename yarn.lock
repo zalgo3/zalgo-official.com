@@ -848,7 +848,7 @@
     slash "^3.0.0"
     tiny-glob "^0.2.9"
 
-"@next/env@13.2.4":
+"@next/env@13.2.4", "@next/env@^13.2.4":
   version "13.2.4"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.2.4.tgz#8b763700262b2445140a44a8c8d088cef676dbae"
   integrity sha512-+Mq3TtpkeeKFZanPturjcXt+KHfKYnLlX6jMLyCrmpq6OOs4i1GqBOAauSkii9QeKCMTYzGppar21JU57b/GEA==

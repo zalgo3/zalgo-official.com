@@ -36,6 +36,7 @@
     },
     "devDependencies": {
         "@netlify/plugin-nextjs": "^4.31.0",
+        "@next/env": "^13.2.4",
         "@types/async-retry": "^1.4.5",
         "@types/jest": "^29.4.0",
         "@types/mapbox__rehype-prism": "^0.8.0",
