@@ -91,7 +91,7 @@ RTX 4090 にすることは確定だが、どのメーカー・どのモデル�
 
 GAINWARD PHANTOM を候補にしておく。
 
-<Affiliates asin="B0BHCBYYQ1" query="GAINWARD PHANTOM Geforce RTX 4090" />
+<Affiliates asin="B0BHCBYYQ1" rakutenItemCode="shoptsukumo:10014357" JAN="4710562243390" query="GAINWARD RTX 4090" />
 
 ### CPU
 
