@@ -28,7 +28,7 @@ jobs:
               uses: actions/cache@v3
               with:
                   path: ${{ github.workspace }}/.next/cache
-                  key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+                  key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx', '**/post.md') }}
                   restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
             - name: Install packages
               run: yarn
