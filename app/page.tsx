@@ -1,9 +1,13 @@
 import Link from 'next/link';
 import styles from 'styles/app/Home.module.css';
+import ShareButtons from 'ui/share-buttons';
 
 import Header from './header';
 
 const Page = () => {
+    const url = 'https://zalgo-official.com';
+    const title = 'ざるご / 田辺広樹';
+    const authorAccount = 'zalgo3';
     return (
         <>
             <Header />
@@ -116,6 +120,11 @@ const Page = () => {
                         </a>
                     </div>
                 </div>
+                <ShareButtons
+                    url={url}
+                    title={title}
+                    authorAccount={authorAccount}
+                />
             </main>
         </>
     );

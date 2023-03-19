@@ -146,7 +146,7 @@ https://zalgo-official.com/nature-remo/
 
 ### 6 位 全自動コーヒーメーカー
 
-<Affiliates asin="B07DTDHP7Q" rakutenItemCode="d-shop1one:10217669" JAN="4549980191279" query="パナソニック コーヒーメーカー" />
+<Affiliates asin="B07DTDHP7Q" rakutenItemCode="vsonic:10005107" JAN="4549980191279" query="パナソニック コーヒーメーカー" />
 
 第 6 位は、全自動で豆から挽いてコーヒーを入れてくれる「コーヒーメーカー」です。
 
