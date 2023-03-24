@@ -63,7 +63,7 @@ jobs:
                   YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
             - name: Build and deploy for production
               if: ${{ github.event_name == 'push' }}
-              run: yarn add --dev netlify-cli && netlify deploy --build
+              run: yarn add --dev netlify-cli && netlify deploy --build --prod
               env:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
