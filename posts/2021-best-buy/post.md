@@ -228,11 +228,11 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 数本折れても、そのまま買い足せば OK。便利です。
 
-### 9 位 Crush Grind TEN Collection
+### 9 位 本格的なペッパーミル
 
-<Affiliates asin="B01A8W0N24" rakutenItemCode="sempre:13639532" query="Crush Grind TEN" />
+<Affiliates asin="B01A8W0N24" rakutenItemCode="biccamera:11387987" JAN="5712898000028" query="Crush Grind TEN" />
 
-コショウのミルです。これもレストランとかでよく見かけるやつ。
+ペッパーミルです。これもレストランとかでよく見かけるやつ。
 
 S&B の粗挽き黒こしょうの買ったときについてくるミルをずっとつかってたんですけど、たくさん削ろうと思うと手が痛くなるので、専用のものを改めて買ってみました。
 
