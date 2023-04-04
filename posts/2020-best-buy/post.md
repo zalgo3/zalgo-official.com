@@ -118,7 +118,7 @@ Apple Watch は電池が 1 日持たないですが、こちらは一週間ほ�
 
 ### 4 位 スチーム型加湿器
 
-<Affiliates asin="B07VGCMF67" rakutenItemCode="sn-mart:10004417" JAN="4974305217639" query="象印 加湿器" />
+<Affiliates asin="B07VGCMF67" JAN="4974305217639" query="EE-DA50-WA" />
 
 第 4 位は、象印のスチーム型加湿器です。
 
@@ -222,7 +222,7 @@ AirPods Pro と並んでよくおすすめされるワイヤレスイヤホン�
 
 ### 3 位 リングフィットアドベンチャー
 
-<Affiliates asin="B07XV8VSZT" rakutenItemCode="r-kojima:11262371" JAN="4902370543278" query="リングフィットアドベンチャー" />
+<Affiliates asin="B07XV8VSZT" rakutenItemCode="biccamera:13673857" JAN="4902370543278" query="リングフィットアドベンチャー" />
 
 第 3 位は、筋トレができるアクションゲーム「リングフィットアドベンチャー」です。
 
