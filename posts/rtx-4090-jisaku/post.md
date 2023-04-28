@@ -1,5 +1,5 @@
 ---
-title: 'Geforce RTX 4090+Core i9-13900K+4K有機ELゲーミングモニターで総額100万円の最強自作PCを作る計画を聞いてくれ'
+title: 'Geforce RTX 4090+Core i9-13900KS+4K有機ELゲーミングモニターで総額90万円の最強自作PCを作る計画を聞いてくれ'
 ---
 
 エルデンリングを配信・録画しながらやったら若干カクついてムカつく！
@@ -39,31 +39,27 @@ GPU をアップグレードするとなると、CPU の性能がややボトル
 
 そんなとき、この投稿を目にしてしまった。
 
-<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter">
+<https://twitter.com/Tsukumo_Sapporo/status/1582631452524433408?s=20&t=tOAv7UzJlzf0Fv1OXzvNIQ>
 
-<div class="wp-block-embed__wrapper">https://twitter.com/Tsukumo_Sapporo/status/1582631452524433408?s=20&t=tOAv7UzJlzf0Fv1OXzvNIQ</div>
-
-</figure>
-
-RTX 4090、買います
+**RTX 4090、買います**
 
 いや待て、冷静になろう。RTX 4090 の値段を調べてみる。
 
-<Affiliates asin="B0BHCBYYQ1" JAN="4710562243390" query="GAINWARD RTX 4090" />
+<Affiliates asin="B0BHCBYYQ1" rakutenItemCode="jism:13767820" JAN="4710562243390" query="GAINWARD RTX 4090" />
 
-33 万円かー…だいたい+20 万円。。。んー。。。
+27 万円かー…だいたい +20 万円。。。んー。。。
 
 えっと、**誤差ですね（白目）**
 
-いや、もちろん高いのはめちゃくちゃ高い。でも、GPU 以外の部品は、一番高いのでも Core i9-13900K の 10 万円だ。
+いや、もちろん高いのはめちゃくちゃ高い。でも、GPU 以外の部品は、一番高いのでも Core i9-13900KS の 10 万円だ。
 
-<Affiliates asin="B0BCF54SR1" query="Intel Core i9-13900K" />
+<Affiliates asin="B0BPXCRWB2" rakutenItemCode="auc-worldichi:10017520" JAN="0735858530477" query="Intel Core i9-13900KS" />
 
 PC にかかる総額を考えると、ここから GPU のグレードを下げたとしても、全体としては意外とお金がかかってしまうということになる。それで微妙だったら目も当てられない。
 
 この性能の伸び率ですよ？どんな用途でもコレあれば最強でしょう？きっと買ってから 5 年以上は持つ。それに、売るときも高く売れるはずなので、最悪売ってしまう選択肢もある。
 
-RTX 4090、買います(2 回目)
+**RTX 4090、買います (2 回目)**
 
 ## 具体的な構成の検討
 
@@ -91,17 +87,15 @@ RTX 4090 にすることは確定だが、どのメーカー・どのモデル�
 
 GAINWARD PHANTOM を候補にしておく。
 
-<Affiliates asin="B0BHCBYYQ1" rakutenItemCode="shoptsukumo:10014357" JAN="4710562243390" query="GAINWARD RTX 4090" />
+<Affiliates asin="B0BHCBYYQ1" rakutenItemCode="jism:13767820" JAN="4710562243390" query="GAINWARD RTX 4090" />
 
 ### CPU
 
 Core i9-13900K の一択。
 
-<Affiliates asin="B0BCF54SR1" query="Intel Core i9-13900K" />
+<Affiliates asin="B0BPXCRWB2" rakutenItemCode="auc-worldichi:10017520" JAN="0735858530477" query="Intel Core i9-13900KS" />
 
-類似モデルとしてグラフィック機能のない 13900KF があるが、値段があまり変わらない上に、実はグラフィック機能以外にも差分があるので、選ぶ理由はないと思う。 (参考:[Intel 公式比較表](https://ark.intel.com/content/www/jp/ja/ark/compare.html?productIds=230497,230496))
-
-ライバル製品の Ryzen 9 7950X も微妙そう。
+ライバル製品の Ryzen 9 7950X は微妙そう。
 
 ゲーミング性能では Intel に負けている上に、コンテンツ制作用途でもあまり変わらず。ソフトの最適化も Intel のほうが優れていることが多いので、素直に i9 で良いだろう。
 
@@ -109,7 +103,7 @@ Core i9-13900K の一択。
 
 **おじさん、4K 有機 EL ゲーミングモニター買っちゃおっかな～＾＾＾＾＾＾＾**
 
-<Affiliates asin="B0BL7L45Q8" query="ASUS ROG Swift OLED PG42UQ" />
+<Affiliates asin="B0BL7L45Q8" rakutenItemCode="edion:10802245" JAN="4711081707134" query="ASUS ROG Swift OLED PG42UQ" />
 
 さっき GPU 以外は一番高くて 10 万円って言ってたじゃねえかって？いや、まあそうなんだけど・・・
 
@@ -151,7 +145,7 @@ MIX は基本的に自分でやるし、そのためにモニタースピーカ�
 
 ### マザーボード
 
-Core i9-13900K+RTX 4090 というウルトラハイエンドマシンなので、マザーボードはそれに見合うものでないと、性能を出しきれない。
+Core i9-13900KS + RTX 4090 というウルトラハイエンドマシンなので、マザーボードはそれに見合うものでないと、性能を出しきれない。
 
 少なくともアッパーミドル以上のクラスを選ぶ必要はあるだろう。
 
@@ -163,7 +157,7 @@ Wi-Fi や Bluetooth、USB-C あたりもほしいが、このクラスなら基�
 
 ASUS と MSI は更に値段が高いし、GIGABYTE か ASRock かなー・・・？
 
-<Affiliates asin="B0BLNGQNXN" query="GIGABYTE Z790 AORUS MASTER" />
+<Affiliates asin="B0BLNGQNXN" rakutenItemCode="biggate:15334029" JAN="0889523033647" query="GIGABYTE Z790 AORUS MASTER" />
 
 ### PC ケース
 
@@ -171,7 +165,7 @@ PS5 並の大きさを誇る RTX 4090 を入れるなら、基本的にフルタ
 
 口コミの良い、CORSAIR Obsidian 1000D を候補にしておく。外見も黒基調で落ち着いていて好み。
 
-<Affiliates asin="B07BQG4TM3" query="CORSAIR Obsidian 1000D" />
+<Affiliates asin="B07BQG4TM3" rakutenItemCode="first23:15532459" JAN="0843591076814" query="CORSAIR Obsidian 1000D" />
 
 ### CPU クーラー
 
@@ -185,7 +179,7 @@ PS5 並の大きさを誇る RTX 4090 を入れるなら、基本的にフルタ
 
 420mm の、CORSAIR iCUE H170i ELITE を候補とする。
 
-<Affiliates asin="B095W3666C" query="CORSAIR iCUE H170i ELITE" />
+<Affiliates asin="B095W3666C" rakutenItemCode="r-kojima:11201513" JAN="0840006643432" query="CORSAIR iCUE H170i ELITE" />
 
 ### ケースファン
 
@@ -193,7 +187,7 @@ PS5 並の大きさを誇る RTX 4090 を入れるなら、基本的にフルタ
 
 なんなら簡易水冷ラジエーターにつけるファンも Noctua にしてもいいくらいだけど、まあそれはやめておいて、フロントとリア用に 120mm を 10 個。
 
-<Affiliates asin="B07C5VG64V" query="Noctua NF-A12x25 PWM" />
+<Affiliates asin="B07C5VG64V" rakutenItemCode="shoptsukumo:10010465" JAN="9010018100396" query="Noctua NF-A12x25 PWM" />
 
 ### メモリ
 
@@ -203,7 +197,7 @@ Core i9-13900K の定格上限である DDR5-5600MHz をセレクトする。
 
 メーカーは、別になんでもいいんだけど CORSAIR で。
 
-<Affiliates asin="B0BD4SRW3H" query="CORSAIR DDR5-5600MHz VENGEANCE 64GB(32GBx2)" />
+<Affiliates asin="B0BD4SRW3H" rakutenItemCode="goodwill:10240440" JAN="0840006698166" query="CORSAIR DDR5-5600MHz VENGEANCE 64GB(32GBx2)" />
 
 ### ストレージ
 
@@ -211,13 +205,11 @@ Core i9-13900K の定格上限である DDR5-5600MHz をセレクトする。
 
 マザーは PCIe 5.0 に対応しているものの、現状 PCIe 5.0 の SSD は高すぎるし実用性も皆無なので、PCIe 4.0 でランダムアクセス性能が高そうなものを選ぶのが良いと考えている。
 
-Samsung 990 PRO が最も性能が高いが、そこまで性能が上がらない上に値段は倍ほどするので、Kingstone KC3000 を候補に。
+最強性能の Samsung 990 PRO をチョイス。発売から半年ほど経ち、価格も落ち着いてきている。
 
 容量は 2TB。1TB だと、OS+α でかなりカツカツなので、少し増やす。
 
-4TB は、2TB を２つ買うより高くなるし、どうしても容量が必要ならもう一枚買い足して RAID 0 にするという手もあるよなあと思い、とりあえず 2TB を 1 枚のみ。
-
-<Affiliates asin="B09K7DRMSC" query="KC3000" />
+<Affiliates asin="B0BHJJ9Y77" rakutenItemCode="goodwill:10240915" JAN="4560441097978" query="Samsung 990 PRO 2TB" />
 
 ### 電源ユニット
 
@@ -229,11 +221,11 @@ RTX 4090 は ATX 3.0 という新規格に移行している。旧規格の電�
 
 静音性等では劣るようだが、どうせ水冷ラジエーターとかのほうがうるさいだろうし。
 
-<Affiliates asin="B0BJDKGCVH" query="MSI MPG A1000G PCIE5 1000W" />
+<Affiliates asin="B0BJDKGCVH" rakutenItemCode="r-kojima:11378001" JAN="4526541042249" query="MSI MPG A1000G PCIE5 1000W" />
 
 ## 総額は…？
 
-グラボ 330000 CPU 100000 ディスプレイ 220000 マザボ 110000 PC ケース 67000 CPU クーラー 30000 ケースファン 40000 メモリ 60000 SSD 33000 電源 38000
+グラボ 270000 CPU 107000 ディスプレイ 213000 マザボ 90000 PC ケース 57000 CPU クーラー 29000 ケースファン 42000 メモリ 33000 SSD 28000 電源 27000
 
 合計は
 
@@ -243,11 +235,11 @@ RTX 4090 は ATX 3.0 という新規格に移行している。旧規格の電�
 
 ・・・・・
 
-**1,028,000 円！！！！！！！！！**
+**896,000 円！！！！！！！！！**
 
 やばい（確信）
 
-これは適当計算で、実際はもうちょっとうまく買い物をしたりするとは思うんで 100 万円下回るとは思いますが、もはや自動車ですね。（ぼくは車運転しないですが）
+もはや自動車ですね。（ぼくは車運転しないですが）
 
 すごい値段ですが、それだけの価値はあると信じてます。
 
