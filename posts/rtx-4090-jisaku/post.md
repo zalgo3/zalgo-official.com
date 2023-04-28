@@ -39,7 +39,7 @@ GPU をアップグレードするとなると、CPU の性能がややボトル
 
 そんなとき、この投稿を目にしてしまった。
 
-<https://twitter.com/Tsukumo_Sapporo/status/1582631452524433408?s=20&t=tOAv7UzJlzf0Fv1OXzvNIQ>
+https://twitter.com/Tsukumo_Sapporo/status/1582631452524433408?s=20&t=tOAv7UzJlzf0Fv1OXzvNIQ
 
 **RTX 4090、買います**
 
