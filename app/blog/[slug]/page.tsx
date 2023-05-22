@@ -3,6 +3,7 @@ import 'prism-themes/themes/prism-nord.min.css';
 
 import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
 import {getPost, getPostAll} from 'lib/posts';
+import remarkImagesToFullPaths from 'lib/remarkImagesToFullPaths';
 import type {Metadata} from 'next';
 import {MDXRemote} from 'next-mdx-remote/rsc';
 import rehypeKatex from 'rehype-katex';
@@ -60,7 +61,11 @@ const Page = async ({params}: {params: {slug: string}}) => {
                 components={{Affiliates}}
                 options={{
                     mdxOptions: {
-                        remarkPlugins: [remarkMath, remarkGfm],
+                        remarkPlugins: [
+                            remarkMath,
+                            remarkGfm,
+                            [remarkImagesToFullPaths, {slug: params.slug}],
+                        ],
                         rehypePlugins: [rehypePrism, rehypeKatex],
                     },
                 }}

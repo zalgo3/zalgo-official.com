@@ -49,6 +49,7 @@ public/fallback-*.js
 public/robots.txt
 public/sitemap.xml
 public/sitemap-*.xml
+public/posts
 
 # Local Netlify folder
 .netlify

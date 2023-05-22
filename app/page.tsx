@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
+import {FaTwitter, FaYoutube} from 'react-icons/fa';
 import styles from 'styles/app/Home.module.css';
 import ShareButtons from 'ui/share-buttons';
 
@@ -12,13 +14,67 @@ const Page = () => {
         <>
             <Header />
             <main className={styles.main}>
+                <div className={styles.socialIcons}>
+                    <a
+                        href="https://twitter.com/zalgo3"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaTwitter color="#1DA1F2" size={32} />
+                        <span>Twitter</span>
+                    </a>
+                    <a
+                        href="https://www.youtube.com/@zalgogame?sub_confirmation=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaYoutube color="#FF0000" size={32} />
+                        <span>ゲーム</span>
+                    </a>
+                    <a
+                        href="https://music.youtube.com/channel/UCD3YZCdQH58hVbw4krMrQjw?sub_confirmation=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaYoutube color="#FF0000" size={32} />
+                        <span>歌</span>
+                    </a>
+                    <a
+                        href="https://www.nicovideo.jp/user/1473771"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Image
+                            src="/icons/niconico.png"
+                            alt="NicoNico"
+                            width={40}
+                            height={40}
+                            style={{marginBottom: 0}}
+                        />
+                        <span style={{marginTop: 0}}>ニコニコ</span>
+                    </a>
+                </div>
+                <div className={styles.profile}>
+                    <Image
+                        src="/images/profile_engineer.jpg"
+                        alt="Profile Picture 1"
+                        width={150}
+                        height={150}
+                    />
+                    <Image
+                        src="/images/profile_youtuber.jpg"
+                        alt="Profile Picture 2"
+                        width={150}
+                        height={150}
+                    />
+                </div>
                 <div className={styles.description}>
                     <p>京都大学博士 (情報学)/歌い手/ゲーム実況者/RTAランナー</p>
                     <p>
                         ハンドルネームはざるご、本名は田辺広樹 (Hiroki Tanabe)
                     </p>
                     <p>
-                        「数理最適化」の研究を行う傍ら、
+                        データサイエンティストとして機械学習業務を行う傍ら、
                         <br />
                         YouTube、ニコニコ動画への動画投稿を行い、総再生回数は500万回超
                     </p>
@@ -96,7 +152,7 @@ const Page = () => {
                             ボカロやアニソンなどの曲を歌ってみた動画を投稿しています。
                         </p>
                         <a
-                            href="https://www.youtube.com/c/zalgosing"
+                            href="https://music.youtube.com/channel/UCD3YZCdQH58hVbw4krMrQjw?sub_confirmation=1"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.link}
