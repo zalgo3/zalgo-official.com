@@ -1,4 +1,5 @@
 import {Node} from 'unist';
+import {is} from 'unist-util-is';
 import {visit} from 'unist-util-visit';
 
 interface ImageNode extends Node {
@@ -15,15 +16,19 @@ interface ImageNode extends Node {
 
 const remarkImagesToFullPaths = ({slug}: {slug: string}) => {
     return (tree: Node) => {
-        visit<ImageNode>(tree, 'image', node => {
-            const url = node.url;
-            if (!url.startsWith('http')) {
-                node.url = `/posts/${slug}/${url}`;
+        visit(tree, 'image', (node: any) => {
+            if (is<ImageNode>(node, 'image')) {
+                const url = node.url;
+                if (!url.startsWith('http')) {
+                    node.url = `/posts/${slug}/${url}`;
+                }
+                if (!node.data)
+                    node.data = {hProperties: {class: '', style: ''}};
+                if (!node.data.hProperties)
+                    node.data.hProperties = {class: '', style: ''};
+                node.data.hProperties.class = 'remark-image';
+                node.data.hProperties.style = 'max-width: 100%; height: auto;';
             }
-            if (!node.data) node.data = {};
-            if (!node.data.hProperties) node.data.hProperties = {};
-            node.data.hProperties.class = 'remark-image';
-            node.data.hProperties.style = 'max-width: 100%; height: auto;';
         });
     };
 };
