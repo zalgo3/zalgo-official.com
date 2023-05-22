@@ -1,10 +1,11 @@
 import 'katex/dist/katex.min.css';
 import 'prism-themes/themes/prism-nord.min.css';
 
-import { format as formatTZ, utcToZonedTime } from 'date-fns-tz';
-import { getPost, getPostAll } from 'lib/posts';
-import type { Metadata } from 'next';
-import { MDXRemote } from 'next-mdx-remote/rsc';
+import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
+import {getPost, getPostAll} from 'lib/posts';
+import remarkImagesToFullPaths from 'lib/remarkImagesToFullPaths';
+import type {Metadata} from 'next';
+import {MDXRemote} from 'next-mdx-remote/rsc';
 import rehypeKatex from 'rehype-katex';
 import rehypePrism from 'rehype-prism-plus';
 import remarkGfm from 'remark-gfm';
@@ -12,14 +13,13 @@ import remarkMath from 'remark-math';
 import styles from 'styles/app/blog/page.module.css';
 import Affiliates from 'ui/affiliates';
 import ShareButtons from 'ui/share-buttons';
-import remarkImagesToFullPaths from 'lib/remarkImagesToFullPaths';
 
 export const generateMetadata = async ({
     params,
 }: {
-    params: { slug: string };
+    params: {slug: string};
 }): Promise<Metadata> => {
-    const { content, ...post } = await getPost(params.slug);
+    const {content, ...post} = await getPost(params.slug);
     return {
         title: post.data.title,
         openGraph: {
@@ -32,8 +32,8 @@ export const generateMetadata = async ({
     };
 };
 
-const Page = async ({ params }: { params: { slug: string } }) => {
-    const { content, ...post } = await getPost(params.slug);
+const Page = async ({params}: {params: {slug: string}}) => {
+    const {content, ...post} = await getPost(params.slug);
     const postUrl = `https://zalgo-official.com/blog/${params.slug}`;
     const siteTitle = 'ざるごのブログ';
     const authorAccount = 'zalgo3';
@@ -58,10 +58,14 @@ const Page = async ({ params }: { params: { slug: string } }) => {
             <MDXRemote
                 source={content}
                 // @ts-expect-error
-                components={{ Affiliates }}
+                components={{Affiliates}}
                 options={{
                     mdxOptions: {
-                        remarkPlugins: [remarkMath, remarkGfm, [remarkImagesToFullPaths, { slug: params.slug }]],
+                        remarkPlugins: [
+                            remarkMath,
+                            remarkGfm,
+                            [remarkImagesToFullPaths, {slug: params.slug}],
+                        ],
                         rehypePlugins: [rehypePrism, rehypeKatex],
                     },
                 }}

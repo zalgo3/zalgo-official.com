@@ -1,8 +1,8 @@
+import Image from 'next/image';
 import Link from 'next/link';
+import {FaTwitter, FaYoutube} from 'react-icons/fa';
 import styles from 'styles/app/Home.module.css';
 import ShareButtons from 'ui/share-buttons';
-import Image from 'next/image';
-import { FaTwitter, FaYoutube } from 'react-icons/fa';
 
 import Header from './header';
 
@@ -15,21 +15,43 @@ const Page = () => {
             <Header />
             <main className={styles.main}>
                 <div className={styles.socialIcons}>
-                    <a href="https://twitter.com/zalgo3" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://twitter.com/zalgo3"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <FaTwitter color="#1DA1F2" size={32} />
                         <span>Twitter</span>
                     </a>
-                    <a href="https://www.youtube.com/@zalgogame?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://www.youtube.com/@zalgogame?sub_confirmation=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <FaYoutube color="#FF0000" size={32} />
                         <span>ゲーム</span>
                     </a>
-                    <a href="https://music.youtube.com/channel/UCD3YZCdQH58hVbw4krMrQjw?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://music.youtube.com/channel/UCD3YZCdQH58hVbw4krMrQjw?sub_confirmation=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <FaYoutube color="#FF0000" size={32} />
                         <span>歌</span>
                     </a>
-                    <a href="https://www.nicovideo.jp/user/1473771" target="_blank" rel="noopener noreferrer">
-                        <Image src="/icons/niconico.png" alt="NicoNico" width={40} height={40} style={{ marginBottom: 0 }} />
-                        <span style={{ marginTop: 0 }}>ニコニコ</span>
+                    <a
+                        href="https://www.nicovideo.jp/user/1473771"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Image
+                            src="/icons/niconico.png"
+                            alt="NicoNico"
+                            width={40}
+                            height={40}
+                            style={{marginBottom: 0}}
+                        />
+                        <span style={{marginTop: 0}}>ニコニコ</span>
                     </a>
                 </div>
                 <div className={styles.profile}>
