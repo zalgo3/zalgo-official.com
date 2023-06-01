@@ -2,7 +2,7 @@
 title: 'イタリア本場の味！生クリーム不使用の全卵カルボナーラが絶品すぎる【料理レシピ】'
 ---
 
-はじめまして。ざるご([@zalgo_sing](https://twitter.com/zalgo_sing))です。
+はじめまして。ざるご([@zalgo3](https://twitter.com/zalgo3))です。
 
 自己紹介は記事の最後にするとして、早速料理の話に移ります。
 
