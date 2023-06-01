@@ -28,7 +28,7 @@ title: '2021年買ってよかったものランキング'
 
 ### 2 位 SHARP ヘルシオ ホットクック
 
-<Affiliates asin="B08JYF6JJD" rakutenItemCode="smilelight:10033996" JAN="4974019187143" query="ヘルシオ ホットクック 2.4L" />
+<Affiliates asin="B08JYF6JJD" rakutenItemCode="edion:10739778" JAN="4974019187143" query="ヘルシオ ホットクック 2.4L" />
 
 またまた SHARP の自動調理家電です。
 
