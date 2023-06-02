@@ -12,3 +12,33 @@ body {
     background-color: var(--c-background);
     color: var(--c-base);
 }
+
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--c-base);
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--c-background);
+    box-shadow: var(--box-shadow-background);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+strong {
+    color: var(--c-primary);
+}
+
+th,
+td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 0.0625rem solid #d1d9e6;
+}
+
+th {
+    text-align: inherit;
+    background-color: var(--c-primary);
+    color: var(--c-white);
+    border: none;
+}

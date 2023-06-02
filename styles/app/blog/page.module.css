@@ -15,3 +15,15 @@
     color: gray;
     margin: 0 0 0.5rem;
 }
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--c-background);
+    box-shadow: var(--box-shadow-background);
+}
