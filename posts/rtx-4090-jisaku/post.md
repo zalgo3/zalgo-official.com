@@ -53,7 +53,7 @@ https://twitter.com/Tsukumo_Sapporo/status/1582631452524433408?s=20&t=tOAv7UzJlz
 
 いや、もちろん高いのはめちゃくちゃ高い。でも、GPU 以外の部品は、一番高いのでも Core i9-13900KS の 10 万円だ。
 
-<Affiliates asin="B0BPXCRWB2" rakutenItemCode="auc-worldichi:10017520" JAN="0735858530477" query="Intel Core i9-13900KS" />
+<Affiliates asin="B0BPXCRWB2" rakutenItemCode="auc-worldichi:10017520" JAN="0735858530477" query="Core i9 13900KS" />
 
 PC にかかる総額を考えると、ここから GPU のグレードを下げたとしても、全体としては意外とお金がかかってしまうということになる。それで微妙だったら目も当てられない。
 
