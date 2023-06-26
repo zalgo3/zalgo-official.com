@@ -53,7 +53,7 @@ https://twitter.com/Tsukumo_Sapporo/status/1582631452524433408?s=20&t=tOAv7UzJlz
 
 いや、もちろん高いのはめちゃくちゃ高い。でも、GPU 以外の部品は、一番高いのでも Core i9-13900KS の 10 万円だ。
 
-<Affiliates asin="B0BPXCRWB2" rakutenItemCode="auc-worldichi:10017520" JAN="0735858530477" query="Core i9 13900KS" />
+<Affiliates asin="B0BCF54SR1" rakutenItemCode="alljapan-online-shop:10018553" JAN="735858526616" query="Core i9 13900K" />
 
 PC にかかる総額を考えると、ここから GPU のグレードを下げたとしても、全体としては意外とお金がかかってしまうということになる。それで微妙だったら目も当てられない。
 
@@ -91,9 +91,9 @@ GAINWARD PHANTOM を候補にしておく。
 
 ### CPU
 
-Core i9-13900K の一択。
+Core i9-13900KS の一択。
 
-<Affiliates asin="B0BPXCRWB2" rakutenItemCode="auc-worldichi:10017520" JAN="0735858530477" query="Intel Core i9-13900KS" />
+<Affiliates asin="B0BCF54SR1" rakutenItemCode="alljapan-online-shop:10018553" JAN="735858526616" query="Core i9 13900K" />
 
 ライバル製品の Ryzen 9 7950X は微妙そう。
 
@@ -157,7 +157,7 @@ Wi-Fi や Bluetooth、USB-C あたりもほしいが、このクラスなら基�
 
 ASUS と MSI は更に値段が高いし、GIGABYTE か ASRock かなー・・・？
 
-<Affiliates asin="B0BLNGQNXN" rakutenItemCode="biggate:15334029" JAN="0889523033647" query="GIGABYTE Z790 AORUS MASTER" />
+<Affiliates asin="B0BJZF7XNW" rakutenItemCode="shoptsukumo:10014350" JAN="4710483941092" query="Z790 Taichi" />
 
 ### PC ケース
 
@@ -169,7 +169,7 @@ PS5 並の大きさを誇る RTX 4090 を入れるなら、基本的にフルタ
 
 ### CPU クーラー
 
-口コミやベンチマーク結果いわく、Core i9-13900K はあまりにも爆熱なため、空冷では十分な性能が出ないらしい。
+口コミやベンチマーク結果いわく、Core i9-13900KS はあまりにも爆熱なため、空冷では十分な性能が出ないらしい。
 
 十分な冷却能力を得るには、360mm 以上のラジエーターを使った簡易水冷、あるいは本格水冷が必要だ。メンテナンスの手間を考えると、簡易水冷が無難だろう。
 
@@ -191,7 +191,7 @@ PS5 並の大きさを誇る RTX 4090 を入れるなら、基本的にフルタ
 
 ### メモリ
 
-Core i9-13900K の定格上限である DDR5-5600MHz をセレクトする。
+Core i9-13900KS の定格上限である DDR5-5600MHz をセレクトする。
 
 容量に関して、行儀の良い使い方をしていれば、32GB で足りないことはないとは思うが、メモリを全然開放しない行儀の悪い使い方をできたほうが何かと生産性も上がると考え、一応 64GB にしておく。
 
