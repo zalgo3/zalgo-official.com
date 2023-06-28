@@ -53,7 +53,7 @@ https://twitter.com/Tsukumo_Sapporo/status/1582631452524433408?s=20&t=tOAv7UzJlz
 
 いや、もちろん高いのはめちゃくちゃ高い。でも、GPU 以外の部品は、一番高いのでも Core i9-13900KS の 10 万円だ。
 
-<Affiliates asin="B0BCF54SR1" rakutenItemCode="alljapan-online-shop:10018553" JAN="735858526616" query="Core i9 13900K" />
+<Affiliates asin="B0BCF54SR1" rakutenItemCode="alljapan-online-shop:10018553" JAN="0735858526616" query="Core i9 13900K" />
 
 PC にかかる総額を考えると、ここから GPU のグレードを下げたとしても、全体としては意外とお金がかかってしまうということになる。それで微妙だったら目も当てられない。
 
@@ -93,7 +93,7 @@ GAINWARD PHANTOM を候補にしておく。
 
 Core i9-13900KS の一択。
 
-<Affiliates asin="B0BCF54SR1" rakutenItemCode="alljapan-online-shop:10018553" JAN="735858526616" query="Core i9 13900K" />
+<Affiliates asin="B0BCF54SR1" rakutenItemCode="alljapan-online-shop:10018553" JAN="0735858526616" query="Core i9 13900K" />
 
 ライバル製品の Ryzen 9 7950X は微妙そう。
 
