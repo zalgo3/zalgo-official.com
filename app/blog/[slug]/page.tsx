@@ -54,7 +54,6 @@ const Page = async ({params}: {params: {slug: string}}) => {
                     'yyyy/MM/dd HH:mm'
                 )}
             </p>
-            {/* @ts-expect-error */}
             <MDXRemote
                 source={content}
                 // @ts-expect-error
