@@ -19,7 +19,6 @@ export const metadata: Metadata = {
         url: 'https://zalgo-official.com',
         siteName: 'ざるご / 田辺広樹',
         locale: 'ja_JP',
-        // @ts-expect-error
         type: 'website',
     },
     icons: {
