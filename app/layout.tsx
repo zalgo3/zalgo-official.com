@@ -17,9 +17,8 @@ export const metadata: Metadata = {
         description:
             '京都大学博士 (情報学)/歌い手/ゲーム実況者/RTAランナー ハンドルネームはざるご、本名は田辺広樹 (Hiroki Tanabe) 「数理最適化」の研究を行う傍ら、YouTube、ニコニコ動画への動画投稿を行い、総再生回数は500万回超',
         url: 'https://zalgo-official.com',
-        site_name: 'ざるご / 田辺広樹',
-        local: 'ja_JP',
-        // @ts-expect-error
+        siteName: 'ざるご / 田辺広樹',
+        locale: 'ja_JP',
         type: 'website',
     },
     icons: {
