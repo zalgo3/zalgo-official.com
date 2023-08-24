@@ -1,5 +1,5 @@
 import retry from 'async-retry';
-import {truncateTitle} from 'lib/string';
+import { truncateTitle } from 'lib/string';
 import Image from 'next/image';
 import Link from 'next/link';
 import fetch from 'node-fetch';
@@ -172,7 +172,7 @@ const Affiliates = async ({
     const yahooUrl = await getYahooUrl(query, JAN);
     const cardUrl =
         asin != null
-            ? `https://www.amazon.co.jp/dp/${asin}/?ref=nosim?tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`
+            ? `https://www.amazon.co.jp/dp/${asin}?tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`
             : rakutenUrl;
     return (
         <div className={styles.card}>
