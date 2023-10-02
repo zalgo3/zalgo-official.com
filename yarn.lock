@@ -817,9 +817,9 @@
     "@types/estree" "*"
 
 "@types/async-retry@^1.4.5":
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/@types/async-retry/-/async-retry-1.4.5.tgz#02680eb366739a327550f6ad38bb898a5571a095"
-  integrity sha512-YrdjSD+yQv7h6d5Ip+PMxh3H6ZxKyQk0Ts+PvaNRInxneG9PFVZjFg77ILAN+N6qYf7g4giSJ1l+ZjQ1zeegvA==
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/@types/async-retry/-/async-retry-1.4.6.tgz#0548ad60211530086ea240e34561465c61fd7770"
+  integrity sha512-or8JPgYUtyPpO0ddHImwUWmSjVE/UalxgMm2d0r3698QhjzlM7eke0PT60bOxs1NG7HxU232RQ1vy1iQKGGRTw==
   dependencies:
     "@types/retry" "*"
 
@@ -1005,9 +1005,9 @@
     csstype "^3.0.2"
 
 "@types/retry@*":
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/@types/retry/-/retry-0.12.2.tgz#ed279a64fa438bb69f2480eda44937912bb7480a"
-  integrity sha512-XISRgDJ2Tc5q4TRqvgJtzsRkFYNJzZrhTdtMoGVBttwzzQJkPnS3WWTFc7kuDRoPtPakl+T+OfdEUjYJj7Jbow==
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/@types/retry/-/retry-0.12.3.tgz#b9cb363c601669dab83da04ed01229bc551a83f1"
+  integrity sha512-rkxEZUFIyDEZhC6EfHz6Hwos2zXewCOLBzhdgv7D55qu4OAySNwDZzxbaMpFI6XthdBa5oHhR5s6/9MSuTfw4g==
 
 "@types/scheduler@*":
   version "0.16.3"
