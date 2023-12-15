@@ -270,7 +270,7 @@ AirPods Pro と並んでよくおすすめされるワイヤレスイヤホン�
 
 #### 無印良品 綿であったかインナー
 
-<Affiliates asin="B09C1Q8MYH" rakutenItemCode="mujirushi-ryohin:10004604" query="無印良品 綿であったか" />
+<Affiliates asin="B09C1Q8MYH" rakutenItemCode="mujirushi-ryohin:10006476" query="無印良品 綿 あったか" />
 
 こちらは、UNIQLO のヒートテックが合わない人におすすめしたい商品です。
 
