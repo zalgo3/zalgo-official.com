@@ -25,7 +25,7 @@ const Page = () => {
             <span>ゲーム</span>
           </a>
           <a
-            href="https://music.youtube.com/channel/UCD3YZCdQH58hVbw4krMrQjw?sub_confirmation=1"
+            href="https://www.youtube.com/channel/UCD3YZCdQH58hVbw4krMrQjw?sub_confirmation=1"
             target="_blank"
             rel="noopener noreferrer"
           >
