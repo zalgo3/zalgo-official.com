@@ -13,9 +13,7 @@ type Options = {
 export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
     const posts = (
         await Promise.all(
-            (
-                await fs.readdir(postsPath)
-            ).map(async slug => {
+            (await fs.readdir(postsPath)).map(async slug => {
                 const postPath = path.join(postsPath, slug, 'post.md');
                 try {
                     let {orig, ...post} = matter(await fs.readFile(postPath));
