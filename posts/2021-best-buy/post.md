@@ -230,7 +230,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 9 位 本格的なペッパーミル
 
-<Affiliates asin="B01A8W0N24" rakutenItemCode="biccamera:11387987" JAN="5712898000028" query="Crush Grind TEN" />
+https://amzn.to/3IgYsgx
 
 ペッパーミルです。これもレストランとかでよく見かけるやつ。
 
