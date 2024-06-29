@@ -37,6 +37,18 @@ jobs:
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   reporter: github-pr-review
+            - name: Generate test coverage report
+              uses: ArtiomTr/jest-coverage-report-action@v2
+              id: coverage
+              with:
+                  package-manager: yarn
+                  output: report-markdown
+                  test-script: yarn test:ci
+            - name: Add test coverage report to pull request
+              if: ${{ github.event_name == 'pull_request' }}
+              uses: marocchino/sticky-pull-request-comment@v2
+              with:
+                  message: ${{ steps.coverage.outputs.report }}
             - name: Build and deploy for preview
               if: ${{ github.event_name == 'pull_request' }}
               run: yarn add --dev netlify-cli && netlify deploy --build
