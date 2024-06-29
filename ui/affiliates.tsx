@@ -92,7 +92,10 @@ const getRakutenItem = async (
     }
 };
 
-const getYahooUrl = async (query: string, JAN?: string): Promise<string | null> => {
+const getYahooUrl = async (
+    query: string,
+    JAN?: string
+): Promise<string | null> => {
     try {
         if (JAN != null) {
             const params = {
