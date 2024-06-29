@@ -28,10 +28,10 @@ jobs:
               uses: actions/cache@v4
               with:
                   path: ${{ github.workspace }}/.next/cache
-                  key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx', '**/post.md') }}
-                  restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
+                  key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx', '**/post.md') }}
+                  restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.lock') }}-
             - name: Install packages
-              run: yarn
+              run: npm install
             - name: Lint code
               uses: reviewdog/action-eslint@v1
               with:
@@ -41,10 +41,10 @@ jobs:
               uses: ArtiomTr/jest-coverage-report-action@v2
               id: coverage
               with:
-                  package-manager: yarn
+                  package-manager: npm install
                   output: report-markdown
                   skip-step: install
-                  test-script: yarn test:ci
+                  test-script: npm run test:ci
             - name: Add test coverage report to pull request
               if: ${{ github.event_name == 'pull_request' }}
               uses: marocchino/sticky-pull-request-comment@v2
@@ -52,7 +52,7 @@ jobs:
                   message: ${{ steps.coverage.outputs.report }}
             - name: Build and deploy for preview
               if: ${{ github.event_name == 'pull_request' }}
-              run: yarn add --dev netlify-cli && netlify deploy --build
+              run: npm install --dev netlify-cli && netlify deploy --build
               env:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
@@ -64,7 +64,7 @@ jobs:
                   YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
             - name: Build and deploy for production
               if: ${{ github.event_name == 'push' }}
-              run: yarn add --dev netlify-cli && netlify deploy --build --prod
+              run: npm install --dev netlify-cli && netlify deploy --build --prod
               env:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
