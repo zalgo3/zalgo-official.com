@@ -1,5 +1,4 @@
 import 'katex/dist/katex.min.css';
-import 'prism-themes/themes/prism-nord.min.css';
 
 import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
 import {getPost, getPostAll} from 'lib/posts';
@@ -7,7 +6,7 @@ import remarkImagesToFullPaths from 'lib/remarkImagesToFullPaths';
 import type {Metadata} from 'next';
 import {MDXRemote} from 'next-mdx-remote/rsc';
 import rehypeKatex from 'rehype-katex';
-import rehypePrism from 'rehype-prism-plus';
+import rehypePrettyCode from 'rehype-pretty-code';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import styles from 'styles/app/blog/page.module.css';
@@ -64,7 +63,7 @@ const Page = async ({params}: {params: {slug: string}}) => {
                             remarkGfm,
                             [remarkImagesToFullPaths, {slug: params.slug}],
                         ],
-                        rehypePlugins: [rehypePrism, rehypeKatex],
+                        rehypePlugins: [rehypePrettyCode, rehypeKatex],
                     },
                 }}
             />
