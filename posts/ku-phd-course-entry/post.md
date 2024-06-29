@@ -24,8 +24,8 @@ title: "京都大学の修士課程を1.5年で早期修了し，博士課程に
 
 ### 「博士課程」は研究者養成課程
 
-<figure class="wp-block-image size-large is-style-default">![大学・大学院の進学システム
-学士課程・修士課程・博士課程の違い](https://zalgo-official.com/img/大学・大学院の研究システム.png)</figure>
+![大学・大学院の進学システム
+学士課程・修士課程・博士課程の違い](https://zalgo-official.com/img/大学・大学院の研究システム.png)
 
 一般的にイメージされる「大学」は4年で終わりますが，主に理系では，**大学院**と呼ばれる上位の学校に進学する人が多いです．
 
@@ -59,7 +59,7 @@ title: "京都大学の修士課程を1.5年で早期修了し，博士課程に
 
 ## なぜ博士課程に進学したか
 
-<figure class="wp-block-image size-medium">![指し棒を持った博士のイラスト（いらすとや）](https://zalgo-official.com/img/博士-285x300.png)</figure>
+![指し棒を持った博士のイラスト（いらすとや）](https://zalgo-official.com/img/博士-285x300.png)
 
 上でも書いたように，多くの大学院生は，修士課程を卒業と同時に就職の道を選び，**博士課程に進む人は殆どいません．**
 
@@ -150,8 +150,8 @@ title: "京都大学の修士課程を1.5年で早期修了し，博士課程に
 
 ### 幅広い研究力・技術力を鍛える
 
-<figure class="wp-block-image size-large">![数学者のイメージ（いらすとや
-](https://zalgo-official.com/img/数学者.png)</figure>
+![数学者のイメージ（いらすとや
+](https://zalgo-official.com/img/数学者.png)
 
 修士課程で論文を書いたことがあるとはいえ，僕の専門である最適化全体に対して僕が持っている引き出しの数は圧倒的に足りていません．
 
@@ -171,7 +171,7 @@ title: "京都大学の修士課程を1.5年で早期修了し，博士課程に
 
 ### 専門外の人に研究を伝える力を鍛える
 
-<figure class="wp-block-image size-medium">![演説・スピーチ・講演会をしている女性（いらすとや）](https://zalgo-official.com/img/演説-300x293.png)</figure>
+![演説・スピーチ・講演会をしている女性（いらすとや）](https://zalgo-official.com/img/演説-300x293.png)
 
 テクニカルなことを極めるのも大事ですが，それを人に伝えることも同じくらい大切なことだと思っています．
 

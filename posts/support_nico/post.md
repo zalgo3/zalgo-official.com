@@ -24,11 +24,11 @@ YouTubeと違って、運で爆発的に評価されることもなければ、�
 
 ### ニコニコ動画のアカウントを作る
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://account.nicovideo.jp/register
 
-</div>
+
 
 ニコニコの動画はアカウント登録なしでも見ることができますが、これから説明するようなアクションの多くには、やはりアカウント登録が必要です。
 
@@ -36,11 +36,11 @@ https://account.nicovideo.jp/register
 
 ### ニコニコ動画のアプリを入れる（スマホの場合）
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://site.nicovideo.jp/nicoapp/?service_list
 
-</div>
+
 
 PCから動画を見ている方は、この項目は飛ばしてもらって構いません。
 
@@ -52,11 +52,11 @@ PCから動画を見ている方は、この項目は飛ばしてもらって構
 
 プレミアム会員じゃなくてもバックグラウンド再生ができるというのも、大きな特徴の一つです。
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://site.nicovideo.jp/nicobox/lp/
 
-</div>
+
 
 ### 無料広告チケットで動画をニコニ広告する
 
@@ -120,8 +120,8 @@ https://site.nicovideo.jp/nicobox/lp/
 
 この記事を書いた日にも、2つほど動画が上がっています。毎日ポチポチして、ぼくを有名にしてください！もし本当に有名になれたら、古参アピはいくらでもどうぞ！
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://www.nicovideo.jp/user/1473771
 
-</div>
+

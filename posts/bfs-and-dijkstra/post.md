@@ -23,13 +23,13 @@ queue.Queueモジュールを使ってもいいですが，シングルスレッ
 
 ちなみに，計算量は点の数V，枝の数EとしてO(V+E)です．
 
-<div class="hcb_wrap">
+
 
 ```
 from collections import deque n, m = map(int, input().split()) edges = [[] for _ in range(n)] prev = [-1] * n for _ in range(m): a, b = map(int, input().split()) a -= 1 b -= 1 edges[a].append(b) edges[b].append(a) def bfs(v): q = deque() prev[v] = -99999 q.append(v) while q: v = q.popleft() for u in edges[v]: if prev[u] == -1: prev[u] = v q.append(u) bfs(0) print("Yes") for i in range(1, n): print(prev[i] + 1)
 ```
 
-</div>
+
 
 ## ダイクストラ法
 
@@ -37,13 +37,13 @@ from collections import deque n, m = map(int, input().split()) edges = [[] for _
 
 頂点の管理にheapqをつかうので，計算量はO( (E+V)logV)です．
 
-<div class="hcb_wrap">
+
 
 ```
 from heapq import heappush, heappop n, m = map(int, input().split()) edges = [[] for _ in range(n)] for _ in range(m): a, b = map(int, input().split()) a -= 1 b -= 1 edges[a].append( (1, b) ) edges[b].append( (1, a) ) INF = 10 ** 9 dist = [INF] * n prev = [-1] * n def dijkstra(s): q = [(0, s)] dist[s] = 0 while q: v = heappop(q)[1] for cost, to in edges[v]: if dist[v] + cost < dist[to]: dist[to] = dist[v] + cost prev[to] = v heappush(q, (dist[to], to)) dijkstra(0) print("Yes") for i in range(1, n): print(prev[i] + 1)
 ```
 
-</div>
+
 
 ## おわりに
 

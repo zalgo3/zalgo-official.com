@@ -16,17 +16,17 @@ title: '【Premiere Pro 2020】GPUエンコードのプラグイン「Daniel2」
 
 そこで，[こちら](https://fabrec.jp/2017/11/28/daniel2-install/)のブログを参考に，ソフトのインストール，ライセンス認証まで済ませました．
 
-<figure class="wp-block-image size-large">![](https://zalgo-official.com/img/daniel2-1024x492.png)<figcaption>赤枠が今回インストールしたもの．「Cinegy Daniel2」「Cinegy H.264」「Cinegy HEVC (H.265)」</figcaption></figure>
+![](https://zalgo-official.com/img/daniel2-1024x492.png)
 
 すると，こんな感じで，これまで H.264 を選んでいたところに新しい形式が 3 つ追加されています．
 
 こちらを選んでいよいよ GPU エンコード！と思い，「Cinegy H.264」を選択したのですが，ここで問題発生
 
-<figure class="wp-block-image size-large">![](https://zalgo-official.com/img/novalidlicense.png)</figure>
+![](https://zalgo-official.com/img/novalidlicense.png)
 
 にゃーんとなってライセンスを確認しましたが，きちんと認証されているはず．
 
-<figure class="wp-block-image size-large">![](https://zalgo-official.com/img/daniel2_license.png)</figure>
+![](https://zalgo-official.com/img/daniel2_license.png)
 
 どうも，ライセンスマネージャに出ている Machine ID と，エラー発生時に出ている Machine ID が異なるようで，それがエラーの原因なのかもしれないです．
 

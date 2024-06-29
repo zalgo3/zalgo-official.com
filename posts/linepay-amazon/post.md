@@ -2,11 +2,11 @@
 title: "【2019年4月】LINE Payの20%還元+Amazonギフト券・Suicaチャージで錬金術する方法"
 ---
 
-<figure class="wp-block-gallery columns-1 is-cropped">
 
-* <figure>![](/img/pay-toku.jpg)</figure>
 
-</figure>
+* ![](/img/pay-toku.jpg)
+
+
 
 LINE Payの20%還元という激ヤバキャンペーンがまたも開催されている．
 
@@ -14,7 +14,7 @@ LINE Payの20%還元という激ヤバキャンペーンがまたも開催され
 
 このキャンペーンのやばいところが，Amazonギフト券やSuicaへのチャージでも20%還元がもらえること．
 
-<figure class="wp-block-image figure-image figure-image-fotolife">![f:id:zalgo:20190418111234p:plain:h300](/img/20190418111234.png)<figcaption>LINE Pay公式の問い合わせ結果にも記載がある．</figcaption></figure>
+![f:id:zalgo:20190418111234p:plain:h300](/img/20190418111234.png)
 
 最大10000円まで還元されるとのことなので，とりあえずAmazonに50000円ぶち込んでおけばそのまま10000円が手に入るというわけだ．まさに錬金術．
 
@@ -33,7 +33,7 @@ LINE Payの20%還元という激ヤバキャンペーンがまたも開催され
 
 もう一つは「マイカラー制度」．LINE Payには，前月の支払い額に応じてポイント還元率が変わるマイカラーという仕組みがある．
 
-<figure class="wp-block-image">![f:id:zalgo:20190418112730p:plain:h300](/img/20190418112730.png)</figure>
+![f:id:zalgo:20190418112730p:plain:h300](/img/20190418112730.png)
 
 このマイカラーが最高ランクのグリーンのとき，更に2%ポイント還元となり，15+3+2=20%還元が受けられる．
 
@@ -69,12 +69,12 @@ Suicaチャージの方法は↓
 
 20%還元キャンペーンの詳細は↓
 
-<figure></figure>
+
 
 <cite class="hatena-citation">[linepay.line.me](https://linepay.line.me/campaign/paytoku.html?utm_source=google&utm_medium=cpc&utm_campaign=g_brand&utm_content=g_paytoku_cp&utm_term=line%20pay_e&gclid=CjwKCAjwndvlBRANEiwABrR32IMi6FkE79A_GscLMIXtjUcqJ-FXouuLf_B1RIk61noQ-VcRS4YlGhoCM0oQAvD_BwE)</cite>
 
-<div class="footnote">
+
 
 [*1](#fn-4a173148):ファミリーマートやローソンなら100円引きなどのLINEクーポンが利用できる．
 
-</div>
+

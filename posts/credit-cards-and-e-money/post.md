@@ -2,11 +2,11 @@
 title: "めんどくさがり諸君でも作るべき最低限のクレカ/電子マネーまとめ"
 ---
 
-<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter">
 
-<div class="wp-block-embed__wrapper">https://twitter.com/zalgo3/status/1399976165792653316?s=20</div>
 
-</figure>
+https://twitter.com/zalgo3/status/1399976165792653316?s=20
+
+
 
 どうもざるごです。↑のようなツイートをしたのでまとめておきます。
 
@@ -20,11 +20,11 @@ title: "めんどくさがり諸君でも作るべき最低限のクレカ/電�
 
 いろいろなポイントサイトがありますが、めんどくさい人は「モッピー」だけでOKです。
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://pc.moppy.jp/entry/invite.php?invite=27KYe1bb
 
-</div>
+
 
 クレカとかを作るときは作りたいカードの名前を必ずこのサイトの中で検索して、もしあったら経由して登録しましょう。（なかったら諦めてOK）
 
@@ -36,11 +36,11 @@ https://pc.moppy.jp/entry/invite.php?invite=27KYe1bb
 
 ### Visa LINE Payクレジットカード
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://linepay.line.me/promotion/line-creditcard/202105-promotion.html?utm_source=portal&utm_medium=campaignlist&utm_campaign=visa_2105&utm_content=0507
 
-</div>
+
 
 ポイント還元率**2%**の最強カードです。
 
@@ -48,11 +48,11 @@ https://linepay.line.me/promotion/line-creditcard/202105-promotion.html?utm_sour
 
 ### 三井住友カード（ナンバーレス）
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://pc.moppy.jp/ad/detail.php?s_id=149052
 
-</div>
+
 
 コンビニの支払いは全部これで大丈夫です。
 
@@ -62,11 +62,11 @@ https://pc.moppy.jp/ad/detail.php?s_id=149052
 
 ### 楽天カード
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://hb.afl.rakuten.co.jp/hsc/20480eaa.2bb41113.20480eab.e7b3fc49/?link_type=hybrid_url&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJoeWJyaWRfdXJsIiwiY29sIjoxLCJjYXQiOiIxIiwiYmFuIjoiMTY2NzYzIiwiYW1wIjpmYWxzZX0%3D
 
-</div>
+
 
 楽天市場で使う用。楽天市場限定で3%還元です。
 
@@ -80,11 +80,11 @@ https://hb.afl.rakuten.co.jp/hsc/20480eaa.2bb41113.20480eab.e7b3fc49/?link_type=
 
 ### PayPay
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://paypay.ne.jp/
 
-</div>
+
 
 クレカが使えない店でも、PayPayなら使える場合が結構多いので、そういうときにもポイント還元を受ける用です。
 
@@ -92,11 +92,11 @@ https://paypay.ne.jp/
 
 ### 楽天Pay
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://r10.to/hynGdt
 
-</div>
+
 
 楽天ポイント消費用です。
 

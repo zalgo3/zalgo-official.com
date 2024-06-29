@@ -79,50 +79,50 @@ IFTTT は，指定したトリガーが検出されたら，指定したアク�
 
 IFTTT の使い方については，↓ のサイトが詳しいのでご参考にどうぞ．
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://chasuke.com/smarthome-ifttt/
 
-</div>
+
 
 サイトを参考に，自動化のトリガーを検出する画面まで行きます．
 
-<figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180444-485x1024.png)</figure>
+![](https://zalgo-official.com/img/Screenshot_20200429-180444-485x1024.png)
 
 まず，This と書かれたところを選び，検索窓に「Alexa」と入力．
 Amazon Alexa を選択します．
 
-<figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180527-485x1024.png)</figure>
+![](https://zalgo-official.com/img/Screenshot_20200429-180527-485x1024.png)
 
 Say a specific phrase （特定のフレーズを言ったら）を選択します．
 
-<figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180530-485x1024.png)</figure>
+![](https://zalgo-official.com/img/Screenshot_20200429-180530-485x1024.png)
 
 入力欄に，トリガーにしたい言葉（今回は「電気つけて」）を入力し，Continue を押します．
 
-<figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180540-485x1024.png)</figure>
+![](https://zalgo-official.com/img/Screenshot_20200429-180540-485x1024.png)
 
 次に，That と書かれたところを選び，検索窓に「nature remo」と入力．
 Nature Remo を選択します．
 
-<figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180546-1-485x1024.png)</figure>
+![](https://zalgo-official.com/img/Screenshot_20200429-180546-1-485x1024.png)
 
-<figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180603-485x1024.png)</figure>
+![](https://zalgo-official.com/img/Screenshot_20200429-180603-485x1024.png)
 
 今回は電気を操作したいので，Control light（明かりを操作）を選択します．
 
-<figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180609-485x1024.png)</figure>
+![](https://zalgo-official.com/img/Screenshot_20200429-180609-485x1024.png)
 
 Please select の中から，寝室の照明（ここは人によって違う） - ON を選択します．
 
-<figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-180617-485x1024.png)</figure>
+![](https://zalgo-official.com/img/Screenshot_20200429-180617-485x1024.png)
 
 これで IFTTT にトリガーを設定できました！
 
 最後に Alexa アプリで定形アクションを設定し，
 「アレクサ，電気つけて」で IFTTT を呼び出せるようにします．
 
-<figure class="wp-block-image size-large is-resized">![](https://zalgo-official.com/img/Screenshot_20200429-182500-485x1024.png)</figure>
+![](https://zalgo-official.com/img/Screenshot_20200429-182500-485x1024.png)
 
 これで「リモで」という必要がなくなりました！
 

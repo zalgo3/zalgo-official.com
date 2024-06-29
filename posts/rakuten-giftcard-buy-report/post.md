@@ -12,11 +12,11 @@ title: "【購入報告】楽天ギフトカードをセブンイレブンで購
 
 数日前は置いてなかったんですが、今日セブンイレブンに置いてるのを見かけたので、Apple Payのnanacoから5万円分購入。
 
-<figure class="wp-block-image size-large">![](https://zalgo-official.com/img/image-1-768x1024.jpg)</figure>
+![](https://zalgo-official.com/img/image-1-768x1024.jpg)
 
 楽天キャッシュ(基本型)へのチャージも問題なく完了しました。
 
-<figure class="wp-block-image size-full">![](https://zalgo-official.com/img/image.png)</figure>
+![](https://zalgo-official.com/img/image.png)
 
 nanacoへの一日のチャージ上限が3万円までなので、毎日コツコツコンビニに通い、チャージした残高は、楽天証券にて8月開始の[楽天キャッシュ決済での投信積立](https://www.rakuten-sec.co.jp/web/info/info20220201-01.html)にて使っていく予定です。
 
@@ -43,11 +43,11 @@ Apple Payのnanacoには、[MIXI M](https://m.mixi.com/)という、mixi社提�
 
 ### エポスゴールドカード→MIXI Mで1.5%〜2.5%ポイント還元
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://www.eposcard.co.jp/goldcard/main.html
 
-</div>
+
 
 エポスゴールドカードは、通常還元率0.5%のゴールドカードですが、[選べるショップポイントアップ](https://www.eposcard.co.jp/pointup/index.html)というサービスにより、対象店舗の中から好きな3つを選び、その店舗に限って還元率を1.5%にすることができます。
 
@@ -77,11 +77,11 @@ MIXI Mは3Dセキュア非対応なので、3Dセキュア対応じゃないと�
 
 ### 三井住友カード NL ゴールド→Kyash→MIXI MでNLゴールド修行
 
-<div class="wp-block-cocoon-blocks-blogcard blogcard-type bct-none">
+
 
 https://www.smbc-card.com/olentry/affiliate/online_entry.do?bno=03401174131
 
-</div>
+
 
 三井住友カード NL ゴールドの修行をするのもおすすめです。
 

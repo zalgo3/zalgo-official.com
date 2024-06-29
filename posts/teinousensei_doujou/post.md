@@ -66,27 +66,27 @@ title: "低能先生に同情している人たちへ【はてな村Hagex殺人�
 
 特にレンチンうどんのやつとか完全にこれプロの写真だよね。実際このsyunkonさんは半分プロみたいなもので、料理ブロガーとしてNo.1を誇り、レシピ本をなんと累計**510万部**も売り上げている。（レベルが違うとはまさにこのこと）
 
-<div class="kattene">
 
-<div class="kattene__imgpart">[![](https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4800254213&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=galavollc-22)](https://amzn.to/2MY3l0e)</div>
 
-<div class="kattene__infopart">
+[![](https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4800254213&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=galavollc-22)](https://amzn.to/2MY3l0e)
 
-<div class="kattene__title">[syunkonカフェごはん レンジで絶品レシピ (e-MOOK)](https://amzn.to/2MY3l0e)</div>
 
-<div class="kattene__description">山本 ゆり</div>
 
-<div class="kattene__btns__two">
+[syunkonカフェごはん レンジで絶品レシピ (e-MOOK)](https://amzn.to/2MY3l0e)
 
-<div>[Amazon](https://amzn.to/2MY3l0e)</div>
+山本 ゆり
 
-<div>[楽天市場](https://hb.afl.rakuten.co.jp/hgc/16ce097e.83baeb75.16ce097f.7073cf49/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F13846792%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F17866248%2F&link_type=text&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJkb3duIiwiY29tIjoxLCJjb21wIjoiZG93biIsInByaWNlIjoxLCJib3IiOjEsImNvbCI6MH0%3D)</div>
 
-</div>
 
-</div>
+[Amazon](https://amzn.to/2MY3l0e)
 
-</div>
+[楽天市場](https://hb.afl.rakuten.co.jp/hgc/16ce097e.83baeb75.16ce097f.7073cf49/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F13846792%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F17866248%2F&link_type=text&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJkb3duIiwiY29tIjoxLCJjb21wIjoiZG93biIsInByaWNlIjoxLCJib3IiOjEsImNvbCI6MH0%3D)
+
+
+
+
+
+
 
 意外性があって面白い料理・食欲をくすぐる巧妙な文章・シズル感漂う美味しそうな写真。この3つがそろって初めて料理ツイートはバズる。
 

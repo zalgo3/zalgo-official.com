@@ -29,7 +29,8 @@ const remarkImagesToFullPaths = ({slug}: {slug: string}) => {
                 if (!imageNode.data.hProperties)
                     imageNode.data.hProperties = {class: '', style: ''};
                 imageNode.data.hProperties.class = 'remark-image';
-                imageNode.data.hProperties.style = 'max-width: 100%; height: auto;';
+                imageNode.data.hProperties.style =
+                    'max-width: 100%; height: auto;';
             }
         });
     };
