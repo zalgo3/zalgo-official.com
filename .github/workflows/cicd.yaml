@@ -41,7 +41,6 @@ jobs:
               uses: ArtiomTr/jest-coverage-report-action@v2
               id: coverage
               with:
-                  package-manager: npm install
                   output: report-markdown
                   skip-step: install
                   test-script: npm run test:ci
