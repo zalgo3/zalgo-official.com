@@ -1,7 +1,7 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 [build]
-  command = "yarn build"
+  command = "npm run build"
   publish = ".next"
 [build.processing]
   skip_processing = false
