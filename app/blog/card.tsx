@@ -1,4 +1,4 @@
-import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
+import {format as formatTZ, toZonedTime} from 'date-fns-tz';
 import {type PostData} from 'lib/posts';
 import {truncateTitle} from 'lib/string';
 import Link from 'next/link';
@@ -11,12 +11,12 @@ const Card = ({post}: {post: PostData}) => {
                 <h2>{truncateTitle(post.title)}</h2>
                 <footer>
                     {formatTZ(
-                        utcToZonedTime(post.createdAt * 1000, 'Asia/Tokyo'),
+                        toZonedTime(post.createdAt * 1000, 'Asia/Tokyo'),
                         'yyyy年MM月dd日'
                     )}{' '}
                     (最終更新:{' '}
                     {formatTZ(
-                        utcToZonedTime(post.updatedAt * 1000, 'Asia/Tokyo'),
+                        toZonedTime(post.updatedAt * 1000, 'Asia/Tokyo'),
                         'yyyy年MM月dd日'
                     )}
                     )
