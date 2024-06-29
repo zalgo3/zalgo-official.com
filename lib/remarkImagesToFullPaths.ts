@@ -16,18 +16,19 @@ interface ImageNode extends Node {
 
 const remarkImagesToFullPaths = ({slug}: {slug: string}) => {
     return (tree: Node) => {
-        visit(tree, 'image', (node: any) => {
-            if (is<ImageNode>(node, 'image')) {
-                const url = node.url;
+        visit(tree, 'image', (node: unknown) => {
+            if (is.image(node)) {
+                const imageNode = node as ImageNode;
+                const url = imageNode.url;
                 if (!url.startsWith('http')) {
-                    node.url = `/posts/${slug}/${url}`;
+                    imageNode.url = `/posts/${slug}/${url}`;
                 }
-                if (!node.data)
-                    node.data = {hProperties: {class: '', style: ''}};
-                if (!node.data.hProperties)
-                    node.data.hProperties = {class: '', style: ''};
-                node.data.hProperties.class = 'remark-image';
-                node.data.hProperties.style = 'max-width: 100%; height: auto;';
+                if (!imageNode.data)
+                    imageNode.data = {hProperties: {class: '', style: ''}};
+                if (!imageNode.data.hProperties)
+                    imageNode.data.hProperties = {class: '', style: ''};
+                imageNode.data.hProperties.class = 'remark-image';
+                imageNode.data.hProperties.style = 'max-width: 100%; height: auto;';
             }
         });
     };
