@@ -1,6 +1,6 @@
 import 'katex/dist/katex.min.css';
 
-import {format as formatTZ, utcToZonedTime} from 'date-fns-tz';
+import {format as formatTZ, toZonedTime} from 'date-fns-tz';
 import {getPost, getPostAll} from 'lib/posts';
 import remarkImagesToFullPaths from 'lib/remarkImagesToFullPaths';
 import type {Metadata} from 'next';
@@ -42,14 +42,14 @@ const Page = async ({params}: {params: {slug: string}}) => {
             <p className={styles.date}>
                 投稿日時:{' '}
                 {formatTZ(
-                    utcToZonedTime(post.data.createdAt * 1000, 'Asia/Tokyo'),
+                    toZonedTime(post.data.createdAt * 1000, 'Asia/Tokyo'),
                     'yyyy/MM/dd HH:mm'
                 )}
             </p>
             <p className={styles.date}>
                 最終更新日時:{' '}
                 {formatTZ(
-                    utcToZonedTime(post.data.updatedAt * 1000, 'Asia/Tokyo'),
+                    toZonedTime(post.data.updatedAt * 1000, 'Asia/Tokyo'),
                     'yyyy/MM/dd HH:mm'
                 )}
             </p>
