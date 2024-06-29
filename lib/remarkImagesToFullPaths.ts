@@ -17,7 +17,7 @@ interface ImageNode extends Node {
 
 const remarkImagesToFullPaths = ({slug}: {slug: string}) => {
     return (tree: Node) => {
-        visit(tree, 'image', (node: unkown) => {
+        visit(tree, 'image', (node: unknown) => {
             if (is(node, 'image')) {
                 const imageNode = node as ImageNode;
                 const url = imageNode.url;
