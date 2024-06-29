@@ -17,7 +17,7 @@ jobs:
             contents: read
             pull-requests: write
         steps:
-            - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+            - uses: actions/checkout@v4
               with:
                   fetch-depth: 0
             - name: Set up node
@@ -38,7 +38,7 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   reporter: github-pr-review
             - name: Generate test coverage report
-              uses: ArtiomTr/jest-coverage-report-action@v2.2.8
+              uses: ArtiomTr/jest-coverage-report-action@v2
               id: coverage
               with:
                   package-manager: yarn
