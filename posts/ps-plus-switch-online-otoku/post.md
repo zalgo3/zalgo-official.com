@@ -12,7 +12,7 @@ title: 'Play Station PlusやNintendo Switch Onlineに超お得に加入する方
 
 <Affiliates rakutenItemCode="rdownload:18492326" query="プレイステーション ストアチケット" />
 
-<figure class="wp-block-image size-full">![](https://zalgo-official.com/assets/uploads/image-1.png)</figure>
+![](https://zalgo-official.com/assets/uploads/image-1.png)
 
 こちらの画像をご覧ください。5143 円での購入で、**442**ポイントの楽天ポイントが獲得できました。
 

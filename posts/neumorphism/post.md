@@ -18,11 +18,11 @@ title: "ブログのサイトデザインを「ニューモーフィズム」に
 
 ### PCの場合
 
-<figure class="wp-block-image size-large">![](https://zalgo-official.com/img/スクリーンショット-2020-09-07-21.57.37-1-1024x506.jpg)</figure>
+![](https://zalgo-official.com/img/スクリーンショット-2020-09-07-21.57.37-1-1024x506.jpg)
 
 ### スマホの場合
 
-<figure class="wp-block-image size-large">![](https://zalgo-official.com/img/スクリーンショット-2020-09-07-21.58.33-576x1024.jpg)</figure>
+![](https://zalgo-official.com/img/スクリーンショット-2020-09-07-21.58.33-576x1024.jpg)
 
 ## どうやって作ったか
 

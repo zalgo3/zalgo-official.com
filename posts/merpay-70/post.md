@@ -2,7 +2,7 @@
 title: "【8月11日まで】メルペイの70%還元キャンペーンが最強すぎる件【電子マネー】"
 ---
 
-<figure class="wp-block-image">![](/img/merpay-70-1024x538.png)</figure>
+![](/img/merpay-70-1024x538.png)
 
 メルカリの電子マネーサービス「メルペイ」で，
 

@@ -170,8 +170,8 @@ PC やタブレットのほうが入学祝いとして一般的だと思った�
 
 今すぐ相談することがなくても、将来何か聞きたいことがあるかもしれない人は、よかったらフォローをお願いします。
 
-<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter">
 
-<div class="wp-block-embed__wrapper">https://twitter.com/zalgo3/status/1501754723556339716?s=20&t=0tPEYv5dfIbnuzgeDG4Beg</div>
 
-</figure>
+https://twitter.com/zalgo3/status/1501754723556339716?s=20&t=0tPEYv5dfIbnuzgeDG4Beg
+
+

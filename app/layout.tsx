@@ -1,6 +1,6 @@
 import 'styles/global.css';
 
-import {GoogleTagManager} from '@next/third-parties/google';
+import {GoogleAnalytics} from '@next/third-parties/google';
 import type {Metadata} from 'next';
 import Script from 'next/script';
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 const RootLayout = ({children}: {children: React.ReactNode}) => {
     return (
         <html lang="ja">
-            <GoogleTagManager gtmId="G-KVTMLPFHK5" />
+            <GoogleAnalytics gaId="G-KVTMLPFHK5" />
             <Script
                 async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3520947091484443"

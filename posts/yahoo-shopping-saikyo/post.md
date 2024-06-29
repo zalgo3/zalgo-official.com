@@ -8,7 +8,7 @@ Amazon？楽天？ふむふむ。
 
 とりあえず一旦座ってもらって、次の画像を見てくれ。
 
-<figure class="wp-block-image size-full">![](https://zalgo-official.com/img/5のつく日.png)</figure>
+![](https://zalgo-official.com/img/5のつく日.png)
 
 ## 最強の還元率
 

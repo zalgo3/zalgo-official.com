@@ -30,13 +30,13 @@ title: "AGC 044 B - Joker をPythonで解いた【幅優先探索/深さ優先�
 
 Pythonで実装したものが下記です．
 
-<div class="hcb_wrap">
+
 
 ```
 n = int(input()) P = list(map(int, input().split())) dist = [[min(i, j, n - i - 1, n - j - 1) for j in range(n)] for i in range(n)] is_sit = [[True for _ in range(n)] for _ in range(n)] ans = 0 for p in P: i, j = divmod(p - 1, n) is_sit[i][j] = False ans += dist[i][j] q = [(i, j, dist[i][j])] while q: i, j, cur_cost = q.pop() if i > 0 and dist[i - 1][j] > cur_cost: dist[i - 1][j] = cur_cost q.append((i - 1, j, cur_cost + is_sit[i - 1][j])) if j > 0 and dist[i][j - 1] > cur_cost: dist[i][j - 1] = cur_cost q.append((i, j - 1, cur_cost + is_sit[i][j - 1])) if i < n - 1 and dist[i + 1][j] > cur_cost: dist[i + 1][j] = cur_cost q.append((i + 1, j, cur_cost + is_sit[i + 1][j])) if j < n - 1 and dist[i][j + 1] > cur_cost: dist[i][j + 1] = cur_cost q.append((i, j + 1, cur_cost + is_sit[i][j + 1])) print(ans)
 ```
 
-</div>
+
 
 ## 感想
 

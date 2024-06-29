@@ -8,21 +8,21 @@ YouTuber 御用達の企画「Google の入社試験解いてみた」
 
 例えばこんなやつ
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
 
-<div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=vTyalZzGqus</div>
 
-</figure>
+https://www.youtube.com/watch?v=vTyalZzGqus
+
+
 
 Google 以外にも、Microsoft とか Apple の入社試験とかいうのも YouTube 企画では定番です。
 
 こんなやつね。
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
 
-<div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=2fRed-1PM6A</div>
 
-</figure>
+https://www.youtube.com/watch?v=2fRed-1PM6A
+
+
 
 この他にも数え切れないくらいの YouTuber が、似たような「Google のおもしろ難問入社試験を解く」という趣旨の動画を上げています。
 
@@ -37,11 +37,11 @@ Google 以外にも、Microsoft とか Apple の入社試験とかいうのも Y
 
 じゃあ実際にはどういう問題が出題されているか？という話ですが、これも Google が公式に動画を上げています。
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
 
-<div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=XKu_SEDAykw</div>
 
-</figure>
+https://www.youtube.com/watch?v=XKu_SEDAykw
+
+
 
 英語なので理解できない人も多いと思いますが、少なくともおもしろ論理クイズではないということは伝わると思います。
 
