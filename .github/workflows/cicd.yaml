@@ -38,7 +38,7 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   reporter: github-pr-review
             - name: Generate test coverage report
-              uses: ArtiomTr/jest-coverage-report-action@v2.2.8
+              uses: ArtiomTr/jest-coverage-report-action@v2.3.0
               id: coverage
               with:
                   package-manager: yarn
