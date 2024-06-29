@@ -14,7 +14,7 @@ type RakutenItem = {
 const getRakutenItem = async (
     query: string,
     itemCode?: string
-): Promise<RakutenItem> => {
+): Promise<RakutenItem | null> => {
     try {
         if (itemCode != null) {
             const params = {
@@ -92,7 +92,7 @@ const getRakutenItem = async (
     }
 };
 
-const getYahooUrl = async (query: string, JAN?: string): Promise<string> => {
+const getYahooUrl = async (query: string, JAN?: string): Promise<string | null> => {
     try {
         if (JAN != null) {
             const params = {
