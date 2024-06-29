@@ -183,7 +183,8 @@ const Affiliates = async ({
     const cardUrl =
         amazonUrl ||
         (rakutenItem ? rakutenItem.affiliateUrl : null) ||
-        yahooUrl;
+        yahooUrl ||
+        '#';
     return (
         <div className={styles.card}>
             {rakutenItem && (
