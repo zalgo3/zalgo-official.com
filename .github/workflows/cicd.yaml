@@ -43,6 +43,7 @@ jobs:
               with:
                   package-manager: yarn
                   output: report-markdown
+                  skip-step: install
                   test-script: yarn test:ci
             - name: Add test coverage report to pull request
               if: ${{ github.event_name == 'pull_request' }}
