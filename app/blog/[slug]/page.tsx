@@ -1,7 +1,7 @@
 import 'katex/dist/katex.min.css';
 
-import {format as formatTZ, toZonedTime} from 'date-fns-tz';
 import {YouTubeEmbed} from '@next/third-parties/google';
+import {format as formatTZ, toZonedTime} from 'date-fns-tz';
 import {getPost, getPostAll} from 'lib/posts';
 import remarkImagesToFullPaths from 'lib/remarkImagesToFullPaths';
 import type {Metadata} from 'next';
