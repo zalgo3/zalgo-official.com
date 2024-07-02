@@ -66,4 +66,4 @@ title: "「高齢者選挙権自主返納制度」を提案します．"
 
 ↓YouTubeでもこの制度について解説しています↓
 
-https://www.youtube.com/watch?v=pik3cL-K4WM
+<YouTubeEmbed videoid="pik3cL-K4WM" />

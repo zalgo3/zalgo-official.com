@@ -52,7 +52,7 @@ OS はこのディスクにインストールされてます。データ保存�
 
 この間上げたばっかの ↓ の動画のプロジェクトファイルを開いてみたけど、プラグインとか刺さった状態で問題なく再生できる。
 
-https://youtu.be/c7q81jnfJKE
+<YouTubeEmbed videoid="c7q81jnfJKE" />
 
 ちなみにプラグインは主に Waves Gold とか Invisible Limiter とかを刺してた。他のプラグインの対応状況とかはまだ不明。
 
