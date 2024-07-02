@@ -4,7 +4,7 @@ title: '【エルデンリング】転送門・転送罠の場所と行き先一
 
 こんにちはざるごです。普段はこんな動画あげてます。
 
-https://youtu.be/To6LVc6SBr4
+<YouTubeEmbed videoid="To6LVc6SBr4" />
 
 転送門の一覧について、まともに網羅されている情報が見つからなかったのでまとめました。（企業系ゲームブログ、抜け漏れが多いというレベルじゃなく、もはや半分くらいの場所しか書いてない…）
 
@@ -81,4 +81,4 @@ https://youtu.be/To6LVc6SBr4
 | 曇り川の洞窟     | リムグレイブ東の小黄金樹 |
 | 舞い戻りの塔     | 神授橋                   |
 
-<Affiliates asin="B0B62D44F3" query="エルデンリング 攻略本" />
+<Affiliates asin="B0CW4NMKPX" rakutenItemCode="jism:14174719" JAN="4949776471033" query="SHADOW OF THE ERDTREE" />
