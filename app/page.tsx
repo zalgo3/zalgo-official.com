@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {FaBlog, FaYoutube} from 'react-icons/fa';
+import {FaYoutube, FaLinkedin} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 import styles from 'styles/app/Home.module.css';
 import ShareButtons from 'ui/share-buttons';
 
 import Header from './header';
+import SocialLinks from './social-links';
 
 const Page = () => {
     const url = 'https://zalgo-official.com';
@@ -14,55 +15,12 @@ const Page = () => {
     return (
         <>
             <Header />
+            <SocialLinks />
             <main className={styles.main}>
-                <div className={styles.socialIcons}>
-                    <a
-                        href="https://www.youtube.com/channel/UC7z2KWNBuF8PQPUxd-rE0pQ?sub_confirmation=1"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaYoutube color="#FF0000" size={32} />
-                        <span>ゲーム</span>
-                    </a>
-                    <a
-                        href="https://www.youtube.com/channel/UCD3YZCdQH58hVbw4krMrQjw?sub_confirmation=1"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaYoutube color="#FF0000" size={32} />
-                        <span>歌</span>
-                    </a>
-                    <a
-                        href="https://www.nicovideo.jp/user/1473771"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Image
-                            src="/icons/niconico.png"
-                            alt="NicoNico"
-                            width={40}
-                            height={40}
-                            style={{marginBottom: 0}}
-                        />
-                        <span style={{marginTop: 0}}>ニコ動</span>
-                    </a>
-                    <a
-                        href="https://twitter.com/zalgo3"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaXTwitter color="#000000" size={32} />
-                        <span>X</span>
-                    </a>
-                    <Link href="/blog">
-                        <FaBlog color="#1E3050" size={32} />
-                        <span>ブログ</span>
-                    </Link>
-                </div>
 
                 <div className={styles.description}>
                     <p>
-                        博士（情報学）/データサイエンティスト/歌い手/ゲーム実況者
+                        歌い手/ゲーム実況者/博士（情報学）/データサイエンティスト/
                     </p>
                 </div>
 
@@ -120,14 +78,14 @@ const Page = () => {
                             rel="noopener noreferrer"
                             className={styles.link}
                         >
-                            LinkedIn
+                            <FaLinkedin color="#0077B5" /> LinkedIn
                         </a>
                     </div>
 
                     <div className={styles.card}>
-                        <h2>YouTube (ゲーム実況)</h2>
+                        <h2>YouTube</h2>
                         <p>
-                            マリオワンダー・マリオオデッセイ・マリオ64などのアクションゲームを中心に、RTA（最速クリア）や、やり込みをテーマとしたゲーム実況動画を投稿しています。
+                            ゲーム実況や歌ってみた動画を投稿しています。
                         </p>
                         <a
                             href="https://www.youtube.com/c/zalgo33?sub_confirmation=1"
@@ -135,22 +93,7 @@ const Page = () => {
                             rel="noopener noreferrer"
                             className={styles.link}
                         >
-                            YouTube (ゲーム実況)
-                        </a>
-                    </div>
-
-                    <div className={styles.card}>
-                        <h2>YouTube (歌ってみた)</h2>
-                        <p>
-                            ボカロやアニソンなどの曲を歌ってみた動画を投稿しています。
-                        </p>
-                        <a
-                            href="https://music.youtube.com/channel/UCD3YZCdQH58hVbw4krMrQjw?sub_confirmation=1"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.link}
-                        >
-                            YouTube (歌ってみた)
+                            <FaYoutube color="#FF0000" /> YouTube (ゲーム実況)
                         </a>
                     </div>
 
@@ -178,7 +121,7 @@ const Page = () => {
                             rel="noopener noreferrer"
                             className={styles.link}
                         >
-                            @zalgo3
+                            <FaXTwitter color="#000000" /> @zalgo3
                         </a>
                         <a
                             href="https://twitter.com/zalgo_video"
@@ -186,7 +129,7 @@ const Page = () => {
                             rel="noopener noreferrer"
                             className={styles.link}
                         >
-                            @zalgo_video (動画用)
+                            <FaXTwitter color="#000000" /> @zalgo_video (動画用)
                         </a>
                     </div>
 

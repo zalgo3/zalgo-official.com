@@ -4,6 +4,6 @@
 
 ## development
 
-```ShellSession
-yarn dev
+```Shell
+npm run dev
 ```

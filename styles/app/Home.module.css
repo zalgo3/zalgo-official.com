@@ -49,40 +49,6 @@
     font-size: 1.5rem;
 }
 
-.socialIcons {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    width: 90%;
-    margin-bottom: 1rem;
-}
-
-.socialIcons a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: inherit;
-    text-decoration: none;
-    border-radius: 5px;
-    width: 90vw;
-    box-shadow: var(--box-shadow-background);
-    margin: 5px 4px 5px 4px;
-    transition: all 0.15s ease;
-}
-
-.socialIcons a span {
-    margin-top: 0.25rem;
-}
-
-.socialIcons a:hover {
-    transform: scale(1.1);
-}
-
-.socialIcons a:active {
-    transform: translateY(1px);
-    box-shadow: var(--box-shadow-foreground);
-}
-
 .grid {
     display: grid;
     align-items: center;
@@ -137,6 +103,10 @@
     transition:
         color 0.15s ease,
         box-shadow 0.15s ease;
+}
+
+.link svg {
+    vertical-align: text-bottom;
 }
 
 .link:hover,
