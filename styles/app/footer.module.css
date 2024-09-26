@@ -21,6 +21,11 @@
     display: block;
     padding: 8px;
     text-decoration: none;
+    transition: transform 0.15s ease;
+}
+
+.navFooter a:hover {
+    transform: scale(1.1);
 }
 
 .navFooter ul ul {
