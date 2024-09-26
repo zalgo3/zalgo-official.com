@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {FaYoutube, FaLinkedin} from 'react-icons/fa';
+import {FaLinkedin,FaYoutube} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 import styles from 'styles/app/Home.module.css';
 import ShareButtons from 'ui/share-buttons';
