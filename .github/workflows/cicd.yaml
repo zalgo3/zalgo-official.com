@@ -13,6 +13,8 @@ concurrency:
 jobs:
     cicd:
         runs-on: ubuntu-latest
+        concurrency:
+            group: concurrency
         permissions:
             contents: read
             pull-requests: write
