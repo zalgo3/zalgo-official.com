@@ -42,7 +42,7 @@
         "remark-gfm": "^4.0.0",
         "remark-math": "^6.0.0",
         "server-only": "^0.0.1",
-        "sharp": "^0.33.0",
+        "sharp": "^0.34.0",
         "shiki": "^1.10.0",
         "typescript": "^5.0.0",
         "unist-util-is": "^6.0.0",
