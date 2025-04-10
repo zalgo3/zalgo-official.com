@@ -17,14 +17,15 @@ import ShareButtons from 'ui/share-buttons';
 export const generateMetadata = async ({
     params,
 }: {
-    params: {slug: string};
+    params: Promise<{slug: string}>;
 }): Promise<Metadata> => {
-    const {content, ...post} = await getPost(params.slug);
+    const resolvedParams = await params;
+    const {content, ...post} = await getPost(resolvedParams.slug);
     return {
         title: post.data.title,
         openGraph: {
             title: post.data.title,
-            url: `https://zalgo-official.com/blog/${params.slug}`,
+            url: `https://zalgo-official.com/blog/${resolvedParams.slug}`,
         },
         twitter: {
             title: post.data.title,
@@ -32,9 +33,10 @@ export const generateMetadata = async ({
     };
 };
 
-const Page = async ({params}: {params: {slug: string}}) => {
-    const {content, ...post} = await getPost(params.slug);
-    const postUrl = `https://zalgo-official.com/blog/${params.slug}`;
+const Page = async ({params}: {params: Promise<{slug: string}>}) => {
+    const resolvedParams = await params;
+    const {content, ...post} = await getPost(resolvedParams.slug);
+    const postUrl = `https://zalgo-official.com/blog/${resolvedParams.slug}`;
     const siteTitle = 'ざるごのブログ';
     const authorAccount = 'zalgo3';
     return (
@@ -62,7 +64,7 @@ const Page = async ({params}: {params: {slug: string}}) => {
                         remarkPlugins: [
                             remarkMath,
                             remarkGfm,
-                            [remarkImagesToFullPaths, {slug: params.slug}],
+                            [remarkImagesToFullPaths, {slug: resolvedParams.slug}],
                         ],
                         rehypePlugins: [rehypePrettyCode, rehypeKatex],
                     },
