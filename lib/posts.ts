@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import {promisify} from 'util';
 
-import matter, {GrayMatterFile, Input} from 'gray-matter';
+import matter, {GrayMatterFile} from 'gray-matter';
 
 const postsPath = 'posts';
 
@@ -17,9 +17,7 @@ export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
             (await fs.readdir(postsPath)).map(async slug => {
                 const postPath = path.join(postsPath, slug, 'post.md');
                 try {
-                    const post = matter(
-                        await fs.readFile(postPath)
-                    );
+                    const post = matter(await fs.readFile(postPath));
                     post.data.slug = slug;
                     post.data.createdAt = parseInt(
                         (
@@ -41,7 +39,11 @@ export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
                     );
                     return post;
                 } catch (error: unknown) {
-                    console.error(error.message);
+                    if (error instanceof Error) {
+                        console.error(error.message);
+                    } else {
+                        console.error('Unknown error:', error);
+                    }
                     return;
                 }
             })
@@ -74,7 +76,7 @@ export const getPost = async (slug: string): Promise<Post> => {
     return {...post, prevPostData, nextPostData};
 };
 
-export type Post = GrayMatterFile<Input> & {
+export type Post = GrayMatterFile<Buffer> & {
     data: PostData;
     prevPostData: PostData | undefined;
     nextPostData: PostData | undefined;
