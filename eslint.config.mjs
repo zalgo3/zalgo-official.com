@@ -38,15 +38,6 @@ export default tseslint.config(
             '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
             '@typescript-eslint/no-unsafe-assignment': 'off',
             '@typescript-eslint/no-misused-promises': 'off',
-            '@typescript-eslint/no-unused-vars': [
-                'error',
-                {
-                    varsIgnorePattern: '^_',
-                    argsIgnorePattern: '^_',
-                    caughtErrorsIgnorePattern: '^_',
-                    destructuredArrayIgnorePattern: '^_',
-                },
-            ],
         },
     },
     {
