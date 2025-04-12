@@ -17,7 +17,7 @@ export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
             (await fs.readdir(postsPath)).map(async slug => {
                 const postPath = path.join(postsPath, slug, 'post.md');
                 try {
-                    const {_orig, ...post} = matter(
+                    const post = matter(
                         await fs.readFile(postPath)
                     );
                     post.data.slug = slug;
