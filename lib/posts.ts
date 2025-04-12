@@ -21,9 +21,9 @@ export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
                     post.data.createdAt = parseInt(
                         (
                             await promisify(exec)(
-                                `git log --date=unix --reverse --format=%cd ${postPath} | head -n 1`
+                                `git log --date=unix --reverse --format=%cd ${postPath}`
                             )
-                        ).stdout.trim(),
+                        ).stdout.trim().split('\n')[0],
                         10
                     );
                     post.data.updatedAt = parseInt(
