@@ -36,8 +36,6 @@ export default tseslint.config(
         },
         rules: {
             '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-            '@typescript-eslint/no-unsafe-assignment': 'off',
-            '@typescript-eslint/no-misused-promises': 'off',
         },
     },
     {
