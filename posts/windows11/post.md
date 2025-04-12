@@ -10,31 +10,31 @@ title: 音楽・ゲーム系YouTuberが自作デスクトップPCをWindows 11�
 
 まず、参考までに大体の構成を。
 
--   OS: Windows 7 Pro → Windows 10 Pro → Windows 11 Pro← 今ココ
+- OS: Windows 7 Pro → Windows 10 Pro → Windows 11 Pro← 今ココ
 
 構成は途中で色々変わってますが、無償アップグレードを繰り返して現在まで至ります。
 
--   CPU: Intel Core i7 10700
+- CPU: Intel Core i7 10700
 
--   マザーボード: Gigabyte H470M DS3H
+- マザーボード: Gigabyte H470M DS3H
 
--   メモリ: Crucial 製 DDR4 32GB (16GB×2)
+- メモリ: Crucial 製 DDR4 32GB (16GB×2)
 
--   グラフィックボード: MSI GeForce RTX 2060 AERO ITX 6G
+- グラフィックボード: MSI GeForce RTX 2060 AERO ITX 6G
 
--   SSD SanDisk 製 1TB SATA
+- SSD SanDisk 製 1TB SATA
 
 OS はこのディスクにインストールされてます。データ保存用に、Western Digital 製の HDD を 2TB のものと 6TB のものを 2 つ積んでます。
 
--   オーディオインターフェース: RME Babyface Pro
+- オーディオインターフェース: RME Babyface Pro
 
 マイクを良い音質で録るためのやつです。PC 構成に入れるかは微妙ですが、これも相性とかに関係してきそうなので一応。
 
 ## 第一印象
 
--   さほど操作感は変わらず。ただ、ところどころ UI がかっこいいし、Windows の設定画面の画面遷移がすげーサクサク
+- さほど操作感は変わらず。ただ、ところどころ UI がかっこいいし、Windows の設定画面の画面遷移がすげーサクサク
 
--   ウィジェットという新機能とか、Android アプリが動くやつとか、まだ全然使いこなせてないけど慣れたら便利そう
+- ウィジェットという新機能とか、Android アプリが動くやつとか、まだ全然使いこなせてないけど慣れたら便利そう
 
 ## 動画制作とかに使うソフトの動作確認
 

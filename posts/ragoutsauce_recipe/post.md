@@ -52,27 +52,15 @@ title: "リングイーネで作る ナスのラグーソースパスタの作�
 
 ![f:id:zalgo:20180528160105j:plain](/img/20180528160105.jpg "f:id:zalgo:20180528160105j:plain")
 
-
-
 [![](https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B00FQCHM6W&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=galavollc-22)](https://amzn.to/2x8cNKN)
-
-
 
 [ディ・チェコ No.7 リングイーネ 500g×4個 [正規輸入品]](https://amzn.to/2x8cNKN)
 
 DE CECCO(ディ・チェコ)
 
-
-
 [Amazon](https://amzn.to/2x8cNKN)
 
 [楽天市場](https://hb.afl.rakuten.co.jp/hgc/16b4e0f3.b29bcd85.16b4e0f4.8a5ba469/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsoukai%2F19767%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fsoukai%2Fi%2F10731487%2F&link_type=text&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJkb3duIiwiY29tIjoxLCJjb21wIjoiZG93biIsInByaWNlIjoxLCJib3IiOjEsImNvbCI6MH0%3D)
-
-
-
-
-
-
 
 ピュア・オリーブオイルを熱し、ナスを炒めます。
 
@@ -104,46 +92,22 @@ DE CECCO(ディ・チェコ)
 
 ひき肉とトマト・チーズの旨味の相乗効果に、ナスの甘みが加わった上質なソースを、高品質なデュラム小麦のパスタでいただく。美味しくないはずのないこの組み合わせ、みなさんもぜひ作ってみてはいかがでしょうか。
 
-
-
 [![](https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00FWB68PS&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=galavollc-22)](https://amzn.to/2IRB64O)
-
-
 
 [成城石井 フェラリーニパルミジャーノレジャーノ24ヶ月熟成180g](https://amzn.to/2IRB64O)
 
 フェラリーニ
 
-
-
 [Amazon](https://amzn.to/2IRB64O)
 
 [楽天市場](https://hb.afl.rakuten.co.jp/hgc/16b7926f.384de1b1.16b79270.61c04176/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fseijoishii%2F8008706611102%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fseijoishii%2Fi%2F10012567%2F&link_type=text&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJkb3duIiwiY29tIjoxLCJjb21wIjoiZG93biIsInByaWNlIjowLCJib3IiOjEsImNvbCI6MH0%3D)
 
-
-
-
-
-
-
-
-
 [![](https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0054HKMEI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=galavollc-22)](https://amzn.to/2shRtww)
-
-
 
 [Microplane 【大根おろしも作れる】 ジャパニーズスタイル グレーター MP-056](https://amzn.to/2shRtww)
 
 Microplane (マイクロプレイン)
 
-
-
 [Amazon](https://amzn.to/2shRtww)
 
 [楽天市場](https://hb.afl.rakuten.co.jp/hgc/16b792ef.f0221d8d.16b792f0.24d92cc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fconvenimart%2Fcnbnb0054hkmei%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fconvenimart%2Fi%2F10134046%2F&link_type=text&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJkb3duIiwiY29tIjoxLCJjb21wIjoiZG93biIsInByaWNlIjowLCJib3IiOjEsImNvbCI6MH0%3D)
-
-
-
-
-
-
