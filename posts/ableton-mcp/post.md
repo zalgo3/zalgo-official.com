@@ -10,7 +10,7 @@ title: 'AIでDAWを自動操作して作曲するableton-mcpが凄い'
 
 ## ableton-mcpとは？ AIとAbleton Liveの連携の仕組み
 
-ableton-mcpは、**AI（現時点では主にAnthropic社のClaude AIが例として挙げられています）が、Ableton LiveというDAWソフトウェアを直接操作できるようにするための技術**と位置づけられるものです。
+ableton-mcpは、**AI（現時点では主にAnthropic社のClaude AIが例として挙げられています）が、Ableton LiveというDAWソフトウェアを直接操作できるようにするための技術**です。
 
 これは、[Siddharth Ahuja氏によって開発され、GitHub上で公開されているオープンソースのプロジェクト](https://github.com/ahujasid/ableton-mcp)です。このプロジェクトは、「**Model Context Protocol (MCP)**」という比較的新しいプロトコルを利用しています。MCPは、AIモデル（クライアント側）と外部ツールやデータソース（サーバー側）の間で、安全かつ標準化された双方向通信を実現するための通信規約です。
 
@@ -31,7 +31,7 @@ AIはこれらの自然言語指示を解釈し、ableton-mcpサーバーを経�
 
 ## ableton-mcpの主な特徴と利点
 
-では、ableton-mcpが既存のAI作曲ツールと比較してどのような特徴を持つのでしょうか。主な利点を整理してみましょう。
+ableton-mcpは既存のAI作曲ツールと比較してどのような特徴を持つのでしょうか。主な利点を整理してみましょう。
 
 1. **DAWネイティブな生成による高い編集自由度**
 
