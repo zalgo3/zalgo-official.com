@@ -56,11 +56,7 @@ title: '家事効率化オタクの京大生がAmazonプライムデーで買っ
 
 <Affiliates asin="B08X4R7WPJ" query="Dove 洗顔料 130g 4個" />
 
-
-
 https://amzn.to/2SQAsuz
-
-
 
 いつも使ってる洗顔料。スーパーで買うより安かったので。
 

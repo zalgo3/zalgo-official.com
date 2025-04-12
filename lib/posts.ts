@@ -1,8 +1,9 @@
 import {exec} from 'child_process';
 import fs from 'fs/promises';
-import matter, {GrayMatterFile, Input} from 'gray-matter';
 import path from 'path';
 import {promisify} from 'util';
+
+import matter, {GrayMatterFile, Input} from 'gray-matter';
 
 const postsPath = 'posts';
 
@@ -16,14 +17,18 @@ export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
             (await fs.readdir(postsPath)).map(async slug => {
                 const postPath = path.join(postsPath, slug, 'post.md');
                 try {
-                    let {orig, ...post} = matter(await fs.readFile(postPath));
+                    const {_orig, ...post} = matter(
+                        await fs.readFile(postPath)
+                    );
                     post.data.slug = slug;
                     post.data.createdAt = parseInt(
                         (
                             await promisify(exec)(
                                 `git log --date=unix --reverse --format=%cd ${postPath}`
                             )
-                        ).stdout.trim().split('\n')[0],
+                        ).stdout
+                            .trim()
+                            .split('\n')[0],
                         10
                     );
                     post.data.updatedAt = parseInt(
@@ -35,7 +40,7 @@ export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
                         10
                     );
                     return post;
-                } catch (error: any) {
+                } catch (error: unknown) {
                     console.error(error.message);
                     return;
                 }
@@ -43,7 +48,7 @@ export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
         )
     )
         .filter((post): post is Post => !!post)
-        .sort((p1, p2) => {
+        .sort((p1: Post, p2: Post) => {
             if (p1.data.createdAt === p2.data.createdAt) {
                 return p1.data.slug.localeCompare(p2.data.slug);
             }
@@ -51,7 +56,7 @@ export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
         })
         .slice(0, options.limit);
 
-    return posts as Post[];
+    return posts;
 };
 
 export const getPostDataAll = async (
@@ -83,6 +88,6 @@ export type PostData = {
 };
 
 export type PageProps = {
-    params?: any;
+    params?: unknown;
     children?: React.ReactNode;
 };

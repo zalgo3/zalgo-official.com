@@ -51,7 +51,7 @@ MIX の経験がある人ならわかると思いますが、4 時間という�
 
 実際私ざるごも、こういった事情も鑑み、ほとんどすべての歌ってみた動画で、エディット・MIX・マスタリングまですべて自分で行なっています。どのような音源を作っているか気になった方は、下記のリンクを参照してください。
 
--   ニコニコ: https://www.nicovideo.jp/user/1473771/mylist/60648484
--   YouTube: https://www.youtube.com/@zalgosing?sub_confirmation=1
+- ニコニコ: https://www.nicovideo.jp/user/1473771/mylist/60648484
+- YouTube: https://www.youtube.com/@zalgosing?sub_confirmation=1
 
 以上、(騒動にかこつけて結局自分の宣伝をするクソ)歌い手による記事でした。それではまた ←

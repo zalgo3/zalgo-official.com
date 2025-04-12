@@ -34,7 +34,6 @@ git cherry-pick -n [COMMIT HASH]..[COMIT HASH]
 
 すると作業内容のみが取り込まれ，コミット前の状況なので，
 
-
 ```bash
 git commit -m "piyo"
 ```

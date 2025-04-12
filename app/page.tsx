@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {FaLinkedin,FaYoutube} from 'react-icons/fa';
+import {FaLinkedin, FaYoutube} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
+
 import styles from 'styles/app/Home.module.css';
 import ShareButtons from 'ui/share-buttons';
 
@@ -17,7 +18,6 @@ const Page = () => {
             <Header />
             <SocialLinks />
             <main className={styles.main}>
-
                 <div className={styles.description}>
                     <p>
                         歌い手/ゲーム実況者/博士（情報学）/データサイエンティスト/
@@ -84,9 +84,7 @@ const Page = () => {
 
                     <div className={styles.card}>
                         <h2>YouTube</h2>
-                        <p>
-                            ゲーム実況や歌ってみた動画を投稿しています。
-                        </p>
+                        <p>ゲーム実況や歌ってみた動画を投稿しています。</p>
                         <a
                             href="https://www.youtube.com/c/zalgo33?sub_confirmation=1"
                             target="_blank"

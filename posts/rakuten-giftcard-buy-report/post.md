@@ -6,7 +6,7 @@ title: "【購入報告】楽天ギフトカードをセブンイレブンで購
 
 こんにちは。ざるご([@zalgo3](https://www.twitter.com/zalgo3))です。
 
-## 楽天ギフトカード、購入完了！
+## 楽天ギフトカード、購入完了
 
 悪魔の錬金術が可能になると話題の、[楽天ギフトカード](https://a.r10.to/hMbvdB)をついに手に入れました。
 
@@ -43,11 +43,7 @@ Apple Payのnanacoには、[MIXI M](https://m.mixi.com/)という、mixi社提�
 
 ### エポスゴールドカード→MIXI Mで1.5%〜2.5%ポイント還元
 
-
-
 https://www.eposcard.co.jp/goldcard/main.html
-
-
 
 エポスゴールドカードは、通常還元率0.5%のゴールドカードですが、[選べるショップポイントアップ](https://www.eposcard.co.jp/pointup/index.html)というサービスにより、対象店舗の中から好きな3つを選び、その店舗に限って還元率を1.5%にすることができます。
 
@@ -77,11 +73,7 @@ MIXI Mは3Dセキュア非対応なので、3Dセキュア対応じゃないと�
 
 ### 三井住友カード NL ゴールド→Kyash→MIXI MでNLゴールド修行
 
-
-
 https://www.smbc-card.com/olentry/affiliate/online_entry.do?bno=03401174131
-
-
 
 三井住友カード NL ゴールドの修行をするのもおすすめです。
 
