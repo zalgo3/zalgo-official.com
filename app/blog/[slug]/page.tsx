@@ -21,7 +21,7 @@ export const generateMetadata = async ({
     params: Promise<{slug: string}>;
 }): Promise<Metadata> => {
     const resolvedParams = await params;
-    const {_content, ...post} = await getPost(resolvedParams.slug);
+    const post = await getPost(resolvedParams.slug);
     return {
         title: post.data.title,
         openGraph: {
