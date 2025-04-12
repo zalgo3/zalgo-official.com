@@ -4,7 +4,7 @@ import {NextResponse} from 'next/server';
 export function middleware(request: NextRequest) {
     const {pathname} = request.nextUrl;
 
-    const slugMatch = pathname.match(/^\/([^/]+)$/);
+    const slugMatch = /^\/([^/]+)$/.exec(pathname);
 
     if (slugMatch && slugMatch[1] !== 'blog') {
         const slug = slugMatch[1];
