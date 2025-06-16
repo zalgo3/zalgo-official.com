@@ -21,7 +21,7 @@
         "@next/env": "^15.0.0",
         "@next/third-parties": "^15.0.0",
         "@types/async-retry": "^1.4.5",
-        "@types/jest": "^29.4.0",
+        "@types/jest": "^30.0.0",
         "@types/mapbox__rehype-prism": "^0.8.0",
         "@types/node": "^22.0.0",
         "@types/react": "^19.0.0",
