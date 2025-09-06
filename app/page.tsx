@@ -91,7 +91,7 @@ const Page = () => {
                             rel="noopener noreferrer"
                             className={styles.link}
                         >
-                            <FaYoutube color="#FF0000" /> YouTube (ゲーム実況)
+                            <FaYoutube color="#FF0000" /> YouTube
                         </a>
                     </div>
 
