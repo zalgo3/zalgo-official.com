@@ -1,7 +1,7 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 [[plugins]]
-  package = "@netlify/plugin-lighthouse"
+  package = "@netlify/plugin-lighthouse@v6"
 [build]
   command = "npm run build"
   publish = ".next"
