@@ -40,7 +40,7 @@ const getRakutenItem = async (
                 }
                 const items = ((await response.json()) as any).Items;
                 if (items.length === 0) {
-                    console.warn(`No hits: ${endpoint}.`);
+                    bail(new Error(`No hits: ${endpoint}.`));
                     return;
                 }
                 return items[0].Item;
@@ -122,7 +122,7 @@ const getYahooUrl = async (
                 }
                 const hits = ((await response.json()) as any).hits;
                 if (hits.length === 0) {
-                    console.warn(`No hits: ${endpoint}.`);
+                    bail(new Error(`No hits: ${endpoint}.`));
                     return;
                 }
                 return hits[0].url;
