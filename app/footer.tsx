@@ -16,6 +16,9 @@ const Footer = () => {
                     <li>
                         <Link href="/blog">ブログ</Link>
                     </li>
+                    <li>
+                        <Link href="/privacy-policy">プライバシーポリシー</Link>
+                    </li>
                 </ul>
             </nav>
             <div className={styles.copyright}>© {years} Hiroki Tanabe</div>

@@ -6,7 +6,11 @@ export function middleware(request: NextRequest) {
 
     const slugMatch = /^\/([^/]+)$/.exec(pathname);
 
-    if (slugMatch && slugMatch[1] !== 'blog') {
+    if (
+        slugMatch &&
+        slugMatch[1] !== 'blog' &&
+        slugMatch[1] !== 'privacy-policy'
+    ) {
         const slug = slugMatch[1];
         const redirectUrl = new URL(`/blog/${slug}`, request.url);
         return NextResponse.redirect(redirectUrl);
