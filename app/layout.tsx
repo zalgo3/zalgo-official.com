@@ -8,17 +8,17 @@ import Footer from './footer';
 
 export const metadata: Metadata = {
     title: {
-        default: 'ざるご / 田辺広樹',
-        template: '%s | ざるご / 田辺広樹',
+        default: 'ざるご Official Website',
+        template: '%s | ざるご Official Website',
     },
     description:
-        '歌い手/ゲーム実況者/博士 (情報学)/データサイエンティスト ハンドルネームはざるご、本名は田辺広樹 (Hiroki Tanabe)',
+        '歌い手/ゲーム実況者/データサイエンティストであるざるごのオフィシャルウェブサイト',
     openGraph: {
-        title: 'ざるご / 田辺広樹',
+        title: 'ざるご Official Website',
         description:
-            '歌い手/ゲーム実況者/博士 (情報学)/データサイエンティスト ハンドルネームはざるご、本名は田辺広樹 (Hiroki Tanabe)',
+            '歌い手/ゲーム実況者/データサイエンティストであるざるごのオフィシャルウェブサイト',
         url: 'https://zalgo-official.com',
-        siteName: 'ざるご / 田辺広樹',
+        siteName: 'ざるご Official Website',
         locale: 'ja_JP',
         type: 'website',
     },
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'ざるご / 田辺広樹',
+        title: 'ざるご Official Website',
         description:
-            '歌い手/ゲーム実況者/博士 (情報学)/データサイエンティスト ハンドルネームはざるご、本名は田辺広樹 (Hiroki Tanabe)',
+            '歌い手/ゲーム実況者/データサイエンティストであるざるごのオフィシャルウェブサイト',
         creator: '@zalgo3',
     },
 };
