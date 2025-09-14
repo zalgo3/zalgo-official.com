@@ -6,8 +6,6 @@ title: "【2019年4月】LINE Payの20%還元+Amazonギフト券・Suicaチャ�
 
 * ![](/img/pay-toku.jpg)
 
-
-
 LINE Payの20%還元という激ヤバキャンペーンがまたも開催されている．
 
 ## AmazonやSuicaへのチャージも対象
@@ -69,12 +67,6 @@ Suicaチャージの方法は↓
 
 20%還元キャンペーンの詳細は↓
 
-
-
 <cite class="hatena-citation">[linepay.line.me](https://linepay.line.me/campaign/paytoku.html?utm_source=google&utm_medium=cpc&utm_campaign=g_brand&utm_content=g_paytoku_cp&utm_term=line%20pay_e&gclid=CjwKCAjwndvlBRANEiwABrR32IMi6FkE79A_GscLMIXtjUcqJ-FXouuLf_B1RIk61noQ-VcRS4YlGhoCM0oQAvD_BwE)</cite>
 
-
-
 [*1](#fn-4a173148):ファミリーマートやローソンなら100円引きなどのLINEクーポンが利用できる．
-
-

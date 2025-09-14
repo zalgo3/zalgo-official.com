@@ -8,10 +8,10 @@ title: 'Geforce RTX 4090+Core i9-13900KS+4K有機ELゲーミングモニター�
 
 ちなみに現在の構成は以下
 
--   RTX 2060 6G
--   Core i7-10700
--   DDR4 メモリ 32GB
--   SATA SSD 1TB + HDD 2TB+6TB
+- RTX 2060 6G
+- Core i7-10700
+- DDR4 メモリ 32GB
+- SATA SSD 1TB + HDD 2TB+6TB
 
 別に今の状態でも、エルデンリングが遊べないということはない。配信つけてても、十分遊べるレベルではある（高画質設定にはできないが）
 

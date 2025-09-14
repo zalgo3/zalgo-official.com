@@ -1,7 +1,8 @@
 import {format as formatTZ, toZonedTime} from 'date-fns-tz';
+import Link from 'next/link';
+
 import {type PostData} from 'lib/posts';
 import {truncateTitle} from 'lib/string';
-import Link from 'next/link';
 import styles from 'styles/app/blog/card.module.css';
 
 const Card = ({post}: {post: PostData}) => {

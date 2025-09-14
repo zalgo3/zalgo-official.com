@@ -79,11 +79,7 @@ IFTTT は，指定したトリガーが検出されたら，指定したアク�
 
 IFTTT の使い方については，↓ のサイトが詳しいのでご参考にどうぞ．
 
-
-
 https://chasuke.com/smarthome-ifttt/
-
-
 
 サイトを参考に，自動化のトリガーを検出する画面まで行きます．
 
@@ -128,9 +124,9 @@ Please select の中から，寝室の照明（ここは人によって違う）
 
 ## まとめ
 
--   スマートリモコンの「Nature Remo」
--   スマートスピーカーの「Alexa (Amazon Echo)」(Google Home でも可)
--   無料アプリの「[IFTTT](https://ifttt.com/)」
+- スマートリモコンの「Nature Remo」
+- スマートスピーカーの「Alexa (Amazon Echo)」(Google Home でも可)
+- 無料アプリの「[IFTTT](https://ifttt.com/)」
 
 これらを組み合わせることで，リモコンを失くす悩みから永遠に解き放たれます．
 

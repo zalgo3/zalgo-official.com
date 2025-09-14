@@ -2,14 +2,15 @@ import 'katex/dist/katex.min.css';
 
 import {YouTubeEmbed} from '@next/third-parties/google';
 import {format as formatTZ, toZonedTime} from 'date-fns-tz';
-import {getPost, getPostAll} from 'lib/posts';
-import remarkImagesToFullPaths from 'lib/remarkImagesToFullPaths';
 import type {Metadata} from 'next';
 import {MDXRemote} from 'next-mdx-remote/rsc';
 import rehypeKatex from 'rehype-katex';
 import rehypePrettyCode from 'rehype-pretty-code';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
+
+import {getPost, getPostAll} from 'lib/posts';
+import remarkImagesToFullPaths from 'lib/remarkImagesToFullPaths';
 import styles from 'styles/app/blog/page.module.css';
 import Affiliates from 'ui/affiliates';
 import ShareButtons from 'ui/share-buttons';
@@ -20,7 +21,7 @@ export const generateMetadata = async ({
     params: Promise<{slug: string}>;
 }): Promise<Metadata> => {
     const resolvedParams = await params;
-    const {content, ...post} = await getPost(resolvedParams.slug);
+    const post = await getPost(resolvedParams.slug);
     return {
         title: post.data.title,
         openGraph: {
@@ -64,7 +65,10 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
                         remarkPlugins: [
                             remarkMath,
                             remarkGfm,
-                            [remarkImagesToFullPaths, {slug: resolvedParams.slug}],
+                            [
+                                remarkImagesToFullPaths,
+                                {slug: resolvedParams.slug},
+                            ],
                         ],
                         rehypePlugins: [rehypePrettyCode, rehypeKatex],
                     },

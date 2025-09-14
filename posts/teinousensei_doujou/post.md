@@ -19,11 +19,11 @@ title: "低能先生に同情している人たちへ【はてな村Hagex殺人�
 <cite class="hatena-citation">[anond.hatelabo.jp](https://anond.hatelabo.jp/20180626093216)</cite>
 
 > [相手](https://anond.hatelabo.jp/keyword/%E7%9B%B8%E6%89%8B)が何かしらの疾患を抱えているのは行動[から](https://anond.hatelabo.jp/keyword/%E3%81%8B%E3%82%89)明らかだっただろ。[学校](https://anond.hatelabo.jp/keyword/%E5%AD%A6%E6%A0%A1)の[教室](https://anond.hatelabo.jp/keyword/%E6%95%99%E5%AE%A4)に[バカ](https://anond.hatelabo.jp/keyword/%E3%83%90%E3%82%AB)[バカ](https://anond.hatelabo.jp/keyword/%E3%83%90%E3%82%AB)ってずーっと叫んでるや[つがい](https://anond.hatelabo.jp/keyword/%E3%81%A4%E3%81%8C%E3%81%84)て、[そいつ](https://anond.hatelabo.jp/keyword/%E3%81%9D%E3%81%84%E3%81%A4)に「[バカ](https://anond.hatelabo.jp/keyword/%E3%83%90%E3%82%AB)[先生](https://anond.hatelabo.jp/keyword/%E5%85%88%E7%94%9F)」って[レッテル](https://anond.hatelabo.jp/keyword/%E3%83%AC%E3%83%83%E3%83%86%E3%83%AB)貼って「また[バカ](https://anond.hatelabo.jp/keyword/%E3%83%90%E3%82%AB)[先生](https://anond.hatelabo.jp/keyword/%E5%85%88%E7%94%9F)が出た～！」って[集団](https://anond.hatelabo.jp/keyword/%E9%9B%86%E5%9B%A3)で煽るのは[イジメ](https://anond.hatelabo.jp/keyword/%E3%82%A4%E3%82%B8%E3%83%A1)じゃないのか？それが適切な[対応](https://anond.hatelabo.jp/keyword/%E5%AF%BE%E5%BF%9C)と言えるのか？[粛々と](https://anond.hatelabo.jp/keyword/%E7%B2%9B%E3%80%85%E3%81%A8)[通報](https://anond.hatelabo.jp/keyword/%E9%80%9A%E5%A0%B1)するだけならまだしも煽る[エントリ](https://anond.hatelabo.jp/keyword/%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AA)まで書いてんだぞ？
-> 
+>
 > それに乗っかって「ここに[コメント](https://anond.hatelabo.jp/keyword/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88)すると[IDコール](https://anond.hatelabo.jp/keyword/ID%E3%82%B3%E3%83%BC%E3%83%AB)貰えるらし[いか](https://anond.hatelabo.jp/keyword/%E3%81%84%E3%81%8B)ら[記念カキコ](https://anond.hatelabo.jp/keyword/%E8%A8%98%E5%BF%B5%E3%82%AB%E3%82%AD%E3%82%B3)」なんて書いてた連中もいたじゃねえか。
-> 
+>
 > 本人が「[イジメ](https://anond.hatelabo.jp/keyword/%E3%82%A4%E3%82%B8%E3%83%A1)られた」と感じたらそれはもう[イジメ](https://anond.hatelabo.jp/keyword/%E3%82%A4%E3%82%B8%E3%83%A1)なんだよ。[セクハラ](https://anond.hatelabo.jp/keyword/%E3%82%BB%E3%82%AF%E3%83%8F%E3%83%A9)[だって](https://anond.hatelabo.jp/keyword/%E3%81%A0%E3%81%A3%E3%81%A6)同じだろうが。
-> 
+>
 > 今回のケース[だって](https://anond.hatelabo.jp/keyword/%E3%81%A0%E3%81%A3%E3%81%A6)本人が「[ネット](https://anond.hatelabo.jp/keyword/%E3%83%8D%E3%83%83%E3%83%88)[リンチ](https://anond.hatelabo.jp/keyword/%E3%83%AA%E3%83%B3%E3%83%81)された」って書き残してるんだよ。
 
 先に言っておくが、私もこのあたりの記事に書いてあることを否定はしない。
@@ -66,27 +66,15 @@ title: "低能先生に同情している人たちへ【はてな村Hagex殺人�
 
 特にレンチンうどんのやつとか完全にこれプロの写真だよね。実際このsyunkonさんは半分プロみたいなもので、料理ブロガーとしてNo.1を誇り、レシピ本をなんと累計**510万部**も売り上げている。（レベルが違うとはまさにこのこと）
 
-
-
 [![](https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4800254213&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=galavollc-22)](https://amzn.to/2MY3l0e)
-
-
 
 [syunkonカフェごはん レンジで絶品レシピ (e-MOOK)](https://amzn.to/2MY3l0e)
 
 山本 ゆり
 
-
-
 [Amazon](https://amzn.to/2MY3l0e)
 
 [楽天市場](https://hb.afl.rakuten.co.jp/hgc/16ce097e.83baeb75.16ce097f.7073cf49/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F13846792%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F17866248%2F&link_type=text&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJkb3duIiwiY29tIjoxLCJjb21wIjoiZG93biIsInByaWNlIjoxLCJib3IiOjEsImNvbCI6MH0%3D)
-
-
-
-
-
-
 
 意外性があって面白い料理・食欲をくすぐる巧妙な文章・シズル感漂う美味しそうな写真。この3つがそろって初めて料理ツイートはバズる。
 

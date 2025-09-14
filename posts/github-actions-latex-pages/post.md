@@ -4,11 +4,7 @@ title: "Resume(職務経歴書)をLaTeXで書いて、個人情報を伏せ字�
 
 ## GitHubリポジトリ
 
-
-
 https://github.com/zalgo3/resume
-
-
 
 ## やったこと
 
