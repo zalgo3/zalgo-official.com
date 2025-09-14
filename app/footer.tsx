@@ -1,10 +1,10 @@
-import moment from 'moment';
+import {format} from 'date-fns';
 import Link from 'next/link';
 
 import styles from 'styles/app/footer.module.css';
 
 const Footer = () => {
-    const now = moment().format('YYYY');
+    const now = format(new Date(), 'yyyy');
     const years = now === '2018' ? now : `2018 - ${now}`;
     return (
         <footer>
