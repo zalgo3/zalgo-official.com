@@ -7,7 +7,7 @@ const Header = () => {
         <header className={styles.header}>
             <h1 className={styles.logo}>
                 <Link href="/" className={styles.logoLink}>
-                    ざるご / 田辺広樹
+                    ざるご Official Website
                 </Link>
             </h1>
         </header>
