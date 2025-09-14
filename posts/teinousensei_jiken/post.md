@@ -20,31 +20,31 @@ http://buzz-plus.com/article/2018/06/25/hagex-fukuoka-net-news/
 「ネットリンチ」をやめなかった「お前ら」への「返答」が今回の事件であるようだ。
 
 > おい[ネット弁慶](https://anond.hatelabo.jp/keyword/ネット弁慶)[卒業](https://anond.hatelabo.jp/keyword/卒業)してきたぞ
-> 
+>
 > 改めて言おう
-> 
+>
 > これが、どれだけ叩かれても[ネット](https://anond.hatelabo.jp/keyword/ネット)[リンチ](https://anond.hatelabo.jp/keyword/リンチ)をやめることがなく、俺と[議論](https://anond.hatelabo.jp/keyword/議論)しておのれらの[正当性](https://anond.hatelabo.jp/keyword/正当性)を示すこともなく（まあ[ネット](https://anond.hatelabo.jp/keyword/ネット)[リンチ](https://anond.hatelabo.jp/keyword/リンチ)の[正当化](https://anond.hatelabo.jp/keyword/正当化)なんて無理だけどな）
-> 
+>
 > 俺を「[低能](https://anond.hatelabo.jp/keyword/低能)[先生](https://anond.hatelabo.jp/keyword/先生)です」の[一言](https://anond.hatelabo.jp/keyword/一言)で[ゲラ](https://anond.hatelabo.jp/keyword/ゲラ)[ゲラ](https://anond.hatelabo.jp/keyword/ゲラ)笑いながら[通報](https://anond.hatelabo.jp/keyword/通報)＆[封殺](https://anond.hatelabo.jp/keyword/封殺)してきたお前らへの返答だ
-> 
+>
 > 「予想通りの展開だ」そう言うのが、俺を知る全[ネット](https://anond.hatelabo.jp/keyword/ネット)ユーザーの[責任](https://anond.hatelabo.jp/keyword/責任)だ[から](https://anond.hatelabo.jp/keyword/から)な？
-> 
+>
 > 「こんなことになるとは思わなかった」なんてほざくなよ？
-> 
+>
 > ただほぼ[引きこもり](https://anond.hatelabo.jp/keyword/引きこもり)の42歳はここで体力が尽きてしもうた
-> 
+>
 > 事前の予定では[東京](https://anond.hatelabo.jp/keyword/東京)までいって[はてな本](https://anond.hatelabo.jp/keyword/はてな本)社に[こんにちは](https://anond.hatelabo.jp/keyword/こんにちは)するつもりだったが、もう無理
-> 
+>
 > 足つってるし
-> 
+>
 > なんだかんだ言って[はてな](https://anond.hatelabo.jp/keyword/はてな)というか[増田](https://anond.hatelabo.jp/keyword/増田)が俺を[ネット弁慶](https://anond.hatelabo.jp/keyword/ネット弁慶)のままで食い止めていた面もあるしなあ
-> 
+>
 > 逆に言うと散々[ガス抜き](https://anond.hatelabo.jp/keyword/ガス抜き)させてもらった恩がある
-> 
+>
 > [はてブ](https://anond.hatelabo.jp/keyword/はてブ)と[通報](https://anond.hatelabo.jp/keyword/通報)厨には恩など欠片もないが
-> 
+>
 > てことでこれ[から](https://anond.hatelabo.jp/keyword/から)近所の[交番](https://anond.hatelabo.jp/keyword/交番)に[自首](https://anond.hatelabo.jp/keyword/自首)して俺[自身](https://anond.hatelabo.jp/keyword/自身)の[責任](https://anond.hatelabo.jp/keyword/責任)をとってくるわ
-> 
+>
 > 足つってる[から](https://anond.hatelabo.jp/keyword/から)着くまで30分くら[いか](https://anond.hatelabo.jp/keyword/いか)かるかも
 
 <cite class="hatena-citation">[anond.hatelabo.jp](https://anond.hatelabo.jp/20180624222908)</cite>

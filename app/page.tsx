@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {FaLinkedin, FaYoutube} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
+
 import styles from 'styles/app/Home.module.css';
 import ShareButtons from 'ui/share-buttons';
 
@@ -27,7 +28,7 @@ const Page = () => {
                             rel="noopener noreferrer"
                             className={styles.link}
                         >
-                            <FaYoutube color="#FF0000" /> YouTube (ゲーム実況)
+                            <FaYoutube color="#FF0000" /> YouTube
                         </a>
                     </div>
 

@@ -23,8 +23,6 @@ Python 3 で実装する際には，`collections` モジュールの `deque` を
 
 ちなみに，計算量は点の数 $V$，枝の数 $E$ として $O(V+E)$ です．
 
-
-
 ```python
 from collections import deque
 
@@ -57,14 +55,11 @@ for i in range(1, n):
     print(prev[i] + 1)
 ```
 
-
-
 ## ダイクストラ法
 
 この問題に対しては必要ありませんが，重み付きグラフの単一視点最短経路問題としてみれば，ダイクストラ法を使うこともできます．
 
 頂点の管理に `heapq` をつかうので，計算量は $O((E+V)logV)$ です．
-
 
 ```python
 from heapq import heappush, heappop
@@ -98,7 +93,6 @@ print("Yes")
 for i in range(1, n):
     print(prev[i] + 1)
 ```
-
 
 ## おわりに
 
