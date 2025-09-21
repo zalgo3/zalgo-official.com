@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {FaLinkedin, FaYoutube} from 'react-icons/fa';
+import {FaLinkedin, FaMusic, FaYoutube} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 
 import styles from 'styles/app/Home.module.css';
@@ -30,6 +30,14 @@ const Page = () => {
                         >
                             <FaYoutube color="#FF0000" /> YouTube
                         </a>
+                    </div>
+
+                    <div className={styles.card}>
+                        <h2>配信楽曲一覧</h2>
+                        <p>Apple Music, Spotifyなどで配信中の楽曲はこちら。</p>
+                        <Link href="/music" className={styles.link}>
+                            <FaMusic /> 楽曲を聴く
+                        </Link>
                     </div>
 
                     <div className={styles.card}>
