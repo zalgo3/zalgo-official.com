@@ -8,7 +8,7 @@ import {
     FaYoutube,
 } from 'react-icons/fa';
 import {SiAmazonmusic} from 'react-icons/si';
-import styles from 'styles/ui/MusicLinks.module.css'; // 新しいCSSファイルをインポート
+import styles from 'styles/ui/MusicLinks.module.css';
 
 type MusicLinksProps = {
     links: {
