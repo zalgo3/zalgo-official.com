@@ -1,0 +1,21 @@
+---
+title: 'オーバーライド [cover]'
+artist: 'ざるご×ヤス'
+composer: '吉田夜世'
+illustrator: 'シラマキアゲ'
+mixer: 'ざるご'
+thumbnail: 'thumbnail.png'
+links:
+    appleMusic: 'https://music.apple.com/jp/album/oobaaraido-cover-single/1837833418'
+    spotify: 'https://open.spotify.com/intl-ja/album/5n0dGzk6d5bCHg0EH3uTmk'
+    youtubeMusic: 'https://music.youtube.com/playlist?list=OLAK5uy_mAmeQ8pqgbeqsPvreVBiRgjqaxeGc4nE4'
+    amazonMusic: 'https://music.amazon.co.jp/albums/B0FQ5FKVC7'
+    lineMusic: 'https://music.line.me/webapp/album/mb0000000004a8673a'
+    awa: ''
+    recochoku: 'https://recochoku.jp/song/S1028477138'
+    tiktok: ''
+    instagram: ''
+    facebook: ''
+    dwango: 'https://pc.dwango.jp/portals/album/2924148'
+    animelo: 'https://pc.animelo.jp/portals/album/2924149'
+---

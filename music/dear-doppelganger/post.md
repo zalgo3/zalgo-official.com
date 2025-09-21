@@ -1,0 +1,22 @@
+---
+title: '拝啓ドッペルゲンガー [cover]'
+artist: 'ざるご'
+collaboration: 'ヤス'
+composer: 'kemu'
+illustrator: 'シラマキアゲ'
+mixer: 'ざるご'
+thumbnail: 'thumbnail.png'
+links:
+    appleMusic: 'https://music.apple.com/jp/album/haikei-dopperugengaa-cover-single/1837833815'
+    spotify: 'https://open.spotify.com/intl-ja/track/5NgNNmsaa1bEOsBCDfJxaL'
+    youtubeMusic: 'https://music.youtube.com/playlist?list=OLAK5uy_n320VjQ-u8ilkq03DKUf3K5Owm7j2lyoI'
+    amazonMusic: 'https://music.amazon.co.jp/albums/B0FQ5GMWXS'
+    lineMusic: 'https://music.line.me/webapp/album/mb0000000004a86746'
+    awa: ''
+    recochoku: 'https://recochoku.jp/song/S1028477176/single'
+    tiktok: ''
+    instagram: ''
+    facebook: ''
+    dwango: 'https://pc.dwango.jp/portals/album/2924149'
+    animelo: 'https://pc.animelo.jp/portals/album/2924149'
+---

@@ -9,7 +9,8 @@ export function middleware(request: NextRequest) {
     if (
         slugMatch &&
         slugMatch[1] !== 'blog' &&
-        slugMatch[1] !== 'privacy-policy'
+        slugMatch[1] !== 'privacy-policy' &&
+        slugMatch[1] !== 'music'
     ) {
         const slug = slugMatch[1];
         const redirectUrl = new URL(`/blog/${slug}`, request.url);
