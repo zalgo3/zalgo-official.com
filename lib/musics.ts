@@ -17,7 +17,8 @@ export type MusicData = {
     artist: string;
     collaboration?: string;
     composer: string;
-    illustrator: string;
+    illustrator?: string;
+    mixer?: string;
     thumbnailUrl?: string;
     links: {
         appleMusic?: string;

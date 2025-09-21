@@ -65,6 +65,11 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
                         Illustrator: {music.data.illustrator}
                     </p>
                 )}
+                {music.data.mixer && (
+                    <p className={pageStyles.composerText}>
+                        Mixer: {music.data.mixer}
+                    </p>
+                )}
             </div>
 
             {music.data.thumbnailUrl && (

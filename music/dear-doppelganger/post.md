@@ -4,6 +4,7 @@ artist: 'ざるご'
 collaboration: 'ヤス'
 composer: 'kemu'
 illustrator: 'シラマキアゲ'
+mixer: 'ざるご'
 thumbnail: 'thumbnail.png'
 links:
     appleMusic: 'https://music.apple.com/jp/album/haikei-dopperugengaa-cover-single/1837833815'

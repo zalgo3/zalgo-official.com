@@ -3,6 +3,7 @@ title: 'オーバーライド [cover]'
 artist: 'ざるご×ヤス'
 composer: '吉田夜世'
 illustrator: 'シラマキアゲ'
+mixer: 'ざるご'
 thumbnail: 'thumbnail.png'
 links:
     appleMusic: 'https://music.apple.com/jp/album/oobaaraido-cover-single/1837833418'
