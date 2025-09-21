@@ -16,8 +16,22 @@ export const generateMetadata = async ({
 }): Promise<Metadata> => {
     const resolvedParams = await params;
     const music = await getMusic(resolvedParams.slug);
+
+    const ogImageUrl = music.data.thumbnailUrl
+        ? `https://zalgo-official.com${music.data.thumbnailUrl}`
+        : undefined;
+
     return {
         title: music.data.title,
+        openGraph: {
+            title: music.data.title,
+            images: ogImageUrl ? [{url: ogImageUrl}] : [],
+        },
+        twitter: {
+            title: music.data.title,
+            card: 'summary_large_image',
+            images: ogImageUrl ? [ogImageUrl] : [],
+        },
     };
 };
 
