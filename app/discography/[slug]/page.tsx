@@ -64,6 +64,9 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
                 <p className={pageStyles.composerText}>
                     Composer: {discographyItem.data.composer}
                 </p>
+                <p className={pageStyles.composerText}>
+                    Lyricist: {discographyItem.data.lyricist}
+                </p>
                 {discographyItem.data.illustrator && (
                     <p className={pageStyles.composerText}>
                         Illustrator: {discographyItem.data.illustrator}
@@ -83,7 +86,12 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
                         alt={discographyItem.data.title}
                         width={350}
                         height={350}
-                        style={{objectFit: 'cover', borderRadius: '16px'}}
+                        style={{
+                            objectFit: 'cover',
+                            borderRadius: '16px',
+                            maxWidth: '100%',
+                            height: 'auto',
+                        }}
                     />
                 </div>
             )}
