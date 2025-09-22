@@ -35,7 +35,7 @@ const Page = () => {
                     <div className={styles.card}>
                         <h2>配信楽曲一覧</h2>
                         <p>Apple Music, Spotifyなどで配信中の楽曲はこちら。</p>
-                        <Link href="/music" className={styles.link}>
+                        <Link href="/discography" className={styles.link}>
                             <FaMusic /> 楽曲を聴く
                         </Link>
                     </div>

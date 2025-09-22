@@ -4,10 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {FaArrowLeft} from 'react-icons/fa';
 
-import {getMusic, getMusicAll} from 'lib/musics';
+import {getDiscographyItem, getDiscographyAll} from 'lib/discography';
 import styles from 'styles/app/blog/page.module.css';
-import pageStyles from 'styles/app/music/page.module.css';
-import MusicLinks from 'ui/MusicLinks';
+import pageStyles from 'styles/app/discography/page.module.css';
+import DiscographyLinks from 'ui/DiscographyLinks';
 
 export const generateMetadata = async ({
     params,
@@ -15,20 +15,20 @@ export const generateMetadata = async ({
     params: Promise<{slug: string}>;
 }): Promise<Metadata> => {
     const resolvedParams = await params;
-    const music = await getMusic(resolvedParams.slug);
+    const discographyItem = await getDiscographyItem(resolvedParams.slug);
 
-    const ogImageUrl = music.data.thumbnailUrl
-        ? `https://zalgo-official.com${music.data.thumbnailUrl}`
+    const ogImageUrl = discographyItem.data.thumbnailUrl
+        ? `https://zalgo-official.com${discographyItem.data.thumbnailUrl}`
         : undefined;
 
     return {
-        title: music.data.title,
+        title: discographyItem.data.title,
         openGraph: {
-            title: music.data.title,
+            title: discographyItem.data.title,
             images: ogImageUrl ? [{url: ogImageUrl}] : [],
         },
         twitter: {
-            title: music.data.title,
+            title: discographyItem.data.title,
             card: 'summary_large_image',
             images: ogImageUrl ? [ogImageUrl] : [],
         },
@@ -37,20 +37,20 @@ export const generateMetadata = async ({
 
 const Page = async ({params}: {params: Promise<{slug: string}>}) => {
     const resolvedParams = await params;
-    const music = await getMusic(resolvedParams.slug);
+    const discographyItem = await getDiscographyItem(resolvedParams.slug);
 
-    const artistDisplayText = music.data.collaboration
-        ? `${music.data.artist}×${music.data.collaboration}`
-        : music.data.artist;
+    const artistDisplayText = discographyItem.data.collaboration
+        ? `${discographyItem.data.artist}×${discographyItem.data.collaboration}`
+        : discographyItem.data.artist;
 
     return (
         <div className={styles.container}>
-            <Link href="/music" className={pageStyles.backLink}>
+            <Link href="/discography" className={pageStyles.backLink}>
                 <FaArrowLeft /> 楽曲一覧へ戻る
             </Link>
 
             <h1 className={styles.title} style={{textAlign: 'center'}}>
-                {music.data.title}
+                {discographyItem.data.title}
             </h1>
 
             <div className={pageStyles.creditContainer}>
@@ -58,25 +58,25 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
                     Artist: {artistDisplayText}
                 </div>
                 <p className={pageStyles.composerText}>
-                    Composer: {music.data.composer}
+                    Composer: {discographyItem.data.composer}
                 </p>
-                {music.data.illustrator && (
+                {discographyItem.data.illustrator && (
                     <p className={pageStyles.composerText}>
-                        Illustrator: {music.data.illustrator}
+                        Illustrator: {discographyItem.data.illustrator}
                     </p>
                 )}
-                {music.data.mixer && (
+                {discographyItem.data.mixer && (
                     <p className={pageStyles.composerText}>
-                        Mixer: {music.data.mixer}
+                        Mixer: {discographyItem.data.mixer}
                     </p>
                 )}
             </div>
 
-            {music.data.thumbnailUrl && (
+            {discographyItem.data.thumbnailUrl && (
                 <div className={pageStyles.thumbnailContainer}>
                     <Image
-                        src={music.data.thumbnailUrl}
-                        alt={music.data.title}
+                        src={discographyItem.data.thumbnailUrl}
+                        alt={discographyItem.data.title}
                         width={350}
                         height={350}
                         style={{objectFit: 'cover', borderRadius: '16px'}}
@@ -85,15 +85,15 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
             )}
 
             <p className={pageStyles.linksHeading}>配信サイト</p>
-            <MusicLinks links={music.data.links} />
+            <DiscographyLinks links={discographyItem.data.links} />
         </div>
     );
 };
 
 export const generateStaticParams = async () => {
-    const musics = await getMusicAll();
-    return musics.map(music => ({
-        slug: music.data.slug,
+    const items = await getDiscographyAll();
+    return items.map(item => ({
+        slug: item.data.slug,
     }));
 };
 
