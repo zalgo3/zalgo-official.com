@@ -20,6 +20,7 @@ export type DiscographyData = {
     lyricist: string;
     illustrator?: string;
     mixer?: string;
+    thumbnail?: string;
     thumbnailUrl?: string;
     links: {
         appleMusic?: string;
