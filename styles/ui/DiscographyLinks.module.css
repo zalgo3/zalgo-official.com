@@ -1,3 +1,11 @@
+.categoryTitle {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -7,16 +15,18 @@
 }
 
 .iconLink {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: white;
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
+    border-radius: 12px;
+    width: 80px;
+    height: 80px;
     box-shadow: var(--box-shadow-background);
     transition: all 0.15s ease;
+    padding: 0.5rem;
 }
 
 .iconLink:hover {
@@ -24,6 +34,13 @@
 }
 
 .iconLink svg {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.serviceName {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
 }

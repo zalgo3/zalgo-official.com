@@ -7,118 +7,164 @@ import {
     FaTiktok,
     FaYoutube,
 } from 'react-icons/fa';
-import {SiAmazonmusic} from 'react-icons/si';
+import {SiAmazon, SiAmazonmusic} from 'react-icons/si';
 import styles from 'styles/ui/DiscographyLinks.module.css';
 
+import {type DiscographyData} from '../lib/discography';
+
 type DiscographyLinksProps = {
-    links: {
-        appleMusic?: string;
-        spotify?: string;
-        youtubeMusic?: string;
-        amazonMusic?: string;
-        lineMusic?: string;
-        awa?: string;
-        tiktok?: string;
-        instagram?: string;
-        facebook?: string;
-    };
+    links: DiscographyData['links'];
 };
 
+const streamingServices = [
+    {
+        key: 'appleMusic',
+        name: 'Apple Music',
+        icon: <FaApple />,
+        color: '#000',
+    },
+    {key: 'spotify', name: 'Spotify', icon: <FaSpotify />, color: '#1DB954'},
+    {
+        key: 'youtubeMusic',
+        name: 'YouTube Music',
+        icon: <FaYoutube />,
+        color: '#FF0000',
+    },
+    {
+        key: 'amazonMusic',
+        name: 'Amazon Music',
+        icon: <SiAmazonmusic />,
+        color: '#00A8E1',
+    },
+    {
+        key: 'lineMusic',
+        name: 'LINE MUSIC',
+        icon: <FaLine />,
+        color: '#00c300',
+    },
+    {key: 'awa', name: 'AWA', color: '#000'},
+    {key: 'recochoku', name: 'レコチョク', color: '#ff4a01'},
+];
+
+const downloadServices = [
+    {
+        key: 'itunesStore',
+        name: 'iTunes Store',
+        icon: <FaApple />,
+        color: '#ea4cc0',
+    },
+    {
+        key: 'amazonDigitalMusic',
+        name: 'Amazon Music',
+        icon: <SiAmazon />,
+        color: '#252f3d',
+    },
+    {key: 'dwango', name: 'ドワンゴジェイピー', color: '#f05b00'},
+    {key: 'animelo', name: 'animelo mix', color: '#6a155f'},
+];
+
+const socialLinks = [
+    {key: 'tiktok', name: 'TikTok', icon: <FaTiktok />, color: '#000'},
+    {
+        key: 'instagram',
+        name: 'Instagram',
+        icon: <FaInstagram />,
+        gradient:
+            'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)',
+    },
+    {
+        key: 'facebook',
+        name: 'Facebook',
+        icon: <FaFacebook />,
+        color: '#1877F2',
+    },
+];
+
 const DiscographyLinks = ({links}: DiscographyLinksProps) => {
+    const availableStreaming = streamingServices.filter(s => links[s.key]);
+    const availableDownloads = downloadServices.filter(s => links[s.key]);
+    const availableSocial = socialLinks.filter(s => links[s.key]);
+
     return (
-        <div className={styles.container}>
-            {links.appleMusic && (
-                <a
-                    href={links.appleMusic}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.iconLink}
-                    style={{backgroundColor: '#000'}}
-                >
-                    <FaApple />
-                </a>
+        <>
+            {availableStreaming.length > 0 && (
+                <>
+                    <h3 className={styles.categoryTitle}>ストリーミング</h3>
+                    <div className={styles.container}>
+                        {availableStreaming.map(service => (
+                            <a
+                                key={service.key}
+                                href={links[service.key] as string}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.iconLink}
+                                style={{
+                                    backgroundColor: service.color,
+                                    background: service.gradient,
+                                }}
+                            >
+                                {service.icon || ''}
+                                <span className={styles.serviceName}>
+                                    {service.name}
+                                </span>
+                            </a>
+                        ))}
+                    </div>
+                </>
             )}
-            {links.spotify && (
-                <a
-                    href={links.spotify}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.iconLink}
-                    style={{backgroundColor: '#1DB954'}}
-                >
-                    <FaSpotify />
-                </a>
+
+            {availableDownloads.length > 0 && (
+                <>
+                    <h3 className={styles.categoryTitle}>ダウンロード</h3>
+                    <div className={styles.container}>
+                        {availableDownloads.map(service => (
+                            <a
+                                key={service.key}
+                                href={links[service.key] as string}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.iconLink}
+                                style={{
+                                    backgroundColor: service.color,
+                                    background: service.gradient,
+                                }}
+                            >
+                                {service.icon || ''}
+                                <span className={styles.serviceName}>
+                                    {service.name}
+                                </span>
+                            </a>
+                        ))}
+                    </div>
+                </>
             )}
-            {links.youtubeMusic && (
-                <a
-                    href={links.youtubeMusic}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.iconLink}
-                    style={{backgroundColor: '#FF0000'}}
-                >
-                    <FaYoutube />
-                </a>
+
+            {availableSocial.length > 0 && (
+                <>
+                    <h3 className={styles.categoryTitle}>SNS</h3>
+                    <div className={styles.container}>
+                        {availableSocial.map(service => (
+                            <a
+                                key={service.key}
+                                href={links[service.key] as string}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.iconLink}
+                                style={{
+                                    backgroundColor: service.color,
+                                    background: service.gradient,
+                                }}
+                            >
+                                {service.icon || ''}
+                                <span className={styles.serviceName}>
+                                    {service.name}
+                                </span>
+                            </a>
+                        ))}
+                    </div>
+                </>
             )}
-            {links.amazonMusic && (
-                <a
-                    href={links.amazonMusic}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.iconLink}
-                    style={{backgroundColor: '#00A8E1'}}
-                >
-                    <SiAmazonmusic />
-                </a>
-            )}
-            {links.lineMusic && (
-                <a
-                    href={links.lineMusic}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.iconLink}
-                    style={{backgroundColor: '#00c300'}}
-                >
-                    <FaLine />
-                </a>
-            )}
-            {links.tiktok && (
-                <a
-                    href={links.tiktok}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.iconLink}
-                    style={{backgroundColor: '#000'}}
-                >
-                    <FaTiktok />
-                </a>
-            )}
-            {links.instagram && (
-                <a
-                    href={links.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.iconLink}
-                    style={{
-                        background:
-                            'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)',
-                    }}
-                >
-                    <FaInstagram />
-                </a>
-            )}
-            {links.facebook && (
-                <a
-                    href={links.facebook}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.iconLink}
-                    style={{backgroundColor: '#1877F2'}}
-                >
-                    <FaFacebook />
-                </a>
-            )}
-        </div>
+        </>
     );
 };
 

@@ -19,4 +19,6 @@ links:
     facebook: ''
     dwango: 'https://pc.dwango.jp/portals/album/2924149'
     animelo: 'https://pc.animelo.jp/portals/album/2924149'
+    itunesStore: 'https://itunes.apple.com/jp/album/haikei-dopperugengaa-cover-single/1837833815?app=itunes'
+    amazonDigitalMusic: 'https://www.amazon.co.jp/dp/B0FQ5GMWXS'
 ---

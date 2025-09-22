@@ -33,6 +33,8 @@ export type DiscographyData = {
         facebook?: string;
         dwango?: string;
         animelo?: string;
+        itunesStore?: string;
+        amazonDigitalMusic?: string;
     };
     createdAt: number;
     updatedAt: number;
