@@ -51,7 +51,6 @@ const streamingServices: Service[] = [
         color: '#00c300',
     },
     {key: 'awa', name: 'AWA', color: '#000'},
-    {key: 'recochoku', name: 'レコチョク', color: '#ff4a01'},
 ];
 
 const downloadServices: Service[] = [
@@ -67,6 +66,7 @@ const downloadServices: Service[] = [
         icon: <SiAmazon />,
         color: '#252f3d',
     },
+    {key: 'recochoku', name: 'レコチョク', color: '#ff4a01'},
     {key: 'dwango', name: 'ドワンゴジェイピー', color: '#f05b00'},
     {key: 'animelo', name: 'animelo mix', color: '#6a155f'},
 ];
