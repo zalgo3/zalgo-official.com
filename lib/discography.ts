@@ -84,9 +84,7 @@ export const getDiscographyAll = async (
                     data.slug = slug;
 
                     if (data.thumbnail) {
-                        data.thumbnailUrl = `/discography/${slug}/${String(
-                            data.thumbnail
-                        )}`;
+                        data.thumbnailUrl = `/discography/${slug}/${data.thumbnail}`;
                     }
 
                     if (data.links) {
