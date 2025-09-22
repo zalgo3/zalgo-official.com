@@ -93,30 +93,45 @@ const DiscographyLinks = ({links}: DiscographyLinksProps) => {
     const availableDownloads = downloadServices.filter(s => links[s.key]);
     const availableSocial = socialLinks.filter(s => links[s.key]);
 
+    const addAmazonTag = (urlString: string): string => {
+        if (!urlString) {
+            return '';
+        }
+        const separator = urlString.includes('?') ? '&' : '?';
+        return `${urlString}${separator}tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`;
+    };
+
     return (
         <>
             {availableStreaming.length > 0 && (
                 <>
                     <h3 className={styles.categoryTitle}>ストリーミング</h3>
                     <div className={styles.container}>
-                        {availableStreaming.map(service => (
-                            <a
-                                key={service.key}
-                                href={links[service.key] as string}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.iconLink}
-                                style={{
-                                    backgroundColor: service.color,
-                                    background: service.gradient,
-                                }}
-                            >
-                                {service.icon || ''}
-                                <span className={styles.serviceName}>
-                                    {service.name}
-                                </span>
-                            </a>
-                        ))}
+                        {availableStreaming.map(service => {
+                            const baseUrl = links[service.key] as string;
+                            const href =
+                                service.key === 'amazonMusic'
+                                    ? addAmazonTag(baseUrl)
+                                    : baseUrl;
+                            return (
+                                <a
+                                    key={service.key}
+                                    href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.iconLink}
+                                    style={{
+                                        backgroundColor: service.color,
+                                        background: service.gradient,
+                                    }}
+                                >
+                                    {service.icon || ''}
+                                    <span className={styles.serviceName}>
+                                        {service.name}
+                                    </span>
+                                </a>
+                            );
+                        })}
                     </div>
                 </>
             )}
@@ -125,24 +140,31 @@ const DiscographyLinks = ({links}: DiscographyLinksProps) => {
                 <>
                     <h3 className={styles.categoryTitle}>ダウンロード</h3>
                     <div className={styles.container}>
-                        {availableDownloads.map(service => (
-                            <a
-                                key={service.key}
-                                href={links[service.key] as string}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.iconLink}
-                                style={{
-                                    backgroundColor: service.color,
-                                    background: service.gradient,
-                                }}
-                            >
-                                {service.icon || ''}
-                                <span className={styles.serviceName}>
-                                    {service.name}
-                                </span>
-                            </a>
-                        ))}
+                        {availableDownloads.map(service => {
+                            const baseUrl = links[service.key] as string;
+                            const href =
+                                service.key === 'amazonDigitalMusic'
+                                    ? addAmazonTag(baseUrl)
+                                    : baseUrl;
+                            return (
+                                <a
+                                    key={service.key}
+                                    href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.iconLink}
+                                    style={{
+                                        backgroundColor: service.color,
+                                        background: service.gradient,
+                                    }}
+                                >
+                                    {service.icon || ''}
+                                    <span className={styles.serviceName}>
+                                        {service.name}
+                                    </span>
+                                </a>
+                            );
+                        })}
                     </div>
                 </>
             )}
