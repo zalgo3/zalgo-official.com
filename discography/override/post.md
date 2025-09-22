@@ -2,6 +2,7 @@
 title: 'オーバーライド [cover]'
 artist: 'ざるご×ヤス'
 composer: '吉田夜世'
+lyricist: '吉田夜世'
 illustrator: 'シラマキアゲ'
 mixer: 'ざるご'
 thumbnail: 'thumbnail.png'

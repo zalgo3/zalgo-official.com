@@ -17,6 +17,7 @@ export type DiscographyData = {
     artist: string;
     collaboration?: string;
     composer: string;
+    lyricist: string;
     illustrator?: string;
     mixer?: string;
     thumbnailUrl?: string;
