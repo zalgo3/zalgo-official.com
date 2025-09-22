@@ -20,6 +20,7 @@ export type DiscographyData = {
     lyricist: string;
     illustrator?: string;
     mixer?: string;
+    thumbnail?: string;
     thumbnailUrl?: string;
     links: {
         appleMusic?: string;
@@ -53,6 +54,23 @@ export type DiscographyItem = GrayMatterFile<Buffer> & {
     data: DiscographyData;
 };
 
+/**
+ * AmazonのURLにアフィリエイトタグを付与するヘルパー関数
+ * @param urlString - 元のURL
+ * @returns タグが付与されたURL
+ */
+const addAmazonTag = (urlString: string | undefined): string | undefined => {
+    if (!urlString) {
+        return undefined;
+    }
+    const tag = process.env.AMAZON_ASSOCIATE_PARTNER_TAG;
+    if (!tag) {
+        return urlString;
+    }
+    const separator = urlString.includes('?') ? '&' : '?';
+    return `${urlString}${separator}tag=${tag}`;
+};
+
 export const getDiscographyAll = async (
     options: Options = {}
 ): Promise<DiscographyItem[]> => {
@@ -62,13 +80,24 @@ export const getDiscographyAll = async (
                 const itemPath = path.join(discographyPath, slug, 'post.md');
                 try {
                     const item = matter(await fs.readFile(itemPath));
-                    item.data.slug = slug;
+                    const data = item.data as Partial<DiscographyData>;
+                    data.slug = slug;
 
-                    if (item.data.thumbnail) {
-                        item.data.thumbnailUrl = `/discography/${slug}/${String(
-                            item.data.thumbnail
-                        )}`;
+                    if (data.thumbnail) {
+                        data.thumbnailUrl = `/discography/${slug}/${data.thumbnail}`;
                     }
+
+                    if (data.links) {
+                        data.links.amazonMusic = addAmazonTag(
+                            data.links.amazonMusic
+                        );
+                        data.links.amazonDigitalMusic = addAmazonTag(
+                            data.links.amazonDigitalMusic
+                        );
+                    }
+
+                    item.data = data as DiscographyData;
+
                     item.data.createdAt = parseInt(
                         (
                             await promisify(exec)(

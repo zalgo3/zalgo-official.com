@@ -1,3 +1,5 @@
+'use client';
+
 import {
     FaApple,
     FaFacebook,
@@ -11,9 +13,11 @@ import {SiAmazon, SiAmazonmusic, SiRakuten} from 'react-icons/si';
 import styles from 'styles/ui/DiscographyLinks.module.css';
 
 import {type DiscographyData} from '../lib/discography';
+import {event} from '../lib/gtag';
 
 type DiscographyLinksProps = {
     links: DiscographyData['links'];
+    songTitle: string;
 };
 
 type Service = {
@@ -129,17 +133,17 @@ const socialLinks: Service[] = [
     },
 ];
 
-const DiscographyLinks = ({links}: DiscographyLinksProps) => {
+const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
     const availableStreaming = streamingServices.filter(s => links[s.key]);
     const availableDownloads = downloadServices.filter(s => links[s.key]);
     const availableSocial = socialLinks.filter(s => links[s.key]);
 
-    const addAmazonTag = (urlString: string): string => {
-        if (!urlString) {
-            return '';
-        }
-        const separator = urlString.includes('?') ? '&' : '?';
-        return `${urlString}${separator}tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`;
+    const handleLinkClick = (category: string, serviceName: string) => {
+        event({
+            action: 'click_distribution_link',
+            category: category,
+            label: `${songTitle} - ${serviceName}`,
+        });
     };
 
     return (
@@ -148,31 +152,27 @@ const DiscographyLinks = ({links}: DiscographyLinksProps) => {
                 <>
                     <h3 className={styles.categoryTitle}>ストリーミング</h3>
                     <div className={styles.container}>
-                        {availableStreaming.map(service => {
-                            const baseUrl = links[service.key] as string;
-                            const href =
-                                service.key === 'amazonMusic'
-                                    ? addAmazonTag(baseUrl)
-                                    : baseUrl;
-                            return (
-                                <a
-                                    key={service.key}
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={styles.iconLink}
-                                    style={{
-                                        backgroundColor: service.color,
-                                        background: service.gradient,
-                                    }}
-                                >
-                                    {service.icon || ''}
-                                    <span className={styles.serviceName}>
-                                        {service.name}
-                                    </span>
-                                </a>
-                            );
-                        })}
+                        {availableStreaming.map(service => (
+                            <a
+                                key={service.key}
+                                href={links[service.key] as string}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.iconLink}
+                                style={{
+                                    backgroundColor: service.color,
+                                    background: service.gradient,
+                                }}
+                                onClick={() =>
+                                    handleLinkClick('Streaming', service.name)
+                                }
+                            >
+                                {service.icon || ''}
+                                <span className={styles.serviceName}>
+                                    {service.name}
+                                </span>
+                            </a>
+                        ))}
                     </div>
                 </>
             )}
@@ -181,31 +181,27 @@ const DiscographyLinks = ({links}: DiscographyLinksProps) => {
                 <>
                     <h3 className={styles.categoryTitle}>ダウンロード</h3>
                     <div className={styles.container}>
-                        {availableDownloads.map(service => {
-                            const baseUrl = links[service.key] as string;
-                            const href =
-                                service.key === 'amazonDigitalMusic'
-                                    ? addAmazonTag(baseUrl)
-                                    : baseUrl;
-                            return (
-                                <a
-                                    key={service.key}
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={styles.iconLink}
-                                    style={{
-                                        backgroundColor: service.color,
-                                        background: service.gradient,
-                                    }}
-                                >
-                                    {service.icon || ''}
-                                    <span className={styles.serviceName}>
-                                        {service.name}
-                                    </span>
-                                </a>
-                            );
-                        })}
+                        {availableDownloads.map(service => (
+                            <a
+                                key={service.key}
+                                href={links[service.key] as string}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.iconLink}
+                                style={{
+                                    backgroundColor: service.color,
+                                    background: service.gradient,
+                                }}
+                                onClick={() =>
+                                    handleLinkClick('Download', service.name)
+                                }
+                            >
+                                {service.icon || ''}
+                                <span className={styles.serviceName}>
+                                    {service.name}
+                                </span>
+                            </a>
+                        ))}
                     </div>
                 </>
             )}
@@ -225,6 +221,9 @@ const DiscographyLinks = ({links}: DiscographyLinksProps) => {
                                     backgroundColor: service.color,
                                     background: service.gradient,
                                 }}
+                                onClick={() =>
+                                    handleLinkClick('Social', service.name)
+                                }
                             >
                                 {service.icon || ''}
                                 <span className={styles.serviceName}>
