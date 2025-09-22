@@ -97,7 +97,10 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
             )}
 
             <p className={pageStyles.linksHeading}>配信サイト</p>
-            <DiscographyLinks links={discographyItem.data.links} />
+            <DiscographyLinks
+                links={discographyItem.data.links}
+                songTitle={discographyItem.data.title}
+            />
 
             <ShareButtons
                 url={postUrl}
