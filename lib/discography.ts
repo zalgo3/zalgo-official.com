@@ -5,13 +5,13 @@ import {promisify} from 'util';
 
 import matter, {GrayMatterFile} from 'gray-matter';
 
-const musicsPath = 'music';
+const discographyPath = 'discography';
 
 type Options = {
     limit?: number;
 };
 
-export type MusicData = {
+export type DiscographyData = {
     slug: string;
     title: string;
     artist: string;
@@ -38,43 +38,45 @@ export type MusicData = {
     updatedAt: number;
 };
 
-export type Music = GrayMatterFile<Buffer> & {
-    data: MusicData;
+export type DiscographyItem = GrayMatterFile<Buffer> & {
+    data: DiscographyData;
 };
 
-export const getMusicAll = async (options: Options = {}): Promise<Music[]> => {
-    const musics = (
+export const getDiscographyAll = async (
+    options: Options = {}
+): Promise<DiscographyItem[]> => {
+    const items = (
         await Promise.all(
-            (await fs.readdir(musicsPath)).map(async slug => {
-                const musicPath = path.join(musicsPath, slug, 'post.md');
+            (await fs.readdir(discographyPath)).map(async slug => {
+                const itemPath = path.join(discographyPath, slug, 'post.md');
                 try {
-                    const music = matter(await fs.readFile(musicPath));
-                    music.data.slug = slug;
+                    const item = matter(await fs.readFile(itemPath));
+                    item.data.slug = slug;
 
-                    if (music.data.thumbnail) {
-                        music.data.thumbnailUrl = `/music/${slug}/${String(
-                            music.data.thumbnail
+                    if (item.data.thumbnail) {
+                        item.data.thumbnailUrl = `/discography/${slug}/${String(
+                            item.data.thumbnail
                         )}`;
                     }
-                    music.data.createdAt = parseInt(
+                    item.data.createdAt = parseInt(
                         (
                             await promisify(exec)(
-                                `git log --date=unix --reverse --format=%cd ${musicPath}`
+                                `git log --date=unix --reverse --format=%cd ${itemPath}`
                             )
                         ).stdout
                             .trim()
                             .split('\n')[0],
                         10
                     );
-                    music.data.updatedAt = parseInt(
+                    item.data.updatedAt = parseInt(
                         (
                             await promisify(exec)(
-                                `git log --date=unix -1 --format=%cd ${musicPath}`
+                                `git log --date=unix -1 --format=%cd ${itemPath}`
                             )
                         ).stdout.trim(),
                         10
                     );
-                    return music as Music;
+                    return item as DiscographyItem;
                 } catch (error: unknown) {
                     if (error instanceof Error) {
                         console.error(error.message);
@@ -86,8 +88,8 @@ export const getMusicAll = async (options: Options = {}): Promise<Music[]> => {
             })
         )
     )
-        .filter((music): music is Music => !!music)
-        .sort((p1: Music, p2: Music) => {
+        .filter((item): item is DiscographyItem => !!item)
+        .sort((p1: DiscographyItem, p2: DiscographyItem) => {
             if (p1.data.createdAt === p2.data.createdAt) {
                 return p1.data.slug.localeCompare(p2.data.slug);
             }
@@ -95,17 +97,19 @@ export const getMusicAll = async (options: Options = {}): Promise<Music[]> => {
         })
         .slice(0, options.limit);
 
-    return musics;
+    return items;
 };
 
-export const getMusicDataAll = async (
+export const getDiscographyDataAll = async (
     options?: Options
-): Promise<MusicData[]> => {
-    return (await getMusicAll(options)).map(m => m.data);
+): Promise<DiscographyData[]> => {
+    return (await getDiscographyAll(options)).map(m => m.data);
 };
 
-export const getMusic = async (slug: string): Promise<Music> => {
-    const musics = await getMusicAll();
-    const idx = musics.findIndex(m => m.data.slug === slug);
-    return musics[idx];
+export const getDiscographyItem = async (
+    slug: string
+): Promise<DiscographyItem> => {
+    const items = await getDiscographyAll();
+    const idx = items.findIndex(m => m.data.slug === slug);
+    return items[idx];
 };

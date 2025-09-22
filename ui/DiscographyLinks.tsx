@@ -8,9 +8,9 @@ import {
     FaYoutube,
 } from 'react-icons/fa';
 import {SiAmazonmusic} from 'react-icons/si';
-import styles from 'styles/ui/MusicLinks.module.css';
+import styles from 'styles/ui/DiscographyLinks.module.css';
 
-type MusicLinksProps = {
+type DiscographyLinksProps = {
     links: {
         appleMusic?: string;
         spotify?: string;
@@ -24,7 +24,7 @@ type MusicLinksProps = {
     };
 };
 
-const MusicLinks = ({links}: MusicLinksProps) => {
+const DiscographyLinks = ({links}: DiscographyLinksProps) => {
     return (
         <div className={styles.container}>
             {links.appleMusic && (
@@ -122,4 +122,4 @@ const MusicLinks = ({links}: MusicLinksProps) => {
     );
 };
 
-export default MusicLinks;
+export default DiscographyLinks;

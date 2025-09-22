@@ -33,6 +33,6 @@ const postsDirectory = path.join(process.cwd(), 'posts');
 const publicPostsDirectory = path.join(process.cwd(), 'public/posts');
 copyImageFiles(postsDirectory, publicPostsDirectory);
 
-const musicDirectory = path.join(process.cwd(), 'music');
-const publicMusicDirectory = path.join(process.cwd(), 'public/music');
-copyImageFiles(musicDirectory, publicMusicDirectory);
+const discographyDirectory = path.join(process.cwd(), 'discography');
+const publicDiscographyDirectory = path.join(process.cwd(), 'public/discography');
+copyImageFiles(discographyDirectory, publicDiscographyDirectory);
