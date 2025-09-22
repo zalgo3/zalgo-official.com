@@ -18,4 +18,6 @@ links:
     facebook: ''
     dwango: 'https://pc.dwango.jp/portals/album/2924148'
     animelo: 'https://pc.animelo.jp/portals/album/2924149'
+    itunesStore: 'https://music.apple.com/jp/album/oobaaraido-cover-single/1837833418'
+    amazonDigitalMusic: 'https://www.amazon.co.jp/dp/B0FQ5FKVC7'
 ---

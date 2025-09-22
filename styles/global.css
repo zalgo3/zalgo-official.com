@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
     --c-primary: #00aa90;
     --c-background: #ebf2fa;

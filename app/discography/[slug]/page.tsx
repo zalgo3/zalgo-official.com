@@ -8,6 +8,7 @@ import {getDiscographyItem, getDiscographyAll} from 'lib/discography';
 import styles from 'styles/app/blog/page.module.css';
 import pageStyles from 'styles/app/discography/page.module.css';
 import DiscographyLinks from 'ui/DiscographyLinks';
+import ShareButtons from 'ui/share-buttons';
 
 export const generateMetadata = async ({
     params,
@@ -38,6 +39,9 @@ export const generateMetadata = async ({
 const Page = async ({params}: {params: Promise<{slug: string}>}) => {
     const resolvedParams = await params;
     const discographyItem = await getDiscographyItem(resolvedParams.slug);
+    const postUrl = `https://zalgo-official.com/discography/${resolvedParams.slug}`;
+    const siteTitle = 'ざるご Official Website';
+    const authorAccount = 'zalgo3';
 
     const artistDisplayText = discographyItem.data.collaboration
         ? `${discographyItem.data.artist}×${discographyItem.data.collaboration}`
@@ -86,6 +90,13 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
 
             <p className={pageStyles.linksHeading}>配信サイト</p>
             <DiscographyLinks links={discographyItem.data.links} />
+
+            <ShareButtons
+                url={postUrl}
+                title={discographyItem.data.title}
+                siteTitle={siteTitle}
+                authorAccount={authorAccount}
+            />
         </div>
     );
 };
