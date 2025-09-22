@@ -16,7 +16,15 @@ type DiscographyLinksProps = {
     links: DiscographyData['links'];
 };
 
-const streamingServices = [
+type Service = {
+    key: keyof DiscographyData['links'];
+    name: string;
+    icon?: React.ReactNode;
+    color?: string;
+    gradient?: string;
+};
+
+const streamingServices: Service[] = [
     {
         key: 'appleMusic',
         name: 'Apple Music',
@@ -46,7 +54,7 @@ const streamingServices = [
     {key: 'recochoku', name: 'レコチョク', color: '#ff4a01'},
 ];
 
-const downloadServices = [
+const downloadServices: Service[] = [
     {
         key: 'itunesStore',
         name: 'iTunes Store',
@@ -63,7 +71,7 @@ const downloadServices = [
     {key: 'animelo', name: 'animelo mix', color: '#6a155f'},
 ];
 
-const socialLinks = [
+const socialLinks: Service[] = [
     {key: 'tiktok', name: 'TikTok', icon: <FaTiktok />, color: '#000'},
     {
         key: 'instagram',
