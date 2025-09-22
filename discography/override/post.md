@@ -20,4 +20,12 @@ links:
     animelo: 'https://pc.animelo.jp/portals/album/2924149'
     itunesStore: 'https://music.apple.com/jp/album/oobaaraido-cover-single/1837833418'
     amazonDigitalMusic: 'https://www.amazon.co.jp/dp/B0FQ5FKVC7'
+    rakutenMusic: 'https://music.rakuten.co.jp/link/album/31948861/song/180173761/'
+    dhits: 'https://dhits.docomo.ne.jp/music/1043772893'
+    kkbox: 'https://kkbox.fm/Vw1YTJo'
+    orimyuStore: 'https://music.orimyu.com/php/music/MusicTop.php?music=12344391'
+    mora: 'https://mora.jp/package/43000033/PA00200783-0-1/'
+    musicjp: 'https://music-book.jp/music/Artist/2932275/Music/aaamskhy'
+    mySound: 'https://mysound.jp/song/13567030/'
+    ototoy: 'https://ototoy.jp/_/default/p/3037262'
 ---

@@ -21,4 +21,12 @@ links:
     animelo: 'https://pc.animelo.jp/portals/album/2924149'
     itunesStore: 'https://itunes.apple.com/jp/album/haikei-dopperugengaa-cover-single/1837833815?app=itunes'
     amazonDigitalMusic: 'https://www.amazon.co.jp/dp/B0FQ5GMWXS'
+    rakutenMusic: 'https://music.rakuten.co.jp/link/album/31948862/song/180173762/'
+    dhits: 'https://dhits.docomo.ne.jp/music/1043772967'
+    kkbox: 'https://kkbox.fm/V51ZTJo'
+    orimyuStore: 'https://music.orimyu.com/php/music/MusicTop.php?music=12344392'
+    mora: 'https://mora.jp/package/43000033/PA00200784-0-1/'
+    musicjp: 'https://music-book.jp/music/Artist/2932275/Music/aaamskxl'
+    mySound: 'https://mysound.jp/song/13567031/'
+    ototoy: 'https://ototoy.jp/_/default/p/3037258'
 ---

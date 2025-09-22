@@ -7,7 +7,7 @@ import {
     FaTiktok,
     FaYoutube,
 } from 'react-icons/fa';
-import {SiAmazon, SiAmazonmusic} from 'react-icons/si';
+import {SiAmazon, SiAmazonmusic, SiRakuten} from 'react-icons/si';
 import styles from 'styles/ui/DiscographyLinks.module.css';
 
 import {type DiscographyData} from '../lib/discography';
@@ -51,6 +51,22 @@ const streamingServices: Service[] = [
         color: '#00c300',
     },
     {key: 'awa', name: 'AWA', color: '#000'},
+    {
+        key: 'rakutenMusic',
+        name: 'Rakuten Music',
+        icon: <SiRakuten />,
+        color: '#bf0000',
+    },
+    {
+        key: 'dhits',
+        name: 'dヒッツ',
+        color: '#ff0000',
+    },
+    {
+        key: 'kkbox',
+        name: 'KKBOX',
+        color: '#00c37a',
+    },
 ];
 
 const downloadServices: Service[] = [
@@ -69,6 +85,31 @@ const downloadServices: Service[] = [
     {key: 'recochoku', name: 'レコチョク', color: '#ff4a01'},
     {key: 'dwango', name: 'ドワンゴジェイピー', color: '#f05b00'},
     {key: 'animelo', name: 'animelo mix', color: '#6a155f'},
+    {
+        key: 'orimyuStore',
+        name: 'オリミュウストア',
+        color: '#00a0e9',
+    },
+    {
+        key: 'mora',
+        name: 'mora',
+        color: '#0090dc',
+    },
+    {
+        key: 'musicjp',
+        name: 'music.jp',
+        color: '#00aeef',
+    },
+    {
+        key: 'mySound',
+        name: 'My Sound',
+        color: '#ff4500',
+    },
+    {
+        key: 'ototoy',
+        name: 'OTOTOY',
+        color: '#2d2d2d',
+    },
 ];
 
 const socialLinks: Service[] = [
