@@ -72,13 +72,14 @@ const getRakutenItem = async (
                 }
                 return items[0].Item;
             });
-            if (item != null) {
-                return {
-                    affiliateUrl: item.affiliateUrl,
-                    itemName: item.itemName,
-                    imageUrl: item.mediumImageUrls[0].imageUrl,
-                };
+            if (item == null) {
+                return null;
             }
+            return {
+                affiliateUrl: item.affiliateUrl,
+                itemName: item.itemName,
+                imageUrl: item.mediumImageUrls[0].imageUrl,
+            };
         }
         const params = {
             applicationId: process.env.RAKUTEN_API_APPLICATION_ID,
