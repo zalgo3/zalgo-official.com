@@ -1,8 +1,9 @@
 import retry from 'async-retry';
-import {truncateTitle} from 'lib/string';
 import Image from 'next/image';
 import Link from 'next/link';
 import fetch from 'node-fetch';
+
+import {truncateTitle} from 'lib/string';
 import styles from 'styles/ui/affiliates.module.css';
 
 type RakutenItem = {
@@ -18,8 +19,8 @@ const getRakutenItem = async (
     try {
         if (itemCode != null) {
             const params = {
-                applicationId: process.env.RAKUTEN_API_APPLICATION_ID as string,
-                affiliateId: process.env.RAKUTEN_AFFILIATE_ID as string,
+                applicationId: process.env.RAKUTEN_API_APPLICATION_ID!,
+                affiliateId: process.env.RAKUTEN_AFFILIATE_ID!,
                 itemCode: itemCode,
                 hits: '1',
             };
@@ -54,8 +55,8 @@ const getRakutenItem = async (
             }
         }
         const params = {
-            applicationId: process.env.RAKUTEN_API_APPLICATION_ID as string,
-            affiliateId: process.env.RAKUTEN_AFFILIATE_ID as string,
+            applicationId: process.env.RAKUTEN_API_APPLICATION_ID!,
+            affiliateId: process.env.RAKUTEN_AFFILIATE_ID!,
             keyword: query,
             hits: '1',
         };
@@ -99,7 +100,7 @@ const getYahooUrl = async (
     try {
         if (JAN != null) {
             const params = {
-                appid: process.env.YAHOO_API_APP_ID as string,
+                appid: process.env.YAHOO_API_APP_ID!,
                 affiliate_type: 'vc',
                 affiliate_id: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${process.env.VALUE_COMMERCE_SID}&pid=${process.env.VALUE_COMMERCE_PID}&vc_url=`,
                 jan_code: JAN,
@@ -132,7 +133,7 @@ const getYahooUrl = async (
             }
         }
         const params = {
-            appid: process.env.YAHOO_API_APP_ID as string,
+            appid: process.env.YAHOO_API_APP_ID!,
             affiliate_type: 'vc',
             affiliate_id: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${process.env.VALUE_COMMERCE_SID}&pid=${process.env.VALUE_COMMERCE_PID}&vc_url=`,
             query: query,

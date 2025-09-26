@@ -10,6 +10,7 @@ import {
     FaYoutube,
 } from 'react-icons/fa';
 import {SiAmazon, SiAmazonmusic, SiRakuten} from 'react-icons/si';
+
 import styles from 'styles/ui/DiscographyLinks.module.css';
 
 import {type DiscographyData} from '../lib/discography';
@@ -155,7 +156,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                         {availableStreaming.map(service => (
                             <a
                                 key={service.key}
-                                href={links[service.key] as string}
+                                href={links[service.key]}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.iconLink}
@@ -164,7 +165,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                                     background: service.gradient,
                                 }}
                                 onClick={() =>
-                                    handleLinkClick('Streaming', service.name)
+                                    { handleLinkClick('Streaming', service.name); }
                                 }
                             >
                                 {service.icon || ''}
@@ -184,7 +185,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                         {availableDownloads.map(service => (
                             <a
                                 key={service.key}
-                                href={links[service.key] as string}
+                                href={links[service.key]}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.iconLink}
@@ -193,7 +194,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                                     background: service.gradient,
                                 }}
                                 onClick={() =>
-                                    handleLinkClick('Download', service.name)
+                                    { handleLinkClick('Download', service.name); }
                                 }
                             >
                                 {service.icon || ''}
@@ -213,7 +214,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                         {availableSocial.map(service => (
                             <a
                                 key={service.key}
-                                href={links[service.key] as string}
+                                href={links[service.key]}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.iconLink}
@@ -222,7 +223,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                                     background: service.gradient,
                                 }}
                                 onClick={() =>
-                                    handleLinkClick('Social', service.name)
+                                    { handleLinkClick('Social', service.name); }
                                 }
                             >
                                 {service.icon || ''}
