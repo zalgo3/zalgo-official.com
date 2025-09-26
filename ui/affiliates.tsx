@@ -5,6 +5,22 @@ import Link from 'next/link';
 import fetch from 'node-fetch';
 import styles from 'styles/ui/affiliates.module.css';
 
+type RakutenApiResponse = {
+    Items: {
+        Item: {
+            affiliateUrl: string;
+            itemName: string;
+            mediumImageUrls: {imageUrl: string}[];
+        };
+    }[];
+};
+
+type YahooApiResponse = {
+    hits: {
+        url: string;
+    }[];
+};
+
 type RakutenItem = {
     affiliateUrl: string;
     itemName: string;
@@ -15,11 +31,20 @@ const getRakutenItem = async (
     query: string,
     itemCode?: string
 ): Promise<RakutenItem | null> => {
+    if (
+        process.env.RAKUTEN_API_APPLICATION_ID == null ||
+        process.env.RAKUTEN_AFFILIATE_ID == null
+    ) {
+        console.error(
+            'RAKUTEN_API_APPLICATION_ID or RAKUTEN_AFFILIATE_ID is not set'
+        );
+        return null;
+    }
     try {
         if (itemCode != null) {
             const params = {
-                applicationId: process.env.RAKUTEN_API_APPLICATION_ID as string,
-                affiliateId: process.env.RAKUTEN_AFFILIATE_ID as string,
+                applicationId: process.env.RAKUTEN_API_APPLICATION_ID,
+                affiliateId: process.env.RAKUTEN_AFFILIATE_ID,
                 itemCode: itemCode,
                 hits: '1',
             };
@@ -38,24 +63,26 @@ const getRakutenItem = async (
                 if (response.status === 429) {
                     throw new Error(`Too many requests: ${endpoint}`);
                 }
-                const items = ((await response.json()) as any).Items;
+                const items = ((await response.json()) as RakutenApiResponse)
+                    .Items;
                 if (items.length === 0) {
                     bail(new Error(`No hits: ${endpoint}.`));
                     return;
                 }
                 return items[0].Item;
             });
-            if (item != null) {
-                return {
-                    affiliateUrl: item.affiliateUrl,
-                    itemName: item.itemName,
-                    imageUrl: item.mediumImageUrls[0].imageUrl,
-                };
+            if (item == null) {
+                return null;
             }
+            return {
+                affiliateUrl: item.affiliateUrl,
+                itemName: item.itemName,
+                imageUrl: item.mediumImageUrls[0].imageUrl,
+            };
         }
         const params = {
-            applicationId: process.env.RAKUTEN_API_APPLICATION_ID as string,
-            affiliateId: process.env.RAKUTEN_AFFILIATE_ID as string,
+            applicationId: process.env.RAKUTEN_API_APPLICATION_ID,
+            affiliateId: process.env.RAKUTEN_AFFILIATE_ID,
             keyword: query,
             hits: '1',
         };
@@ -74,13 +101,16 @@ const getRakutenItem = async (
             if (response.status === 429) {
                 throw new Error(`Too many requests: ${endpoint}`);
             }
-            const items = ((await response.json()) as any).Items;
+            const items = ((await response.json()) as RakutenApiResponse).Items;
             if (items.length === 0) {
                 bail(new Error(`No hits: ${endpoint}.`));
                 return;
             }
             return items[0].Item;
         });
+        if (item == null) {
+            return null;
+        }
         return {
             affiliateUrl: item.affiliateUrl,
             itemName: item.itemName,
@@ -96,10 +126,20 @@ const getYahooUrl = async (
     query: string,
     JAN?: string
 ): Promise<string | null> => {
+    if (
+        process.env.YAHOO_API_APP_ID == null ||
+        process.env.VALUE_COMMERCE_SID == null ||
+        process.env.VALUE_COMMERCE_PID == null
+    ) {
+        console.error(
+            'YAHOO_API_APP_ID, VALUE_COMMERCE_SID, or VALUE_COMMERCE_PID is not set'
+        );
+        return null;
+    }
     try {
         if (JAN != null) {
             const params = {
-                appid: process.env.YAHOO_API_APP_ID as string,
+                appid: process.env.YAHOO_API_APP_ID,
                 affiliate_type: 'vc',
                 affiliate_id: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${process.env.VALUE_COMMERCE_SID}&pid=${process.env.VALUE_COMMERCE_PID}&vc_url=`,
                 jan_code: JAN,
@@ -120,7 +160,7 @@ const getYahooUrl = async (
                 if (response.status === 429) {
                     throw new Error(`Too many requests: ${endpoint}`);
                 }
-                const hits = ((await response.json()) as any).hits;
+                const hits = ((await response.json()) as YahooApiResponse).hits;
                 if (hits.length === 0) {
                     bail(new Error(`No hits: ${endpoint}.`));
                     return;
@@ -132,7 +172,7 @@ const getYahooUrl = async (
             }
         }
         const params = {
-            appid: process.env.YAHOO_API_APP_ID as string,
+            appid: process.env.YAHOO_API_APP_ID,
             affiliate_type: 'vc',
             affiliate_id: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${process.env.VALUE_COMMERCE_SID}&pid=${process.env.VALUE_COMMERCE_PID}&vc_url=`,
             query: query,
@@ -153,14 +193,14 @@ const getYahooUrl = async (
             if (response.status === 429) {
                 throw new Error(`Too many requests: ${endpoint}`);
             }
-            const hits = ((await response.json()) as any).hits;
+            const hits = ((await response.json()) as YahooApiResponse).hits;
             if (hits.length === 0) {
                 bail(new Error(`No hits: ${endpoint}.`));
                 return;
             }
             return hits[0].url;
         });
-        return itemUrl;
+        return itemUrl ?? null;
     } catch (error) {
         console.error('Error fetching Yahoo URL:', error);
         return null;
@@ -178,15 +218,19 @@ const Affiliates = async ({
     rakutenItemCode?: string;
     JAN?: string;
 }) => {
+    if (process.env.AMAZON_ASSOCIATE_PARTNER_TAG == null) {
+        console.error('AMAZON_ASSOCIATE_PARTNER_TAG is not set');
+        return null;
+    }
     const rakutenItem = await getRakutenItem(query, rakutenItemCode);
     const yahooUrl = await getYahooUrl(query, JAN);
     const amazonUrl = asin
         ? `https://www.amazon.co.jp/dp/${asin}?tag=${process.env.AMAZON_ASSOCIATE_PARTNER_TAG}`
         : null;
     const cardUrl =
-        amazonUrl ||
-        (rakutenItem ? rakutenItem.affiliateUrl : null) ||
-        yahooUrl ||
+        amazonUrl ??
+        (rakutenItem ? rakutenItem.affiliateUrl : null) ??
+        yahooUrl ??
         '#';
     return (
         <div className={styles.card}>

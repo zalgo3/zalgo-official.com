@@ -1,9 +1,9 @@
 import {dirname} from 'path';
 import {fileURLToPath} from 'url';
-import {FlatCompat} from '@eslint/eslintrc';
 
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
+import NextPlugin from '@next/eslint-plugin-next';
 import importPlugin from 'eslint-plugin-import';
 import unusedImports from 'eslint-plugin-unused-imports';
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -11,21 +11,24 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-});
-
 export default tseslint.config(
     {
         files: ['*.ts', '*.tsx'],
     },
     {
-        ignores: ['**/.next/**/*'],
+        ignores: [
+            '**/.next/**/*',
+            'coverage/**',
+            'eslint.config.mjs',
+            'next.config.mjs',
+            'scripts/copyImages.mjs',
+            'sitemap.config.mjs',
+            'jest.config.ts',
+        ],
     },
     eslint.configs.recommended,
     tseslint.configs.strictTypeChecked,
     tseslint.configs.stylisticTypeChecked,
-    ...compat.extends('next/core-web-vitals'),
     {
         languageOptions: {
             parser: tseslint.parser,
@@ -88,6 +91,22 @@ export default tseslint.config(
         rules: {
             'react/jsx-boolean-value': 'error',
             'react/jsx-curly-brace-presence': 'error',
+        },
+    },
+    {
+        files: ['next-env.d.ts'],
+        rules: {
+            '@typescript-eslint/triple-slash-reference': 'off',
+        },
+    },
+    {
+        files: ['**/*.ts', '**/*.tsx'],
+        plugins: {
+            '@next/next': NextPlugin,
+        },
+        rules: {
+            ...NextPlugin.configs.recommended.rules,
+            ...NextPlugin.configs['core-web-vitals'].rules,
         },
     },
     eslintConfigPrettier

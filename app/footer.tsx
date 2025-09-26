@@ -1,6 +1,5 @@
 import {format} from 'date-fns';
 import Link from 'next/link';
-
 import styles from 'styles/app/footer.module.css';
 
 const Footer = () => {

@@ -155,7 +155,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                         {availableStreaming.map(service => (
                             <a
                                 key={service.key}
-                                href={links[service.key] as string}
+                                href={links[service.key]}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.iconLink}
@@ -163,11 +163,11 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                                     backgroundColor: service.color,
                                     background: service.gradient,
                                 }}
-                                onClick={() =>
-                                    handleLinkClick('Streaming', service.name)
-                                }
+                                onClick={() => {
+                                    handleLinkClick('Streaming', service.name);
+                                }}
                             >
-                                {service.icon || ''}
+                                {service.icon ?? ''}
                                 <span className={styles.serviceName}>
                                     {service.name}
                                 </span>
@@ -184,7 +184,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                         {availableDownloads.map(service => (
                             <a
                                 key={service.key}
-                                href={links[service.key] as string}
+                                href={links[service.key]}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.iconLink}
@@ -192,11 +192,11 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                                     backgroundColor: service.color,
                                     background: service.gradient,
                                 }}
-                                onClick={() =>
-                                    handleLinkClick('Download', service.name)
-                                }
+                                onClick={() => {
+                                    handleLinkClick('Download', service.name);
+                                }}
                             >
-                                {service.icon || ''}
+                                {service.icon ?? ''}
                                 <span className={styles.serviceName}>
                                     {service.name}
                                 </span>
@@ -213,7 +213,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                         {availableSocial.map(service => (
                             <a
                                 key={service.key}
-                                href={links[service.key] as string}
+                                href={links[service.key]}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.iconLink}
@@ -221,11 +221,11 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                                     backgroundColor: service.color,
                                     background: service.gradient,
                                 }}
-                                onClick={() =>
-                                    handleLinkClick('Social', service.name)
-                                }
+                                onClick={() => {
+                                    handleLinkClick('Social', service.name);
+                                }}
                             >
-                                {service.icon || ''}
+                                {service.icon ?? ''}
                                 <span className={styles.serviceName}>
                                     {service.name}
                                 </span>

@@ -1,7 +1,6 @@
+import {type DiscographyData} from 'lib/discography';
 import Image from 'next/image';
 import Link from 'next/link';
-
-import {type DiscographyData} from 'lib/discography';
 import styles from 'styles/app/discography/card.module.css';
 
 const Card = ({item}: {item: DiscographyData}) => {
