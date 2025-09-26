@@ -201,7 +201,7 @@ const getYahooUrl = async (
             }
             return hits[0].url;
         });
-        return itemUrl;
+        return itemUrl ?? null;
     } catch (error) {
         console.error('Error fetching Yahoo URL:', error);
         return null;
