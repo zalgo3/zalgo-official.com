@@ -109,6 +109,9 @@ const getRakutenItem = async (
             }
             return items[0].Item;
         });
+        if (item == null) {
+            return null;
+        }
         return {
             affiliateUrl: item.affiliateUrl,
             itemName: item.itemName,
