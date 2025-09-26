@@ -1,9 +1,8 @@
 import retry from 'async-retry';
+import {truncateTitle} from 'lib/string';
 import Image from 'next/image';
 import Link from 'next/link';
 import fetch from 'node-fetch';
-
-import {truncateTitle} from 'lib/string';
 import styles from 'styles/ui/affiliates.module.css';
 
 type RakutenApiResponse = {

@@ -1,10 +1,9 @@
 import 'katex/dist/katex.min.css';
+import {getDiscographyItem, getDiscographyAll} from 'lib/discography';
 import type {Metadata} from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import {FaArrowLeft} from 'react-icons/fa';
-
-import {getDiscographyItem, getDiscographyAll} from 'lib/discography';
 import styles from 'styles/app/blog/page.module.css';
 import pageStyles from 'styles/app/discography/page.module.css';
 import DiscographyLinks from 'ui/DiscographyLinks';

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-
 import styles from 'styles/app/blog/header.module.css';
 
 const Header = () => {

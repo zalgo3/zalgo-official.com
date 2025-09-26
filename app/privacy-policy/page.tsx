@@ -1,5 +1,4 @@
 import type {Metadata} from 'next';
-
 import styles from 'styles/app/blog/page.module.css';
 
 export const metadata: Metadata = {

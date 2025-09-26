@@ -10,7 +10,6 @@ import {
     FaYoutube,
 } from 'react-icons/fa';
 import {SiAmazon, SiAmazonmusic, SiRakuten} from 'react-icons/si';
-
 import styles from 'styles/ui/DiscographyLinks.module.css';
 
 import {type DiscographyData} from '../lib/discography';
