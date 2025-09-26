@@ -98,5 +98,11 @@ export default tseslint.config(
             'react/jsx-curly-brace-presence': 'error',
         },
     },
+    {
+        files: ['next-env.d.ts'],
+        rules: {
+            '@typescript-eslint/triple-slash-reference': 'off',
+        },
+    },
     eslintConfigPrettier
 );
