@@ -20,7 +20,15 @@ export default tseslint.config(
         files: ['*.ts', '*.tsx'],
     },
     {
-        ignores: ['**/.next/**/*'],
+        ignores: [
+            '**/.next/**/*',
+            'coverage/**',
+            'eslint.config.mjs',
+            'next.config.mjs',
+            'scripts/copyImages.mjs',
+            'sitemap.config.mjs',
+            'jest.config.ts',
+        ],
     },
     eslint.configs.recommended,
     tseslint.configs.strictTypeChecked,
