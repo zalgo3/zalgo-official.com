@@ -1,9 +1,9 @@
+import Breadcrumbs from '../../Breadcrumbs';
 import 'katex/dist/katex.min.css';
 import {getDiscographyItem, getDiscographyAll} from 'lib/discography';
 import type {Metadata} from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import {FaArrowLeft} from 'react-icons/fa';
 import styles from 'styles/app/blog/page.module.css';
 import pageStyles from 'styles/app/discography/page.module.css';
 import DiscographyLinks from 'ui/DiscographyLinks';
@@ -45,12 +45,17 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
     const artistDisplayText = discographyItem.data.collaboration
         ? `${discographyItem.data.artist}×${discographyItem.data.collaboration}`
         : discographyItem.data.artist;
+    const breadcrumbs = [
+        {label: '楽曲一覧', href: '/discography'},
+        {
+            label: discographyItem.data.title,
+            href: `/discography/${resolvedParams.slug}`,
+        },
+    ];
 
     return (
         <div className={styles.container}>
-            <Link href="/discography" className={pageStyles.backLink}>
-                <FaArrowLeft /> 楽曲一覧へ戻る
-            </Link>
+            <Breadcrumbs items={breadcrumbs} />
 
             <h1 className={styles.title} style={{textAlign: 'center'}}>
                 {discographyItem.data.title}

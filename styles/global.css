@@ -48,3 +48,97 @@ th {
     color: var(--c-white);
     border: none;
 }
+
+/* TOC Container - Neumorphism box */
+nav.toc {
+    position: sticky;
+    top: 1rem;
+    width: 300px;
+    flex-shrink: 0;
+    margin-left: 2rem;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-background);
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    font-size: 0.9rem;
+}
+
+/* Accordion Header (Summary) */
+nav.toc summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  list-style-position: inside;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow-background);
+  transition: all 0.2s ease-out;
+}
+nav.toc summary:hover {
+  color: var(--c-primary);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 10px #c8ced5, -4px -4px 10px #ffffff;
+}
+nav.toc details[open] > summary {
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow-foreground);
+}
+nav.toc summary:active {
+  box-shadow: var(--box-shadow-foreground);
+  transform: translateY(1px);
+}
+
+/* TOC list appears when details is open */
+nav.toc details[open] > nav {
+    margin-top: 1rem;
+}
+
+nav.toc ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+nav.toc ol ol {
+    padding-left: 1rem;
+}
+nav.toc li {
+    margin-bottom: 0.5rem;
+}
+nav.toc a {
+    text-decoration: none;
+    color: var(--c-base);
+    transition: color 0.2s;
+    display: block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+}
+nav.toc a:hover {
+    color: var(--c-primary);
+    background-color: #e0e5ec;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+    nav.toc {
+        position: static;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 2rem;
+        max-height: 40vh;
+    }
+}
+
+.container {
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: flex-start;
+}
+
+.container > div {
+   flex: 1;
+   min-width: 0;
+}

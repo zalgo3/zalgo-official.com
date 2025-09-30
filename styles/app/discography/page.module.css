@@ -31,21 +31,6 @@
     color: var(--c-base);
 }
 
-.backLink {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: var(--c-base);
-    margin-bottom: 2rem;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-.backLink:hover {
-    color: var(--c-primary);
-}
-
 .listContainer {
     width: 100%;
     max-width: 1200px;
