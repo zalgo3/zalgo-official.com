@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 };
 
 const PrivacyPolicyPage = () => {
-    const breadcrumbs = [{label: 'プライバシーポリシー', href: '/privacy-policy'}];
+    const breadcrumbs = [
+        {label: 'プライバシーポリシー', href: '/privacy-policy'},
+    ];
     return (
         <div className={styles.container}>
             <Breadcrumbs items={breadcrumbs} />

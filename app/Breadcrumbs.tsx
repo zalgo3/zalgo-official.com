@@ -10,7 +10,7 @@ type BreadcrumbsProps = {
     items: BreadcrumbItem[];
 };
 
-const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
+const Breadcrumbs = ({items}: BreadcrumbsProps) => {
     return (
         <nav aria-label="breadcrumb" className={styles.container}>
             <ol className={styles.list}>

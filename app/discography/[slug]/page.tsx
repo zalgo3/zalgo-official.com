@@ -1,13 +1,13 @@
-import Breadcrumbs from '../../Breadcrumbs';
 import 'katex/dist/katex.min.css';
 import {getDiscographyItem, getDiscographyAll} from 'lib/discography';
 import type {Metadata} from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from 'styles/app/blog/page.module.css';
 import pageStyles from 'styles/app/discography/page.module.css';
 import DiscographyLinks from 'ui/DiscographyLinks';
 import ShareButtons from 'ui/share-buttons';
+
+import Breadcrumbs from '../../Breadcrumbs';
 
 export const generateMetadata = async ({
     params,
