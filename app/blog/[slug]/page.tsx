@@ -92,11 +92,13 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
                                     rehypeKatex,
                                     rehypeSlug,
                                     [
-                                        rehypeToc,
+                                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                                        rehypeToc as any,
                                         {
                                             headings: ['h2', 'h3'],
                                             nav: true,
-                                            customizeTOC: toc => {
+                                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                                            customizeTOC: (toc: any) => {
                                                 return {
                                                     type: 'element',
                                                     tagName: 'details',
