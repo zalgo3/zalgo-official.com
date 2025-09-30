@@ -8,11 +8,16 @@ import type {Metadata} from 'next';
 import {MDXRemote} from 'next-mdx-remote/rsc';
 import rehypeKatex from 'rehype-katex';
 import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeSlug from 'rehype-slug';
+import rehypeToc from 'rehype-toc';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import styles from 'styles/app/blog/page.module.css';
 import Affiliates from 'ui/affiliates';
+import NicoNicoEmbed from 'ui/NicoNicoEmbed';
 import ShareButtons from 'ui/share-buttons';
+
+import Breadcrumbs from '../../Breadcrumbs';
 
 export const generateMetadata = async ({
     params,
@@ -37,49 +42,98 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
     const resolvedParams = await params;
     const {content, ...post} = await getPost(resolvedParams.slug);
     const postUrl = `https://zalgo-official.com/blog/${resolvedParams.slug}`;
-    const siteTitle = 'ざるごのブログ';
+    const siteTitle = 'ブログ | ざるご Official Website';
     const authorAccount = 'zalgo3';
+    const breadcrumbs = [
+        {label: 'ブログ', href: '/blog'},
+        {label: post.data.title, href: `/blog/${resolvedParams.slug}`},
+    ];
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>{post.data.title}</h1>
-            <p className={styles.date}>
-                投稿日時:{' '}
-                {formatTZ(
-                    toZonedTime(post.data.createdAt * 1000, 'Asia/Tokyo'),
-                    'yyyy/MM/dd HH:mm'
-                )}
-            </p>
-            <p className={styles.date}>
-                最終更新日時:{' '}
-                {formatTZ(
-                    toZonedTime(post.data.updatedAt * 1000, 'Asia/Tokyo'),
-                    'yyyy/MM/dd HH:mm'
-                )}
-            </p>
-            <MDXRemote
-                source={content}
-                components={{Affiliates, YouTubeEmbed}}
-                options={{
-                    mdxOptions: {
-                        remarkPlugins: [
-                            remarkMath,
-                            remarkGfm,
-                            [
-                                remarkImagesToFullPaths,
-                                {slug: resolvedParams.slug},
-                            ],
-                        ],
-                        rehypePlugins: [rehypePrettyCode, rehypeKatex],
-                    },
-                }}
-            />
-            <ShareButtons
-                url={postUrl}
-                title={post.data.title}
-                siteTitle={siteTitle}
-                authorAccount={authorAccount}
-            />
-        </div>
+        <>
+            <Breadcrumbs items={breadcrumbs} />
+            <div className={`${styles.container} container`}>
+                <div>
+                    <h1 className={styles.title}>{post.data.title}</h1>
+                    <p className={styles.date}>
+                        投稿日時:{' '}
+                        {formatTZ(
+                            toZonedTime(
+                                post.data.createdAt * 1000,
+                                'Asia/Tokyo'
+                            ),
+                            'yyyy/MM/dd HH:mm'
+                        )}
+                    </p>
+                    <p className={styles.date}>
+                        最終更新日時:{' '}
+                        {formatTZ(
+                            toZonedTime(
+                                post.data.updatedAt * 1000,
+                                'Asia/Tokyo'
+                            ),
+                            'yyyy/MM/dd HH:mm'
+                        )}
+                    </p>
+                    <MDXRemote
+                        source={content}
+                        components={{Affiliates, YouTubeEmbed, NicoNicoEmbed}}
+                        options={{
+                            mdxOptions: {
+                                remarkPlugins: [
+                                    remarkMath,
+                                    remarkGfm,
+                                    [
+                                        remarkImagesToFullPaths,
+                                        {slug: resolvedParams.slug},
+                                    ],
+                                ],
+                                rehypePlugins: [
+                                    rehypePrettyCode,
+                                    rehypeKatex,
+                                    rehypeSlug,
+                                    [
+                                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                                        rehypeToc as any,
+                                        {
+                                            headings: ['h2', 'h3'],
+                                            nav: true,
+                                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                                            customizeTOC: (toc: any) => {
+                                                return {
+                                                    type: 'element',
+                                                    tagName: 'details',
+                                                    properties: {open: false},
+                                                    children: [
+                                                        {
+                                                            type: 'element',
+                                                            tagName: 'summary',
+                                                            properties: {},
+                                                            children: [
+                                                                {
+                                                                    type: 'text',
+                                                                    value: '目次',
+                                                                },
+                                                            ],
+                                                        },
+                                                        toc,
+                                                    ],
+                                                };
+                                            },
+                                        },
+                                    ],
+                                ],
+                            },
+                        }}
+                    />
+                    <ShareButtons
+                        url={postUrl}
+                        title={post.data.title}
+                        siteTitle={siteTitle}
+                        authorAccount={authorAccount}
+                    />
+                </div>
+            </div>
+        </>
     );
 };
 

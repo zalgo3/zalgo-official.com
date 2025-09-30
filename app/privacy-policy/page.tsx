@@ -1,14 +1,20 @@
 import type {Metadata} from 'next';
 import styles from 'styles/app/blog/page.module.css';
 
+import Breadcrumbs from '../Breadcrumbs';
+
 export const metadata: Metadata = {
     title: 'プライバシーポリシー',
     description: '当サイトのプライバシーポリシーです。',
 };
 
 const PrivacyPolicyPage = () => {
+    const breadcrumbs = [
+        {label: 'プライバシーポリシー', href: '/privacy-policy'},
+    ];
     return (
         <div className={styles.container}>
+            <Breadcrumbs items={breadcrumbs} />
             <h1 className={styles.title}>プライバシーポリシー</h1>
 
             <section>

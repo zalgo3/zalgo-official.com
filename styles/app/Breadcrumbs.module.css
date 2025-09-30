@@ -1,0 +1,44 @@
+.container {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    padding: 0 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+}
+
+.listItem:not(:last-child)::after {
+    content: '>';
+    margin: 0 0.5rem;
+    color: #888;
+}
+
+.listItem a {
+    text-decoration: none;
+    color: var(--c-base);
+    transition: color 0.2s;
+}
+
+.listItem a:hover {
+    text-decoration: none;
+    color: var(--c-primary);
+}
+
+.listItem span {
+    color: #555;
+    font-weight: bold;
+}
