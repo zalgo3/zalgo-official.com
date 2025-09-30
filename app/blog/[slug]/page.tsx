@@ -1,5 +1,6 @@
 import 'katex/dist/katex.min.css';
 
+import NicoNicoEmbed from 'ui/NicoNicoEmbed';
 import {YouTubeEmbed} from '@next/third-parties/google';
 import {format as formatTZ, toZonedTime} from 'date-fns-tz';
 import {getPost, getPostAll} from 'lib/posts';
@@ -58,7 +59,7 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
             </p>
             <MDXRemote
                 source={content}
-                components={{Affiliates, YouTubeEmbed}}
+                components={{Affiliates, YouTubeEmbed, NicoNicoEmbed}}
                 options={{
                     mdxOptions: {
                         remarkPlugins: [
