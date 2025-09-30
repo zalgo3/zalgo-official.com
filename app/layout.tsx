@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         title: 'ざるご Official Website',
         description:
             '歌い手/ゲーム実況者/データサイエンティストであるざるごのオフィシャルウェブサイト',
-        creator: '@zalgo3',
+        creator: '@zalgo_video',
     },
 };
 

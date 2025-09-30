@@ -10,18 +10,18 @@ export const metadata: Metadata = {
         template: '%s | ブログ | ざるご Official Website',
     },
     description:
-        '歌い手/ゲーム実況者/博士 (情報学)/データサイエンティストであるざるご (田辺広樹) のブログです。',
+        '歌い手/ゲーム実況者/データサイエンティストであるざるごのブログ',
     openGraph: {
         title: 'ブログ',
         description:
-            '歌い手/ゲーム実況者/博士 (情報学)/データサイエンティストであるざるご (田辺広樹) のブログです。',
+            '歌い手/ゲーム実況者/データサイエンティストであるざるごのブログ',
         url: 'https://zalgo-official.com/blog',
         siteName: 'ざるご Official Website',
     },
     twitter: {
         title: 'ブログ',
         description:
-            '歌い手/ゲーム実況者/博士 (情報学)/データサイエンティストであるざるご (田辺広樹) のブログです。',
+            '歌い手/ゲーム実況者/データサイエンティストであるざるごのブログ',
     },
 };
 
