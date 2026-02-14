@@ -6,8 +6,9 @@
         "predev": "node scripts/copyImages.mjs",
         "dev": "next dev",
         "prebuild": "node scripts/copyImages.mjs",
-        "build": "open-next build",
+        "build": "opennextjs-cloudflare build",
         "build:next": "next build",
+        "deploy": "wrangler pages deploy .open-next --project-name=zalgo-official",
         "postbuild": "next-sitemap --config sitemap.config.mjs",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
@@ -69,6 +70,7 @@
         "ts-jest": "^29.0.5",
         "ts-node": "^10.9.1",
         "ts-patch": "^3.0.0",
-        "typescript-eslint": "^8.29.1"
+        "typescript-eslint": "^8.29.1",
+        "wrangler": "^4.65.0"
     }
 }
