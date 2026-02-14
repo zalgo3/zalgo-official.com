@@ -2,7 +2,7 @@
     "$schema": "node_modules/wrangler/config-schema.json",
     "name": "zalgo-official",
     "main": ".open-next/worker.js",
-    "compatibility_date": "2026-02-15",
+    "compatibility_date": "2026-02-14",
     "compatibility_flags": [
         "nodejs_compat"
     ],
