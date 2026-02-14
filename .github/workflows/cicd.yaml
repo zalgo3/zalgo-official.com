@@ -39,27 +39,18 @@ jobs:
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   reporter: github-pr-review
-            - name: Build and deploy for preview
-              if: ${{ github.event_name == 'pull_request' }}
-              run: npx netlify-cli deploy
+            - name: Build
+              run: npx @opennextjs/cloudflare build
               env:
-                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
                   AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
                   RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
                   RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
                   VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
                   VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
                   YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
-            - name: Build and deploy for production
-              if: ${{ github.event_name == 'push' }}
-              run: npx netlify-cli deploy --prod
-              env:
-                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-                  AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
-                  RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
-                  RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
-                  VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
-                  VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
-                  YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
+            - name: Deploy to Cloudflare Pages
+              uses: cloudflare/wrangler-action@v3
+              with:
+                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                  accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+                  command: pages deploy .open-next --project-name=zalgo-official --branch=${{ github.head_ref || github.ref_name }}
