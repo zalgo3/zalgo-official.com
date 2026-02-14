@@ -40,6 +40,7 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   reporter: github-pr-review
             - name: Build
+              if: "!contains(github.event.head_commit.message, '[skip build]')"
               run: npm run build
               env:
                   AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
@@ -48,9 +49,19 @@ jobs:
                   VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
                   VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
                   YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
+            - name: Fake Build for testing
+              if: "contains(github.event.head_commit.message, '[skip build]')"
+              run: |
+                mkdir -p .open-next
+                echo "<html><body><h1>Deployment Test</h1><p>Build skipped by [skip build] tag</p></body></html>" > .open-next/index.html
+            - name: Create project if not exists
+              run: npx wrangler pages project create zalgo-official --production-branch main || true
+              env:
+                  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
             - name: Deploy to Cloudflare Pages
               uses: cloudflare/wrangler-action@v3
               with:
                   apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
                   accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  command: pages deploy .open-next --project-name=zalgo-official --branch=${{ github.head_ref || github.ref_name }}
+                  command: pages deploy .open-next --project-name=zalgo-official --branch=${{ github.head_ref || github.ref_name }} --commit-dirty=true
