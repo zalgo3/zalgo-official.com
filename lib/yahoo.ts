@@ -1,6 +1,29 @@
 import retry from 'async-retry';
 import fetch from 'node-fetch';
 
+const RATE_LIMIT_INTERVAL_MS = 1000; // QPS=1
+let lastRequestTime = 0;
+let requestQueue: Promise<void> = Promise.resolve();
+
+const waitForRateLimit = (): Promise<void> => {
+    requestQueue = requestQueue.then(
+        () =>
+            new Promise<void>(resolve => {
+                const now = Date.now();
+                const elapsed = now - lastRequestTime;
+                const waitTime = Math.max(
+                    0,
+                    RATE_LIMIT_INTERVAL_MS - elapsed
+                );
+                setTimeout(() => {
+                    lastRequestTime = Date.now();
+                    resolve();
+                }, waitTime);
+            })
+    );
+    return requestQueue;
+};
+
 type YahooApiResponse = {
     hits: {
         url: string;
@@ -33,6 +56,7 @@ export const getYahooUrl = async (
             const urlSearchParams = new URLSearchParams(params).toString();
             const endpoint = `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`;
             const itemUrl = await retry(async bail => {
+                await waitForRateLimit();
                 const response = await fetch(endpoint);
                 if (response.status === 400) {
                     bail(new Error(`Parameter is not valid: ${endpoint}`));
@@ -66,6 +90,7 @@ export const getYahooUrl = async (
         const urlSearchParams = new URLSearchParams(params).toString();
         const endpoint = `https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch?${urlSearchParams}`;
         const itemUrl = await retry(async bail => {
+            await waitForRateLimit();
             const response = await fetch(endpoint);
             if (response.status === 400) {
                 bail(new Error(`Parameter is not valid: ${endpoint}`));
