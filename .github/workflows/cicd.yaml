@@ -48,9 +48,9 @@ jobs:
                   VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
                   VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
                   YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
-            - name: Deploy to Cloudflare Pages
+            - name: Deploy to Cloudflare Workers
               uses: cloudflare/wrangler-action@v3
               with:
                   apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
                   accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  command: pages deploy .open-next --project-name=zalgo-official --branch=${{ github.head_ref || github.ref_name }} --commit-dirty=true
+                  command: deploy
