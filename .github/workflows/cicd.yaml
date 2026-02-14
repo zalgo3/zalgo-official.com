@@ -40,7 +40,7 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   reporter: github-pr-review
             - name: Build
-              run: npm run build
+              run: npm run build:cf
               env:
                   AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
                   RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}

@@ -1,23 +1,8 @@
-import type { OpenNextConfig } from "@opennextjs/cloudflare";
+// @ts-nocheck
+// default open-next.config.ts file created by @opennextjs/cloudflare
+import { defineCloudflareConfig } from "@opennextjs/cloudflare/config";
+import r2IncrementalCache from "@opennextjs/cloudflare/overrides/incremental-cache/r2-incremental-cache";
 
-const config: OpenNextConfig = {
-  default: {
-    runtime: "edge",
-    override: {
-      wrapper: "cloudflare-node",
-      converter: "edge",
-      proxyExternalRequest: "fetch",
-    },
-  },
-  middleware: {
-    external: true,
-    override: {
-      wrapper: "cloudflare-edge",
-      converter: "edge",
-      proxyExternalRequest: "fetch",
-    },
-  },
-  buildCommand: "npm run build:next",
-};
-
-export default config;
+export default defineCloudflareConfig({
+	incrementalCache: r2IncrementalCache,
+});
