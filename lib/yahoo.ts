@@ -34,23 +34,27 @@ export const getYahooUrl = async (
     query: string,
     JAN?: string
 ): Promise<string | null> => {
-    if (
-        process.env.YAHOO_API_APP_ID == null ||
-        process.env.VALUE_COMMERCE_SID == null ||
-        process.env.VALUE_COMMERCE_PID == null
-    ) {
+    const appid = process.env.YAHOO_API_APP_ID;
+    const sid = process.env.VALUE_COMMERCE_SID;
+    const pid = process.env.VALUE_COMMERCE_PID;
+
+    if (!appid || !sid || !pid) {
         console.error(
             'YAHOO_API_APP_ID, VALUE_COMMERCE_SID, or VALUE_COMMERCE_PID is not set'
         );
         return null;
     }
+
+    const trimmedJAN = JAN?.trim();
+    const trimmedQuery = query.trim();
+
     try {
-        if (JAN != null) {
+        if (trimmedJAN) {
             const params = {
-                appid: process.env.YAHOO_API_APP_ID,
+                appid,
                 affiliate_type: 'vc',
-                affiliate_id: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${process.env.VALUE_COMMERCE_SID}&pid=${process.env.VALUE_COMMERCE_PID}&vc_url=`,
-                jan_code: JAN,
+                affiliate_id: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${sid}&pid=${pid}&vc_url=`,
+                jan_code: trimmedJAN,
                 results: '1',
             };
             const urlSearchParams = new URLSearchParams(params).toString();
@@ -80,11 +84,16 @@ export const getYahooUrl = async (
                 return itemUrl;
             }
         }
+
+        if (!trimmedQuery) {
+            return null;
+        }
+
         const params = {
-            appid: process.env.YAHOO_API_APP_ID,
+            appid,
             affiliate_type: 'vc',
-            affiliate_id: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${process.env.VALUE_COMMERCE_SID}&pid=${process.env.VALUE_COMMERCE_PID}&vc_url=`,
-            query: query,
+            affiliate_id: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${sid}&pid=${pid}&vc_url=`,
+            query: trimmedQuery,
             results: '1',
         };
         const urlSearchParams = new URLSearchParams(params).toString();

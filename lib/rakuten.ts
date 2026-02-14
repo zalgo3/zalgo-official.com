@@ -48,11 +48,11 @@ export const getRakutenProduct = async (
     query: string,
     JAN?: string
 ): Promise<RakutenProduct | null> => {
-    if (
-        process.env.RAKUTEN_API_APPLICATION_ID == null ||
-        process.env.RAKUTEN_API_ACCESS_KEY == null ||
-        process.env.RAKUTEN_AFFILIATE_ID == null
-    ) {
+    const applicationId = process.env.RAKUTEN_API_APPLICATION_ID;
+    const accessKey = process.env.RAKUTEN_API_ACCESS_KEY;
+    const affiliateId = process.env.RAKUTEN_AFFILIATE_ID;
+
+    if (!applicationId || !accessKey || !affiliateId) {
         console.error(
             'RAKUTEN_API_APPLICATION_ID, RAKUTEN_API_ACCESS_KEY, or RAKUTEN_AFFILIATE_ID is not set'
         );
@@ -60,15 +60,24 @@ export const getRakutenProduct = async (
     }
 
     const params: Record<string, string> = {
-        applicationId: process.env.RAKUTEN_API_APPLICATION_ID,
-        accessKey: process.env.RAKUTEN_API_ACCESS_KEY,
-        affiliateId: process.env.RAKUTEN_AFFILIATE_ID,
-        keyword: query,
+        applicationId,
+        accessKey,
+        affiliateId,
         hits: '1',
     };
-    if (JAN != null) {
-        params.productCode = JAN;
+
+    const trimmedJAN = JAN?.trim();
+    const trimmedQuery = query.trim();
+
+    if (trimmedJAN) {
+        params.productCode = trimmedJAN;
+    } else if (trimmedQuery) {
+        params.keyword = trimmedQuery;
+    } else {
+        // No valid search criteria provided
+        return null;
     }
+
     const urlSearchParams = new URLSearchParams(params).toString();
     const endpoint = `https://openapi.rakuten.co.jp/ichibaproduct/api/Product/Search/20250801?${urlSearchParams}`;
 
@@ -84,7 +93,11 @@ export const getRakutenProduct = async (
 
             if (response.status === 400) {
                 const text = await response.text();
-                bail(new Error(`Rakuten API 400: ${text}`));
+                // Mask sensitive keys in logs
+                const safeEndpoint = endpoint
+                    .replace(applicationId, '***')
+                    .replace(accessKey, '***');
+                bail(new Error(`Rakuten API 400: ${text} (Endpoint: ${safeEndpoint})`));
                 return;
             }
             if (response.status === 403) {
