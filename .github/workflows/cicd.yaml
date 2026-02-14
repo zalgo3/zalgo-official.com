@@ -39,15 +39,29 @@ jobs:
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   reporter: github-pr-review
-            - name: Build
-              run: npm run build:cf
-              env:
-                  AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
-                  RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
-                  RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
-                  VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
-                  VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
-                  YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
+            # - name: Cache OpenNext build
+            #   id: cache-opennext
+            #   uses: actions/cache@v5
+            #   with:
+            #       path: .open-next
+            #       key: ${{ runner.os }}-opennext-${{ hashFiles('package-lock.json', 'next.config.mjs', 'open-next.config.ts', 'middleware.ts', 'app/**', 'discography/**', 'lib/**', 'posts/**', 'public/**', 'scripts/**', 'styles/**', 'ui/**', 'typings/**') }}
+            
+            # - name: Build
+            #   if: steps.cache-opennext.outputs.cache-hit != 'true'
+            #   run: npm run build:cf
+            #   env:
+            #       AMAZON_ASSOCIATE_PARTNER_TAG: ${{ secrets.AMAZON_ASSOCIATE_PARTNER_TAG }}
+            #       RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+            #       RAKUTEN_API_APPLICATION_ID: ${{ secrets.RAKUTEN_API_APPLICATION_ID }}
+            #       VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
+            #       VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
+            #       YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
+
+            - name: Create Dummy Build Artifacts (Debug)
+              run: |
+                mkdir -p .open-next/assets
+                echo 'export default { async fetch() { return new Response("Debug Deployment: Build skipped"); } };' > .open-next/worker.js
+                echo "Dummy asset" > .open-next/assets/debug.txt
             - name: Deploy to Cloudflare Workers
               uses: cloudflare/wrangler-action@v3
               with:
