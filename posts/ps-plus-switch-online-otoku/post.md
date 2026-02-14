@@ -10,7 +10,7 @@ title: 'Play Station PlusやNintendo Switch Onlineに超お得に加入する方
 
 それは、**楽天ブックスで利用権を購入すること**です。
 
-<Affiliates rakutenItemCode="rdownload:18492326" query="プレイステーション ストアチケット" />
+<Affiliates query="プレイステーション ストアチケット" />
 
 ![](https://zalgo-official.com/assets/uploads/image-1.png)
 
@@ -24,6 +24,6 @@ title: 'Play Station PlusやNintendo Switch Onlineに超お得に加入する方
 
 なお、Nintendo Switch Online に加入したい場合なども、同様に楽天市場で購入したほうが間違いなくお得です。
 
-<Affiliates rakutenItemCode="rdownload:17917635" query="Nintendo Switch Online" />
+<Affiliates query="Nintendo Switch Online" />
 
 ゲーマー諸君はぜひお試しを。

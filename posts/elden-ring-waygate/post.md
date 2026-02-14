@@ -81,4 +81,4 @@ title: '【エルデンリング】転送門・転送罠の場所と行き先一
 | 曇り川の洞窟     | リムグレイブ東の小黄金樹 |
 | 舞い戻りの塔     | 神授橋                   |
 
-<Affiliates asin="B0CW4NMKPX" rakutenItemCode="jism:14174719" JAN="4949776471033" query="SHADOW OF THE ERDTREE" />
+<Affiliates asin="B0CW4NMKPX" JAN="4949776471033" query="SHADOW OF THE ERDTREE" />

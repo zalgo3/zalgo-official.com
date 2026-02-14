@@ -10,7 +10,7 @@ title: '2021年買ってよかったものランキング'
 
 ### 1 位 SHARP ヘルシオ ウォーターオーブン
 
-<Affiliates asin="B098DF799D" rakutenItemCode="yz-office:10014840" JAN="4974019184463" query="ヘルシオ ウォーターオーブン AX-XA20" />
+<Affiliates asin="B098DF799D" JAN="4974019184463" query="ヘルシオ ウォーターオーブン AX-XA20" />
 
 毎日使っている最高の調理家電です。
 
@@ -28,7 +28,7 @@ title: '2021年買ってよかったものランキング'
 
 ### 2 位 SHARP ヘルシオ ホットクック
 
-<Affiliates asin="B08JYF6JJD" rakutenItemCode="edion:10739778" JAN="4974019187143" query="ヘルシオ ホットクック 2.4L" />
+<Affiliates asin="B08JYF6JJD" JAN="4974019187143" query="ヘルシオ ホットクック 2.4L" />
 
 またまた SHARP の自動調理家電です。
 
@@ -42,7 +42,7 @@ title: '2021年買ってよかったものランキング'
 
 ### 3 位 日立 470L 冷蔵庫
 
-<Affiliates asin="B09MYLZMGP" rakutenItemCode="takeya-lhe:10006458" JAN="4549873137797" query="日立 470L 冷蔵庫" />
+<Affiliates asin="B09MYLZMGP" JAN="4549873137797" query="日立 470L 冷蔵庫" />
 
 スペースの都合でずっと小さい冷蔵庫を使ってたんですけど、引っ越しに伴い大きいものに買い替え。
 
@@ -60,7 +60,7 @@ title: '2021年買ってよかったものランキング'
 
 ### 4 位 Switchbot カーテン
 
-<Affiliates asin="B099NQ1WMY" rakutenItemCode="gadgetmart:10030032" JAN="0850007706272" query="Switchbot カーテン" />
+<Affiliates asin="B099NQ1WMY" JAN="0850007706272" query="Switchbot カーテン" />
 
 カーテンを自動開閉してくれるスマート家電です。
 
@@ -76,7 +76,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 1 位 オカムラ コンテッサ セコンダ
 
-<Affiliates asin="B072J7ZS6H" rakutenItemCode="cocodecow:10147080" JAN="4906076161699" query="オカムラ コンテッサ セコンダ" />
+<Affiliates asin="B072J7ZS6H" JAN="4906076161699" query="オカムラ コンテッサ セコンダ" />
 
 2020 年の[Flexispot の電動昇降スタンディングデスク](https://amzn.to/3GHAxVm)に続き、2021 年もデスク関連グッズが 1 位を飾りました。
 
@@ -96,7 +96,7 @@ Alexa からカーテンを操作することもできますし、指定時刻�
 
 ### 2 位 アイリスオーヤマ 8 通りの高さ調整ができる枕 匠眠
 
-<Affiliates asin="B01AU77E9W" rakutenItemCode="l-plus:10232216" JAN="4967576194778" query="アイリスオーヤマ 枕 匠眠" />
+<Affiliates asin="B01AU77E9W" JAN="4967576194778" query="アイリスオーヤマ 枕 匠眠" />
 
 第 2 位は、中のシートや中材を出して 8 通りの高さ調節ができるアイリスオーヤマの枕です。
 
