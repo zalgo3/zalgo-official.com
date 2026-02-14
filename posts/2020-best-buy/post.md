@@ -20,7 +20,7 @@ title: '2020年買ってよかったものランキング'
 
 #### ドラム式洗濯乾燥機
 
-<Affiliates asin="B09GJWBRGT" rakutenItemCode="a-price:10932391" JAN="4974019194592" query="SHARP ドラム式洗濯機" />
+<Affiliates asin="B09GJWBRGT" JAN="4974019194592" query="SHARP ドラム式洗濯機" />
 
 この記事で紹介する中で最も高価な商品です。ですが、それだけの価値があると断言できます。
 
@@ -36,7 +36,7 @@ title: '2020年買ってよかったものランキング'
 
 #### 食器洗い乾燥機
 
-<Affiliates asin="B08D61PP8F" rakutenItemCode="ec-current:12709438" JAN="4549980620939" query="パナソニック 食器洗い乾燥機" />
+<Affiliates asin="B08D61PP8F" JAN="4549980620939" query="パナソニック 食器洗い乾燥機" />
 
 食器・包丁・まな板・鍋・フライパンなど、ぶっこんでボタンを押すだけでピッカピカになります。
 
@@ -50,7 +50,7 @@ title: '2020年買ってよかったものランキング'
 
 #### ルンバ
 
-<Affiliates asin="B07K482T9R" rakutenItemCode="jhb-trade:10001605" JAN="0885155017741" query="ルンバe5" />
+<Affiliates asin="B07K482T9R" JAN="0885155017741" query="ルンバe5" />
 
 上２つに比べると役に立ち度はやや落ちますが、それでも非常に助かる時短家電です。
 
@@ -76,7 +76,7 @@ e5 でもすごく助かるんですが、i7 と違って部屋のマップを�
 
 #### 口腔洗浄器
 
-<Affiliates asin="B09XLYMC8H" rakutenItemCode="surprise-shop:10027122" JAN="4549980652633" query="ジェットウォッシャードルツ ポータブル" />
+<Affiliates asin="B09XLYMC8H" JAN="4549980652633" query="ジェットウォッシャードルツ ポータブル" />
 
 口腔洗浄器とは、歯と歯の間に強い水流を流し込んで、歯をきれいにする歯磨きグッズです。
 
@@ -90,7 +90,7 @@ e5 でもすごく助かるんですが、i7 と違って部屋のマップを�
 
 #### 電動歯ブラシ
 
-<Affiliates asin="B07BMTNQC9" rakutenItemCode="ksheep1:10094619" JAN="4549980052051" query="ポケットドルツ" />
+<Affiliates asin="B07BMTNQC9" JAN="4549980052051" query="ポケットドルツ" />
 
 普通の歯ブラシでもいいんですが、より磨きやすい電動歯ブラシを使っています。
 
@@ -100,7 +100,7 @@ e5 でもすごく助かるんですが、i7 と違って部屋のマップを�
 
 ### 3 位 Fitbit Charge 4
 
-<Affiliates asin="B08V4QYJBY" rakutenItemCode="kichibei0318:10009997" JAN="0810038853253" query="Fitbit Charge4" />
+<Affiliates asin="B08V4QYJBY" JAN="0810038853253" query="Fitbit Charge4" />
 
 第 3 位は、フィットネストラッカー兼スマートウォッチの「Fitbit Charge 4」です。
 
@@ -130,9 +130,9 @@ Apple Watch は電池が 1 日持たないですが、こちらは一週間ほ�
 
 ### 5 位 スマートスピーカー・スマートリモコン
 
-<Affiliates asin="B09B8SZLLG" rakutenItemCode="r-kojima:11390752" JAN="0840080592077" query="Echo dot" />
+<Affiliates asin="B09B8SZLLG" JAN="0840080592077" query="Echo dot" />
 
-<Affiliates asin="B08BLSLWH4" rakutenItemCode="biccamera:13265348" JAN="0865164000361" query="Nature Remo" />
+<Affiliates asin="B08BLSLWH4" JAN="0865164000361" query="Nature Remo" />
 
 第 5 位は、家の家電を自動で操作できる「スマートスピーカー+スマートリモコン」のセットです。
 
@@ -146,7 +146,7 @@ https://zalgo-official.com/nature-remo/
 
 ### 6 位 全自動コーヒーメーカー
 
-<Affiliates asin="B07DTDHP7Q" rakutenItemCode="vsonic:10005107" JAN="4549980191279" query="パナソニック コーヒーメーカー" />
+<Affiliates asin="B07DTDHP7Q" JAN="4549980191279" query="パナソニック コーヒーメーカー" />
 
 第 6 位は、全自動で豆から挽いてコーヒーを入れてくれる「コーヒーメーカー」です。
 
@@ -158,7 +158,7 @@ https://zalgo-official.com/nature-remo/
 
 ### 7 位 フードプロセッサー
 
-<Affiliates asin="B071R48NJT" rakutenItemCode="terada-ya:10011357" JAN="4582221880792" query="山本電気 マスターカット" />
+<Affiliates asin="B071R48NJT" JAN="4582221880792" query="山本電気 マスターカット" />
 
 第 7 位は、食材を細かく切ることができる「フードプロセッサー」です。
 
@@ -172,7 +172,7 @@ https://zalgo-official.com/nature-remo/
 
 ### 8 位 完全ワイヤレスイヤホン
 
-<Affiliates asin="B095SJYYV3" rakutenItemCode="a-price:10907854" JAN="4548736121133" query="SONY WF-1000XM4" />
+<Affiliates asin="B095SJYYV3" JAN="4548736121133" query="SONY WF-1000XM4" />
 
 第 8 位は、完全ワイヤレスイヤホンの「SONY WF-1000XM シリーズ」です。
 
@@ -198,7 +198,7 @@ AirPods Pro と並んでよくおすすめされるワイヤレスイヤホン�
 
 ### 2 位 ヨギボー マックス
 
-<Affiliates asin="B00XXFFGQM" rakutenItemCode="yogibo:10000003" query="Yogibo Max" />
+<Affiliates asin="B00XXFFGQM" query="Yogibo Max" />
 
 第 2 位は、いわゆる「人をダメにするソファ」のヨギボーです。
 
@@ -222,7 +222,7 @@ AirPods Pro と並んでよくおすすめされるワイヤレスイヤホン�
 
 ### 3 位 リングフィットアドベンチャー
 
-<Affiliates asin="B07XV8VSZT" rakutenItemCode="biccamera:13673857" JAN="4902370543278" query="リングフィットアドベンチャー" />
+<Affiliates asin="B07XV8VSZT" JAN="4902370543278" query="リングフィットアドベンチャー" />
 
 第 3 位は、筋トレができるアクションゲーム「リングフィットアドベンチャー」です。
 
@@ -232,7 +232,7 @@ AirPods Pro と並んでよくおすすめされるワイヤレスイヤホン�
 
 #### プロテイン
 
-<Affiliates asin="B01FRT7D4E" rakutenItemCode="matsuyadenki:10118182" JAN="4580500324159" query="ビーレジェンド ベリベリベリー" />
+<Affiliates asin="B01FRT7D4E" JAN="4580500324159" query="ビーレジェンド ベリベリベリー" />
 
 筋トレの効果を高めるにはやはり必須でしょう。
 
@@ -240,7 +240,7 @@ AirPods Pro と並んでよくおすすめされるワイヤレスイヤホン�
 
 #### スポーツマット
 
-<Affiliates asin="B07SCMHMZW" rakutenItemCode="apworld:10077608" JAN="4589487316980" query="ニシ・スポーツ エクサマット" />
+<Affiliates asin="B07SCMHMZW" JAN="4589487316980" query="ニシ・スポーツ エクサマット" />
 
 「足音が気になる＋運動中足の裏が痛くなる」を防げる商品です。このゲームをやるなら購入推奨。
 
@@ -248,7 +248,7 @@ AirPods Pro と並んでよくおすすめされるワイヤレスイヤホン�
 
 ### 4 位 浄水ポット
 
-<Affiliates asin="B0982PW1V9" rakutenItemCode="kenkoex:10216527" JAN="4006387115463" query="ブリタ 浄水ポット" />
+<Affiliates asin="B0982PW1V9" JAN="4006387115463" query="ブリタ 浄水ポット" />
 
 第 4 位は、手軽に美味しい水を飲める「浄水器つきポット」です。
 
@@ -270,7 +270,7 @@ AirPods Pro と並んでよくおすすめされるワイヤレスイヤホン�
 
 #### 無印良品 綿であったかインナー
 
-<Affiliates asin="B09C1Q8MYH" rakutenItemCode="mujirushi-ryohin:10006476" query="無印良品 綿 あったか" />
+<Affiliates asin="B09C1Q8MYH" query="無印良品 綿 あったか" />
 
 こちらは、UNIQLO のヒートテックが合わない人におすすめしたい商品です。
 
@@ -294,7 +294,7 @@ https://www.uniqlo.com/jp/ja/products/E429284-000/00?colorDisplayCode=08
 
 ### 6 位 アイリスオーヤマのエアリーマットレス
 
-<Affiliates asin="B00IYDD8PY" rakutenItemCode="rack-kan:10068426" JAN="4905009454969" query="アイリスオーヤマ エアリーマットレス" />
+<Affiliates asin="B00IYDD8PY" JAN="4905009454969" query="アイリスオーヤマ エアリーマットレス" />
 
 第 6 位は、実家で使って虜になり、自宅でもすぐに購入したこちらの寝具です。
 
@@ -306,7 +306,7 @@ https://www.uniqlo.com/jp/ja/products/E429284-000/00?colorDisplayCode=08
 
 ### 7 位 ニトリの珪藻土バスマット
 
-<Affiliates rakutenItemCode="nitori:10178459" query="ニトリ 珪藻土バスマット" />
+<Affiliates query="ニトリ 珪藻土バスマット" />
 
 第 7 位は、[アスベストが混入していたニュースで今話題](https://www.nitori-net.jp/ecstatic/image/pdf/nitori_inspection_20122515.pdf)の（）ニトリの珪藻土バスマットです。
 

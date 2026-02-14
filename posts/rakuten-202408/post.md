@@ -8,31 +8,31 @@ title: '【楽天市場】お買い物マラソンで買ったものリスト【
 
 ### Thalia Capo
 
-<Affiliates asin="B0CY9B38S8" rakutenItemCode="premiumgt:10127277" JAN="4525421218552" query="Thalia Capo" />
+<Affiliates asin="B0CY9B38S8" JAN="4525421218552" query="Thalia Capo" />
 
 ギターのとても音が良くてかっこいいカポ
 
 ### ふるさと納税の無洗米
 
-<Affiliates rakutenItemCode="f014389-numata:10000133" query="ふるさと納税 無洗米" />
+<Affiliates query="ふるさと納税 無洗米" />
 
 コスパがよさそうだったので
 
 ### ミックスナッツ
 
-<Affiliates rakutenItemCode="calinuts:10000078" JAN="4580758070068" query="ミックスナッツ" />
+<Affiliates JAN="4580758070068" query="ミックスナッツ" />
 
 これとヨーグルトとオートミールとドライフルーツでいつも朝ごはんにしています
 
 ### エレキギターの弦
 
-<Affiliates asin="B01NBNR2F2" rakutenItemCode="musicfarm:1002425" JAN="0733132190027" query="optiweb スーパーライト" />
+<Affiliates asin="B01NBNR2F2" JAN="0733132190027" query="optiweb スーパーライト" />
 
 そろそろ張り替えたいので
 
 ### USB-C で充電できるクリップチューナー
 
-<Affiliates asin="B0B9XR1BGT" rakutenItemCode="musicfarm:1003184" JAN="6936257208774" query="WST-905Li" />
+<Affiliates asin="B0B9XR1BGT" JAN="6936257208774" query="WST-905Li" />
 
 ボタン電池じゃなくて USB-C で充電できるのは非常に魅力的に思えました
 
@@ -42,13 +42,13 @@ title: '【楽天市場】お買い物マラソンで買ったものリスト【
 
 フレーバー付きが飲みやすくて愛飲しています。楽天で買うとポイントがついてお得
 
-<Affiliates asin="B0CG8MSDCG" rakutenItemCode="comp:10000051" query="COMP Powder" />
+<Affiliates asin="B0CG8MSDCG" query="COMP Powder" />
 
 ### プロテイン ビーレジェンド
 
 非常に美味しくて飲みやすいプロテイン
 
-<Affiliates asin="B0C3C6HGNH" rakutenItemCode="realstyle4u:10002388" JAN="4562277758504" query="ビーレジェンド" />
+<Affiliates asin="B0C3C6HGNH" JAN="4562277758504" query="ビーレジェンド" />
 
 ### ハンドブレンダー
 
@@ -56,7 +56,7 @@ title: '【楽天市場】お買い物マラソンで買ったものリスト【
 
 ジェノベーゼを作ったりするのに使っていきたい。
 
-<Affiliates asin="B00O9V3L0M" rakutenItemCode="yamada-denki:10612576" JAN="8021098003775" query="MQ5235WH" />
+<Affiliates asin="B00O9V3L0M" JAN="8021098003775" query="MQ5235WH" />
 
 ## 買う予定のもの
 

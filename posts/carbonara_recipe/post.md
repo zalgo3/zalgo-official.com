@@ -37,7 +37,7 @@ title: 'イタリア本場の味！生クリーム不使用の全卵カルボナ
 
 <Affiliates query="パルミジャーノ・レッジャーノ" />
 
-<Affiliates asin="B004KULMRQ" rakutenItemCode="glv-p5:10046509" JAN="0098399450001" query="Microplane" />
+<Affiliates asin="B004KULMRQ" JAN="0098399450001" query="Microplane" />
 
 それでは具材を炒めていきましょう。
 

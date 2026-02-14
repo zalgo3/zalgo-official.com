@@ -45,7 +45,7 @@ https://twitter.com/Tsukumo_Sapporo/status/1582631452524433408?s=20&t=tOAv7UzJlz
 
 いや待て、冷静になろう。RTX 4090 の値段を調べてみる。
 
-<Affiliates asin="B0BHCBYYQ1" rakutenItemCode="jism:13767820" JAN="4710562243390" query="GAINWARD RTX 4090" />
+<Affiliates asin="B0BHCBYYQ1" JAN="4710562243390" query="GAINWARD RTX 4090" />
 
 27 万円かー…だいたい +20 万円。。。んー。。。
 
@@ -53,7 +53,7 @@ https://twitter.com/Tsukumo_Sapporo/status/1582631452524433408?s=20&t=tOAv7UzJlz
 
 いや、もちろん高いのはめちゃくちゃ高い。でも、GPU 以外の部品は、一番高いのでも Core i9-13900KS の 10 万円だ。
 
-<Affiliates asin="B0BCF54SR1" rakutenItemCode="alljapan-online-shop:10018553" JAN="0735858526616" query="Core i9 13900K" />
+<Affiliates asin="B0BCF54SR1" JAN="0735858526616" query="Core i9 13900K" />
 
 PC にかかる総額を考えると、ここから GPU のグレードを下げたとしても、全体としては意外とお金がかかってしまうということになる。それで微妙だったら目も当てられない。
 
@@ -87,13 +87,13 @@ RTX 4090 にすることは確定だが、どのメーカー・どのモデル�
 
 GAINWARD PHANTOM を候補にしておく。
 
-<Affiliates asin="B0BHCBYYQ1" rakutenItemCode="jism:13767820" JAN="4710562243390" query="GAINWARD RTX 4090" />
+<Affiliates asin="B0BHCBYYQ1" JAN="4710562243390" query="GAINWARD RTX 4090" />
 
 ### CPU
 
 Core i9-13900KS の一択。
 
-<Affiliates asin="B0BCF54SR1" rakutenItemCode="alljapan-online-shop:10018553" JAN="0735858526616" query="Core i9 13900K" />
+<Affiliates asin="B0BCF54SR1" JAN="0735858526616" query="Core i9 13900K" />
 
 ライバル製品の Ryzen 9 7950X は微妙そう。
 
@@ -103,7 +103,7 @@ Core i9-13900KS の一択。
 
 **おじさん、4K 有機 EL ゲーミングモニター買っちゃおっかな～＾＾＾＾＾＾＾**
 
-<Affiliates asin="B0BL7L45Q8" rakutenItemCode="edion:10802245" JAN="4711081707134" query="ASUS ROG Swift OLED PG42UQ" />
+<Affiliates asin="B0BL7L45Q8" JAN="4711081707134" query="ASUS ROG Swift OLED PG42UQ" />
 
 さっき GPU 以外は一番高くて 10 万円って言ってたじゃねえかって？いや、まあそうなんだけど・・・
 
@@ -157,7 +157,7 @@ Wi-Fi や Bluetooth、USB-C あたりもほしいが、このクラスなら基�
 
 ASUS と MSI は更に値段が高いし、GIGABYTE か ASRock かなー・・・？
 
-<Affiliates asin="B0BJZF7XNW" rakutenItemCode="shoptsukumo:10014350" JAN="4710483941092" query="Z790 Taichi" />
+<Affiliates asin="B0BJZF7XNW" JAN="4710483941092" query="Z790 Taichi" />
 
 ### PC ケース
 
@@ -165,7 +165,7 @@ PS5 並の大きさを誇る RTX 4090 を入れるなら、基本的にフルタ
 
 口コミの良い、CORSAIR Obsidian 1000D を候補にしておく。外見も黒基調で落ち着いていて好み。
 
-<Affiliates asin="B07BQG4TM3" rakutenItemCode="first23:15532459" JAN="0843591076814" query="CORSAIR Obsidian 1000D" />
+<Affiliates asin="B07BQG4TM3" JAN="0843591076814" query="CORSAIR Obsidian 1000D" />
 
 ### CPU クーラー
 
@@ -179,7 +179,7 @@ PS5 並の大きさを誇る RTX 4090 を入れるなら、基本的にフルタ
 
 420mm の、CORSAIR iCUE H170i ELITE を候補とする。
 
-<Affiliates asin="B095W3666C" rakutenItemCode="r-kojima:11201513" JAN="0840006643432" query="CORSAIR iCUE H170i ELITE" />
+<Affiliates asin="B095W3666C" JAN="0840006643432" query="CORSAIR iCUE H170i ELITE" />
 
 ### ケースファン
 
@@ -187,7 +187,7 @@ PS5 並の大きさを誇る RTX 4090 を入れるなら、基本的にフルタ
 
 なんなら簡易水冷ラジエーターにつけるファンも Noctua にしてもいいくらいだけど、まあそれはやめておいて、フロントとリア用に 120mm を 10 個。
 
-<Affiliates asin="B07C5VG64V" rakutenItemCode="shoptsukumo:10010465" JAN="9010018100396" query="Noctua NF-A12x25 PWM" />
+<Affiliates asin="B07C5VG64V" JAN="9010018100396" query="Noctua NF-A12x25 PWM" />
 
 ### メモリ
 
@@ -197,7 +197,7 @@ Core i9-13900KS の定格上限である DDR5-5600MHz をセレクトする。
 
 メーカーは、別になんでもいいんだけど CORSAIR で。
 
-<Affiliates asin="B0BD4SRW3H" rakutenItemCode="goodwill:10240440" JAN="0840006698166" query="CORSAIR DDR5-5600MHz VENGEANCE 64GB(32GBx2)" />
+<Affiliates asin="B0BD4SRW3H" JAN="0840006698166" query="CORSAIR DDR5-5600MHz VENGEANCE 64GB(32GBx2)" />
 
 ### ストレージ
 
@@ -209,7 +209,7 @@ Core i9-13900KS の定格上限である DDR5-5600MHz をセレクトする。
 
 容量は 2TB。1TB だと、OS+α でかなりカツカツなので、少し増やす。
 
-<Affiliates asin="B0BHJJ9Y77" rakutenItemCode="goodwill:10240915" JAN="4560441097978" query="Samsung 990 PRO 2TB" />
+<Affiliates asin="B0BHJJ9Y77" JAN="4560441097978" query="Samsung 990 PRO 2TB" />
 
 ### 電源ユニット
 
@@ -221,7 +221,7 @@ RTX 4090 は ATX 3.0 という新規格に移行している。旧規格の電�
 
 静音性等では劣るようだが、どうせ水冷ラジエーターとかのほうがうるさいだろうし。
 
-<Affiliates asin="B0BJDKGCVH" rakutenItemCode="r-kojima:11378001" JAN="4526541042249" query="MSI MPG A1000G PCIE5 1000W" />
+<Affiliates asin="B0BJDKGCVH" JAN="4526541042249" query="MSI MPG A1000G PCIE5 1000W" />
 
 ## 総額は…？
 
