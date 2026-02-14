@@ -6,7 +6,7 @@
         "predev": "node scripts/copyImages.mjs",
         "dev": "next dev",
         "prebuild": "node scripts/copyImages.mjs",
-        "build": "next build",
+        "build": "open-next build",
         "postbuild": "next-sitemap --config sitemap.config.mjs",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
