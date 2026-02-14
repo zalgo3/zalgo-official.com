@@ -1,7 +1,7 @@
 import retry from 'async-retry';
 import fetch from 'node-fetch';
 
-const RATE_LIMIT_INTERVAL_MS = 1000; // QPS=1
+const RATE_LIMIT_INTERVAL_MS = 100; // QPS=10
 let lastRequestTime = 0;
 let requestQueue: Promise<void> = Promise.resolve();
 
