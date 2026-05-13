@@ -100,6 +100,13 @@ export default tseslint.config(
         },
     },
     {
+        files: ['**/__tests__/**/*.{ts,tsx}', '**/*.test.{ts,tsx}'],
+        rules: {
+            '@typescript-eslint/no-unsafe-call': 'off',
+            '@typescript-eslint/no-unsafe-member-access': 'off',
+        },
+    },
+    {
         files: ['**/*.ts', '**/*.tsx'],
         plugins: {
             '@next/next': NextPlugin,
