@@ -96,7 +96,7 @@ export const getDiscographyAll = async (
                         );
                     }
 
-                    item.data = data as DiscographyData;
+                    item.data = data;
 
                     item.data.createdAt = parseInt(
                         (
