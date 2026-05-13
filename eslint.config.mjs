@@ -4,7 +4,6 @@ import {fileURLToPath} from 'url';
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import NextPlugin from '@next/eslint-plugin-next';
-import importPlugin from 'eslint-plugin-import';
 import unusedImports from 'eslint-plugin-unused-imports';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
@@ -39,35 +38,6 @@ export default tseslint.config(
         },
         rules: {
             '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-        },
-    },
-    {
-        plugins: {
-            import: importPlugin,
-        },
-        rules: {
-            'import/order': [
-                'error',
-                {
-                    groups: ['builtin', 'external', 'internal'],
-                    alphabetize: {order: 'asc', caseInsensitive: true},
-                    'newlines-between': 'always',
-                    pathGroups: [
-                        {
-                            pattern: 'src/components/**',
-                            group: 'internal',
-                            position: 'before',
-                        },
-                        {
-                            pattern: 'src/lib/**',
-                            group: 'internal',
-                            position: 'before',
-                        },
-                    ],
-                },
-            ],
-            'import/newline-after-import': 'error',
-            'import/no-duplicates': 'error',
         },
     },
     {
