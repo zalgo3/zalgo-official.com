@@ -1,6 +1,7 @@
 'use client';
 
 import {
+    FaAmazon,
     FaApple,
     FaFacebook,
     FaInstagram,
@@ -9,7 +10,7 @@ import {
     FaTiktok,
     FaYoutube,
 } from 'react-icons/fa';
-import {SiAmazon, SiAmazonmusic, SiRakuten} from 'react-icons/si';
+import {SiRakuten} from 'react-icons/si';
 import styles from 'styles/ui/DiscographyLinks.module.css';
 
 import {type DiscographyData} from '../lib/discography';
@@ -45,7 +46,7 @@ const streamingServices: Service[] = [
     {
         key: 'amazonMusic',
         name: 'Amazon Music',
-        icon: <SiAmazonmusic />,
+        icon: <FaAmazon />,
         color: '#00A8E1',
     },
     {
@@ -83,7 +84,7 @@ const downloadServices: Service[] = [
     {
         key: 'amazonDigitalMusic',
         name: 'Amazon Music',
-        icon: <SiAmazon />,
+        icon: <FaAmazon />,
         color: '#252f3d',
     },
     {key: 'recochoku', name: 'レコチョク', color: '#ff4a01'},
