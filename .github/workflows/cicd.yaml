@@ -40,7 +40,7 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   reporter: github-pr-review
             - name: Build and deploy for preview
-              if: ${{ github.event_name == 'pull_request' }}
+              if: ${{ github.event_name == 'pull_request' && github.actor != 'dependabot[bot]' }}
               run: npx netlify-cli deploy
               env:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
