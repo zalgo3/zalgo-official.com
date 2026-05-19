@@ -16,6 +16,8 @@ import styles from 'styles/ui/DiscographyLinks.module.css';
 import {type DiscographyData} from '../lib/discography';
 import {event} from '../lib/gtag';
 
+const googleAdsConversionSendTo = 'AW-785669436/1jk_CL3lq68cELy60fYC';
+
 type DiscographyLinksProps = {
     links: DiscographyData['links'];
     songTitle: string;
@@ -28,6 +30,14 @@ type Service = {
     color?: string;
     gradient?: string;
 };
+
+type ServiceLinkStyle = React.CSSProperties & {
+    '--service-background': string;
+};
+
+const getServiceLinkStyle = (service: Service): ServiceLinkStyle => ({
+    '--service-background': service.gradient ?? service.color ?? '#000',
+});
 
 const streamingServices: Service[] = [
     {
@@ -139,12 +149,43 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
     const availableDownloads = downloadServices.filter(s => links[s.key]);
     const availableSocial = socialLinks.filter(s => links[s.key]);
 
+    const sendDistributionLinkConversion = (serviceName: string) => {
+        if (
+            typeof window === 'undefined' ||
+            !googleAdsConversionSendTo ||
+            typeof window.gtag === 'undefined'
+        ) {
+            return;
+        }
+
+        const gtag = window.gtag as unknown as (
+            event: 'event',
+            action: string,
+            params: {
+                event_callback?: () => void;
+                event_label: string;
+                event_timeout: number;
+                send_to: string;
+                transport_type: 'beacon';
+            }
+        ) => void;
+
+        gtag('event', 'conversion', {
+            send_to: googleAdsConversionSendTo,
+            event_label: `${songTitle} - ${serviceName}`,
+            event_callback: () => undefined,
+            event_timeout: 500,
+            transport_type: 'beacon',
+        });
+    };
+
     const handleLinkClick = (category: string, serviceName: string) => {
         event({
             action: 'click_distribution_link',
             category: category,
             label: `${songTitle} - ${serviceName}`,
         });
+        sendDistributionLinkConversion(serviceName);
     };
 
     return (
@@ -160,10 +201,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.iconLink}
-                                style={{
-                                    backgroundColor: service.color,
-                                    background: service.gradient,
-                                }}
+                                style={getServiceLinkStyle(service)}
                                 onClick={() => {
                                     handleLinkClick('Streaming', service.name);
                                 }}
@@ -189,10 +227,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.iconLink}
-                                style={{
-                                    backgroundColor: service.color,
-                                    background: service.gradient,
-                                }}
+                                style={getServiceLinkStyle(service)}
                                 onClick={() => {
                                     handleLinkClick('Download', service.name);
                                 }}
@@ -218,10 +253,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.iconLink}
-                                style={{
-                                    backgroundColor: service.color,
-                                    background: service.gradient,
-                                }}
+                                style={getServiceLinkStyle(service)}
                                 onClick={() => {
                                     handleLinkClick('Social', service.name);
                                 }}

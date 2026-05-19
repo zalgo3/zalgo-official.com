@@ -24,6 +24,7 @@
     border-radius: 12px;
     width: 80px;
     height: 80px;
+    background: var(--service-background, #000);
     box-shadow: var(--box-shadow-background);
     transition: all 0.15s ease;
     padding: 0.5rem;
