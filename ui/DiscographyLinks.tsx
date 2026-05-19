@@ -14,9 +14,8 @@ import {SiRakuten} from 'react-icons/si';
 import styles from 'styles/ui/DiscographyLinks.module.css';
 
 import {type DiscographyData} from '../lib/discography';
+import {distributionLinkConversionSendTo} from '../lib/googleAds';
 import {event} from '../lib/gtag';
-
-const googleAdsConversionSendTo = 'AW-785669436/1jk_CL3lq68cELy60fYC';
 
 type DiscographyLinksProps = {
     links: DiscographyData['links'];
@@ -152,7 +151,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
     const sendDistributionLinkConversion = (serviceName: string) => {
         if (
             typeof window === 'undefined' ||
-            !googleAdsConversionSendTo ||
+            !distributionLinkConversionSendTo ||
             typeof window.gtag === 'undefined'
         ) {
             return;
@@ -171,7 +170,7 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
         ) => void;
 
         gtag('event', 'conversion', {
-            send_to: googleAdsConversionSendTo,
+            send_to: distributionLinkConversionSendTo,
             event_label: `${songTitle} - ${serviceName}`,
             event_callback: () => undefined,
             event_timeout: 500,
