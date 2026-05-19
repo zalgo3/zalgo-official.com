@@ -2,7 +2,8 @@
 
 import {useEffect} from 'react';
 
-const googleAdsId = 'AW-785669436';
+import {googleAdsId} from '../lib/googleAds';
+
 const retryIntervalMs = 100;
 const maxRetryCount = 50;
 
