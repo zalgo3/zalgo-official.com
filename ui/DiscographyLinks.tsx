@@ -151,7 +151,6 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
     const sendDistributionLinkConversion = (serviceName: string) => {
         if (
             typeof window === 'undefined' ||
-            !distributionLinkConversionSendTo ||
             typeof window.gtag === 'undefined'
         ) {
             return;
