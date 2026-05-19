@@ -27,7 +27,7 @@ const GoogleAds = () => {
                 return;
             }
 
-            googleTagWindow.dataLayer = googleTagWindow.dataLayer || [];
+            googleTagWindow.dataLayer = googleTagWindow.dataLayer ?? [];
             googleTagWindow.dataLayer.push(['config', googleAdsId]);
         };
 
