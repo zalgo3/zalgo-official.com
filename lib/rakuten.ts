@@ -1,7 +1,14 @@
 import retry from 'async-retry';
-import fetch from 'node-fetch';
+import {unstable_cache} from 'next/cache';
 
 const RATE_LIMIT_INTERVAL_MS = 100; // QPS=10
+// Affiliate links rarely change, so cache fetch results in Next.js' Data Cache
+// (persisted under .next/cache and restored in CI) to avoid re-hitting the API
+// on every build.
+const REVALIDATE_SECONDS = 60 * 60 * 24 * 7; // 1 week
+// Abort a stuck request instead of letting it block static generation for up to
+// `staticPageGenerationTimeout`, which would balloon build time.
+const FETCH_TIMEOUT_MS = 10_000;
 let lastRequestTime = 0;
 let requestQueue: Promise<void> = Promise.resolve();
 
@@ -11,10 +18,7 @@ const waitForRateLimit = (): Promise<void> => {
             new Promise<void>(resolve => {
                 const now = Date.now();
                 const elapsed = now - lastRequestTime;
-                const waitTime = Math.max(
-                    0,
-                    RATE_LIMIT_INTERVAL_MS - elapsed
-                );
+                const waitTime = Math.max(0, RATE_LIMIT_INTERVAL_MS - elapsed);
                 setTimeout(() => {
                     lastRequestTime = Date.now();
                     resolve();
@@ -44,7 +48,7 @@ export type RakutenProduct = {
     imageUrl: string;
 };
 
-export const getRakutenProduct = async (
+const fetchRakutenProduct = async (
     query: string,
     JAN?: string
 ): Promise<RakutenProduct | null> => {
@@ -82,55 +86,63 @@ export const getRakutenProduct = async (
     const endpoint = `https://openapi.rakuten.co.jp/ichibaproduct/api/Product/Search/20250801?${urlSearchParams}`;
 
     try {
-        const item = await retry(async bail => {
-            await waitForRateLimit();
-            const response = await fetch(endpoint, {
-                headers: {
-                    Origin: 'https://zalgo-official.com',
-                    Referer: 'https://zalgo-official.com/',
-                },
-            });
+        const item = await retry(
+            async bail => {
+                await waitForRateLimit();
+                const response = await fetch(endpoint, {
+                    headers: {
+                        Origin: 'https://zalgo-official.com',
+                        Referer: 'https://zalgo-official.com/',
+                    },
+                    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+                });
 
-            if (response.status === 400) {
-                const text = await response.text();
-                // Mask sensitive keys in logs
-                const safeEndpoint = endpoint
-                    .replace(applicationId, '***')
-                    .replace(accessKey, '***');
-                bail(new Error(`Rakuten API 400: ${text} (Endpoint: ${safeEndpoint})`));
-                return;
-            }
-            if (response.status === 403) {
-                const text = await response.text();
-                bail(new Error(`Rakuten API 403 (Forbidden): ${text}`));
-                return;
-            }
-            if (response.status === 404) {
-                bail(new Error(`Not found: ${endpoint}`));
-                return;
-            }
-            if (response.status === 429) {
-                throw new Error(`Too many requests: ${endpoint}`);
-            }
+                if (response.status === 400) {
+                    const text = await response.text();
+                    // Mask sensitive keys in logs
+                    const safeEndpoint = endpoint
+                        .replace(applicationId, '***')
+                        .replace(accessKey, '***');
+                    bail(
+                        new Error(
+                            `Rakuten API 400: ${text} (Endpoint: ${safeEndpoint})`
+                        )
+                    );
+                    return;
+                }
+                if (response.status === 403) {
+                    const text = await response.text();
+                    bail(new Error(`Rakuten API 403 (Forbidden): ${text}`));
+                    return;
+                }
+                if (response.status === 404) {
+                    bail(new Error(`Not found: ${endpoint}`));
+                    return;
+                }
+                if (response.status === 429) {
+                    throw new Error(`Too many requests: ${endpoint}`);
+                }
 
-            if (!response.ok) {
-                const text = await response.text();
-                bail(
-                    new Error(
-                        `Rakuten API Error ${response.status.toString()}: ${text}`
-                    )
-                );
-                return;
-            }
+                if (!response.ok) {
+                    const text = await response.text();
+                    bail(
+                        new Error(
+                            `Rakuten API Error ${response.status.toString()}: ${text}`
+                        )
+                    );
+                    return;
+                }
 
-            const data =
-                (await response.json()) as RakutenProductSearchResponse;
-            if (data.Products.length === 0) {
-                bail(new Error(`No hits: ${endpoint}`));
-                return;
-            }
-            return data.Products[0].Product;
-        });
+                const data =
+                    (await response.json()) as RakutenProductSearchResponse;
+                if (data.Products.length === 0) {
+                    bail(new Error(`No hits: ${endpoint}`));
+                    return;
+                }
+                return data.Products[0].Product;
+            },
+            {retries: 3, minTimeout: 500}
+        );
 
         if (item == null) {
             return null;
@@ -147,3 +159,16 @@ export const getRakutenProduct = async (
         return null;
     }
 };
+
+// Cache the whole lookup (not just the fetch) so warm builds skip the rate-limit
+// queue and network entirely on a cache hit. The result is persisted in Next.js'
+// Data Cache under .next/cache, which CI restores across builds.
+export const getRakutenProduct = (
+    query: string,
+    JAN?: string
+): Promise<RakutenProduct | null> =>
+    unstable_cache(
+        () => fetchRakutenProduct(query, JAN),
+        ['rakuten-product', query, JAN ?? ''],
+        {revalidate: REVALIDATE_SECONDS}
+    )();
