@@ -9,6 +9,10 @@ const REVALIDATE_SECONDS = 60 * 60 * 24 * 7; // 1 week
 // Abort a stuck request instead of letting it block static generation for up to
 // `staticPageGenerationTimeout`, which would balloon build time.
 const FETCH_TIMEOUT_MS = 10_000;
+// Thrown for "there is genuinely no product for this query" (no hits / 404).
+// Such a result is safe to cache; any other failure (rate limit, timeout,
+// network, 4xx/5xx) is transient and must NOT be cached as a null miss.
+class PermanentError extends Error {}
 let lastRequestTime = 0;
 let requestQueue: Promise<void> = Promise.resolve();
 
@@ -116,7 +120,7 @@ const fetchRakutenProduct = async (
                     return;
                 }
                 if (response.status === 404) {
-                    bail(new Error(`Not found: ${endpoint}`));
+                    bail(new PermanentError(`Not found: ${endpoint}`));
                     return;
                 }
                 if (response.status === 429) {
@@ -136,7 +140,7 @@ const fetchRakutenProduct = async (
                 const data =
                     (await response.json()) as RakutenProductSearchResponse;
                 if (data.Products.length === 0) {
-                    bail(new Error(`No hits: ${endpoint}`));
+                    bail(new PermanentError(`No hits: ${endpoint}`));
                     return;
                 }
                 return data.Products[0].Product;
@@ -155,20 +159,31 @@ const fetchRakutenProduct = async (
             imageUrl: item.mediumImageUrl,
         };
     } catch (error) {
-        console.error('Error fetching Rakuten product:', error);
-        return null;
+        // A genuine "no product" result is cacheable; rethrow anything else so
+        // the transient failure is not persisted as a null miss.
+        if (error instanceof PermanentError) {
+            return null;
+        }
+        throw error;
     }
 };
 
 // Cache the whole lookup (not just the fetch) so warm builds skip the rate-limit
 // queue and network entirely on a cache hit. The result is persisted in Next.js'
-// Data Cache under .next/cache, which CI restores across builds.
-export const getRakutenProduct = (
+// Data Cache under .next/cache, which CI restores across builds. Only resolved
+// values are cached, so transient failures (thrown above) are retried next build.
+export const getRakutenProduct = async (
     query: string,
     JAN?: string
-): Promise<RakutenProduct | null> =>
-    unstable_cache(
-        () => fetchRakutenProduct(query, JAN),
-        ['rakuten-product', query, JAN ?? ''],
-        {revalidate: REVALIDATE_SECONDS}
-    )();
+): Promise<RakutenProduct | null> => {
+    try {
+        return await unstable_cache(
+            () => fetchRakutenProduct(query, JAN),
+            ['rakuten-product', query, JAN ?? ''],
+            {revalidate: REVALIDATE_SECONDS}
+        )();
+    } catch (error) {
+        console.error('Error fetching Rakuten product:', error);
+        return null;
+    }
+};
