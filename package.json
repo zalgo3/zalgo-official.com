@@ -33,7 +33,6 @@
         "next": "^16.0.0",
         "next-mdx-remote": "^6.0.0",
         "next-sitemap": "^4.0.0",
-        "node-fetch": "^3.3.0",
         "prism-themes": "^1.9.0",
         "react": "19.2.7",
         "react-dom": "19.2.7",

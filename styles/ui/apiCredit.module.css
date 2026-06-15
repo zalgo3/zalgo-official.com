@@ -1,0 +1,19 @@
+.credits {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    justify-content: center;
+    margin-top: 24px;
+    opacity: 0.7;
+}
+
+.credits a {
+    color: inherit;
+    font-size: 80%;
+    text-decoration: none;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}

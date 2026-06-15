@@ -1,7 +1,7 @@
-import { getAmazonUrl } from 'lib/amazon';
-import { getRakutenProduct } from 'lib/rakuten';
-import { truncateTitle } from 'lib/string';
-import { getYahooUrl } from 'lib/yahoo';
+import {getAmazonUrl} from 'lib/amazon';
+import {getRakutenProduct} from 'lib/rakuten';
+import {truncateTitle} from 'lib/string';
+import {getYahooUrl} from 'lib/yahoo';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from 'styles/ui/affiliates.module.css';
@@ -15,8 +15,10 @@ const Affiliates = async ({
     asin?: string;
     JAN?: string;
 }) => {
-    const rakutenProduct = await getRakutenProduct(query, JAN);
-    const yahooUrl = await getYahooUrl(query, JAN);
+    const [rakutenProduct, yahooUrl] = await Promise.all([
+        getRakutenProduct(query, JAN),
+        getYahooUrl(query, JAN),
+    ]);
     const amazonUrl = getAmazonUrl(asin);
     const cardUrl =
         amazonUrl ??
