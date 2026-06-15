@@ -15,6 +15,7 @@ const Search = () => {
                 className={styles.input}
                 name="q"
                 placeholder="サイト内検索"
+                aria-label="サイト内検索"
             />
             <button type="submit" className={styles.button} name="sa">
                 検索

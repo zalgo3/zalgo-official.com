@@ -4,6 +4,8 @@ import {YouTubeEmbed} from '@next/third-parties/google';
 import {format as formatTZ, toZonedTime} from 'date-fns-tz';
 import {getPost, getPostAll} from 'lib/posts';
 import remarkImagesToFullPaths from 'lib/remarkImagesToFullPaths';
+import {defaultOgImage, siteUrl} from 'lib/siteMetadata';
+import {excerpt} from 'lib/string';
 import type {Metadata} from 'next';
 import {MDXRemote} from 'next-mdx-remote/rsc';
 import rehypeKatex from 'rehype-katex';
@@ -26,15 +28,23 @@ export const generateMetadata = async ({
     params: Promise<{slug: string}>;
 }): Promise<Metadata> => {
     const resolvedParams = await params;
-    const post = await getPost(resolvedParams.slug);
+    const {content, data} = await getPost(resolvedParams.slug);
+    const description = excerpt(content);
+    const url = `${siteUrl}/blog/${resolvedParams.slug}`;
     return {
-        title: post.data.title,
+        title: data.title,
+        description,
         openGraph: {
-            title: post.data.title,
-            url: `https://zalgo-official.com/blog/${resolvedParams.slug}`,
+            title: data.title,
+            description,
+            url,
+            type: 'article',
+            images: [defaultOgImage],
         },
         twitter: {
-            title: post.data.title,
+            title: data.title,
+            description,
+            images: [defaultOgImage],
         },
     };
 };
@@ -51,8 +61,24 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
         {label: 'ブログ', href: '/blog'},
         {label: post.data.title, href: `/blog/${resolvedParams.slug}`},
     ];
+    const articleJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: post.data.title,
+        datePublished: new Date(post.data.createdAt * 1000).toISOString(),
+        dateModified: new Date(post.data.updatedAt * 1000).toISOString(),
+        author: {'@type': 'Person', name: 'Hiroki Tanabe'},
+        mainEntityOfPage: postUrl,
+        url: postUrl,
+    };
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(articleJsonLd),
+                }}
+            />
             <Breadcrumbs items={breadcrumbs} />
             <div className={`${styles.container} container`}>
                 <div>

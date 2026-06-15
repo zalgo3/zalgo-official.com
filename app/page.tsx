@@ -100,7 +100,11 @@ const Page = () => {
                         <h2>オリジナルグッズ販売中</h2>
                         <div className={styles.suzuriProducts}>
                             <div className={styles.suzuriProduct}>
-                                <a href="https://suzuri.jp/zalgo/15079349/acrylic-keychain/50x50mm/clear">
+                                <a
+                                    href="https://suzuri.jp/zalgo/15079349/acrylic-keychain/50x50mm/clear"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     <Image
                                         src="/images/acrylic-keychain.png"
                                         alt="アクリルキーホルダー"
@@ -110,13 +114,19 @@ const Page = () => {
                                 </a>
                                 <a
                                     href="https://suzuri.jp/zalgo/15079349/acrylic-keychain/50x50mm/clear"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className={styles.link}
                                 >
                                     アクリルキーホルダー
                                 </a>
                             </div>
                             <div className={styles.suzuriProduct}>
-                                <a href="https://suzuri.jp/zalgo/15079384/can-badge/75mm/white">
+                                <a
+                                    href="https://suzuri.jp/zalgo/15079384/can-badge/75mm/white"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     <Image
                                         src="/images/can-badge.png"
                                         alt="缶バッジ"
@@ -126,6 +136,8 @@ const Page = () => {
                                 </a>
                                 <a
                                     href="https://suzuri.jp/zalgo/15079384/can-badge/75mm/white"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className={styles.link}
                                 >
                                     缶バッジ

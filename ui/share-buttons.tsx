@@ -26,6 +26,7 @@ const ShareButtons = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.button}
+                aria-label="Xでシェア"
             >
                 <FaXTwitter color="#000000" />
             </a>
@@ -34,14 +35,16 @@ const ShareButtons = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.button}
+                aria-label="LINEでシェア"
             >
                 <FaLine color="#00c300" />
             </a>
             <a
-                href={`http://b.hatena.ne.jp/add?mode=confirm&url=${encodedUrl}`}
+                href={`https://b.hatena.ne.jp/add?mode=confirm&url=${encodedUrl}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.button}
+                aria-label="はてなブックマークに追加"
             >
                 <SiHatenabookmark color="#00a4de" />
             </a>
@@ -50,6 +53,7 @@ const ShareButtons = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.button}
+                aria-label="Facebookでシェア"
             >
                 <FaFacebook color="#1877f2" />
             </a>

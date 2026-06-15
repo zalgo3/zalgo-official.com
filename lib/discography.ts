@@ -71,9 +71,7 @@ const addAmazonTag = (urlString: string | undefined): string | undefined => {
     return `${urlString}${separator}tag=${tag}`;
 };
 
-export const getDiscographyAll = async (
-    options: Options = {}
-): Promise<DiscographyItem[]> => {
+const loadDiscography = async (): Promise<DiscographyItem[]> => {
     const items = (
         await Promise.all(
             (await fs.readdir(discographyPath)).map(async slug => {
@@ -134,10 +132,25 @@ export const getDiscographyAll = async (
                 return p1.data.slug.localeCompare(p2.data.slug);
             }
             return p2.data.createdAt - p1.data.createdAt;
-        })
-        .slice(0, options.limit);
+        });
 
     return items;
+};
+
+// Memoize during production builds for the same reason as the posts list: each
+// statically generated page called this (via getDiscographyItem), re-reading
+// every item and spawning two `git log` processes per item. Skipped in dev.
+let cachedDiscography: Promise<DiscographyItem[]> | undefined;
+const loadDiscographyCached = (): Promise<DiscographyItem[]> =>
+    process.env.NODE_ENV === 'production'
+        ? (cachedDiscography ??= loadDiscography())
+        : loadDiscography();
+
+export const getDiscographyAll = async (
+    options: Options = {}
+): Promise<DiscographyItem[]> => {
+    const items = await loadDiscographyCached();
+    return options.limit ? items.slice(0, options.limit) : items;
 };
 
 export const getDiscographyDataAll = async (

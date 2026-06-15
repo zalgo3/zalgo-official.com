@@ -12,6 +12,7 @@ const NicoNicoEmbed = ({videoId, title}: NicoNicoEmbedProps) => {
             height="176"
             src={`https://ext.nicovideo.jp/thumb/${videoId}`}
             style={{border: 'solid 1px #ccc'}}
+            title={title}
             allowFullScreen
         >
             <a href={`https://www.nicovideo.jp/watch/${videoId}`}>{title}</a>

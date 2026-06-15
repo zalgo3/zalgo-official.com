@@ -11,7 +11,7 @@ type Options = {
     limit?: number;
 };
 
-export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
+const loadPosts = async (): Promise<Post[]> => {
     const posts = (
         await Promise.all(
             (await fs.readdir(postsPath)).map(async slug => {
@@ -55,10 +55,25 @@ export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
                 return p1.data.slug.localeCompare(p2.data.slug);
             }
             return p2.data.createdAt - p1.data.createdAt;
-        })
-        .slice(0, options.limit);
+        });
 
     return posts;
+};
+
+// Memoize the full post list during production builds. Every statically
+// generated page used to call getPostAll (directly or via getPost), and each
+// call re-read every post and spawned two `git log` processes per post — an
+// O(N^2) blow-up in subprocess spawns. The list is immutable during a build, so
+// caching it is safe. Skipped in development so post edits stay fresh.
+let cachedPosts: Promise<Post[]> | undefined;
+const loadPostsCached = (): Promise<Post[]> =>
+    process.env.NODE_ENV === 'production'
+        ? (cachedPosts ??= loadPosts())
+        : loadPosts();
+
+export const getPostAll = async (options: Options = {}): Promise<Post[]> => {
+    const posts = await loadPostsCached();
+    return options.limit ? posts.slice(0, options.limit) : posts;
 };
 
 export const getPostDataAll = async (
