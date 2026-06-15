@@ -14,6 +14,7 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import styles from 'styles/app/blog/page.module.css';
 import Affiliates from 'ui/affiliates';
+import ApiCredit from 'ui/ApiCredit';
 import NicoNicoEmbed from 'ui/NicoNicoEmbed';
 import ShareButtons from 'ui/share-buttons';
 
@@ -41,6 +42,8 @@ export const generateMetadata = async ({
 const Page = async ({params}: {params: Promise<{slug: string}>}) => {
     const resolvedParams = await params;
     const {content, ...post} = await getPost(resolvedParams.slug);
+    // Show the API credit only on posts that actually render affiliate cards.
+    const hasAffiliates = content.includes('<Affiliates');
     const postUrl = `https://zalgo-official.com/blog/${resolvedParams.slug}`;
     const siteTitle = 'ブログ | ざるご Official Website';
     const authorAccount = 'zalgo3';
@@ -131,6 +134,7 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
                         siteTitle={siteTitle}
                         authorAccount={authorAccount}
                     />
+                    {hasAffiliates && <ApiCredit />}
                 </div>
             </div>
         </>
