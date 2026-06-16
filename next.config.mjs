@@ -26,6 +26,15 @@ export default {
                 port: '',
                 pathname: '/**',
             },
+            {
+                // The Rakuten Product Search API (20250801) returns product
+                // images on this CDN host; without it next/image rejects them
+                // and the product thumbnails render blank.
+                protocol: 'https',
+                hostname: 'r.r10s.jp',
+                port: '',
+                pathname: '/**',
+            },
         ],
     },
     headers: async () => [
