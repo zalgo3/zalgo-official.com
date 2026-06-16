@@ -20,17 +20,12 @@ const Affiliates = async ({
         getYahooUrl(query, JAN),
     ]);
     const amazonUrl = getAmazonUrl(asin);
-    const cardUrl =
-        amazonUrl ??
-        (rakutenProduct ? rakutenProduct.affiliateUrl : null) ??
-        yahooUrl ??
-        '#';
     return (
         <div className={styles.card}>
             {rakutenProduct && (
                 <>
                     {rakutenProduct.imageUrl && (
-                        <Link className={styles.imageContainer} href={cardUrl}>
+                        <div className={styles.imageContainer}>
                             <Image
                                 src={rakutenProduct.imageUrl}
                                 alt={rakutenProduct.productName}
@@ -43,11 +38,11 @@ const Affiliates = async ({
                                     boxShadow: 'var(--box-shadow-background)',
                                 }}
                             />
-                        </Link>
+                        </div>
                     )}
-                    <Link className={styles.title} href={cardUrl}>
+                    <span className={styles.title}>
                         {truncateTitle(rakutenProduct.productName)}
-                    </Link>
+                    </span>
                 </>
             )}
             <div className={styles.buttonGroup}>
