@@ -26,8 +26,7 @@ export const metadata: Metadata = {
     },
 };
 
-// TODO: 以下の本文はすべて下書きです。経歴・実績・人物像はご本人の言葉に
-// 合わせて編集してください。
+// TODO: 経歴・実績など追記したい事実があれば、下の facts に項目を足してください。
 const AboutPage = () => {
     return (
         <>
@@ -38,29 +37,17 @@ const AboutPage = () => {
                 />
                 <h1 className={styles.title}>プロフィール</h1>
                 <p className={styles.lead}>
-                    ざるごです。歌い手・ゲーム実況者として動画を投稿しつつ、データサイエンティストとしても活動しています。歌・ゲーム・技術と、一見ばらばらに見える領域を横断しながら、面白いと思ったことを形にして発信しています。
+                    歌い手・ゲーム実況者・データサイエンティストとして活動しています。
                 </p>
 
-                <section className={styles.section}>
-                    <h2>歌い手</h2>
-                    <p>
-                        YouTube・ニコニコ動画を中心に「歌ってみた」を投稿しています。配信中の楽曲は楽曲ページからご覧いただけます。
-                    </p>
-                </section>
-
-                <section className={styles.section}>
-                    <h2>ゲーム実況者</h2>
-                    <p>
-                        ゲーム実況動画を投稿しています。攻略情報やプレイの様子をお届けしています。
-                    </p>
-                </section>
-
-                <section className={styles.section}>
-                    <h2>データサイエンティスト</h2>
-                    <p>
-                        データサイエンス・機械学習・数理最適化などに取り組んでいます。技術的な内容はブログでも発信しています。
-                    </p>
-                </section>
+                <dl className={styles.facts}>
+                    <dt>活動名</dt>
+                    <dd>ざるご</dd>
+                    <dt>活動</dt>
+                    <dd>歌ってみた / ゲーム実況 / ブログ執筆</dd>
+                    <dt>分野</dt>
+                    <dd>データサイエンス・機械学習・数理最適化</dd>
+                </dl>
 
                 <div className={styles.links}>
                     <Link href="/discography" className={styles.link}>

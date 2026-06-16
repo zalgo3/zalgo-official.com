@@ -17,16 +17,15 @@ const Page = () => {
             <Header />
             <SocialLinks />
             <main className={styles.main}>
-                {/* TODO: 自己紹介文・肩書きは下書きです。本人の言葉に合わせて
-                    編集してください。アバター写真を public/images/ に置いて
-                    <Image> を追加すると第一印象がさらに強くなります。 */}
+                {/* アバター写真を public/images/ に置いて <Image> を追加すると
+                    第一印象がさらに強くなります。 */}
                 <section className={styles.hero}>
                     <h2 className={styles.heroName}>ざるご</h2>
                     <p className={styles.heroRoles}>
                         歌い手 / ゲーム実況者 / データサイエンティスト
                     </p>
                     <p className={styles.heroBio}>
-                        YouTube・ニコニコ動画でゲーム実況や歌ってみたを投稿しながら、データサイエンティストとしても活動しています。音楽・技術・日々の発見を発信中です。
+                        YouTube・ニコニコ動画で歌ってみた・ゲーム実況を投稿しています。データサイエンスの分野でも活動しています。
                     </p>
                     <div className={styles.heroCtas}>
                         <a

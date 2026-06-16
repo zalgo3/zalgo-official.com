@@ -13,16 +13,23 @@
     font-size: 1.05rem;
 }
 
-.section {
-    margin-top: 1.5rem;
+.facts {
+    margin: 1.5rem 0;
     padding: 1.25rem 1.5rem;
     border-radius: 12px;
     box-shadow: var(--box-shadow-background);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.6rem 1.5rem;
 }
 
-.section h2 {
-    margin-top: 0;
+.facts dt {
+    font-weight: bold;
     color: var(--c-primary);
+}
+
+.facts dd {
+    margin: 0;
 }
 
 .links {
