@@ -1,10 +1,12 @@
 .navFooter {
-    display: flex;
-    justify-content: center;
+    padding: 0 0.5rem;
 }
 
 .navFooter ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -13,7 +15,6 @@
 .navFooter li {
     border-radius: 10px;
     box-shadow: var(--box-shadow-background);
-    margin: 5px 4px 5px 4px;
 }
 
 .navFooter a {
@@ -26,6 +27,13 @@
 
 .navFooter a:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .navFooter a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
 }
 
 .navFooter ul ul {
