@@ -26,7 +26,8 @@
     color: var(--c-primary);
 }
 
-.activeFilter {
+.activeFilter,
+.activeFilter:hover {
     color: var(--c-white);
     background-color: var(--c-primary);
 }
