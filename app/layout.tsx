@@ -1,6 +1,7 @@
 import 'styles/global.css';
 
 import {GoogleAnalytics} from '@next/third-parties/google';
+import {defaultOgImage, siteUrl} from 'lib/siteMetadata';
 import type {Metadata} from 'next';
 import Script from 'next/script';
 
@@ -8,6 +9,7 @@ import Footer from './footer';
 import GoogleAds from './google-ads';
 
 export const metadata: Metadata = {
+    metadataBase: new URL(siteUrl),
     title: {
         default: 'ざるご Official Website',
         template: '%s | ざるご Official Website',
@@ -18,10 +20,11 @@ export const metadata: Metadata = {
         title: 'ざるご Official Website',
         description:
             '歌い手/ゲーム実況者/データサイエンティストであるざるごのオフィシャルウェブサイト',
-        url: 'https://zalgo-official.com',
+        url: siteUrl,
         siteName: 'ざるご Official Website',
         locale: 'ja_JP',
         type: 'website',
+        images: [defaultOgImage],
     },
     icons: {
         icon: [
@@ -36,6 +39,7 @@ export const metadata: Metadata = {
         description:
             '歌い手/ゲーム実況者/データサイエンティストであるざるごのオフィシャルウェブサイト',
         creator: '@zalgo_video',
+        images: [defaultOgImage],
     },
 };
 

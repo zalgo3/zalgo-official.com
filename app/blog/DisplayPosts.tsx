@@ -1,5 +1,3 @@
-'use client';
-
 import {type PostData} from 'lib/posts';
 import styles from 'styles/app/blog/DisplayPosts.module.css';
 
