@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     },
 };
 
-// TODO: 経歴・実績など追記したい事実があれば、下の facts に項目を足してください。
 const AboutPage = () => {
     return (
         <>

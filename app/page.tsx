@@ -17,8 +17,6 @@ const Page = () => {
             <Header />
             <SocialLinks />
             <main className={styles.main}>
-                {/* アバター写真を public/images/ に置いて <Image> を追加すると
-                    第一印象がさらに強くなります。 */}
                 <section className={styles.hero}>
                     <h2 className={styles.heroName}>ざるご</h2>
                     <p className={styles.heroRoles}>
