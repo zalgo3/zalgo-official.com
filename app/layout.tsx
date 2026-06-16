@@ -2,7 +2,7 @@ import 'styles/global.css';
 
 import {GoogleAnalytics} from '@next/third-parties/google';
 import {defaultOgImage, siteUrl} from 'lib/siteMetadata';
-import type {Metadata} from 'next';
+import type {Metadata, Viewport} from 'next';
 import Script from 'next/script';
 
 import Footer from './footer';
@@ -41,6 +41,10 @@ export const metadata: Metadata = {
         creator: '@zalgo_video',
         images: [defaultOgImage],
     },
+};
+
+export const viewport: Viewport = {
+    themeColor: '#00aa90',
 };
 
 const RootLayout = ({children}: {children: React.ReactNode}) => {

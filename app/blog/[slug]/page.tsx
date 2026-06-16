@@ -18,6 +18,7 @@ import styles from 'styles/app/blog/page.module.css';
 import Affiliates from 'ui/affiliates';
 import ApiCredit from 'ui/ApiCredit';
 import NicoNicoEmbed from 'ui/NicoNicoEmbed';
+import PostImage from 'ui/PostImage';
 import ShareButtons from 'ui/share-buttons';
 
 import Breadcrumbs from '../../Breadcrumbs';
@@ -105,7 +106,12 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
                     </p>
                     <MDXRemote
                         source={content}
-                        components={{Affiliates, YouTubeEmbed, NicoNicoEmbed}}
+                        components={{
+                            Affiliates,
+                            YouTubeEmbed,
+                            NicoNicoEmbed,
+                            img: PostImage,
+                        }}
                         options={{
                             mdxOptions: {
                                 remarkPlugins: [

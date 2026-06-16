@@ -17,6 +17,18 @@
 body {
     background-color: var(--c-background);
     color: var(--c-base);
+    font-family:
+        system-ui,
+        -apple-system,
+        'Segoe UI',
+        'Helvetica Neue',
+        'Hiragino Kaku Gothic ProN',
+        'Hiragino Sans',
+        'Noto Sans JP',
+        'Yu Gothic',
+        Meiryo,
+        sans-serif;
+    line-height: 1.7;
 }
 
 table {
@@ -66,27 +78,29 @@ nav.toc {
 
 /* Accordion Header (Summary) */
 nav.toc summary {
-  cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  list-style-position: inside;
-  padding: 0.75rem 1.25rem;
-  border-radius: 12px;
-  box-shadow: var(--box-shadow-background);
-  transition: all 0.2s ease-out;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    list-style-position: inside;
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-background);
+    transition: all 0.2s ease-out;
 }
 nav.toc summary:hover {
-  color: var(--c-primary);
-  transform: translateY(-2px);
-  box-shadow: 4px 4px 10px #c8ced5, -4px -4px 10px #ffffff;
+    color: var(--c-primary);
+    transform: translateY(-2px);
+    box-shadow:
+        4px 4px 10px #c8ced5,
+        -4px -4px 10px #ffffff;
 }
 nav.toc details[open] > summary {
-  margin-bottom: 1rem;
-  box-shadow: var(--box-shadow-foreground);
+    margin-bottom: 1rem;
+    box-shadow: var(--box-shadow-foreground);
 }
 nav.toc summary:active {
-  box-shadow: var(--box-shadow-foreground);
-  transform: translateY(1px);
+    box-shadow: var(--box-shadow-foreground);
+    transform: translateY(1px);
 }
 
 /* TOC list appears when details is open */
@@ -133,12 +147,12 @@ nav.toc a:hover {
 }
 
 .container {
-   display: flex;
-   flex-direction: row-reverse;
-   align-items: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
 }
 
 .container > div {
-   flex: 1;
-   min-width: 0;
+    flex: 1;
+    min-width: 0;
 }
