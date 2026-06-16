@@ -6,11 +6,15 @@ export function proxy(request: NextRequest) {
 
     const slugMatch = /^\/([^/]+)$/.exec(pathname);
 
+    // Top-level routes that must NOT be treated as legacy blog slugs.
+    const reservedPaths = ['blog', 'privacy-policy', 'discography', 'about'];
+
     if (
         slugMatch &&
-        slugMatch[1] !== 'blog' &&
-        slugMatch[1] !== 'privacy-policy' &&
-        slugMatch[1] !== 'discography'
+        // Skip files/route handlers (e.g. feed.xml, manifest.webmanifest);
+        // post slugs never contain a dot.
+        !slugMatch[1].includes('.') &&
+        !reservedPaths.includes(slugMatch[1])
     ) {
         const slug = slugMatch[1];
         const redirectUrl = new URL(`/blog/${slug}`, request.url);

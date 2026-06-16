@@ -17,6 +17,31 @@ const Page = () => {
             <Header />
             <SocialLinks />
             <main className={styles.main}>
+                <section className={styles.hero}>
+                    <h2 className={styles.heroName}>ざるご</h2>
+                    <p className={styles.heroRoles}>
+                        歌い手 / ゲーム実況者 / データサイエンティスト
+                    </p>
+                    <p className={styles.heroBio}>
+                        本業はデータサイエンティストです。YouTube・ニコニコ動画で歌ってみた・ゲーム実況も投稿しています。
+                    </p>
+                    <div className={styles.heroCtas}>
+                        <a
+                            href="https://www.youtube.com/c/zalgo33?sub_confirmation=1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.link}
+                        >
+                            <FaYoutube color="#FF0000" /> YouTube
+                        </a>
+                        <Link href="/discography" className={styles.link}>
+                            <FaMusic /> 楽曲を聴く
+                        </Link>
+                        <Link href="/blog" className={styles.link}>
+                            ブログを読む
+                        </Link>
+                    </div>
+                </section>
                 <div className={styles.grid}>
                     <div className={styles.card}>
                         <h2>YouTube</h2>

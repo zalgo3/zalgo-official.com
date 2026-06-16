@@ -16,7 +16,16 @@ const Footer = () => {
                         <Link href="/blog">ブログ</Link>
                     </li>
                     <li>
+                        <Link href="/discography">楽曲</Link>
+                    </li>
+                    <li>
+                        <Link href="/about">プロフィール</Link>
+                    </li>
+                    <li>
                         <Link href="/privacy-policy">プライバシーポリシー</Link>
+                    </li>
+                    <li>
+                        <a href="/feed.xml">RSS</a>
                     </li>
                 </ul>
             </nav>

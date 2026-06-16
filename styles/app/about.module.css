@@ -1,0 +1,70 @@
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.title {
+    text-align: center;
+}
+
+.lead {
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.facts {
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-background);
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.6rem 1.5rem;
+}
+
+.facts dt {
+    font-weight: bold;
+    color: var(--c-primary);
+}
+
+.facts dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Stack the term/description on narrow screens so long values never overflow. */
+@media (max-width: 480px) {
+    .facts {
+        grid-template-columns: 1fr;
+        gap: 0.1rem;
+    }
+
+    .facts dt {
+        margin-top: 0.6rem;
+    }
+
+    .facts dt:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.link {
+    color: var(--c-primary);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 0.9rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-background);
+}
+
+.link:hover {
+    text-decoration: underline;
+}

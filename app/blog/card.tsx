@@ -8,7 +8,11 @@ const Card = ({post}: {post: PostData}) => {
     return (
         <article className={styles.card}>
             <Link href={`/blog/${post.slug}`} key={post.slug}>
+                <span className={styles.category}>{post.category}</span>
                 <h2>{truncateTitle(post.title)}</h2>
+                {post.excerpt && (
+                    <p className={styles.excerpt}>{post.excerpt}</p>
+                )}
                 <footer>
                     {formatTZ(
                         toZonedTime(post.createdAt * 1000, 'Asia/Tokyo'),

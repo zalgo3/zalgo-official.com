@@ -49,6 +49,41 @@
     font-size: 1.5rem;
 }
 
+.hero {
+    text-align: center;
+    max-width: 720px;
+    margin: 1.5rem auto 0.5rem;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow-background);
+}
+
+.heroName {
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+}
+
+.heroRoles {
+    font-size: 1.1rem;
+    color: var(--c-primary);
+    font-weight: bold;
+    margin: 0 0 1rem;
+}
+
+.heroBio {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0 auto 1.5rem;
+    max-width: 36rem;
+}
+
+.heroCtas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
 .grid {
     display: grid;
     align-items: center;

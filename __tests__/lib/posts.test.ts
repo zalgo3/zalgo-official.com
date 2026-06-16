@@ -7,6 +7,8 @@ describe('PostData type', () => {
         const postData: PostData = {
             slug: 'test-slug',
             title: 'Test Title',
+            excerpt: 'Test excerpt',
+            category: 'コラム',
             createdAt: 1640995200,
             updatedAt: 1640995200,
         };
