@@ -90,6 +90,7 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
                         alt={discographyItem.data.title}
                         width={350}
                         height={350}
+                        priority
                         style={{
                             objectFit: 'cover',
                             borderRadius: '16px',
