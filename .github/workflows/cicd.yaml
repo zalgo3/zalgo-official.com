@@ -42,7 +42,15 @@ jobs:
                   reporter: github-pr-review
             - name: Build and deploy for preview
               if: ${{ github.event_name == 'pull_request' }}
-              run: npx netlify-cli deploy
+              id: deploy_preview
+              run: |
+                  DEPLOY_JSON=$(npx netlify-cli deploy --json)
+                  echo "$DEPLOY_JSON"
+                  URL=$(echo "$DEPLOY_JSON" | jq -r '.deploy_url // .url // empty')
+                  if [ -z "$URL" ]; then
+                      URL=$(echo "$DEPLOY_JSON" | grep -oE 'https://[a-z0-9.-]+\.netlify\.app' | head -n1)
+                  fi
+                  echo "preview_url=$URL" >> "$GITHUB_OUTPUT"
               env:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
@@ -53,6 +61,25 @@ jobs:
                   VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
                   VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
                   YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
+            - name: Comment preview URL on PR
+              if: ${{ github.event_name == 'pull_request' && steps.deploy_preview.outputs.preview_url != '' }}
+              uses: actions/github-script@v7
+              env:
+                  PREVIEW_URL: ${{ steps.deploy_preview.outputs.preview_url }}
+              with:
+                  script: |
+                      const url = process.env.PREVIEW_URL;
+                      const marker = '<!-- netlify-preview-url -->';
+                      const body = `${marker}\n🚀 **プレビューデプロイ**: ${url}\n\n<sub>このコメントはコミットごとに更新されます。</sub>`;
+                      const {owner, repo} = context.repo;
+                      const issue_number = context.issue.number;
+                      const {data: comments} = await github.rest.issues.listComments({owner, repo, issue_number});
+                      const existing = comments.find((c) => c.body && c.body.includes(marker));
+                      if (existing) {
+                          await github.rest.issues.updateComment({owner, repo, comment_id: existing.id, body});
+                      } else {
+                          await github.rest.issues.createComment({owner, repo, issue_number, body});
+                      }
             - name: Build and deploy for production
               if: ${{ github.event_name == 'push' }}
               run: npx netlify-cli deploy --prod
