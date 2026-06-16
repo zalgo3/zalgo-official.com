@@ -1,5 +1,6 @@
 import 'katex/dist/katex.min.css';
 import {getDiscographyItem, getDiscographyAll} from 'lib/discography';
+import {defaultOgImage, siteUrl} from 'lib/siteMetadata';
 import type {Metadata} from 'next';
 import Image from 'next/image';
 import styles from 'styles/app/blog/page.module.css';
@@ -18,19 +19,21 @@ export const generateMetadata = async ({
     const discographyItem = await getDiscographyItem(resolvedParams.slug);
 
     const ogImageUrl = discographyItem.data.thumbnailUrl
-        ? `https://zalgo-official.com${discographyItem.data.thumbnailUrl}`
-        : undefined;
+        ? `${siteUrl}${discographyItem.data.thumbnailUrl}`
+        : defaultOgImage;
 
     return {
         title: discographyItem.data.title,
         openGraph: {
             title: discographyItem.data.title,
-            images: ogImageUrl ? [{url: ogImageUrl}] : [],
+            url: `${siteUrl}/discography/${resolvedParams.slug}`,
+            siteName: 'ざるご Official Website',
+            images: [ogImageUrl],
         },
         twitter: {
             title: discographyItem.data.title,
             card: 'summary_large_image',
-            images: ogImageUrl ? [ogImageUrl] : [],
+            images: [ogImageUrl],
         },
     };
 };
