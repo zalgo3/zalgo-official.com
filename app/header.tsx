@@ -9,20 +9,6 @@ const Header = () => {
                     ざるご Official Website
                 </Link>
             </h1>
-            <nav className={styles.nav} aria-label="グローバルナビゲーション">
-                <Link href="/" className={styles.navLink}>
-                    ホーム
-                </Link>
-                <Link href="/blog" className={styles.navLink}>
-                    ブログ
-                </Link>
-                <Link href="/discography" className={styles.navLink}>
-                    楽曲
-                </Link>
-                <Link href="/about" className={styles.navLink}>
-                    プロフィール
-                </Link>
-            </nav>
         </header>
     );
 };
