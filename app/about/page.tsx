@@ -37,16 +37,18 @@ const AboutPage = () => {
                 />
                 <h1 className={styles.title}>プロフィール</h1>
                 <p className={styles.lead}>
-                    歌い手・ゲーム実況者・データサイエンティストとして活動しています。
+                    本業はデータサイエンティストです。歌い手・ゲーム実況者としても活動しています。
                 </p>
 
                 <dl className={styles.facts}>
                     <dt>活動名</dt>
                     <dd>ざるご</dd>
-                    <dt>活動</dt>
-                    <dd>歌ってみた / ゲーム実況 / ブログ執筆</dd>
+                    <dt>本業</dt>
+                    <dd>データサイエンティスト</dd>
                     <dt>分野</dt>
                     <dd>データサイエンス・機械学習・数理最適化</dd>
+                    <dt>創作活動</dt>
+                    <dd>歌ってみた / ゲーム実況</dd>
                 </dl>
 
                 <div className={styles.links}>

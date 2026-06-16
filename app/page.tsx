@@ -25,7 +25,7 @@ const Page = () => {
                         歌い手 / ゲーム実況者 / データサイエンティスト
                     </p>
                     <p className={styles.heroBio}>
-                        YouTube・ニコニコ動画で歌ってみた・ゲーム実況を投稿しています。データサイエンスの分野でも活動しています。
+                        本業はデータサイエンティストです。YouTube・ニコニコ動画で歌ってみた・ゲーム実況も投稿しています。
                     </p>
                     <div className={styles.heroCtas}>
                         <a
