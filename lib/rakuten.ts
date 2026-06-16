@@ -39,7 +39,8 @@ type RakutenProductSearchResponse = {
             productName: string;
             brandName: string;
             productUrlPC: string;
-            mediumImageUrl: string;
+            // The API returns null when a product has no image.
+            mediumImageUrl: string | null;
             affiliateUrl?: string;
         };
     }[];
@@ -49,7 +50,7 @@ export type RakutenProduct = {
     productId: string;
     productName: string;
     affiliateUrl: string;
-    imageUrl: string;
+    imageUrl: string | null;
 };
 
 const fetchRakutenProduct = async (
@@ -156,7 +157,7 @@ const fetchRakutenProduct = async (
             productId: item.productId,
             productName: item.productName,
             affiliateUrl: item.affiliateUrl ?? item.productUrlPC,
-            imageUrl: item.mediumImageUrl,
+            imageUrl: item.mediumImageUrl ?? null,
         };
     } catch (error) {
         // A genuine "no product" result is cacheable; rethrow anything else so

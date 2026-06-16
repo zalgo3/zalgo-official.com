@@ -29,20 +29,22 @@ const Affiliates = async ({
         <div className={styles.card}>
             {rakutenProduct && (
                 <>
-                    <Link className={styles.imageContainer} href={cardUrl}>
-                        <Image
-                            src={rakutenProduct.imageUrl}
-                            alt={rakutenProduct.productName}
-                            width={200}
-                            height={200}
-                            style={{
-                                borderRadius: '10px',
-                                width: '85%',
-                                height: 'auto',
-                                boxShadow: 'var(--box-shadow-background)',
-                            }}
-                        />
-                    </Link>
+                    {rakutenProduct.imageUrl && (
+                        <Link className={styles.imageContainer} href={cardUrl}>
+                            <Image
+                                src={rakutenProduct.imageUrl}
+                                alt={rakutenProduct.productName}
+                                width={200}
+                                height={200}
+                                style={{
+                                    borderRadius: '10px',
+                                    width: '85%',
+                                    height: 'auto',
+                                    boxShadow: 'var(--box-shadow-background)',
+                                }}
+                            />
+                        </Link>
+                    )}
                     <Link className={styles.title} href={cardUrl}>
                         {truncateTitle(rakutenProduct.productName)}
                     </Link>
