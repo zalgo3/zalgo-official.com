@@ -1,3 +1,4 @@
+import {defaultOgImage, siteUrl} from 'lib/siteMetadata';
 import type {Metadata} from 'next';
 
 import Header from '../header';
@@ -15,13 +16,15 @@ export const metadata: Metadata = {
         title: 'ブログ',
         description:
             '歌い手/ゲーム実況者/データサイエンティストであるざるごのブログ',
-        url: 'https://zalgo-official.com/blog',
+        url: `${siteUrl}/blog`,
         siteName: 'ざるご Official Website',
+        images: [defaultOgImage],
     },
     twitter: {
         title: 'ブログ',
         description:
             '歌い手/ゲーム実況者/データサイエンティストであるざるごのブログ',
+        images: [defaultOgImage],
     },
 };
 
