@@ -10,6 +10,11 @@ import GoogleAds from './google-ads';
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
+    alternates: {
+        types: {
+            'application/rss+xml': '/feed.xml',
+        },
+    },
     title: {
         default: 'ざるご Official Website',
         template: '%s | ざるご Official Website',

@@ -17,6 +17,34 @@ const Page = () => {
             <Header />
             <SocialLinks />
             <main className={styles.main}>
+                {/* TODO: 自己紹介文・肩書きは下書きです。本人の言葉に合わせて
+                    編集してください。アバター写真を public/images/ に置いて
+                    <Image> を追加すると第一印象がさらに強くなります。 */}
+                <section className={styles.hero}>
+                    <h2 className={styles.heroName}>ざるご</h2>
+                    <p className={styles.heroRoles}>
+                        歌い手 / ゲーム実況者 / データサイエンティスト
+                    </p>
+                    <p className={styles.heroBio}>
+                        YouTube・ニコニコ動画でゲーム実況や歌ってみたを投稿しながら、データサイエンティストとしても活動しています。音楽・技術・日々の発見を発信中です。
+                    </p>
+                    <div className={styles.heroCtas}>
+                        <a
+                            href="https://www.youtube.com/c/zalgo33?sub_confirmation=1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.link}
+                        >
+                            <FaYoutube color="#FF0000" /> YouTube
+                        </a>
+                        <Link href="/discography" className={styles.link}>
+                            <FaMusic /> 楽曲を聴く
+                        </Link>
+                        <Link href="/blog" className={styles.link}>
+                            ブログを読む
+                        </Link>
+                    </div>
+                </section>
                 <div className={styles.grid}>
                     <div className={styles.card}>
                         <h2>YouTube</h2>

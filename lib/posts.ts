@@ -5,6 +5,9 @@ import {promisify} from 'util';
 
 import matter, {GrayMatterFile} from 'gray-matter';
 
+import {getPostCategory} from './postCategories';
+import {excerpt} from './string';
+
 const postsPath = 'posts';
 
 type Options = {
@@ -19,6 +22,8 @@ const loadPosts = async (): Promise<Post[]> => {
                 try {
                     const post = matter(await fs.readFile(postPath));
                     post.data.slug = slug;
+                    post.data.excerpt = excerpt(post.content);
+                    post.data.category = getPostCategory(slug);
                     post.data.createdAt = parseInt(
                         (
                             await promisify(exec)(
@@ -100,6 +105,8 @@ export type Post = GrayMatterFile<Buffer> & {
 export type PostData = {
     slug: string;
     title: string;
+    excerpt: string;
+    category: string;
     createdAt: number;
     updatedAt: number;
 };

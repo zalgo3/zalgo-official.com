@@ -2,7 +2,7 @@ import 'katex/dist/katex.min.css';
 
 import {YouTubeEmbed} from '@next/third-parties/google';
 import {format as formatTZ, toZonedTime} from 'date-fns-tz';
-import {getPost, getPostAll} from 'lib/posts';
+import {getPost, getPostAll, getPostDataAll} from 'lib/posts';
 import remarkImagesToFullPaths from 'lib/remarkImagesToFullPaths';
 import {defaultOgImage, siteUrl} from 'lib/siteMetadata';
 import {excerpt} from 'lib/string';
@@ -22,6 +22,7 @@ import PostImage from 'ui/PostImage';
 import ShareButtons from 'ui/share-buttons';
 
 import Breadcrumbs from '../../Breadcrumbs';
+import RelatedPosts from '../RelatedPosts';
 
 export const generateMetadata = async ({
     params,
@@ -62,6 +63,15 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
         {label: 'ブログ', href: '/blog'},
         {label: post.data.title, href: `/blog/${resolvedParams.slug}`},
     ];
+    // Related posts: prefer the same category, then fill with the most recent
+    // other posts. (The full list is already sorted newest-first.)
+    const otherPosts = (await getPostDataAll()).filter(
+        p => p.slug !== resolvedParams.slug
+    );
+    const relatedPosts = [
+        ...otherPosts.filter(p => p.category === post.data.category),
+        ...otherPosts.filter(p => p.category !== post.data.category),
+    ].slice(0, 3);
     const articleJsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -167,6 +177,7 @@ const Page = async ({params}: {params: Promise<{slug: string}>}) => {
                         authorAccount={authorAccount}
                     />
                     {hasAffiliates && <ApiCredit />}
+                    <RelatedPosts posts={relatedPosts} />
                 </div>
             </div>
         </>
