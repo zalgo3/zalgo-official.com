@@ -14,7 +14,6 @@ import {SiRakuten} from 'react-icons/si';
 import styles from 'styles/ui/DiscographyLinks.module.css';
 
 import {type DiscographyData} from '../lib/discography';
-import {distributionLinkConversionSendTo} from '../lib/googleAds';
 import {event} from '../lib/gtag';
 
 type DiscographyLinksProps = {
@@ -148,42 +147,12 @@ const DiscographyLinks = ({links, songTitle}: DiscographyLinksProps) => {
     const availableDownloads = downloadServices.filter(s => links[s.key]);
     const availableSocial = socialLinks.filter(s => links[s.key]);
 
-    const sendDistributionLinkConversion = (serviceName: string) => {
-        if (
-            typeof window === 'undefined' ||
-            typeof window.gtag === 'undefined'
-        ) {
-            return;
-        }
-
-        const gtag = window.gtag as unknown as (
-            event: 'event',
-            action: string,
-            params: {
-                event_callback?: () => void;
-                event_label: string;
-                event_timeout: number;
-                send_to: string;
-                transport_type: 'beacon';
-            }
-        ) => void;
-
-        gtag('event', 'conversion', {
-            send_to: distributionLinkConversionSendTo,
-            event_label: `${songTitle} - ${serviceName}`,
-            event_callback: () => undefined,
-            event_timeout: 500,
-            transport_type: 'beacon',
-        });
-    };
-
     const handleLinkClick = (category: string, serviceName: string) => {
         event({
             action: 'click_distribution_link',
             category: category,
             label: `${songTitle} - ${serviceName}`,
         });
-        sendDistributionLinkConversion(serviceName);
     };
 
     return (

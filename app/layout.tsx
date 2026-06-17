@@ -6,7 +6,6 @@ import type {Metadata, Viewport} from 'next';
 import Script from 'next/script';
 
 import Footer from './footer';
-import GoogleAds from './google-ads';
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
@@ -56,7 +55,6 @@ const RootLayout = ({children}: {children: React.ReactNode}) => {
     return (
         <html lang="ja">
             <GoogleAnalytics gaId="G-KVTMLPFHK5" />
-            <GoogleAds />
             <Script
                 async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3520947091484443"
