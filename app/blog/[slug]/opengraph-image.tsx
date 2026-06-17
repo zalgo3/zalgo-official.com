@@ -63,9 +63,7 @@ const Image = async ({
                 width: '100%',
                 height: '100%',
                 display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                padding: '80px',
+                padding: '56px',
                 backgroundColor: '#ebf2fa',
                 fontFamily: 'NotoSansJP',
             }}
@@ -73,32 +71,54 @@ const Image = async ({
             <div
                 style={{
                     display: 'flex',
-                    fontSize: 40,
-                    fontWeight: 700,
-                    color: '#00aa90',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    width: '100%',
+                    height: '100%',
+                    padding: '72px',
+                    borderRadius: '40px',
+                    backgroundColor: '#ebf2fa',
+                    boxShadow:
+                        '18px 18px 44px #c8ced5, -18px -18px 44px #ffffff',
                 }}
             >
-                ブログ
-            </div>
-            <div
-                style={{
-                    display: 'flex',
-                    fontSize: 64,
-                    fontWeight: 700,
-                    color: '#3b3d3f',
-                    lineHeight: 1.3,
-                }}
-            >
-                {title}
-            </div>
-            <div
-                style={{
-                    display: 'flex',
-                    fontSize: 36,
-                    color: '#3b3d3f',
-                }}
-            >
-                {siteName}
+                <div style={{display: 'flex'}}>
+                    <div
+                        style={{
+                            display: 'flex',
+                            fontSize: 34,
+                            fontWeight: 700,
+                            color: '#00aa90',
+                            padding: '10px 30px',
+                            borderRadius: '9999px',
+                            backgroundColor: '#ebf2fa',
+                            boxShadow:
+                                '6px 6px 14px #c8ced5, -6px -6px 14px #ffffff',
+                        }}
+                    >
+                        ブログ
+                    </div>
+                </div>
+                <div
+                    style={{
+                        display: 'flex',
+                        fontSize: 62,
+                        fontWeight: 700,
+                        color: '#3b3d3f',
+                        lineHeight: 1.3,
+                    }}
+                >
+                    {title}
+                </div>
+                <div
+                    style={{
+                        display: 'flex',
+                        fontSize: 34,
+                        color: '#3b3d3f',
+                    }}
+                >
+                    {siteName}
+                </div>
             </div>
         </div>,
         {
