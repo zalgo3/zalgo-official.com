@@ -4,7 +4,7 @@ import {YouTubeEmbed} from '@next/third-parties/google';
 import {format as formatTZ, toZonedTime} from 'date-fns-tz';
 import {getPost, getPostAll, getPostDataAll} from 'lib/posts';
 import remarkImagesToFullPaths from 'lib/remarkImagesToFullPaths';
-import {defaultOgImage, siteUrl} from 'lib/siteMetadata';
+import {siteUrl} from 'lib/siteMetadata';
 import {excerpt} from 'lib/string';
 import type {Metadata} from 'next';
 import {MDXRemote} from 'next-mdx-remote/rsc';
@@ -41,12 +41,10 @@ export const generateMetadata = async ({
             description,
             url,
             type: 'article',
-            images: [defaultOgImage],
         },
         twitter: {
             title: data.title,
             description,
-            images: [defaultOgImage],
         },
     };
 };
