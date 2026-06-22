@@ -3,6 +3,7 @@ title: 'アナタサマ [cover]'
 artist: 'ざるご'
 composer: 'かいりきベア'
 lyricist: 'かいりきベア'
+illustrator: 'シラマキアゲ'
 mixer: 'ざるご'
 thumbnail: 'thumbnail.png'
 links:
