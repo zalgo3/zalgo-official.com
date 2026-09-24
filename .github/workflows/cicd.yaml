@@ -1,9 +1,5 @@
 name: CI/CD
 
-# Deployment is handled by Cloudflare Pages' own GitHub integration (it builds
-# every push and posts preview URLs on PRs); this workflow only lints and
-# checks that the static export builds.
-
 on:
     pull_request:
         branches:
@@ -14,6 +10,8 @@ on:
 concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
     cancel-in-progress: true
+env:
+    CLOUDFLARE_PAGES_PROJECT: zalgo-official-com
 jobs:
     cicd:
         runs-on: ubuntu-latest
@@ -54,3 +52,33 @@ jobs:
                   VALUE_COMMERCE_PID: ${{ secrets.VALUE_COMMERCE_PID }}
                   VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
                   YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
+            - name: Deploy to Cloudflare Pages
+              id: deploy
+              uses: cloudflare/wrangler-action@v3
+              with:
+                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                  accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+                  # Creates the Pages project on the first run; later runs
+                  # fail the create harmlessly and go straight to deploy.
+                  preCommands: npx wrangler pages project create ${{ env.CLOUDFLARE_PAGES_PROJECT }} --production-branch=main || true
+                  # PRs deploy to a preview alias; pushes to main go live.
+                  command: pages deploy out --project-name=${{ env.CLOUDFLARE_PAGES_PROJECT }} --branch=${{ github.head_ref || github.ref_name }}
+            - name: Comment preview URL on PR
+              if: ${{ github.event_name == 'pull_request' && steps.deploy.outputs.deployment-url != '' }}
+              uses: actions/github-script@v9
+              env:
+                  PREVIEW_URL: ${{ steps.deploy.outputs.deployment-url }}
+              with:
+                  script: |
+                      const url = process.env.PREVIEW_URL;
+                      const marker = '<!-- cloudflare-preview-url -->';
+                      const body = `${marker}\n🚀 **プレビューデプロイ**: ${url}\n\n<sub>このコメントはコミットごとに更新されます。</sub>`;
+                      const {owner, repo} = context.repo;
+                      const issue_number = context.issue.number;
+                      const {data: comments} = await github.rest.issues.listComments({owner, repo, issue_number});
+                      const existing = comments.find((c) => c.body && c.body.includes(marker));
+                      if (existing) {
+                          await github.rest.issues.updateComment({owner, repo, comment_id: existing.id, body});
+                      } else {
+                          await github.rest.issues.createComment({owner, repo, issue_number, body});
+                      }
