@@ -1,5 +1,7 @@
 import type {MetadataRoute} from 'next';
 
+export const dynamic = 'force-static';
+
 const manifest = (): MetadataRoute.Manifest => ({
     name: 'ざるご Official Website',
     short_name: 'ざるご',

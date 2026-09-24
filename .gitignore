@@ -51,6 +51,7 @@ public/sitemap.xml
 public/sitemap-*.xml
 public/posts
 public/discography
+public/_redirects
 
-# Local Netlify folder
-.netlify
+# Local Cloudflare Wrangler folder
+.wrangler
