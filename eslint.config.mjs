@@ -24,6 +24,7 @@ export default tseslint.config(
             'out/**',
             'scripts/copyImages.mjs',
             'scripts/generateRedirects.mjs',
+            'scripts/unshallow.mjs',
             'sitemap.config.mjs',
             'jest.config.ts',
         ],
