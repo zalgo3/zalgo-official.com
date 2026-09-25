@@ -21,7 +21,7 @@ links:
     itunesStore: 'https://music.apple.com/jp/album/hitomania-cover-single/6807636187?app=itunes'
     amazonDigitalMusic: 'https://www.amazon.co.jp/dp/B0HHCXRJ2S'
     rakutenMusic: 'https://music.rakuten.co.jp/link/album/33058424'
-    dhits: ''
+    dhits: 'https://dhits.docomo.ne.jp/music/1049924501'
     kkbox: 'https://www.kkbox.com/jp/ja/album/TaDcPrJj9CYeFEeOTk'
     orimyuStore: 'https://music.orimyu.com/php/music/MusicTop.php?music=13601566'
     mora: 'https://mora.jp/package/43000033/PA00226603-0-1/'
