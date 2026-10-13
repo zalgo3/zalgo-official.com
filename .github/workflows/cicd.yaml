@@ -53,6 +53,10 @@ jobs:
                   VALUE_COMMERCE_SID: ${{ secrets.VALUE_COMMERCE_SID }}
                   YAHOO_API_APP_ID: ${{ secrets.YAHOO_API_APP_ID }}
             - name: Deploy to Cloudflare Pages
+              # Dependabot PRs only receive Dependabot secrets, so the
+              # Cloudflare token is empty there; the build above still checks
+              # them.
+              if: ${{ github.event.pull_request.user.login != 'dependabot[bot]' }}
               id: deploy
               uses: cloudflare/wrangler-action@v4
               with:
